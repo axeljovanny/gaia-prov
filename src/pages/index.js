@@ -1,11 +1,12 @@
 import React from "react"
-import { Home } from "../components";
+import { Home, Navbar } from "../components";
 
 
 
 const IndexPage = () => {
   return (
     <>
+      <Navbar />
       <Home />
     </>
   )
