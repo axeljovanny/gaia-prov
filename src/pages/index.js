@@ -1,12 +1,12 @@
 import React from "react"
-import { SEO } from "../components";
+import { Home } from "../components";
 
 
 
 const IndexPage = () => {
   return (
     <>
-      Hola
+      <Home />
     </>
   )
 };
