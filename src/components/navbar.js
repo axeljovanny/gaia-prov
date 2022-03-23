@@ -1,38 +1,55 @@
 import React from "react"
-import { Items, StyledLeft, StyledLogo, StyledNavbar, StyledRight } from "../styles/js/navbar"
-import { StaticImage } from "gatsby-plugin-image"
 import { Link } from "gatsby"
+import '../styles/css/navbar.css'
+import { StaticImage } from "gatsby-plugin-image"
+import { StyledLogoContainer, ItemLeft, ItemRight, StyledLeft, StyledLogo, StyledNavbar, StyledRight } from "../styles/js/navbar"
 
 
 const Navbar = ({ children }) => (
     <>
         <StyledNavbar>
             <StyledLeft>
-                <Items>
-                    <il>SPA</il>
-                    <il>SALON</il>
-                </Items>
+
+                <ItemLeft>
+                    <Link to="#">
+                        SPA
+                    </Link>
+                </ItemLeft>
+
+                <ItemLeft>
+                    <Link to="#">
+                        SALON
+                    </Link>
+                </ItemLeft>
             </StyledLeft>
 
-            <StyledLogo>
-                <Link to="/404">
-                    <StaticImage
-                        src="../images/logo.png"
-                        alt="gaia logo"
-                        placeholder="blurred"
-                        layout="fixed"
-                        formats={['auto', 'webp', 'avif']}
-                        width={100}
-                        height={100}
-                    />
-                </Link>
-            </StyledLogo>
+            <StyledLogoContainer >
+                    <Link to="/">
+                        <StaticImage
+                            className="logo"
+                            src="../images/logo.png"
+                            alt="gaia logo"
+                            placeholder="blurred"
+                            formats={['auto', 'webp', 'avif']}
+
+
+
+
+                        />
+                    </Link>
+            </StyledLogoContainer>
 
             <StyledRight>
-                <Items>
-                    <il>ABOUT</il>
-                    <il>POLICIES</il>
-                </Items>
+                <ItemRight>
+                    <Link to="#">
+                        ABOUT
+                    </Link>
+                </ItemRight>
+                <ItemRight>
+                    <Link to="#">
+                        POLICIES
+                    </Link>
+                </ItemRight>
             </StyledRight>
 
         </StyledNavbar>
