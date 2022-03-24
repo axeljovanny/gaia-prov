@@ -11,7 +11,8 @@ const Footer = ({ children }) => (
             <StyledContainer >
                 <StyledItem>
                     <p className="text-footer-left">
-                        Lorem ipsum, dolor sit amet consectetur 99999999999
+                        gaiaevolution@icloud.com       |   Tel: 773-799-8843
+
                     </p>
                 </StyledItem>
                 <StyledSocialContainer>
@@ -54,11 +55,12 @@ const Footer = ({ children }) => (
                 </StyledSocialContainer>
                 <StyledItem>
                     <p className="text-footer-right">
-                        Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                        3143 W. Fullerton Ave. Chicago, IL
+
                     </p>
                 </StyledItem>
             </StyledContainer>
-    
+
         </StyledFooter>
 
     </>

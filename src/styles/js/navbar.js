@@ -10,7 +10,7 @@ export const StyledNavbar = styled.div`
   display: flex;
   justify-content: center ;
   align-items: center;
-  whidth: 100vw;
+  width: 100vw;
   height: 17vh;
   -webkit-box-shadow: inset 0px 20px 50px -16px #4A4A4A; 
   box-shadow: inset 0px 20px 50px -16px #4A4A4A;
@@ -80,6 +80,7 @@ list-style: none;
 padding: 0;
 
 
+
 `
 
 export const ItemLeft = styled.div`
@@ -92,7 +93,7 @@ background-color: none;
 margin: 10px 0 10px 0;
 width: 100%;
 height: 10vh;
-
+font-family: 'Montserrat', sans-serif;
 
 `
 
@@ -108,5 +109,6 @@ margin: 10px 0 10px 0;
 width: 50%;
 margin-right: 1px;
 height: 10vh;
+font-family: 'Montserrat', sans-serif;
 
 `

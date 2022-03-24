@@ -1,19 +1,37 @@
 import React from "react"
-import { StyledHome, StyledButton, StyledText } from "../styles/js/home.js"
+import "../styles/css/home.css"
+
+import { StyledContentContainer, StyledTitleContainer, StyledButtonsContainer, StyledText, StyledHome, StyledButton } from "../styles/js/home.js"
 
 const Home = ({ children }) => (
     <>
         <StyledHome>
+            <StyledContentContainer>
+                <StyledTitleContainer>
 
-           {/*  <StyledButton>
-                Buy Now
-            </StyledButton> */}
+                    <p className="title-gaia-evo">Gaia Evolution</p>
+                    <p className="sub-gaia-evo" >Spa & Salon</p>
+
+                    <StyledButtonsContainer>
+
+                        <StyledButton className="button">
+                            Gift Card
+                        </StyledButton>
+                        <StyledButton className="button">
+                            AvedaShop
+                        </StyledButton>
+                    </StyledButtonsContainer>
+                </StyledTitleContainer>
+
+
+            </StyledContentContainer>
             <StyledText>
-                <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                </p>
+                NATURAL - ORGANIC - VEGAN - CRUELTYFREE
             </StyledText>
-        </StyledHome>
+
+
+
+        </StyledHome >
     </>
 
 )

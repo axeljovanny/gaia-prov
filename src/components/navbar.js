@@ -24,19 +24,19 @@ const Navbar = ({ children }) => (
             </StyledLeft>
 
             <StyledLogoContainer >
-                    <Link to="/">
-                        <StaticImage
-                            className="logo"
-                            src="../images/logo.png"
-                            alt="gaia logo"
-                            placeholder="blurred"
-                            formats={['auto', 'webp', 'avif']}
+                <Link to="/">
+                    <StaticImage
+                        className="logo"
+                        src="../images/logo.png"
+                        alt="gaia logo"
+                        placeholder="blurred"
+                        formats={['auto', 'webp', 'avif']}
 
 
 
 
-                        />
-                    </Link>
+                    />
+                </Link>
             </StyledLogoContainer>
 
             <StyledRight>
