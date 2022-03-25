@@ -1,8 +1,10 @@
 import React from "react"
 import { Link } from "gatsby"
 import '../styles/css/footer.css'
-import { StaticImage } from "gatsby-plugin-image"
 import { StyledSocialContainer, StyledContainer, StyledFooter, StyledItem, StyledSocialItem } from "../styles/js/footer"
+import { FacebookIcon, InstagramIcon, MapsIcon } from "../images/icons";
+import { colors } from "../utils/const"
+
 
 
 const Footer = ({ children }) => (
@@ -11,54 +13,34 @@ const Footer = ({ children }) => (
             <StyledContainer >
                 <StyledItem>
                     <p className="text-footer-left">
-                        Lorem ipsum, dolor sit amet consectetur 99999999999
+                        gaiaevolution@icloud.com     773-799-8843
                     </p>
                 </StyledItem>
                 <StyledSocialContainer>
                     <StyledSocialItem>
                         <Link to="">
-                            <StaticImage src="https://cdn-icons-png.flaticon.com/512/124/124010.png"
-                                alt="..."
-                                placeholder="blurred"
-                                layout="constrained"
-                                formats={['auto', 'webp', 'avif']}
-                                width={30}
-                                height={30}
-                            />
+                            <FacebookIcon fill={colors.white} className="svgAbout" />
                         </Link>
                     </StyledSocialItem>
                     <StyledSocialItem>
                         <Link to="">
-                            <StaticImage src="https://www.buscopng.com/wp-content/uploads/2020/10/Logo-de-instagram-original.png"
-                                alt="..."
-                                placeholder="blurred"
-                                layout="constrained"
-                                formats={['auto', 'webp', 'avif']}
-                                width={30}
-                                height={30}
-                            />
+                            <InstagramIcon fill={colors.white} className="svgAbout" />
                         </Link>
                     </StyledSocialItem>
                     <StyledSocialItem>
                         <Link to="">
-                            <StaticImage src="https://cdn-icons-png.flaticon.com/512/124/124010.png"
-                                alt="..."
-                                placeholder="blurred"
-                                layout="constrained"
-                                formats={['auto', 'webp', 'avif']}
-                                width={30}
-                                height={30}
-                            />
+                            <MapsIcon fill={colors.white} className="svgAbout" />
+
                         </Link>
                     </StyledSocialItem>
                 </StyledSocialContainer>
                 <StyledItem>
                     <p className="text-footer-right">
-                        Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                        3143 W. Fullerton Ave. Chicago, IL
                     </p>
                 </StyledItem>
             </StyledContainer>
-    
+
         </StyledFooter>
 
     </>
