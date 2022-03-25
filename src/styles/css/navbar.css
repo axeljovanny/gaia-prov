@@ -1,8 +1,19 @@
 .logo {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 80%;
-    height: auto;
-    margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 80%;
+  height: auto;
+  margin: 0 auto;
+}
+.fondo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  position: absolute;
+  z-index: -1;
+
+  width: 100vw;
+  height: 100vh;
 }
