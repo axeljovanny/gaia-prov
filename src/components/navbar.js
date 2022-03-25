@@ -1,61 +1,98 @@
-import React from "react"
+import React, { useState } from "react"
 import { Link } from "gatsby"
 import '../styles/css/navbar.css'
 import { StaticImage } from "gatsby-plugin-image"
-import { StyledLogoContainer, ItemLeft, ItemRight, StyledLeft, StyledLogo, StyledNavbar, StyledRight } from "../styles/js/navbar"
+import { StyledLogoContainer, Item, StyledItems, StyledNavbar, Overlay, OverlayMenu, NavIcon, Line, StyledIcons } from "../styles/js/navbar"
+import { MapsIcon, FacebookIcon, InstagramIcon } from "../images/icons"
+import { colors } from "../utils/const"
 
 
-const Navbar = ({ children }) => (
-    <>
-        <StyledNavbar>
-            <StyledLeft>
+const Navbar = ({ siteTitle }) => {
+    const [toggle, toggleNav] = useState(false);
 
-                <ItemLeft>
-                    <Link to="#">
-                        SPA
+    return (
+        <>
+            <StyledNavbar>
+                <StyledItems>
+                    <Item>
+                        <Link to="#">
+                            SPA
+                        </Link>
+                    </Item>
+                    <Item>
+                        <Link to="#">
+                            SALON
+                        </Link>
+                    </Item>
+                </StyledItems>
+
+                <StyledLogoContainer >
+                    <Link to="/">
+                        <StaticImage
+                            className="logo"
+                            src="../images/logo.png"
+                            alt="gaia logo"
+                            placeholder="blurred"
+                            formats={['auto', 'webp', 'avif']}
+                        />
                     </Link>
-                </ItemLeft>
+                </StyledLogoContainer>
 
-                <ItemLeft>
-                    <Link to="#">
-                        SALON
-                    </Link>
-                </ItemLeft>
-            </StyledLeft>
+                <StyledItems>
+                    <Item>
+                        <Link to="#">
+                            ABOUT
+                        </Link>
+                    </Item>
+                    <Item>
+                        <Link to="#">
+                            POLICIES
+                        </Link>
+                    </Item>
+                </StyledItems>
 
-            <StyledLogoContainer >
-                <Link to="/">
-                    <StaticImage
-                        className="logo"
-                        src="../images/logo.png"
-                        alt="gaia logo"
-                        placeholder="blurred"
-                        formats={['auto', 'webp', 'avif']}
+                <NavIcon onClick={() => toggleNav(!toggle)}>
+                    <Line open={toggle} />
+                    <Line open={toggle} />
+                    <Line open={toggle} />
+                </NavIcon>
+
+            </StyledNavbar>
+            <Overlay open={toggle}>
+                <OverlayMenu open={toggle}>
+                    <Item onClick={() => toggleNav(!toggle)}>
+                        <Link to="#">
+                            POLICIES
+                        </Link>
+                    </Item>
+                    <Item onClick={() => toggleNav(!toggle)}>
+                        <Link to="#">
+                            POLICIES
+                        </Link>
+                    </Item>
+                    <Item onClick={() => toggleNav(!toggle)}>
+                        <Link to="#">
+                            POLICIES
+                        </Link>
+                    </Item>
+                    <Item onClick={() => toggleNav(!toggle)}>
+                        <Link to="#">
+                            POLICIES
+                        </Link>
+                    </Item>
+                </OverlayMenu>
 
 
+                <StyledIcons open={toggle}>
+                    <FacebookIcon fill={colors.white} className="svgAbout" />
+                    <InstagramIcon fill={colors.white} className="svgAbout" />
+                    <MapsIcon fill={colors.white} className="svgAbout" />
+                </StyledIcons>
+            </Overlay>
+        </>
+    )
 
-
-                    />
-                </Link>
-            </StyledLogoContainer>
-
-            <StyledRight>
-                <ItemRight>
-                    <Link to="#">
-                        ABOUT
-                    </Link>
-                </ItemRight>
-                <ItemRight>
-                    <Link to="#">
-                        POLICIES
-                    </Link>
-                </ItemRight>
-            </StyledRight>
-
-        </StyledNavbar>
-    </>
-
-)
+}
 
 
 export default Navbar

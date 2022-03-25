@@ -1,8 +1,10 @@
 import styled from "styled-components"
 import { above } from "."
+import { colors, font, size } from "../../utils/const"
+
 
 export const StyledFooter = styled.div`
-  
+display: none;
   ${above.medium`
       
   `}
@@ -13,7 +15,7 @@ export const StyledFooter = styled.div`
 
   position: absolute;
   width: 100%;
-  height: 8vh;
+  height: 15vh;
   bottom: 0;
   left: 0;
   background: none;
@@ -31,14 +33,8 @@ display:flex;
 justify-content: center;
 align-items: center;
 
-/* width: 70%; */
 width: 100%;
 height: 100%;
-/* background: red; */
-background: none;
-
-margin: 0 12px 0 12px;
-
 `}
 
 `
@@ -52,11 +48,16 @@ ${above.large`
 display: flex;
 justify-content: center;
 align-items: center;
-
 width: 100%;
 height: 100%;
 margin: 0 10px 0 10px;
 background: none;
+
+p{
+  font-family:  ${font.light};
+  color: ${colors.white} ;
+  font-size: ${size.Wmini};
+}
 
 `}
 
@@ -70,25 +71,17 @@ ${above.large`
 display: flex;
 justify-content: center;
 align-items: center;
+gap: 0.5em;
 
 width: 40%;
 height: 100%;
-margin: 0 10px 0 10px;
-background: none;
 
 `}
 
 `
 export const StyledSocialItem = styled.div`
-
 display: flex;
 justify-content: center ;
 align-items: center;
-
-width: 2vw;
-margin: 0 4px 0 4px;
-
-background: none;
-
 
 `
