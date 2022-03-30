@@ -1,5 +1,4 @@
 import React from "react"
-import { Link } from "gatsby"
 import "../styles/css/home.css"
 import { StaticImage } from "gatsby-plugin-image";
 import { StyledTitleContainer, StyledButtonsContainer, StyledText, StyledHome, StyledButton, StyledLogoMobileContainer } from "../styles/js/home.js"
@@ -26,16 +25,16 @@ const Home = ({ children }) => (
                 <h3>Spa & Salon</h3>
 
                 <StyledButtonsContainer>
-                    <Link to="/">
+                    <a href="https://squareup.com/gift/FHH5R6M6H54FS/order" target="_blank" rel="noreferrer" >
                         <StyledButton className="button">
                             Gift Card
                         </StyledButton>
-                    </Link>
-                    <Link to="/">
+                    </a>
+                    <a href="https://www.aveda.com/locator/get_the_facts.tmpl?vanity=1&SalonID=38631" target="_blank" rel="noreferrer">
                         <StyledButton className="button">
                             Aveda Shop
                         </StyledButton>
-                    </Link>
+                    </a>
                 </StyledButtonsContainer>
             </StyledTitleContainer>
             <StyledText>
