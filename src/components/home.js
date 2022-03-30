@@ -33,7 +33,7 @@ const Home = ({ children }) => (
                     </Link>
                     <Link to="/">
                         <StyledButton className="button">
-                            AvedaShop
+                            Aveda Shop
                         </StyledButton>
                     </Link>
                 </StyledButtonsContainer>

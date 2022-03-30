@@ -104,7 +104,7 @@ export const StyledTitleContainer = styled.div`
 
   h1{
     font-family: ${font.bold};
-    font-size: 4.5rem ;
+    font-size: ${size.Mheader};
   }
   h3{
     font-family: ${font.light};
@@ -113,7 +113,7 @@ export const StyledTitleContainer = styled.div`
   ${above.medium`
   
   h1{
-    font-size: 3.5rem ;
+    font-size: ${size.Mheader};
   }
       
   `}
