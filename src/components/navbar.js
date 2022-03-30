@@ -62,17 +62,17 @@ const Navbar = ({ siteTitle }) => {
                 <OverlayMenu open={toggle}>
                     <Item onClick={() => toggleNav(!toggle)}>
                         <Link to="#">
-                            POLICIES
+                            SPA
                         </Link>
                     </Item>
                     <Item onClick={() => toggleNav(!toggle)}>
                         <Link to="#">
-                            POLICIES
+                            SALON
                         </Link>
                     </Item>
                     <Item onClick={() => toggleNav(!toggle)}>
                         <Link to="#">
-                            POLICIES
+                            ABOUT
                         </Link>
                     </Item>
                     <Item onClick={() => toggleNav(!toggle)}>

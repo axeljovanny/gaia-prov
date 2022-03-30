@@ -124,6 +124,8 @@ export const Overlay = styled.div`
   transition: height 0.4s ease-in-out;
   position: fixed;
   z-index: 5;
+  justify-content: center;
+  align-items: center;
 
   ${above.large` {
     display: none;
@@ -136,36 +138,35 @@ export const Overlay = styled.div`
 export const OverlayMenu = styled.div`
   flex-direction: column;
   justify-content: center;
-  align-items: flex-start;
-  display: none;
+  align-items: center;
+  display: flex;
   width: 100vw;
-  height: 70%;
+  height: 40%;
   list-style: none; 
-  padding-left: 12%;
+  margin: 50% 0;
 
   div a{
     opacity: ${props => (props.open ? 1 : 0)};
-    font-family:  ${font.bold};
+    font-family:  ${font.light};
     color: ${colors.white} ;
-    font-size: ${size.Mtittle};
+    font-size: ${size.Wtittle};
     transition: opacity 0.4s ease-in-out;
-    
   }
 
 `;
 
 export const StyledIcons = styled.div`
-display: ${props => props.open ? 'flex' : 'none'};
-height: 25%;
-flex-direction: row;
-justify-content: center;
-align-items: center;
-
-svg{
-    width: 90%;
+    display: ${props => props.open ? 'flex' : 'none'};
+    height: 25%;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 70%;
 
 
-}
+    svg{
+        width: 100%;
+    }
     
     ${above.large`
     padding-top: 5vh;
