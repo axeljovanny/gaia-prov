@@ -21,6 +21,7 @@ const Home = ({ children }) => (
                         quality='80'
                     />
                 </StyledLogoMobileContainer>
+                <h3>Welcome to</h3>
                 <h1>Gaia Evolution</h1>
                 <h3>Spa & Salon</h3>
 

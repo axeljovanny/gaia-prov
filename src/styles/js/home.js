@@ -20,23 +20,34 @@ export const StyledHome = styled.div`
 export const StyledButton = styled.button`
   width: 140px;
   height: 43px;
+
   display: flex;
   cursor: pointer;
   align-items: center;
-  border-radius: 50px;
+  border-radius: 5px;
   margin: 1rem auto;
   justify-content: center ;
-  background-color: transparent;
-  border 1px white solid ;
+
+  background-color: transparent; 
+  border 1px rgba(255, 255, 255, 0.7) solid ;
+
   font-family: ${font.bold};
+
   color: ${colors.white};
+
+  :hover{
+    transition: 0.2s ;
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+    background-color: rgba(255, 255, 255, 0.2); 
+  }
 
   ${above.medium`
       
   `}
   ${above.large`
  
-    margin: 0 25px 0 25px;
+    margin: 0 25px;
 
   `}
 `
@@ -96,9 +107,9 @@ export const StyledTitleContainer = styled.div`
   font-size: 1rem;
   height: auto;
   align-items: center;
-  display: list-item flow ;
+  display: flex ;
   justify-content: center ;
-  margin-top: 1.5rem;
+  flex-direction: column;
 
   color: ${colors.white};
 
@@ -107,8 +118,10 @@ export const StyledTitleContainer = styled.div`
     font-size: ${size.Mheader};
   }
   h3{
+    margin: 0;
     font-family: ${font.light};
   }
+  
 
   ${above.medium`
   
@@ -132,19 +145,20 @@ export const StyledTitleContainer = styled.div`
 export const StyledButtonsContainer = styled.div`
   
   width: 100%;
-  display: inline block ;
+  display: flex ;
   align-items: center;
-  height: fit-content ;
   justify-content: center ;
-  font-family: ${font.bold}
-  margin-top: 5rem; 
-  
+  flex-direction: column;
+  font-family: ${font.bold}  
   ${above.medium`
 
   `}
   ${above.large`
   
-    display: flex ;
+    margin-top: 5rem; 
+    flex-direction: row;
+
+
   `}
 `
 
