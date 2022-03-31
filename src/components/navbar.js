@@ -15,12 +15,12 @@ const Navbar = ({ siteTitle }) => {
             <StyledNavbar>
                 <StyledItems>
                     <Item>
-                        <Link to="#">
+                        <Link to="/skin">
                             SKIN CARE
                         </Link>
                     </Item>
                     <Item>
-                        <Link to="#">
+                        <Link to="/hair">
                             HAIR CARE
                         </Link>
                     </Item>
@@ -40,7 +40,7 @@ const Navbar = ({ siteTitle }) => {
 
                 <StyledItems>
                     <Item>
-                        <Link to="#">
+                        <Link to="/policies">
                             POLICIES
                         </Link>
                     </Item>
@@ -63,17 +63,17 @@ const Navbar = ({ siteTitle }) => {
             <Overlay open={toggle}>
                 <OverlayMenu open={toggle}>
                     <Item onClick={() => toggleNav(!toggle)}>
-                        <Link to="#">
-                            SPA
+                        <Link to="/skin">
+                            SKIN CARE
                         </Link>
                     </Item>
                     <Item onClick={() => toggleNav(!toggle)}>
-                        <Link to="#">
-                            SALON
+                        <Link to="/hair">
+                            HAIR CARE
                         </Link>
                     </Item>
                     <Item onClick={() => toggleNav(!toggle)}>
-                        <Link to="#">
+                        <Link to="/policies">
                             POLICIES
                         </Link>
                     </Item>
