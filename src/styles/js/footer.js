@@ -65,6 +65,12 @@ height: auto;
 margin: 0 auto;
 background: none;
 
+p a{
+  margin:0;
+  font-family:  ${font.bold};
+  color: ${colors.white} ;
+  font-size: ${size.Wtext};
+}
 p{
   font-family:  ${font.bold};
   color: ${colors.white} ;
@@ -77,9 +83,10 @@ p{
 }
 
 .tel2 {
+    display: flex;
     width: 100%;
     margin: 10px auto;
-    text-align: center;
+    justify-content: center;
     background-color: none;
     font-size: ${size.Wtext};
     
@@ -102,6 +109,10 @@ width: 100%;
 height: 100%;
 margin: auto 10px;
 background: none;
+
+p a{
+  font-size: ${size.Wmini};
+}
 
 
 .email,

@@ -11,10 +11,17 @@ const Footer = ({ children }) => (
         <StyledFooter>
             <StyledContainer >
                 <StyledItem>
-                    <p className="email">
-                        gaiaevolution@icloud.com <phone className="tel1">Tel: 773-799-8843</phone>
+                    <p className="tel1">
+                        <a href="tel:773-799-8843">Tel: 773-799-8843</a>
                     </p>
-                    <p className="tel2"> 773-799-8843</p>
+                    <p className="tel2">
+                        <a href="tel:773-799-8843">773-799-8843</a>
+                    </p>
+                    <p className="email">
+                        <a href="mailto:gaiaevolution@icloud.com">
+                            gaiaevolution@icloud.com
+                        </a>
+                    </p>
                 </StyledItem>
                 <StyledSocialContainer>
                     <StyledSocialItem>
