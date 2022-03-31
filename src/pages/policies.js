@@ -1,11 +1,19 @@
 import { StaticImage } from "gatsby-plugin-image";
 import React from "react"
-import { Footer, Navbar, Policies } from "../components";
+import { Navbar, Policies } from "../components";
 import '../styles/css/navbar.css'
+
+const pageStyles = {
+    flexDirection: 'column',
+    width: '100vw',
+    display: "flex",
+    justifyContent: "center",
+    alignItems: "center",
+}
 
 const PoliciesPage = () => {
     return (
-        <>
+        < >
             <StaticImage
                 className="fondo"
                 src="../images/fondo.jpg"
@@ -17,8 +25,10 @@ const PoliciesPage = () => {
                 quality='80'
             />
             <Navbar />
-            <Policies />
-            <Footer />
+            <div style={pageStyles} >
+                <Policies />
+            </div>
+
         </>
     )
 };
