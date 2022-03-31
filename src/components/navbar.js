@@ -2,7 +2,7 @@ import React, { useState } from "react"
 import { Link } from "gatsby"
 import '../styles/css/navbar.css'
 import { StaticImage } from "gatsby-plugin-image"
-import { StyledLogoContainer, Item, StyledItems, StyledNavbar, Overlay, OverlayMenu, NavIcon, Line, StyledIcons } from "../styles/js/navbar"
+import { StyledLogoContainer, Item, StyledItems, StyledButton, StyledNavbar, Overlay, OverlayMenu, NavIcon, Line, StyledIcons } from "../styles/js/navbar"
 import { MapsIcon, FacebookIcon, InstagramIcon } from "../images/icons"
 import { colors } from "../utils/const"
 
@@ -16,12 +16,12 @@ const Navbar = ({ siteTitle }) => {
                 <StyledItems>
                     <Item>
                         <Link to="#">
-                            SPA
+                            SKIN CARE
                         </Link>
                     </Item>
                     <Item>
                         <Link to="#">
-                            SALON
+                            HAIR CARE
                         </Link>
                     </Item>
                 </StyledItems>
@@ -41,13 +41,15 @@ const Navbar = ({ siteTitle }) => {
                 <StyledItems>
                     <Item>
                         <Link to="#">
-                            ABOUT
+                            POLICIES
                         </Link>
                     </Item>
                     <Item>
-                        <Link to="#">
-                            POLICIES
-                        </Link>
+                        <a href="https://gaia-evolution-spasalon.square.site/" target="_blank" rel="noreferrer">
+                            <StyledButton className="button">
+                                BOOK NOW
+                            </StyledButton>
+                        </a>
                     </Item>
                 </StyledItems>
 
@@ -72,16 +74,17 @@ const Navbar = ({ siteTitle }) => {
                     </Item>
                     <Item onClick={() => toggleNav(!toggle)}>
                         <Link to="#">
-                            ABOUT
-                        </Link>
-                    </Item>
-                    <Item onClick={() => toggleNav(!toggle)}>
-                        <Link to="#">
                             POLICIES
                         </Link>
                     </Item>
+                    <Item onClick={() => toggleNav(!toggle)}>
+                        <a href="https://gaia-evolution-spasalon.square.site/" target="_blank" rel="noreferrer">
+                            <StyledButton className="button">
+                                BOOK NOW
+                            </StyledButton>
+                        </a>
+                    </Item>
                 </OverlayMenu>
-
 
                 <StyledIcons open={toggle}>
                     <FacebookIcon fill={colors.white} className="svgAbout" />

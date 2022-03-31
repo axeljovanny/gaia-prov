@@ -121,7 +121,7 @@ export const Overlay = styled.div`
   height: ${props => (props.open ? "100vh" : 0)};
   width: 100vw;
   background: ${colors.black};
-  transition: height 0.4s ease-in-out;
+  transition: height 0.3s ease-in-out;
   position: fixed;
   z-index: 5;
   justify-content: center;
@@ -132,7 +132,6 @@ export const Overlay = styled.div`
     }
   `}
 `;
-
 
 
 export const OverlayMenu = styled.div`
@@ -161,10 +160,14 @@ export const StyledIcons = styled.div`
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    width: 70%;
+    width: 60%;
+    opacity: ${props => (props.open ? 1 : 0)};
+    transition: opacity 0.6s ease-in-out;
 
 
     svg{
+      opacity: ${props => (props.open ? 1 : 0)};
+    transition: opacity 0.6s ease-in-out;
         width: 100%;
     }
     
@@ -180,4 +183,33 @@ export const StyledIcons = styled.div`
         
     }
   `}
+`
+export const StyledButton = styled.div`
+  width: 100%;
+  height: 6vh;
+  
+  display: flex;
+  padding: 5px;
+  cursor: pointer;
+  align-items: center;
+  border-radius: 5px;
+  justify-content: center ;
+  font-family: ${font.medium};
+  color: ${colors.white};
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+  background-color: rgba(255, 255, 255, 0.2);  
+
+  :hover{
+    transition: 0.2s ;
+    background-color: rgba(255, 255, 255, 0.5); 
+    color: ${colors.black};
+  }
+
+  ${above.large`
+  padding: 10px;
+  width: 95%;
+  height: 2vh;
+  `}
+    
 `
