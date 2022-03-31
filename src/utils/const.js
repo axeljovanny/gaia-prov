@@ -12,11 +12,11 @@ export const colors = {
 }
 
 export const size = {
-    Wheader: "calc(100px + 0.4vw)",
-    Mheader: "calc(70px + 0.4vw)",
-    Wtittle: "calc(25px + 0.3vw)",
-    Mtittle: "calc(22px + 0.2vw)",
-    Wtext: "calc(18px + 0.2vw)",
+    Wheader: "calc(100px + 0.05vw)",
+    Mheader: "calc(70px + 0.05vw)",
+    Wtittle: "calc(25px + 0.05vw)",
+    Mtittle: "calc(22px + 0.05vw)",
+    Wtext: "calc(18px + 0.05vw)",
     Mtext: "calc(16px + 0.1vw)",
     Wmini: "calc(14px + 0.1vw)",
     Mmini: "calc(12px + 0.1vw)",

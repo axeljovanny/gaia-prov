@@ -4,15 +4,13 @@ import { colors, font, size } from "../../utils/const"
 
 
 export const StyledFooter = styled.div`
-  display: inline;
+  display: flex;
   align-items: center;
   justify-content: center;
 
-  position: absolute;
+  position: relative;
   width: 100%;
   height: auto;
-  bottom: 0;
-  left: 0;
   background: none;
 
   ${above.medium`
@@ -24,11 +22,9 @@ export const StyledFooter = styled.div`
   align-items: center;
   justify-content: center;
 
-  position: absolute;
+  position: relative;
   width: 100%;
   height: 15vh;
-  bottom: 0;
-  left: 0;
   background: none;
 
   `}

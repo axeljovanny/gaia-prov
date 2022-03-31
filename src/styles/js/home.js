@@ -8,11 +8,14 @@ export const StyledHome = styled.div`
   justify-content: center ;
   align-items: center;
   width: 100vw;
-  height: 100vh;
+  height: 60vh;
+  padding-top:50%;
   ${above.medium`
       
   `}
   ${above.large`
+  padding-top:0;
+  height: 85vh;
   
   `}
 `
