@@ -1,7 +1,6 @@
 import { StaticImage } from "gatsby-plugin-image";
 import React from "react"
 import { Footer, Hair, Navbar } from "../components";
-import '../styles/css/navbar.css'
 
 const HairPage = () => {
     return (

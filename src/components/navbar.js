@@ -1,6 +1,5 @@
 import React, { useState } from "react"
 import { Link } from "gatsby"
-import '../styles/css/navbar.css'
 import { StaticImage } from "gatsby-plugin-image"
 import { StyledLogoContainer, Item, StyledItems, StyledButton, StyledNavbar, Overlay, OverlayMenu, NavIcon, Line, StyledIcons } from "../styles/js/navbar"
 import { MapsIcon, FacebookIcon, InstagramIcon } from "../images/icons"

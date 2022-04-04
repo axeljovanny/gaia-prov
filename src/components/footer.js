@@ -1,5 +1,4 @@
 import React from "react"
-import '../styles/css/footer.css'
 import { StyledSocialContainer, StyledContainer, StyledFooter, StyledItem, StyledSocialItem } from "../styles/js/footer"
 import { FacebookIcon, InstagramIcon, MapsIcon } from "../images/icons";
 import { colors } from "../utils/const"

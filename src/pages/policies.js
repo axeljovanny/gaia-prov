@@ -1,36 +1,56 @@
-import { StaticImage } from "gatsby-plugin-image";
 import React from "react"
 import { Navbar, Policies } from "../components";
-import '../styles/css/navbar.css'
+
+import { graphql, useStaticQuery } from 'gatsby'
+import { getImage } from "gatsby-plugin-image"
+
+import { convertToBgImage } from "gbimage-bridge"
+import BackgroundImage from 'gatsby-background-image'
 
 const pageStyles = {
-    flexDirection: 'column',
-    width: '100vw',
-    display: "flex",
-    justifyContent: "center",
-    alignItems: "center",
+  flexDirection: 'column',
+  width: '100vw',
+  display: "flex",
+  justifyContent: "center",
+  alignItems: "center",
 }
 
 const PoliciesPage = () => {
-    return (
-        < >
-            <StaticImage
-                className="fondo"
-                src="../images/fondo.jpg"
-                alt="gaia fondo"
-                loading="eager"
-                layout="fullWidth"
-                breakpoints={[750, 1080, 1366, 1920]}
-                formats={['auto', 'webp', 'avif']}
-                quality='80'
-            />
-            <Navbar />
-            <div style={pageStyles} >
-                <Policies />
-            </div>
+  const { backgroundImage123 } = useStaticQuery(
+    graphql`
+          query {
+            backgroundImage123: file(relativePath: {eq: "fondo.jpg"}) {
+              childImageSharp {
+                gatsbyImageData(
+                  quality: 70
+                  formats: WEBP
+                  layout: FULL_WIDTH
+                  webpOptions: {quality: 90}
+                )
+              }
+            }
+          }
+        `
+  )
+  const image = getImage(backgroundImage123)
 
-        </>
-    )
+  const bgImage = convertToBgImage(image)
+
+  return (
+    <BackgroundImage
+      Tag="section"
+      // Spread bgImage into BackgroundImage:
+      {...bgImage}
+      preserveStackingContext
+      className="masthead"
+    >
+      <Navbar />
+      <div style={pageStyles} >
+        <Policies />
+      </div>
+
+    </BackgroundImage>
+  )
 };
 
 

@@ -1,7 +1,6 @@
 import { StaticImage } from "gatsby-plugin-image";
 import React from "react"
 import { Footer, Navbar, Skin } from "../components";
-import '../styles/css/navbar.css'
 
 const SkinPage = () => {
     return (

@@ -21,22 +21,3 @@
     transform: scale(1) translateY(0px);
   }
 }
-
-.fondo {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  position: fixed;
-  z-index: 10;
-  width: 100vw;
-  height: 100vh;
-  transition: none;
-  animation: none;
-}
-
-@media (min-width: 1140px) {
-  .fondo {
-    transition: all 0.1s ease-in-out;
-    animation: headertransition 60s linear 10ms infinite;
-  }
-}
