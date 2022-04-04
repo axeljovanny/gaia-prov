@@ -3,6 +3,7 @@ import PropTypes from "prop-types"
 import { GlobalStyles } from '../styles/js/index';
 
 
+
 const Layout = ({ children }) => (
 
   <>

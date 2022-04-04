@@ -42,6 +42,12 @@ ul {
   margin: 0 auto;
   list-style-type: none;
 }
+.masthead {
+  width: 100vw;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
 
 ::-webkit-scrollbar {
   display: none;
