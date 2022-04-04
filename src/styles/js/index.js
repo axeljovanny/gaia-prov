@@ -32,7 +32,7 @@ body {
   padding: 0;
   margin: 0;
   font-family: Josefin;
-  background: white;
+  background: black;
   height:100%; 
 }
 a {

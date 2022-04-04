@@ -18,7 +18,7 @@ export const StyledNavbar = styled.div`
   `}
   ${above.large`
   display: flex;
-  justify-content: center ;
+  justify-content: center;
   align-items: center;
   whidth: 100vw;
   height: 20vh;
@@ -34,14 +34,11 @@ export const StyledLogoContainer = styled.div`
       
   `}
   ${above.large`
-
   display: flex;
-  justify-content: center ;
+  justify-content: center;
   align-items: center;
-
   width: 10vw;
   height: 100%;
- 
 
   background: none;
 
