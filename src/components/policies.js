@@ -14,7 +14,7 @@ const Policies = ({ children }) => (
                 src="../images/logo.png"
                 alt="gaia logo policies"
                 loading="eager"
-                width={500}
+                width={539}
                 layout="constrained"
                 formats={['auto', 'webp', 'avif']}
                 quality='80'
