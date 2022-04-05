@@ -31,7 +31,7 @@ const Navbar = ({ siteTitle }) => {
                             className="logo"
                             src="../images/logo.png"
                             alt="gaia logo nav"
-                            width={539}
+                            width={500}
                             placeholder="blurred"
                             formats={['auto', 'webp', 'avif']}
                         />

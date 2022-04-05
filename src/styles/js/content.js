@@ -10,9 +10,9 @@ export const StyledContentM = styled.div`
     width: 100%;
     ${above.large`
     flex-direction: row;
-    justify-content: flex-start;
+    justify-content: space-around;
     align-items: flex-start;
-    width: 90%;
+    width: 95%;
 
   `}
 
@@ -29,7 +29,7 @@ export const StyledContent = styled.div`
     -webkit-backdrop-filter: blur(10px);
     backdrop-filter: blur(10px);
     background-color: rgba(0, 0, 0, 0.4); 
-    padding: 5em 0;
+    padding: 2em 0;
 
   ${above.medium`
       
@@ -144,6 +144,35 @@ export const StyledText = styled.div`
 
   `}
 `
+export const StyledServiceHair = styled.div`
+  display: flex;
+  justify-content: ${props => (props.service ? "flex-start" : "flex-end")};
+  flex-flow: row nowrap;
+  width: ${props => (props.service ? "65%" : "30%")};
+  margin: 2em 0;
+  padding:0 0.2em; 
+  text-align: left;
+  align-items: flex-end;
+
+  ul{
+      margin: 0;
+      padding: 0;
+  }
+
+  ul li{
+    display:flex;
+    font-family:  ${font.light};
+    color: ${colors.softYellow} ;
+    font-size: ${size.Mtext};
+    justify-content: flex-start;
+  }
+  ${above.large`
+  width: ${props => (props.service ? "45%" : "35%")};
+  justify-content: ${props => (props.service ? "flex-end" : "flex-start")};
+
+  `}
+
+`
 
 export const StyledService = styled.div`
   display: flex;
@@ -151,23 +180,26 @@ export const StyledService = styled.div`
   align-items: center;
   flex-flow: row wrap;
   width: 90%;
-  margin: 1em 0;
+  margin: 2em 0;
+  text-align: justify;
   ${above.large`
-  width: ${props => (props.m ? "50%" : "90%")};
+  width: ${props => (props.m ? "45%" : "90%")};
   `}
 
 `
 
 export const StyledServiceTittle = styled.div`
   display: flex;
-  justify-content: flex-strart;
+  justify-content: ${props => (props.hair ? "center" : "flex-strart")};
   align-items: flex-strart;
   width: 100%;
   font-family:  ${font.bold};
   color: ${colors.softYellow} ;
   font-size: ${size.Wtext};
+
   ${above.large`
-  width: ${props => (props.m ? "100%" : "30%")};
+  text-align: left;
+  width: ${props => (props.m ? "100%" : "40%")};
   `}
 `
 
@@ -181,7 +213,7 @@ export const StyledServicePrice = styled.div`
   font-size: ${size.Wtext};
 
   ${above.large`
-  width: ${props => (props.m ? "100%" : "70%")};
+  width: ${props => (props.m ? "100%" : "60%")};
 
 
   `}
@@ -195,8 +227,14 @@ export const StyledServiceDesc = styled.div`
   font-family:  ${font.light};
   color: ${colors.white} ;
   font-size: ${size.Wtext};
+  text-align: left;
+
 
   ${above.large`
+  text-align: justify;
+  justify-content: center;
+
+
 
 
   `}
@@ -226,8 +264,117 @@ export const StyledTittle = styled.div`
   font-family:  ${font.bold};
   color: ${colors.softYellow} ;
   font-size: ${size.Wtittle};
+  text-align: center;
 
   ${above.large`
+
+
+  `}
+  
+`
+
+export const StyledWaxing = styled.div`
+display: grid;
+grid-template-columns: 1fr;
+grid-template-rows: repeat(3, 1fr);
+grid-column-gap: 0px;
+grid-row-gap: 0px;
+width:100%;
+justify-content: center;
+
+ul{
+  margin: 0;
+  padding: 0;
+}
+
+ul li{
+
+display:flex;
+font-family:  ${font.light};
+color: ${colors.softYellow} ;
+font-size: ${size.Mtext};
+align-items: flex-start;
+justify-content: ${props => (props.service ? "flex-end" : "flex-start")};
+}
+
+  ${above.large`
+  grid-template-columns: repeat(3, auto);
+  grid-template-rows: 1fr;
+  ul li{
+
+    font-family:  ${font.medium};
+    color: ${colors.softYellow} ;
+    font-size: ${size.Wmini};
+    text-align: left;
+    
+    }
+  
+  `}
+  
+`
+export const WaxingUno = styled.div`
+grid-area: 1 / 1 / 2 / 2;
+width:100%;
+display:flex;
+justify-content: center;
+  ${above.large`
+  grid-area: 1 / 1 / 2 / 2; 
+  width:20vw;
+
+
+  `}
+  
+`
+export const WaxingDos = styled.div`
+grid-area: 2 / 1 / 3 / 2; 
+width:100%;
+display:flex;
+justify-content: center;
+
+  ${above.large`
+  grid-area: 1 / 2 / 2 / 3; 
+  width:20vw;
+  border-style: none dotted;
+  border-width: 1px;
+  border-color: ${colors.softYellow};
+
+
+  `}
+  
+`
+export const WaxingTres = styled.div`
+grid-area: 3 / 1 / 4 / 2;
+width:100%;
+display:flex;
+justify-content: center;
+
+  ${above.large`
+  grid-area: 1 / 3 / 2 / 4;
+  width:20vw;
+
+  `}
+  
+`
+export const Container = styled.div`
+  padding: 2em;
+  display:flex;
+  width:90%;
+
+  ${above.large`
+  justify-content: center;
+
+  `}
+  
+`
+export const Item = styled.div`
+  display:flex;
+  width:50%;
+  justify-content: ${props => (props.price ? "flex-end" : "flex-start")};
+  width: ${props => (props.price ? "20%" : "100%")};
+  
+  ${above.large`
+  align-items: flex-start;
+  width: ${props => (props.price ? "20%" : "90%")};
 
 
   `}
