@@ -2,6 +2,21 @@ import styled from "styled-components"
 import { above } from "."
 import { colors, font, size } from "../../utils/const"
 
+export const StyledContentM = styled.div`
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    ${above.large`
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+    width: 90%;
+
+  `}
+
+`
 export const StyledContent = styled.div`
     display: flex;
     position: relative;
@@ -128,4 +143,93 @@ export const StyledText = styled.div`
     }
 
   `}
+`
+
+export const StyledService = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: row wrap;
+  width: 90%;
+  margin: 1em 0;
+  ${above.large`
+  width: ${props => (props.m ? "50%" : "90%")};
+  `}
+
+`
+
+export const StyledServiceTittle = styled.div`
+  display: flex;
+  justify-content: flex-strart;
+  align-items: flex-strart;
+  width: 100%;
+  font-family:  ${font.bold};
+  color: ${colors.softYellow} ;
+  font-size: ${size.Wtext};
+  ${above.large`
+  width: ${props => (props.m ? "100%" : "30%")};
+  `}
+`
+
+export const StyledServicePrice = styled.div`
+  display: flex;
+  justify-content: flex-strart;
+  align-items: flex-strart;
+  width: 100%;
+  font-family:  ${font.light};
+  color: ${colors.softYellow} ;
+  font-size: ${size.Wtext};
+
+  ${above.large`
+  width: ${props => (props.m ? "100%" : "70%")};
+
+
+  `}
+`
+
+export const StyledServiceDesc = styled.div`
+  display: flex;
+  justify-content: flex-strart;
+  align-items: flex-strart;
+  width: 100%;  
+  font-family:  ${font.light};
+  color: ${colors.white} ;
+  font-size: ${size.Wtext};
+
+  ${above.large`
+
+
+  `}
+`
+
+export const StyledServiceNote = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  font-family:  ${font.medium};
+  color: ${colors.softYellow} ;
+  font-size: ${size.Wmini};
+
+  ${above.large`
+
+
+  `}
+  
+`
+
+export const StyledTittle = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  font-family:  ${font.bold};
+  color: ${colors.softYellow} ;
+  font-size: ${size.Wtittle};
+
+  ${above.large`
+
+
+  `}
+  
 `

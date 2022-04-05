@@ -120,7 +120,7 @@ export const Overlay = styled.div`
   background: ${colors.black};
   transition: height 0.3s ease-in-out;
   position: fixed;
-  z-index: 12;
+  z-index: 5;
   justify-content: center;
   align-items: center;
 
