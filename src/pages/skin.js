@@ -1,5 +1,5 @@
 import React from "react"
-import { Navbar, Skin } from "../components";
+import { Footer, Navbar, Skin } from "../components";
 
 import { graphql, useStaticQuery } from 'gatsby'
 import { getImage } from "gatsby-plugin-image"
@@ -19,7 +19,7 @@ const SkinPage = () => {
   const { backgroundImage123 } = useStaticQuery(
     graphql`
               query {
-                backgroundImage123: file(relativePath: {eq: "fondov.jpg"}) {
+                backgroundImage123: file(relativePath: {eq: "fondo3.jpg"}) {
                   childImageSharp {
                     gatsbyImageData(
                       quality: 70
@@ -48,6 +48,7 @@ const SkinPage = () => {
       <div style={pageStyles} >
         <Skin />
       </div>
+      <Footer />
 
     </BackgroundImage>
   )

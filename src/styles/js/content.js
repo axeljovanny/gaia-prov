@@ -30,6 +30,8 @@ export const StyledContent = styled.div`
     backdrop-filter: blur(10px);
     background-color: rgba(0, 0, 0, 0.4); 
     padding: 2em 0;
+    border-radius: 5px;
+
 
   ${above.medium`
       
@@ -232,7 +234,7 @@ export const StyledServiceDesc = styled.div`
 
   ${above.large`
   text-align: justify;
-  justify-content: center;
+  justify-content: ${props => (props.fix ? "flex-start" : "center")};
 
 
 

@@ -22,7 +22,11 @@ export const StyledNavbar = styled.div`
   align-items: center;
   whidth: 100vw;
   height: 20vh;
-  background: linear-gradient(to top, rgba(0, 0, 0, 0.05) 10%, ${colors.black} 100%);
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.0) 0%, ${colors.black} 100%);
+  a{
+    margin-left: auto;
+    margin-right: auto;
+  }
 
   
   `}

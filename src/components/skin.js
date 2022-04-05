@@ -65,14 +65,12 @@ const Skin = ({ children }) => (
 
                 <StyledService m>
                     <StyledServiceTittle m>
-                        Aveda Tulasara Facial
-                    </StyledServiceTittle>
+                        Aveda Botanical Plant Peel                     </StyledServiceTittle>
                     <StyledServicePrice m>
-                        60 min $129
+                        60 min $139
                     </StyledServicePrice>
                     <StyledServiceDesc>
-                        This treatment is customized to target all skin concern including; dry, aging, acneic, and sensitive skin
-                    </StyledServiceDesc>
+                        This treatment is customized to target all skin concerns including; dry, aging, acneic, and sensitive skin                    </StyledServiceDesc>
                 </StyledService>
             </StyledContentM>
             <StyledContentM>
@@ -128,7 +126,7 @@ const Skin = ({ children }) => (
                 <StyledServicePrice>
                     60 min $95
                 </StyledServicePrice>
-                <StyledServiceDesc>
+                <StyledServiceDesc fix>
                     This 60 min treatment is customized to target all skin concern including; dry, aging, acneic, and sensitive skin.
                 </StyledServiceDesc>
             </StyledService>
@@ -209,7 +207,7 @@ const Skin = ({ children }) => (
                     <StyledServicePrice m>
                         60 min $129
                     </StyledServicePrice>
-                    <StyledServiceDesc>
+                    <StyledServiceDesc fix>
                         For hyperpigmentation skin, Sun damage
                     </StyledServiceDesc>
                 </StyledService>
@@ -305,7 +303,7 @@ const Skin = ({ children }) => (
                 <StyledServicePrice>
                     30 min $65
                 </StyledServicePrice>
-                <StyledServiceDesc>
+                <StyledServiceDesc fix>
                     Skin Cleansing, Manual Exfoliation, Serum and LED Light. Helps Reduce Swelling & Puffiness, Anti-Aging & Acne
                 </StyledServiceDesc>
             </StyledService>

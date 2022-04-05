@@ -18,7 +18,7 @@ const HairPage = () => {
   const { backgroundImage123 } = useStaticQuery(
     graphql`
               query {
-                backgroundImage123: file(relativePath: {eq: "fondov.jpg"}) {
+                backgroundImage123: file(relativePath: {eq: "fondo4.jpg"}) {
                   childImageSharp {
                     gatsbyImageData(
                       quality: 70

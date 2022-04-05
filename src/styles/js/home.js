@@ -14,7 +14,7 @@ export const StyledHome = styled.div`
       
   `}
   ${above.large`
-  padding-top:0;
+  padding-top: 5%;
   height: 85vh;
   
   `}
