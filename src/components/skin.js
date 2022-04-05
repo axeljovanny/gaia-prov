@@ -12,6 +12,7 @@ const Skin = ({ children }) => (
                 src="../images/logo.png"
                 alt="gaia logo skin"
                 loading="eager"
+                width={539}
                 layout="constrained"
                 formats={['auto', 'webp', 'avif']}
                 quality='80'
