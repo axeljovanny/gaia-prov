@@ -30,7 +30,7 @@ const Navbar = ({ siteTitle }) => {
                         <StaticImage
                             className="logo"
                             src="../images/logo.png"
-                            alt="gaia logo"
+                            alt="gaia logo nav"
                             placeholder="blurred"
                             formats={['auto', 'webp', 'avif']}
                         />

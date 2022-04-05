@@ -1,26 +1,56 @@
-import { StaticImage } from "gatsby-plugin-image";
 import React from "react"
-import { Footer, Hair, Navbar } from "../components";
+import { Hair, Navbar } from "../components";
 
+import { graphql, useStaticQuery } from 'gatsby'
+import { getImage } from "gatsby-plugin-image"
+
+import { convertToBgImage } from "gbimage-bridge"
+import BackgroundImage from 'gatsby-background-image'
+
+const pageStyles = {
+    flexDirection: 'column',
+    width: '100vw',
+    display: "flex",
+    justifyContent: "center",
+    alignItems: "center",
+}
 const HairPage = () => {
+    const { backgroundImage123 } = useStaticQuery(
+        graphql`
+              query {
+                backgroundImage123: file(relativePath: {eq: "fondov.jpg"}) {
+                  childImageSharp {
+                    gatsbyImageData(
+                      quality: 70
+                      layout: FIXED
+                      webpOptions: {quality: 90}
+                      formats: [AUTO, WEBP, AVIF]
+                      aspectRatio: 169
+                    )
+                  }
+                }
+              }
+            `
+    )
+    const image = getImage(backgroundImage123)
+
+    const bgImage = convertToBgImage(image)
+
     return (
-        <>
-            <StaticImage
-                className="fondo"
-                src="../images/fondo.jpg"
-                alt="gaia fondo"
-                loading="eager"
-                layout="fullWidth"
-                breakpoints={[750, 1080, 1366, 1920]}
-                formats={['auto', 'webp', 'avif']}
-                quality='80'
-            />
-            <Hair />
+        <BackgroundImage
+            Tag="section"
+            // Spread bgImage into BackgroundImage:
+            {...bgImage}
+            preserveStackingContext
+            className="masthead"
+        >
             <Navbar />
-            <Footer />
-        </>
+            <div style={pageStyles} >
+                <Hair />
+            </div>
+
+        </BackgroundImage>
     )
 };
-
 
 export default HairPage

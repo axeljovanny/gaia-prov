@@ -19,11 +19,11 @@ const PoliciesPage = () => {
   const { backgroundImage123 } = useStaticQuery(
     graphql`
           query {
-            backgroundImage123: file(relativePath: {eq: "fondo.jpg"}) {
+            backgroundImage123: file(relativePath: {eq: "fondov.jpg"}) {
               childImageSharp {
                 gatsbyImageData(
                   quality: 70
-                  formats: WEBP
+                  formats: [AUTO, WEBP, AVIF]
                   layout: FULL_WIDTH
                   webpOptions: {quality: 90}
                 )

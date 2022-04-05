@@ -24,7 +24,6 @@ const NotFoundPage = () => {
         alt="gaia fondo"
         loading="eager"
         layout="fullWidth"
-        breakpoints={[750, 1080, 1366, 1920]}
         formats={['auto', 'webp', 'avif']}
         quality='80'
       />

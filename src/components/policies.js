@@ -12,10 +12,9 @@ const Policies = ({ children }) => (
                 className="container-logo"
                 imgClassName="logo"
                 src="../images/logo.png"
-                alt="gaia logo"
+                alt="gaia logo policies"
                 loading="eager"
                 layout="constrained"
-                breakpoints={[750, 1080, 1366, 1920]}
                 formats={['auto', 'webp', 'avif']}
                 quality='80'
             />

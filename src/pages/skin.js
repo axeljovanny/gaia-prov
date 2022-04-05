@@ -8,22 +8,22 @@ import { convertToBgImage } from "gbimage-bridge"
 import BackgroundImage from 'gatsby-background-image'
 
 const pageStyles = {
-    flexDirection: 'column',
-    width: '100vw',
-    display: "flex",
-    justifyContent: "center",
-    alignItems: "center",
+  flexDirection: 'column',
+  width: '100vw',
+  display: "flex",
+  justifyContent: "center",
+  alignItems: "center",
 }
 
 const SkinPage = () => {
-    const { backgroundImage123 } = useStaticQuery(
-        graphql`
+  const { backgroundImage123 } = useStaticQuery(
+    graphql`
               query {
-                backgroundImage123: file(relativePath: {eq: "fondo.jpg"}) {
+                backgroundImage123: file(relativePath: {eq: "fondov.jpg"}) {
                   childImageSharp {
                     gatsbyImageData(
                       quality: 70
-                      formats: WEBP
+                      formats: [AUTO, WEBP, AVIF]
                       layout: FULL_WIDTH
                       webpOptions: {quality: 90}
                     )
@@ -31,26 +31,26 @@ const SkinPage = () => {
                 }
               }
             `
-    )
-    const image = getImage(backgroundImage123)
+  )
+  const image = getImage(backgroundImage123)
 
-    const bgImage = convertToBgImage(image)
+  const bgImage = convertToBgImage(image)
 
-    return (
-        <BackgroundImage
-            Tag="section"
-            // Spread bgImage into BackgroundImage:
-            {...bgImage}
-            preserveStackingContext
-            className="masthead"
-        >
-            <Navbar />
-            <div style={pageStyles} >
-                <Skin />
-            </div>
+  return (
+    <BackgroundImage
+      Tag="section"
+      // Spread bgImage into BackgroundImage:
+      {...bgImage}
+      preserveStackingContext
+      className="masthead"
+    >
+      <Navbar />
+      <div style={pageStyles} >
+        <Skin />
+      </div>
 
-        </BackgroundImage>
-    )
+    </BackgroundImage>
+  )
 };
 
 
