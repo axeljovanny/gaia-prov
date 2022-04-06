@@ -122,11 +122,10 @@ const Hair = ({ children }) => (
 
             <StyledService>
                 <StyledServiceTittle hair>
-                    BRAZILIAN BLOWOUT
-
+                    NATURAL KERATIN SMOOTHING TREATMENT
                 </StyledServiceTittle>
                 <StyledServiceDesc>
-                    Brazilian eliminates frizz, smoothest, adds shine, locks in color, improves the overall health of the hair, reduces daily styling time. Brazilian Blowout hair treatment consist of liquid keratin formula that bonds to your hair to create a protective layer around each strand.
+                    Natural Keratin Smoothing Treatment eliminates frizz, smoothest, adds shine, locks in color, improves the overall health of the hair, reduces daily styling time. Natural Keratin Smoothing Treatment consist of liquid keratin formula that bonds to your hair to create a protective layer around each strand.
                 </StyledServiceDesc>
                 <StyledServiceHair m hair service>
                     <ul>
