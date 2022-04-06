@@ -17,8 +17,8 @@ const Skin = ({ children }) => (
                 formats={['auto', 'webp', 'avif']}
                 quality='80'
             />
-            <h1>Gaia Evolution</h1>
-            <h2>SKIN CARE</h2>
+            <h1>GAIA EVOLUTION</h1>
+            <h2>SKINCARE</h2>
         </StyledLogoMobileContainer>
         <StyledContent>
             <StyledService>

@@ -60,13 +60,13 @@ export const StyledLogoMobileContainer = styled.div`
 h1{
     font-family:  ${font.medium};
     color: ${colors.softYellow} ;
-    font-size: ${size.Mheader};
+    font-size: ${size.Mtittle};
     margin-top: 0.5em ;
 }
 h2{
     font-family:  ${font.medium};
     color: ${colors.softYellow} ;
-    font-size: ${size.Mtittle};
+    font-size: ${size.Mheader};
     margin: 0;
 }
 

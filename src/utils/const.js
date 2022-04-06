@@ -12,8 +12,8 @@ export const colors = {
 }
 
 export const size = {
-    Wheader: "calc(100px + 0.05vw)",
-    Mheader: "calc(70px + 0.05vw)",
+    Wheader: "calc(60px + 0.05vw)",
+    Mheader: "calc(40px + 0.05vw)",
     Wtittle: "calc(25px + 0.05vw)",
     Mtittle: "calc(22px + 0.05vw)",
     Wtext: "calc(18px + 0.05vw)",

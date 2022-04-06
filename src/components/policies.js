@@ -19,7 +19,7 @@ const Policies = ({ children }) => (
                 formats={['auto', 'webp', 'avif']}
                 quality='80'
             />
-            <h1>Gaia Evolution</h1>
+            <h1>GAIA EVOLUTION</h1>
             <h2>POLICIES</h2>
         </StyledLogoMobileContainer>
         <StyledContent>

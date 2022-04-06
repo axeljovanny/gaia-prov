@@ -17,18 +17,19 @@ const pageStyles = {
 const HairPage = () => {
   const { backgroundImage123 } = useStaticQuery(
     graphql`
-              query {
-                backgroundImage123: file(relativePath: {eq: "fondo4.jpg"}) {
-                  childImageSharp {
-                    gatsbyImageData(
-                      quality: 70
-                      layout: FULL_WIDTH
-                      webpOptions: {quality: 90}
-                      formats: [AUTO, WEBP, AVIF]
-                    )
-                  }
-                }
-              }
+    query {
+      backgroundImage123: file(relativePath: {eq: "fondo2.jpg"}) {
+        childImageSharp {
+          gatsbyImageData(
+            quality: 90
+            width: 2000
+            webpOptions: {quality: 90}
+            layout: CONSTRAINED
+            formats: [AUTO, WEBP, AVIF]
+          )
+        }
+      }
+    }
             `
   )
   const image = getImage(backgroundImage123)

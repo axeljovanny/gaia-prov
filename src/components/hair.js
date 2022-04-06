@@ -17,8 +17,8 @@ const Hair = ({ children }) => (
                 formats={['auto', 'webp', 'avif']}
                 quality='80'
             />
-            <h1>Gaia Evolution</h1>
-            <h2>HAIR CARE</h2>
+            <h1>GAIA EVOLUTION</h1>
+            <h2>HAIRCARE</h2>
         </StyledLogoMobileContainer>
         <StyledContent>
             <StyledService>
@@ -130,12 +130,13 @@ const Hair = ({ children }) => (
                 </StyledServiceDesc>
                 <StyledServiceHair m hair service>
                     <ul>
-                        <li>Brazilian Blowout</li>
+                        <li>Natural Keratin</li>
+                        <li>Smoothing Treatment</li>
                     </ul>
                 </StyledServiceHair>
                 <StyledServiceHair m hair>
                     <ul>
-                        <li>$200 – 300 +</li>
+                        <li>$200 -400+</li>
                     </ul>
                 </StyledServiceHair>
             </StyledService>

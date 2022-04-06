@@ -34,9 +34,10 @@ export const StyledButton = styled.button`
   background-color: transparent; 
   border 1px rgba(255, 255, 255, 0.7) solid ;
 
-  font-family: ${font.bold};
+  font-family: ${font.medium};
 
   color: ${colors.white};
+  font-size: ${size.Mtext};
 
   :hover{
     transition: 0.2s ;
@@ -49,30 +50,35 @@ export const StyledButton = styled.button`
       
   `}
   ${above.large`
- 
+  font-size: ${size.Mtext}; 
     margin: 0 25px;
 
   `}
 `
 
 export const StyledText = styled.div`
-    display: none;
+  display: block;
+  right: 0;
+  float: right;
+  height: auto;
+  background: none;
+  text-align:center;
+  width: fit-content;
+  position: absolute; 
+  color: ${colors.white};
+  transform: rotate(90deg) translateY(-140px);
+  font-family: ${font.light};
+  font-size: ${size.Mmini};
+  letter-spacing: 1px;
   ${above.medium`
+  transform: rotate(90deg) translateY(-120px);
+  font-size: ${size.Wmini};
 
   `}
   ${above.large`
-    display: block;
-    right: 0;
-    float: right;
-    height: auto;
-    background: none;
-    text-align:center;
-    width: fit-content;
-    position: absolute; 
-    color: ${colors.white};
-    transform: rotate(90deg) translateY(-110px);
-    font-family: ${font.light};
-    letter-spacing: 1px;
+  transform: rotate(90deg) translateY(-110px);
+  font-size: ${size.Wmini};
+    
 
 `}
 `
@@ -134,6 +140,9 @@ export const StyledTitleContainer = styled.div`
       
   `}
   ${above.large`
+  h1{
+    font-size: ${size.Wheader};
+  }
 
   .container-logo{
     display: none;

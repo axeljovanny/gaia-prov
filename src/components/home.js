@@ -36,6 +36,11 @@ const Home = ({ children }) => (
                             Aveda Shop
                         </StyledButton>
                     </a>
+                    <a href="https://gaia-evolution-spasalon.square.site/" target="_blank" rel="noreferrer">
+                        <StyledButton className="button">
+                            Book Now
+                        </StyledButton>
+                    </a>
                 </StyledButtonsContainer>
             </StyledTitleContainer>
             <StyledText>
