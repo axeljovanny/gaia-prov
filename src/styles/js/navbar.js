@@ -108,6 +108,7 @@ export const Line = styled.span`
     width: 25px;
     height: 3px;
     margin: 5px;
+    color: ${colors.white};
     background-color: ${colors.white};
     transition: width 0.4s ease-in-out;
 

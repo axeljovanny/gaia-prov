@@ -4,8 +4,8 @@ import { Navbar, Policies } from "../components";
 import { graphql, useStaticQuery } from 'gatsby'
 import { getImage } from "gatsby-plugin-image"
 
-import { convertToBgImage } from "gbimage-bridge"
-import BackgroundImage from 'gatsby-background-image'
+import { BgImage } from "gbimage-bridge"
+
 
 const pageStyles = {
   flexDirection: 'column',
@@ -35,22 +35,15 @@ const PoliciesPage = () => {
   )
   const image = getImage(backgroundImage123)
 
-  const bgImage = convertToBgImage(image)
-
   return (
-    <BackgroundImage
-      Tag="section"
-      // Spread bgImage into BackgroundImage:
-      {...bgImage}
-      preserveStackingContext
-      className="masthead"
-    >
-      <Navbar />
-      <div style={pageStyles} >
-        <Policies />
-      </div>
-
-    </BackgroundImage>
+    <>
+      <BgImage image={image} className="masthead" />
+      <div className="content">
+        <Navbar />
+        <div style={pageStyles} >
+          <Policies />
+        </div></div>
+    </>
   )
 };
 

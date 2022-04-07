@@ -1,4 +1,4 @@
-import { css, createGlobalStyle } from "styled-components"
+import { css, createGlobalStyle, keyframes } from "styled-components"
 
 export const size = {
   small: 400,
@@ -25,6 +25,14 @@ export const aboveMax = Object.keys(size).reduce((acc, label) => {
   return acc
 }, {})
 
+const headertransition = keyframes`
+  0% { transform: scale(1) translateY(0px)}
+  50% { transform: scale(1.3) translateY(5%)}
+  75% { transform: scale(1.2) translateY(-5%)}
+  100% { transform: scale(1) translateY(0px)}
+
+`
+
 export const GlobalStyles = createGlobalStyle`
 body {
   overflow-x: hidden;
@@ -44,11 +52,26 @@ ul {
 }
 
 .masthead {
-  z-index: 0;
-  width: 100vw;
+  width: 100%;
   min-height: 100vh;
+  position: fixed !important;
+  left: 0;
+  right: 0;
+  bottom: 0;
   
 }
+
+.mastheadHome {
+  width: 100%;
+  min-height: 100vh;
+  position: fixed !important;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  animation: ${headertransition} 60s linear 10ms infinite;
+  |transition: all 0.1s ease-in-out;
+}
+
 
 .content{
   display: flex;
@@ -57,13 +80,16 @@ ul {
   z-index: 10;
   position: absolute;
   width: 100vw;
-  height: 100vh;
+  height: 100%;
+  left: 0;
+  right: 0;
+  bottom: 0;
 }
 
 @media (min-width: 1140px) {
   .masthead {
-    
-    
+    background-size: cover;
+    background-attachment: fixed;
   }
 }
 

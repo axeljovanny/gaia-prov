@@ -30,12 +30,9 @@ export const StyledButton = styled.button`
   border-radius: 5px;
   margin: 1rem auto;
   justify-content: center ;
-
   background-color: transparent; 
-  border 1px rgba(255, 255, 255, 0.7) solid ;
-
+  border: 1px ${colors.white} solid ;
   font-family: ${font.medium};
-
   color: ${colors.white};
   font-size: ${size.Mtext};
 
