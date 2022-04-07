@@ -19,7 +19,7 @@ const SkinPage = () => {
   const { backgroundImage123 } = useStaticQuery(
     graphql`
               query {
-                backgroundImage123: file(relativePath: {eq: "fondo4.jpg"}) {
+                backgroundImage123: file(relativePath: {eq: "fondo3.jpg"}) {
                   childImageSharp {
                     gatsbyImageData(
                       quality: 90
