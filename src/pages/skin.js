@@ -4,8 +4,7 @@ import { Footer, Navbar, Skin } from "../components";
 import { graphql, useStaticQuery } from 'gatsby'
 import { getImage } from "gatsby-plugin-image"
 
-import { convertToBgImage } from "gbimage-bridge"
-import BackgroundImage from 'gatsby-background-image'
+import { BgImage } from "gbimage-bridge"
 
 const pageStyles = {
   flexDirection: 'column',
@@ -35,23 +34,19 @@ const SkinPage = () => {
   )
   const image = getImage(backgroundImage123)
 
-  const bgImage = convertToBgImage(image)
 
   return (
-    <BackgroundImage
-      Tag="section"
-      // Spread bgImage into BackgroundImage:
-      {...bgImage}
-      preserveStackingContext
-      className="masthead"
-    >
-      <Navbar />
-      <div style={pageStyles} >
-        <Skin />
-      </div>
-      <Footer />
+    <>
+      <BgImage image={image} className="masthead" />
+      <div className="content">
 
-    </BackgroundImage>
+        <Navbar />
+        <div style={pageStyles} >
+          <Skin />
+        </div>
+        <Footer />
+      </div>
+    </>
   )
 };
 
