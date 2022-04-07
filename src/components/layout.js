@@ -2,6 +2,12 @@ import React from "react"
 import PropTypes from "prop-types"
 import { GlobalStyles } from '../styles/js/index';
 
+import '../styles/css/footer.css'
+import '../styles/css/navbar.css'
+
+
+
+
 
 const Layout = ({ children }) => (
 
