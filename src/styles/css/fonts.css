@@ -18,3 +18,16 @@
     url(../fonts/Montserrat-Light.ttf) format("truetype");
   font-display: swap;
 }
+
+@font-face {
+  font-family: "LePorsche";
+  src: local("LePorsche"),
+    url(../fonts/AL_LePORSCHE_PersonalUseOnly.ttf) format("truetype");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Branch";
+  src: local("Branch"), url(../fonts/Branch.ttf) format("truetype");
+  font-display: swap;
+}
