@@ -4,7 +4,7 @@ import { colors, font, size } from "../../utils/const"
 
 
 export const StyledNavbar = styled.div`
-    background: none;
+    background: ${colors.none};
     display: flex;
     flex-direction: row;
     justify-content: space-betwen;
@@ -21,8 +21,8 @@ export const StyledNavbar = styled.div`
   justify-content: center;
   align-items: center;
   whidth: 100vw;
-  height: 20vh;
-  background: linear-gradient(to top, rgba(0, 0, 0, 0.0) 0%, ${colors.black} 100%);
+  //background: linear-gradient(to top, rgba(0, 0, 0, 0.0) 0%, ${colors.green} 150%);
+  background: ${colors.none};
   a{
     margin-left: auto;
     margin-right: auto;
@@ -35,16 +35,12 @@ export const StyledNavbar = styled.div`
 export const StyledLogoContainer = styled.div`
   display: none;
   ${above.medium`
-      
   `}
   ${above.large`
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 10vw;
-  height: 100%;
-
-  background: none;
+  background: ${colors.none};
 
   `}
 `
@@ -58,10 +54,7 @@ export const StyledItems = styled.div`
   display: flex;
   justify-content: center ;
   align-items: center;
-  width: 18vw;
-  height: 100%;
-  background: none ;
-  
+  background: ${colors.none};  
   `}
 `
 
@@ -72,15 +65,13 @@ align-items: center;
 list-style: none; 
 padding: 0;
 background-color: none;
-margin: 10px 0 10px 0;
-width: 100%;
-height: 10vh;
+margin: 54px 3vw;
 font-family: 'Montserrat', sans-serif;
 
 a{
-  font-family:  ${font.medium};
-  color: ${colors.white} ;
-  font-size: ${size.Mmini};
+  font-family:  ${font.leporsche};
+  color: ${colors.black} ;
+  font-size: ${size.Wtext};
 }
 
 
@@ -108,8 +99,8 @@ export const Line = styled.span`
     width: 25px;
     height: 3px;
     margin: 5px;
-    color: ${colors.white};
-    background-color: ${colors.white};
+    color: ${colors.black};
+    background-color: ${colors.black};
     transition: width 0.4s ease-in-out;
 
     :nth-child(2) {

@@ -3,14 +3,13 @@ import { Footer, Home, Navbar } from "../components";
 
 import { graphql, useStaticQuery } from 'gatsby'
 import { getImage } from "gatsby-plugin-image"
-
 import { BgImage } from "gbimage-bridge"
 
 const IndexPage = () => {
   const { backgroundImage123 } = useStaticQuery(
     graphql`
       query {
-        backgroundImage123: file(relativePath: {eq: "fondo.jpg"}) {
+        backgroundImage123: file(relativePath: {eq: "Backgrounds/Home.jpg"}) {
           childImageSharp {
             gatsbyImageData(
               quality: 50
@@ -27,14 +26,14 @@ const IndexPage = () => {
 
   return (
     <>
-
-      <BgImage image={image} className="mastheadHome">
-      </BgImage>
       <div className="content">
+        <BgImage image={image} className="mastheadHome">
+        </BgImage>
         <Navbar />
         <Home />
-        <Footer />
       </div>
+      <Footer />
+
 
     </>
   )

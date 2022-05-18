@@ -5,169 +5,117 @@ import { colors, font, size } from "../../utils/const"
 
 export const StyledHome = styled.div`
   display: flex;
-  justify-content: center ;
+  position: absolute;
+  justify-content: space-between ;
   align-items: center;
+  flex-flow: row nowrap;
   width: 100vw;
   height: 60vh;
-  padding-top:50%;
   ${above.medium`
       
   `}
   ${above.large`
-  padding-top: 5%;
-  height: 85vh;
+  height: 90vh;
   
   `}
 `
-
-export const StyledButton = styled.button`
-  width: 140px;
-  height: 43px;
-
-  display: flex;
-  cursor: pointer;
+export const StyledTitleContainer = styled.div`
+  width: 35%;
+  background: none;
+  height: auto;
+  display: flex ;
   align-items: center;
-  border-radius: 5px;
-  margin: 1rem auto;
-  justify-content: center ;
-  background-color: transparent; 
-  border: 1px ${colors.white} solid ;
-  font-family: ${font.medium};
-  color: ${colors.white};
-  font-size: ${size.Mtext};
+  justify-content: center;
+  flex-flow: column nowrap;
 
-  :hover{
-    transition: 0.2s ;
-    -webkit-backdrop-filter: blur(10px);
-    backdrop-filter: blur(10px);
-    background-color: rgba(255, 255, 255, 0.2); 
+  h3{
+    display: flex ;
+  align-items: flex-start;
+  justify-content: flex-start;
+    margin: 0;
+    font-family: ${font.leporsche};
+  }
+  
+  ${above.large`
+  h3{
+    font-size: ${size.Wtext};
+    color: ${colors.black};
   }
 
-  ${above.medium`
-      
-  `}
-  ${above.large`
-  font-size: ${size.Mtext}; 
-    margin: 0 25px;
-
   `}
 `
 
-export const StyledText = styled.div`
-  display: block;
-  right: 0;
-  float: right;
-  height: auto;
+export const StyledLeftContainer = styled.div`
+  width: 30%;
   background: none;
-  text-align:center;
-  width: fit-content;
-  position: absolute; 
-  color: ${colors.white};
-  transform: rotate(90deg) translateY(-140px);
-  font-family: ${font.light};
-  font-size: ${size.Mmini};
-  letter-spacing: 1px;
-  ${above.medium`
-  transform: rotate(90deg) translateY(-120px);
-  font-size: ${size.Wmini};
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: column;
+
+  ${above.large`
+
 
   `}
-  ${above.large`
-  transform: rotate(90deg) translateY(-110px);
-  font-size: ${size.Wmini};
-    
+`
+export const StyledRightContainer = styled.div`
+  width: 30%;
+  background: none;
+  height: 30%;
+  display: flex ;
+  align-items: center;
+  justify-content: center;
+  flex-flow: column nowrap;
 
-`}
+  ${above.large`
+
+
+  `}
 `
 
-export const StyledLogoMobileContainer = styled.div`
-  
+export const StyledCircle = styled.div`
+  width: 60%;
+  background: none;
+  height: 30%;
+  display: flex ;
+  align-items:  flex-end;
+  justify-content: flex-start;
+  svg{
+    transform: translate(-80%, 60%)
+  }
+  ${above.large`
+
+
+  `}
+`
+export const StyledSocialMedia = styled.div`
+  width: 100%;
+  height: auto;
   display: flex;
-  justify-content: center ;
-  align-items: center;
-  width: 100vw;
-  height: 42%;
-  position: absolute;
-  top: 0;
+  align-items: flex-end;
+  justify-content: flex-start;
+  ${above.large`
 
-.container-logo{
-  width: 25vw;
-}
+
+  `}
+`
+
+export const StyledSocialContainer = styled.div`
+display: flex;
+flex-direction: column;
+text-align: center;
+gap: 0.2em 0;
+background-color: none;
+
 ${above.medium`
-
-.container-logo{
-  width: 18vw;
-}
-
+      
 `}
 ${above.large`
+display: flex;
+gap: 0.5em 0;
+width: 20%;
+height: 100%;
 
-  display: none;
-
-  `}
+`}
 `
-
-export const StyledTitleContainer = styled.div`
-  width: 100%;
-  background: none;
-  font-size: 1rem;
-  height: auto;
-  align-items: center;
-  display: flex ;
-  justify-content: center ;
-  flex-direction: column;
-
-  color: ${colors.white};
-
-  h1{
-    font-family: ${font.bold};
-    font-size: ${size.Mheader};
-  }
-  h3{
-    margin: 0;
-    font-family: ${font.light};
-  }
-  
-
-  ${above.medium`
-  
-  h1{
-    font-size: ${size.Mheader};
-  }
-      
-  `}
-  ${above.large`
-  h1{
-    font-size: ${size.Wheader};
-  }
-
-  .container-logo{
-    display: none;
-  }
-  .logo{
-    display: none;
-  }
-
-  `}
-`
-
-export const StyledButtonsContainer = styled.div`
-  
-  width: 100%;
-  display: flex ;
-  align-items: center;
-  justify-content: center ;
-  flex-direction: column;
-  font-family: ${font.bold}  
-  ${above.medium`
-
-  `}
-  ${above.large`
-  
-    margin-top: 5rem; 
-    flex-direction: row;
-
-
-  `}
-`
-

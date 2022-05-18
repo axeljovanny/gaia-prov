@@ -14,13 +14,13 @@ const Navbar = ({ siteTitle }) => {
             <StyledNavbar>
                 <StyledItems>
                     <Item>
-                        <Link to="/skin">
-                            SKIN CARE
+                        <Link to="/hair">
+                            HAIR CARE
                         </Link>
                     </Item>
                     <Item>
-                        <Link to="/hair">
-                            HAIR CARE
+                        <Link to="/skin">
+                            SKIN CARE
                         </Link>
                     </Item>
                 </StyledItems>
@@ -29,12 +29,14 @@ const Navbar = ({ siteTitle }) => {
                     <Link to="/">
                         <StaticImage
                             className="logo"
-                            src="../images/logo.png"
+                            src="../images/Logo/logo.png"
                             alt="gaia logo nav"
                             loading="eager"
-                            width={140}
+                            width={110}
                             placeholder="blurred"
                             formats={['auto', 'webp', 'avif']}
+                            quality={100}
+
                         />
                     </Link>
                 </StyledLogoContainer>
@@ -42,14 +44,12 @@ const Navbar = ({ siteTitle }) => {
                 <StyledItems>
                     <Item>
                         <Link to="/policies">
-                            POLICIES
+                            BODY CARE
                         </Link>
                     </Item>
                     <Item>
-                        <a href="https://gaia-evolution-spasalon.square.site/" target="_blank" rel="noreferrer">
-                            <StyledButton className="button">
-                                BOOK NOW
-                            </StyledButton>
+                        <a href="https://www.aveda.com/locator/get_the_facts.tmpl?vanity=1&SalonID=38631" target="_blank" rel="noreferrer">
+                            PRODUCTS
                         </a>
                     </Item>
                 </StyledItems>

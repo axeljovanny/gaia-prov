@@ -1,0 +1,18 @@
+:root {
+  --color-brand-1: #ff8080;
+}
+
+.flecha {
+  width: 15px;
+  padding: 0% 5px 5%;
+}
+.linea {
+  width: 100%;
+}
+
+.svgcircle {
+  fill: #ff8080;
+  position: absolute;
+  bottom: 0;
+  transform-style: preserve-3d;
+}

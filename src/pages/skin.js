@@ -1,52 +1,65 @@
-import React from "react"
-import { Footer, Navbar, Skin } from "../components";
+import { Link } from "gatsby";
+import React, { useState } from "react"
+import { StyledHomeReturn, StyledNavbar, StyledService, Line, NavIcon, StyledServiceNav, StyledServiceContent, StyledServiceFooter, StyledServicePage, StyledHome, Text, SVG } from "../styles/js/skin";
+import '../styles/css/services.css'
+import Loadable from "@loadable/component"
 
-import { graphql, useStaticQuery } from 'gatsby'
-import { getImage } from "gatsby-plugin-image"
 
-import { BgImage } from "gbimage-bridge"
+const Flecha = Loadable(() => import("../assets/Flecha.svg"))
 
-const pageStyles = {
-  flexDirection: 'column',
-  width: '100vw',
-  display: "flex",
-  justifyContent: "center",
-  alignItems: "center",
-}
+
+
+
 
 const SkinPage = () => {
-  const { backgroundImage123 } = useStaticQuery(
-    graphql`
-              query {
-                backgroundImage123: file(relativePath: {eq: "fondo3.jpg"}) {
-                  childImageSharp {
-                    gatsbyImageData(
-                      quality: 90
-                      layout: CONSTRAINED
-                      width: 2000
-                      webpOptions: {quality: 90}
-                      formats: [AUTO, WEBP, AVIF]
-                    )
-                  }
-                }
-              }
-            `
-  )
-  const image = getImage(backgroundImage123)
-
-
+  const [toggle, toggleNav] = useState(false);
   return (
-    <>
-      <BgImage image={image} className="masthead" />
-      <div className="content">
+    <StyledServicePage >
+      <StyledServiceNav>
+        <StyledHome>
+          <StyledHomeReturn>
+            <Link to="/">
+              <Flecha className="flecha"></Flecha>
+              HOME
+            </Link>
+          </StyledHomeReturn>
+        </StyledHome>
+        <StyledNavbar>
+          <Text><StyledService>
+            <Link to="/skin">
+              SKIN CARE
+            </Link>
 
-        <Navbar />
-        <div style={pageStyles} >
-          <Skin />
-        </div>
-        <Footer />
-      </div>
-    </>
+          </StyledService>
+            <StyledService>
+              <Link to="/hair">
+                HAIR CARE
+              </Link>
+
+            </StyledService>
+            <StyledService>
+              <Link to="/body">
+                BODY CARE
+              </Link>
+
+            </StyledService></Text>
+          <SVG>
+            {/* <Linea className="linea"></Linea> */}
+          </SVG>
+
+
+
+          <NavIcon onClick={() => toggleNav(!toggle)}>
+            <Line open={toggle} />
+            <Line open={toggle} />
+            <Line open={toggle} />
+          </NavIcon>
+
+        </StyledNavbar>
+      </StyledServiceNav>
+      <StyledServiceContent></StyledServiceContent>
+      <StyledServiceFooter></StyledServiceFooter>
+    </StyledServicePage>
   )
 };
 
