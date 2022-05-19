@@ -16,3 +16,7 @@
   bottom: 0;
   transform-style: preserve-3d;
 }
+
+.container-prueba {
+  transform: translate(10%, -5%);
+}

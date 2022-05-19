@@ -1,4 +1,5 @@
 import React from "react"
+import { TextTittle } from "../styles/js/skin"
 
 
 const Service = ({ services }) => {
@@ -7,14 +8,7 @@ const Service = ({ services }) => {
             {services.map(({ node }) => {
                 return (
                     <>
-
-                        <div key={node.id}>
-                            <>
-                                <span>{node.title}</span>
-                                <span>$ {node.name}</span>
-                            </>
-                        </div>
-
+                        {node.subcategory === 'aveda' && (<TextTittle><p>{node.title}</p></TextTittle>)}
                     </>
                 )
             })}
@@ -22,4 +16,4 @@ const Service = ({ services }) => {
     )
 }
 
-export default Service
+export { Service }
