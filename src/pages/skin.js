@@ -1,12 +1,12 @@
 import { Link } from "gatsby";
 import React, { useState } from "react"
-import { StyledHomeReturn, StyledNavbar, StyledService, Line, NavIcon, StyledServiceNav, StyledServiceContent, StyledServiceFooter, StyledServicePage, StyledHome, Text, SVG, StyledServiceTittle, StyledServiceDesc, StyledServicePhoto, StyledServiceSwitch, StyledServiceNote, TextTittle, DescTittle, DescText, StyledNote, DescDetails, DescTime, DescPrice, DescBook } from "../styles/js/skin";
+import { StyledHomeReturn, StyledNavbar, StyledService, Line, NavIcon, StyledServiceNav, StyledServiceContent, StyledServiceFooter, StyledServicePage, StyledHome, Text, SVG, StyledServiceTittle, StyledServiceDesc, StyledServicePhoto, StyledServiceSwitch, StyledServiceNote, StyledNote } from "../styles/js/skin";
 import '../styles/css/services.css'
 import { StaticImage } from "gatsby-plugin-image";
 
 
 import Loadable from "@loadable/component"
-import { Skin } from "../components";
+import { SkinService, SkinTittle } from "../components/skin";
 
 const Flecha = Loadable(() => import("../assets/Flecha.svg"))
 const Linea = Loadable(() => import("../assets/LineaSeleccion.svg"))
@@ -62,26 +62,10 @@ const SkinPage = () => {
       <StyledServiceSwitch></StyledServiceSwitch>
       <StyledServiceContent>
         <StyledServiceTittle>
-          <Skin />
+          <SkinTittle />
         </StyledServiceTittle>
-        <StyledServiceDesc>
-          <DescTittle><p>GAIA EXPRESS</p></DescTittle>
-          <DescText><p>Meant to be for someone who is always on the run. This 45 min facial includes deep cleansing soothing mask and hydrating cremes</p></DescText>
-          <DescDetails>
-            <DescTime>
-              45 min
-            </DescTime>
-            <DescPrice>
-              $85
-            </DescPrice>
-            <DescBook>
-              <Link to="/">
-                BOOK NOW
-                <Flecha className="flecha"></Flecha>
-              </Link>
-            </DescBook>
-          </DescDetails>
-
+        <StyledServiceDesc >
+          <SkinService title='GAIA ULTIMATE' />
         </StyledServiceDesc>
         <StyledServicePhoto>
           <StaticImage
