@@ -1,22 +1,25 @@
 import { Link } from "gatsby";
 import React, { useState } from "react"
-import { StyledHomeReturn, StyledNavbar, StyledService, Line, NavIcon, StyledServiceNav, StyledServiceContent, StyledServiceFooter, StyledServicePage, StyledHome, Text, SVG, StyledServiceTittle, StyledServiceDesc, StyledServicePhoto, StyledServiceSwitch, StyledServiceNote, StyledNote } from "../styles/js/skin";
+import { StyledHomeReturn, StyledNavbar, StyledService, Line, NavIcon, StyledServiceNav, StyledServiceContent, StyledServicePage, StyledHome, Text, SVG, StyledServiceTittle, StyledServiceDesc, StyledServicePhoto, StyledServiceSwitch, StyledServiceNote, StyledNote, TextTittle } from "../styles/js/skin";
 import '../styles/css/services.css'
 import { StaticImage } from "gatsby-plugin-image";
 
 
 import Loadable from "@loadable/component"
-import { SkinService, SkinTittle } from "../components/skin";
+import { SkinService, useSkinService } from "../components/skin";
 
 const Flecha = Loadable(() => import("../assets/Flecha.svg"))
 const Linea = Loadable(() => import("../assets/LineaSeleccion.svg"))
 
 
-
-
+const initialTitle = 'GAIA SIGNATURE';
 
 const SkinPage = () => {
+  const services = useSkinService()
+
   const [toggle, toggleNav] = useState(false);
+  const [title, setTitle] = useState(initialTitle);
+
   return (
     <StyledServicePage >
       <StyledServiceNav>
@@ -59,13 +62,24 @@ const SkinPage = () => {
 
         </StyledNavbar>
       </StyledServiceNav>
-      <StyledServiceSwitch></StyledServiceSwitch>
+      {/* <StyledServiceSwitch></StyledServiceSwitch> */}
       <StyledServiceContent>
         <StyledServiceTittle>
-          <SkinTittle />
+          {services.map(({ node }) => {
+            return (
+              <>
+                {node.subcategory === 'aveda' && (
+                  <TextTittle>
+                    <button onClick={() => setTitle(node.title)}>
+                      {node.title}
+                    </button>
+                  </TextTittle>)}
+              </>
+            )
+          })}
         </StyledServiceTittle>
         <StyledServiceDesc >
-          <SkinService title='GAIA ULTIMATE' />
+          <SkinService title={title} />
         </StyledServiceDesc>
         <StyledServicePhoto>
           <StaticImage
@@ -84,8 +98,8 @@ const SkinPage = () => {
       <StyledServiceNote>
         <StyledNote><p>Meant to be for someone who is always on the run. This 45 min facial includes deep cleansing soothing mask and hydrating cremes Meant to be for someone who is always on the run. This 45 min facial includes deep cleansing soothing mask and hydrating cremes</p></StyledNote>
       </StyledServiceNote>
-      <StyledServiceFooter>
-      </StyledServiceFooter>
+      {/* <StyledServiceFooter>
+      </StyledServiceFooter> */}
     </StyledServicePage>
   )
 };

@@ -10,6 +10,7 @@ export const StyledServicePage = styled.div`
     align-items: center;
     background: ${colors.softWhite};
     width: 100vw;
+    height: 100hw;
 
 `
 export const StyledServiceNav = styled.div`
@@ -21,7 +22,7 @@ export const StyledServiceNav = styled.div`
     width: 90%;
     height: 15vh;
     ${above.large`
-    height: 25vh;
+    height: 20vh;
     flex-flow: column nowrap;
     background: ${colors.none};
 
@@ -52,15 +53,14 @@ export const StyledServiceTittle = styled.div`
     flex-flow: column nowrap;
     background: ${colors.none};
     width: 25%;
-    border-right: solid 1px ${colors.black};
     `
 export const TextTittle = styled.div`
     display: flex;
     justify-content: flex-start;
     align-items: center;
     background: ${colors.none};
-    width: 60%;
-    p{
+    width: 70%;
+    button{
       font-family: ${font.leporsche};
         font-size: ${size.Mtittle};
         color: ${colors.black};
@@ -72,6 +72,7 @@ export const DescTittle = styled.div`
       align-items: center;
       background: ${colors.none};
       width: 70%;
+
       p{
         font-family: ${font.leporsche};
         font-size: ${size.Wtittle};
@@ -141,6 +142,7 @@ export const StyledServiceDesc = styled.div`
       flex-flow: column wrap;
       align-items: flex-start;
       background: ${colors.none};
+      border-left: solid 1px ${colors.black};
       width: 60%;
       padding: 0 2em;
       height: 100%;
@@ -150,8 +152,8 @@ export const StyledServicePhoto = styled.div`
       display: flex;
       justify-content: center;
       align-items: center;
-      background: ${colors.green};
-      width: 25%;
+      background: ${colors.none};
+      width: 20%;
       
       `
 export const StyledServiceFooter = styled.div`
@@ -318,70 +320,6 @@ display: none;
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-export const StyledSkinContent = styled.div`
-display: flex;
-justify-content: center;
-align-items: flex-start;
-flex-direction: column;
-background: ${colors.none};
-width: 90%;
-height: 90%;
-
-  ${above.medium`
-      
-  `}
-  ${above.large`
-  align-items: center;
-  height: 85%;
-
- 
-  `}
-`
-
-
-
-
-
-
-
-export const StyledLine = styled.div`
-display: none;
-
-
-  ${above.large`
-  display: flex;
-  justify-content: center;
-  background: ${colors.none};
-  width: 60%;
-  height: 5%;
-  align-items: center;
-
- 
-  `}
-`
 
 /*
  Movil menu
