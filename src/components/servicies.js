@@ -39,5 +39,36 @@ const SkinServiceDesc = ({ services, title }) => {
         </>
     )
 }
+const HairServiceDesc = ({ services, type }) => {
+    return (
+        <>
+            {services.map(({ node }) => {
+                return (
+                    <>
+                        {
+                            node.type === type.type &&
+                            node.subcategory === 'aveda' && (
+                                <>
+                                    <DescTittle><p>{node.type}</p></DescTittle>
+                                    <DescText><p>{node.description}</p></DescText>
+                                    <DescDetails>
+                                        <DescPrice>
+                                            {node.price}
+                                        </DescPrice>
+                                        <DescBook>
+                                            <Link to="/">
+                                                BOOK NOW
+                                                <Flecha className="flecha"></Flecha>
+                                            </Link>
+                                        </DescBook>
+                                    </DescDetails>
+                                </>
+                            )}
+                    </>
+                )
+            })}
+        </>
+    )
+}
 
-export { SkinServiceDesc }
+export { SkinServiceDesc, HairServiceDesc }
