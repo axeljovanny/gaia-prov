@@ -1,13 +1,13 @@
 import React, { useState } from "react"
 import { Link } from "gatsby"
 import { StaticImage } from "gatsby-plugin-image"
-import { StyledLogoContainer, Item, StyledItems, StyledButton, StyledNavbar, Overlay, OverlayMenu, NavIcon, StyledIcons } from "../styles/js/navbar"
-import { StyledHomeReturn, StyledService, Line, StyledServiceNav, StyledHome, Text, SVG, } from "../styles/js/skin";
+import { StyledLogoContainer, Item, StyledItems, StyledButton, StyledNavbar, Overlay, OverlayMenu, NavIcon, StyledIcons, Line } from "../styles/js/navbar"
 
 import { MapsIcon, FacebookIcon, InstagramIcon } from "../images/icons"
 import { colors } from "../utils/const"
 
 import Loadable from "@loadable/component"
+import { StyledHomeReturn, StyledNavbarServ, StyledService, StyledServiceNav, SVG, Text } from "../styles/js/servnav"
 
 const Flecha = Loadable(() => import("../assets/Flecha.svg"))
 const Linea = Loadable(() => import("../assets/LineaSeleccion.svg"))
@@ -36,7 +36,7 @@ const Navbar = ({ siteTitle }) => {
                     <Link to="/">
                         <StaticImage
                             className="logo"
-                            src="../images/Logo/logo.png"
+                            src="../images/logo.png"
                             alt="gaia logo nav"
                             loading="eager"
                             width={110}
@@ -111,37 +111,33 @@ const Navbar = ({ siteTitle }) => {
 }
 const ServiceNav = ({ siteTitle }) => {
     const [toggle, toggleNav] = useState(false);
-
     return (
         <>
             <StyledServiceNav>
-                <StyledHome>
-                    <StyledHomeReturn>
-                        <Link to="/">
-                            <Flecha className="flecha"></Flecha>
-                            HOME
-                        </Link>
-                    </StyledHomeReturn>
-                </StyledHome>
-                <StyledNavbar>
-                    <Text><StyledService>
-                        <Link to="/skin">
-                            SKIN CARE
-                        </Link>
-
-                    </StyledService>
+                <StyledHomeReturn>
+                    <Link to="/">
+                        <Flecha className="flecha"></Flecha>
+                        HOME
+                    </Link>
+                </StyledHomeReturn>
+                <StyledNavbarServ>
+                    <Text>
+                        <StyledService>
+                            <Link to="/skin">
+                                SKIN CARE
+                            </Link>
+                        </StyledService>
                         <StyledService>
                             <Link to="/hair">
                                 HAIR CARE
                             </Link>
-
                         </StyledService>
                         <StyledService>
                             <Link to="/body">
                                 BODY CARE
                             </Link>
-
-                        </StyledService></Text>
+                        </StyledService>
+                    </Text>
                     <SVG>
                         <Linea className="linea"></Linea>
                     </SVG>
@@ -152,7 +148,7 @@ const ServiceNav = ({ siteTitle }) => {
                         <Line open={toggle} />
                     </NavIcon>
 
-                </StyledNavbar>
+                </StyledNavbarServ>
             </StyledServiceNav>
         </>
     )

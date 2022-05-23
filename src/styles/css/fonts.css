@@ -20,9 +20,41 @@
 }
 
 @font-face {
-  font-family: "LePorsche";
-  src: local("LePorsche"),
-    url(../fonts/AL_LePORSCHE_PersonalUseOnly.ttf) format("truetype");
+  font-family: "WaverlyBold";
+  src: local("WaverlyBold"), url(../fonts/Waverly-bold.otf) format("opentype");
+  font-display: swap;
+}
+@font-face {
+  font-family: "WaverlyExtra";
+  src: local("WaverlyExtra"),
+    url(../fonts/Waverly-extrabold.otf) format("opentype");
+  font-display: swap;
+}
+@font-face {
+  font-family: "WaverlyHeavy";
+  src: local("WaverlyHeavy"), url(../fonts/Waverly-heavy.otf) format("opentype");
+  font-display: swap;
+}
+@font-face {
+  font-family: "WaverlyLight";
+  src: local("WaverlyLight"), url(../fonts/Waverly-light.otf) format("opentype");
+  font-display: swap;
+}
+@font-face {
+  font-family: "WaverlyMedium";
+  src: local("WaverlyMedium"),
+    url(../fonts/Waverly-medium.otf) format("opentype");
+  font-display: swap;
+}
+@font-face {
+  font-family: "WaverlySemi";
+  src: local("WaverlySemi"),
+    url(../fonts/Waverly-semibold.otf) format("opentype");
+  font-display: swap;
+}
+@font-face {
+  font-family: "WaverlyThin";
+  src: local("WaverlyThin"), url(../fonts/Waverly-thin.otf) format("opentype");
   font-display: swap;
 }
 

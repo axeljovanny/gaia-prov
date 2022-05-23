@@ -24,7 +24,6 @@ const SkinPage = () => {
     <StyledServicePage >
       <ServiceNav></ServiceNav>
 
-      {/* <StyledServiceSwitch></StyledServiceSwitch> */}
       <StyledServiceContent>
         <StyledServiceTittle>
           {services.map(({ node }) => {

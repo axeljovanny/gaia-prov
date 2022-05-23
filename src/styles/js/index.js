@@ -40,7 +40,7 @@ body {
   scroll-behavior: smooth;
   padding: 0;
   margin: 0;
-  font-family: ${font.leporsche};
+  font-family: ${font.waveLight};
   background: ${colors.softWhite};
   height:100%; 
 }

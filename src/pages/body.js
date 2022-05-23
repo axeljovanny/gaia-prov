@@ -30,7 +30,6 @@ const BodyPage = () => {
     return (
         <StyledServicePage >
             <ServiceNav></ServiceNav>
-            {/* <StyledServiceSwitch></StyledServiceSwitch> */}
             <StyledServiceContent>
                 <StyledServiceTittle>
                     {sort.map((data) => {

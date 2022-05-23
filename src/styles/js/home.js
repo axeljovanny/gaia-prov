@@ -33,7 +33,7 @@ export const StyledTitleContainer = styled.div`
   align-items: flex-start;
   justify-content: flex-start;
     margin: 0;
-    font-family: ${font.leporsche};
+    font-family: ${font.waveLight};
   }
   
   ${above.large`

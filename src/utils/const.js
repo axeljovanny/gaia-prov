@@ -29,6 +29,13 @@ export const font = {
     bold: "MontserratBold",
     medium: "MontserratMedium",
     light: "MontserratLight",
-    leporsche: "LePorsche",
     branch: "Branch",
+    waveBold: "WaverlyBold",
+    waveExtra: "WaverlyExtra",
+    waveHeavy: "WaverlyHeavy",
+    waveLight: "WaverlyLight",
+    waveMedium: "WaverlyMedium",
+    waveSemi: "WaverlySemi",
+    waveThin: "WaverlyThin",
+
 }

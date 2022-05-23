@@ -2,26 +2,39 @@ import styled from "styled-components"
 import { above } from "."
 import { colors, font, size } from "../../utils/const"
 
+export const StyledServiceNav = styled.div`
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-flow: row nowrap;
+    background: ${colors.none};
+    width: 90%;
+    height: 15vh;
+    ${above.large`
+    height: 20vh;
+    flex-flow: column nowrap;
+    background: ${colors.none};
 
-export const StyledNavbar = styled.div`
+    `}
+`
+
+export const StyledNavbarServ = styled.div`
     background: ${colors.none};
     display: flex;
-    flex-direction: row;
-    justify-content: space-betwen;
+    justify-content: flex-end;
     align-items: center;
     z-index: 12;
-    position: absolute;
-    width: 100vw;
-    height: 15vh;
+    width: 50%;
+    height: 100%;
   ${above.medium`
       
   `}
   ${above.large`
   display: flex;
+  flex-flow: column nowrap;
   justify-content: center;
   align-items: center;
-  whidth: 100vw;
-  //background: linear-gradient(to top, rgba(0, 0, 0, 0.0) 0%, ${colors.green} 150%);
+  width: 90%;
   background: ${colors.none};
   a{
     margin-left: auto;
@@ -32,50 +45,85 @@ export const StyledNavbar = styled.div`
   `}
 `
 
-export const StyledLogoContainer = styled.div`
-  display: none;
-  ${above.medium`
-  `}
+export const Text = styled.div`
+display: none;
+
   ${above.large`
   display: flex;
+  flex-flow: row nowrap;
   justify-content: center;
-  align-items: center;
   background: ${colors.none};
+  width: 100%;
+  height: 30%;
+  align-items: center;
 
+ 
   `}
 `
+export const SVG = styled.div`
+display: none;
 
-export const StyledItems = styled.div`
-  display: none;
-  ${above.medium`
-      
-  `}
   ${above.large`
   display: flex;
-  justify-content: center ;
+  flex-flow: column nowrap;
+  gap:2em;
+  justify-content: center;
+  background: ${colors.none};
+  width: 75%;
+  height: auto;
   align-items: center;
-  background: ${colors.none};  
+
+ 
   `}
 `
 
-export const Item = styled.div`
+export const StyledHomeReturn = styled.div`
 display: flex;
-justify-content: center;
+justify-content: flex-start;
 align-items: center;
-list-style: none; 
-padding: 0;
-background-color: none;
-margin: 54px 3vw;
-font-family: 'Montserrat', sans-serif;
+background: ${colors.none};
+width: 50%;
+height: 100%;
 
-a{
-  font-family:  ${font.waveLight};
-  color: ${colors.black} ;
-  font-size: ${size.Wtext};
-}
+  a:link{
+    font-family: ${font.waveLight};
+    font-size: ${size.Mtext};
+  }
+  a:visited {
+    color: ${colors.black};
+  }
 
+  ${above.large`
+  align-items: flex-end;
+  width: 10%;
+  height: 100%;
 
+  a:link{
+    font-family: ${font.waveLight};
+    font-size: ${size.Wtext};
+  }
+    
+ 
+  `}
 `
+
+export const StyledService = styled.div`
+display: none;
+
+  ${above.large`
+  display: flex;
+  flex-flow: column nowrap;
+  gap:2em;
+  justify-content: center;
+  background: ${colors.none};
+  width: 25%;
+  height: 100%;
+  align-items: center;
+
+ 
+  `}
+`
+
 /*
  Movil menu
 */
@@ -84,8 +132,7 @@ export const NavIcon = styled.button`
     cursor: pointer;
     border: none;
     outline: none;
-    margin: 2em 2em;
-    position: fixed;
+    position:fixed;
 
     ${above.large` {
       display: none;
@@ -177,6 +224,8 @@ export const StyledIcons = styled.div`
     }
   `}
 `
+
+
 export const StyledButton = styled.div`
   width: 100%;
   height: 6vh;
@@ -205,4 +254,35 @@ export const StyledButton = styled.div`
   height: 2vh;
   `}
     
+`
+export const StyledItems = styled.div`
+  display: none;
+  ${above.medium`
+      
+  `}
+  ${above.large`
+  display: flex;
+  justify-content: center ;
+  align-items: center;
+  background: ${colors.none};  
+  `}
+`
+
+export const Item = styled.div`
+display: flex;
+justify-content: center;
+align-items: center;
+list-style: none; 
+padding: 0;
+background-color: none;
+margin: 54px 3vw;
+font-family: 'Montserrat', sans-serif;
+
+a{
+  font-family:  ${font.waveLight};
+  color: ${colors.black} ;
+  font-size: ${size.Wtext};
+}
+
+
 `
