@@ -25,7 +25,7 @@ const HairPage = () => {
   const sort = result.filter((item,
     index) => result.indexOf(item) === index);
 
-  console.log(sort);
+  // console.log(sort);
 
 
   return (
@@ -87,6 +87,10 @@ const HairPage = () => {
         </StyledServiceTittle>
         <StyledServiceDesc >
           <HairService type={type} />
+          <Link to="/">
+            BOOK NOW
+            <Flecha className="flecha"></Flecha>
+          </Link>
         </StyledServiceDesc>
         <StyledServicePhoto>
           <StaticImage
