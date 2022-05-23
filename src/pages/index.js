@@ -1,5 +1,7 @@
 import React from "react"
-import { Footer, Home, Navbar } from "../components";
+import { Footer, Home } from "../components";
+import { Navbar } from "../components/navbar"
+
 
 import { graphql, useStaticQuery } from 'gatsby'
 import { getImage } from "gatsby-plugin-image"

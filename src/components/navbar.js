@@ -1,9 +1,16 @@
 import React, { useState } from "react"
 import { Link } from "gatsby"
 import { StaticImage } from "gatsby-plugin-image"
-import { StyledLogoContainer, Item, StyledItems, StyledButton, StyledNavbar, Overlay, OverlayMenu, NavIcon, Line, StyledIcons } from "../styles/js/navbar"
+import { StyledLogoContainer, Item, StyledItems, StyledButton, StyledNavbar, Overlay, OverlayMenu, NavIcon, StyledIcons } from "../styles/js/navbar"
+import { StyledHomeReturn, StyledService, Line, StyledServiceNav, StyledHome, Text, SVG, } from "../styles/js/skin";
+
 import { MapsIcon, FacebookIcon, InstagramIcon } from "../images/icons"
 import { colors } from "../utils/const"
+
+import Loadable from "@loadable/component"
+
+const Flecha = Loadable(() => import("../assets/Flecha.svg"))
+const Linea = Loadable(() => import("../assets/LineaSeleccion.svg"))
 
 
 const Navbar = ({ siteTitle }) => {
@@ -102,6 +109,55 @@ const Navbar = ({ siteTitle }) => {
     )
 
 }
+const ServiceNav = ({ siteTitle }) => {
+    const [toggle, toggleNav] = useState(false);
+
+    return (
+        <>
+            <StyledServiceNav>
+                <StyledHome>
+                    <StyledHomeReturn>
+                        <Link to="/">
+                            <Flecha className="flecha"></Flecha>
+                            HOME
+                        </Link>
+                    </StyledHomeReturn>
+                </StyledHome>
+                <StyledNavbar>
+                    <Text><StyledService>
+                        <Link to="/skin">
+                            SKIN CARE
+                        </Link>
+
+                    </StyledService>
+                        <StyledService>
+                            <Link to="/hair">
+                                HAIR CARE
+                            </Link>
+
+                        </StyledService>
+                        <StyledService>
+                            <Link to="/body">
+                                BODY CARE
+                            </Link>
+
+                        </StyledService></Text>
+                    <SVG>
+                        <Linea className="linea"></Linea>
+                    </SVG>
+
+                    <NavIcon onClick={() => toggleNav(!toggle)}>
+                        <Line open={toggle} />
+                        <Line open={toggle} />
+                        <Line open={toggle} />
+                    </NavIcon>
+
+                </StyledNavbar>
+            </StyledServiceNav>
+        </>
+    )
+
+}
 
 
-export default Navbar
+export { Navbar, ServiceNav }

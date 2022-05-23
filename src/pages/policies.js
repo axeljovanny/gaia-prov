@@ -1,5 +1,6 @@
 import React from "react"
-import { Navbar, Policies } from "../components";
+import { Policies } from "../components";
+import { Navbar } from "../components/navbar"
 
 import { graphql, useStaticQuery } from 'gatsby'
 import { getImage } from "gatsby-plugin-image"

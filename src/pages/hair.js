@@ -1,15 +1,15 @@
 import { Link } from "gatsby";
 import React, { useState } from "react"
-import { StyledHomeReturn, StyledNavbar, StyledService, Line, NavIcon, StyledServiceNav, StyledServiceContent, StyledServicePage, StyledHome, Text, SVG, StyledServiceTittle, StyledServiceDesc, StyledServicePhoto, StyledServiceSwitch, StyledServiceNote, StyledNote, TextTittle } from "../styles/js/skin";
+import { StyledServiceContent, StyledServicePage, StyledServiceTittle, StyledServiceDesc, StyledServicePhoto, StyledServiceNote, StyledNote, TextTittle } from "../styles/js/skin";
 import '../styles/css/services.css'
 import { StaticImage } from "gatsby-plugin-image";
 
 
 import Loadable from "@loadable/component"
 import { HairService, useHairService } from "../components/hair";
+import { ServiceNav } from "../components/navbar";
 
 const Flecha = Loadable(() => import("../assets/Flecha.svg"))
-const Linea = Loadable(() => import("../assets/LineaSeleccion.svg"))
 
 
 const initialTitle = 'HAIR CUTS';
@@ -30,46 +30,7 @@ const HairPage = () => {
 
   return (
     <StyledServicePage >
-      <StyledServiceNav>
-        <StyledHome>
-          <StyledHomeReturn>
-            <Link to="/">
-              <Flecha className="flecha"></Flecha>
-              HOME
-            </Link>
-          </StyledHomeReturn>
-        </StyledHome>
-        <StyledNavbar>
-          <Text><StyledService>
-            <Link to="/skin">
-              SKIN CARE
-            </Link>
-
-          </StyledService>
-            <StyledService>
-              <Link to="/hair">
-                HAIR CARE
-              </Link>
-
-            </StyledService>
-            <StyledService>
-              <Link to="/body">
-                BODY CARE
-              </Link>
-
-            </StyledService></Text>
-          <SVG>
-            <Linea className="linea"></Linea>
-          </SVG>
-
-          <NavIcon onClick={() => toggleNav(!toggle)}>
-            <Line open={toggle} />
-            <Line open={toggle} />
-            <Line open={toggle} />
-          </NavIcon>
-
-        </StyledNavbar>
-      </StyledServiceNav>
+      <ServiceNav></ServiceNav>
       {/* <StyledServiceSwitch></StyledServiceSwitch> */}
       <StyledServiceContent>
         <StyledServiceTittle>
