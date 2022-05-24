@@ -7,7 +7,7 @@ import { StaticImage } from "gatsby-plugin-image";
 
 import Loadable from "@loadable/component"
 import { HairService, useHairService } from "../components/hair";
-import { ServiceNav } from "../components/navbar";
+import { ServiceNav } from "../components/servnav";
 
 const Flecha = Loadable(() => import("../assets/Flecha.svg"))
 

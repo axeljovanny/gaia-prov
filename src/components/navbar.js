@@ -6,11 +6,8 @@ import { StyledLogoContainer, Item, StyledItems, StyledButton, StyledNavbar, Ove
 import { MapsIcon, FacebookIcon, InstagramIcon } from "../images/icons"
 import { colors } from "../utils/const"
 
-import Loadable from "@loadable/component"
-import { StyledHomeReturn, StyledNavbarServ, StyledService, StyledServiceNav, SVG, Text } from "../styles/js/servnav"
 
-const Flecha = Loadable(() => import("../assets/Flecha.svg"))
-const Linea = Loadable(() => import("../assets/LineaSeleccion.svg"))
+
 
 
 const Navbar = ({ siteTitle }) => {
@@ -109,51 +106,7 @@ const Navbar = ({ siteTitle }) => {
     )
 
 }
-const ServiceNav = ({ siteTitle }) => {
-    const [toggle, toggleNav] = useState(false);
-    return (
-        <>
-            <StyledServiceNav>
-                <StyledHomeReturn>
-                    <Link to="/">
-                        <Flecha className="flecha"></Flecha>
-                        HOME
-                    </Link>
-                </StyledHomeReturn>
-                <StyledNavbarServ>
-                    <Text>
-                        <StyledService>
-                            <Link to="/skin">
-                                SKIN CARE
-                            </Link>
-                        </StyledService>
-                        <StyledService>
-                            <Link to="/hair">
-                                HAIR CARE
-                            </Link>
-                        </StyledService>
-                        <StyledService>
-                            <Link to="/body">
-                                BODY CARE
-                            </Link>
-                        </StyledService>
-                    </Text>
-                    <SVG>
-                        <Linea className="linea"></Linea>
-                    </SVG>
-
-                    <NavIcon onClick={() => toggleNav(!toggle)}>
-                        <Line open={toggle} />
-                        <Line open={toggle} />
-                        <Line open={toggle} />
-                    </NavIcon>
-
-                </StyledNavbarServ>
-            </StyledServiceNav>
-        </>
-    )
-
-}
 
 
-export { Navbar, ServiceNav }
+
+export { Navbar }

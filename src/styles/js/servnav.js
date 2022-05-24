@@ -4,13 +4,15 @@ import { colors, font, size } from "../../utils/const"
 
 export const StyledServiceNav = styled.div`
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: flex-start;
     flex-flow: row nowrap;
     background: ${colors.none};
-    width: 90%;
-    height: 15vh;
+    width: 100%;
+    height: 10vh;
     ${above.large`
+    width: 90%;
+    justify-content: center;
     height: 20vh;
     flex-flow: column nowrap;
     background: ${colors.none};
@@ -21,10 +23,11 @@ export const StyledServiceNav = styled.div`
 export const StyledNavbarServ = styled.div`
     background: ${colors.none};
     display: flex;
-    justify-content: flex-end;
-    align-items: center;
+    justify-content: flex-start;
+    align-items: flex-start;
     z-index: 12;
-    width: 50%;
+    width: 30%;
+    padding: 1em 0 0 1em;
     height: 100%;
   ${above.medium`
       
@@ -78,22 +81,14 @@ display: none;
 `
 
 export const StyledHomeReturn = styled.div`
-display: flex;
-justify-content: flex-start;
-align-items: center;
-background: ${colors.none};
-width: 50%;
-height: 100%;
-
-  a:link{
-    font-family: ${font.waveLight};
-    font-size: ${size.Mtext};
-  }
-  a:visited {
-    color: ${colors.black};
-  }
+display: none;
 
   ${above.large`
+  display: flex;
+  justify-content: flex-start;
+
+  background: ${colors.none};
+
   align-items: flex-end;
   width: 10%;
   height: 100%;
@@ -101,6 +96,10 @@ height: 100%;
   a:link{
     font-family: ${font.waveLight};
     font-size: ${size.Wtext};
+    color: ${colors.black};
+  }
+  a:visited {
+    color: ${colors.black};
   }
     
  
@@ -146,8 +145,8 @@ export const Line = styled.span`
     width: 25px;
     height: 3px;
     margin: 5px;
-    color: ${colors.black};
-    background-color: ${colors.black};
+    color: ${colors.none};
+    background-color: ${props => (props.open ? colors.softWhite : colors.green)};
     transition: width 0.4s ease-in-out;
 
     :nth-child(2) {
@@ -160,12 +159,16 @@ export const Overlay = styled.div`
   flex-direction: column;
   height: ${props => (props.open ? "100vh" : 0)};
   width: 100vw;
-  background: ${colors.black};
+  background: rgba(130, 140, 122, 0.8);
+  backdrop-filter: blur(5px);
   transition: height 0.3s ease-in-out;
   position: fixed;
   z-index: 5;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
+  :nth-child(1n) {
+    align-items: flex-end;
+  }
 
   ${above.large` {
     display: none;
@@ -177,12 +180,11 @@ export const Overlay = styled.div`
 export const OverlayMenu = styled.div`
   flex-direction: column;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
   display: flex;
-  width: 100vw;
+  width: 90vw;
   height: 40%;
-  list-style: none; 
-  margin: 50% 0;
+  list-style: none;
 
   div a{
     opacity: ${props => (props.open ? 1 : 0)};
@@ -193,22 +195,60 @@ export const OverlayMenu = styled.div`
   }
 
 `;
+export const OverlayFooter = styled.div`
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  display: flex;
+  width: 100%;
+  background: ${colors.none};
+
+  div{
+    opacity: ${props => (props.open ? 1 : 0)};
+    transition: opacity 0.4s ease-in-out;
+  }
+
+`;
+
+export const Contacto = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 50vw;
+  height: 100%;
+  background: ${colors.none};
+  a,p{
+    font-family:  ${font.light};
+    text-align: left;
+    color: ${colors.white} ;
+    font-size: ${size.Mtext};
+  }
+
+`;
+export const Logo = styled.div`
+  display: flex;
+  flex-direction: column;
+  width: 50vw;
+  height: 100%;
+  padding: 1em 0;
+  background: ${colors.none};
+
+`;
 
 export const StyledIcons = styled.div`
     display: ${props => props.open ? 'flex' : 'none'};
-    height: 25%;
+    height: ${props => (props.open ? "auto" : 0)};
     flex-direction: row;
-    justify-content: center;
+    justify-content: flex-end;
     align-items: center;
-    width: 60%;
+    padding: 1em;
+    gap: 1em;
+    width: auto;
     opacity: ${props => (props.open ? 1 : 0)};
-    transition: opacity 0.6s ease-in-out;
-
+    transition: opacity 1s ease-in-out;
 
     svg{
-      opacity: ${props => (props.open ? 1 : 0)};
-    transition: opacity 0.6s ease-in-out;
-        width: 100%;
+      width: 100%;
     }
     
     ${above.large`
@@ -270,12 +310,12 @@ export const StyledItems = styled.div`
 
 export const Item = styled.div`
 display: flex;
-justify-content: center;
-align-items: center;
+justify-content: flex-start;
+align-items: flex-start;
 list-style: none; 
 padding: 0;
 background-color: none;
-margin: 54px 3vw;
+margin: .5em 0;
 font-family: 'Montserrat', sans-serif;
 
 a{
