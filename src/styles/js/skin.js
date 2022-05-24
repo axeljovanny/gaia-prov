@@ -10,7 +10,7 @@ export const StyledServicePage = styled.div`
     align-items: center;
     background: ${colors.softWhite};
     width: 100vw;
-    height: 100hw;
+    height: 100vh;
 
 `
 
@@ -21,7 +21,7 @@ export const StyledServiceContent = styled.div`
     flex-flow: column nowrap;
     background: ${colors.none};
     width: 100%;
-    height: auto;
+    height: 60vh;
     ${above.large`
     flex-flow: row nowrap;
     
@@ -29,12 +29,15 @@ export const StyledServiceContent = styled.div`
     `
 export const StyledServiceTittle = styled.div`
     display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-flow: row wrap;
+    background: ${colors.none};
+    width: 90%;
+    ${above.large`
     justify-content: center;
     align-items: flex-end;
-    flex-flow: row nowrap;
-    background: ${colors.none};
     width: 25%;
-    ${above.large`
     flex-flow: column nowrap;
     
     `}
@@ -44,8 +47,14 @@ export const TextTittle = styled.div`
     justify-content: flex-start;
     align-items: center;
     background: ${colors.none};
-    width: 70%;
+    width: 50%;
     button{
+      background: none;
+      color: inherit;
+      border: none;
+      padding: 0;
+      cursor: pointer;
+      outline: inherit;
       font-family: ${font.waveLight};
         font-size: ${size.Mtittle};
         color: ${colors.black};
@@ -80,7 +89,7 @@ export const DescTime = styled.div`
       background: ${colors.none};
       width: 20%;
       p{
-        font-family: ${font.waveLight};
+        font-family: ${font.medium};
         font-size: ${size.Wtext};
         color: ${colors.black};
       }
@@ -92,7 +101,7 @@ export const DescPrice = styled.div`
       background: ${colors.none};
       width: 20%;
       p{
-        font-family: ${font.waveLight};
+        font-family: ${font.medium};
         font-size: ${size.Wtext};
         color: ${colors.black};
       }
@@ -116,24 +125,31 @@ export const DescText = styled.div`
       background: ${colors.none};
       width: 100%;
       p{
-        font-family: ${font.waveLight};
+        font-family: ${font.light};
         font-size: ${size.Wtext};
         color: ${colors.black};
       }
       ${above.large`
       width: 80%;
+      p{
+        font-family: ${font.light};
+        font-size: ${size.Mtext};
+        color: ${colors.black};
+      }
       `}
       `
 export const StyledServiceDesc = styled.div`
       display: flex;
       justify-content: flex-start;
-      flex-flow: column wrap;
+      flex-flow: column nowrap;
       align-items: flex-start;
       background: ${colors.none};
       border-left: none;
       width: 90%;
       padding: 0 2em;
       height: 100%;
+      overflow:scroll;
+
       ${above.large`
       width: 60%;
       border-left: solid 1px ${colors.black};
@@ -166,16 +182,17 @@ export const StyledNote = styled.div`
     display: flex;
     justify-content: flex-start;
     align-items: center;
-    width: 80%;
+    width: 90%;
     padding: 0 0%;
     p{
-      font-family: ${font.waveLight};
-      font-size: ${size.Wmini};
+      font-family: ${font.light};
+      font-size: ${size.Mmini};
       color: ${colors.white};
     }
     ${above.large`
     width: 80%;
     p{
+      font-size: ${size.Wmini};
       color: ${colors.black};
     }
 
@@ -183,15 +200,20 @@ export const StyledNote = styled.div`
     `
 export const StyledServiceNote = styled.div`
         display: flex;
-        justify-content: center;
+        justify-content: space-around;
+        flex-direction: column;
         align-items: center;
         background: ${colors.green};
         width: 100%;
-        padding: 0;     
+        height: 25vh;
+        padding: 0;
+        text-align: justify;
         ${above.large`
-        justify-content: flex-start;
+        justify-content: space-around;
+        align-items: flex-start;
         width: 90%;
-        padding: 0 0 3% 0;     
+        padding: 0 0 3% 0;    
+        height: 20vh; 
         background: ${colors.none};
 
 

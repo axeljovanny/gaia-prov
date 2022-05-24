@@ -19,7 +19,7 @@ export const DescPriceHair = styled.div`
       background: ${colors.none};
       width: 20%;
       p{
-        font-family: ${font.waveLight};
+        font-family: ${font.medium};
         font-size: ${size.Wtext};
         color: ${colors.black};
       }

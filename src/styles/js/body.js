@@ -20,7 +20,7 @@ export const DescPriceBody = styled.div`
       background: ${colors.none};
       width: 20%;
       p{
-        font-family: ${font.waveLight};
+        font-family: ${font.medium};
         font-size: ${size.Wtext};
         color: ${colors.black};
       }
@@ -44,7 +44,7 @@ export const DescNoteBody = styled.div`
       background: ${colors.none};
       width: 100%;
       p{
-        font-family: ${font.waveLight};
+        font-family: ${font.medium};
         font-size: ${size.Wmini};
         color: ${colors.black};
       }

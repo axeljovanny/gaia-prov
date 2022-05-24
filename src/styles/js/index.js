@@ -40,7 +40,7 @@ body {
   scroll-behavior: smooth;
   padding: 0;
   margin: 0;
-  font-family: ${font.waveLight};
+  font-family: ${font.light};
   background: ${colors.softWhite};
   height:100%; 
 }
