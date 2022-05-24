@@ -27,7 +27,7 @@ export const StyledNavbarServ = styled.div`
     align-items: flex-start;
     z-index: 12;
     width: auto;
-    padding: 1em 0 0 1em;
+    margin: 1em 0 0 1em;
   ${above.medium`
       
   `}
@@ -154,6 +154,7 @@ export const Line = styled.span`
 `;
 
 export const Overlay = styled.div`
+
   display: flex;
   flex-direction: column;
   height: ${props => (props.open ? "100vh" : 0)};
@@ -162,6 +163,7 @@ export const Overlay = styled.div`
   backdrop-filter: blur(5px);
   transition: height 0.3s ease-in-out;
   position: fixed;
+  top:0;
   z-index: 5;
   justify-content: space-between;
   align-items: center;
@@ -199,6 +201,7 @@ export const OverlayFooter = styled.div`
   align-items: center;
   display: ${props => (props.open ? 'flex' : 'none')};
   width: 100%;
+  height: 25%;
   background: ${colors.none};
 
 `;

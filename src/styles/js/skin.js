@@ -143,6 +143,7 @@ export const StyledServiceDesc = styled.div`
       justify-content: flex-start;
       flex-flow: column nowrap;
       align-items: flex-start;
+      text-align: justify;
       background: ${colors.none};
       border-left: none;
       width: 90%;
