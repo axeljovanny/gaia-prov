@@ -15,21 +15,29 @@ export const StyledServicePage = styled.div`
 `
 
 export const StyledServiceContent = styled.div`
-display: flex;
-justify-content: center;
-align-items: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: column nowrap;
     background: ${colors.none};
     width: 100%;
     height: auto;
-
+    ${above.large`
+    flex-flow: row nowrap;
+    
+    `}
     `
 export const StyledServiceTittle = styled.div`
     display: flex;
     justify-content: center;
     align-items: flex-end;
-    flex-flow: column nowrap;
+    flex-flow: row nowrap;
     background: ${colors.none};
     width: 25%;
+    ${above.large`
+    flex-flow: column nowrap;
+    
+    `}
     `
 export const TextTittle = styled.div`
     display: flex;
@@ -106,12 +114,15 @@ export const DescText = styled.div`
       justify-content: flex-start;
       align-items: center;
       background: ${colors.none};
-      width: 80%;
+      width: 100%;
       p{
         font-family: ${font.waveLight};
         font-size: ${size.Wtext};
         color: ${colors.black};
       }
+      ${above.large`
+      width: 80%;
+      `}
       `
 export const StyledServiceDesc = styled.div`
       display: flex;
@@ -119,18 +130,26 @@ export const StyledServiceDesc = styled.div`
       flex-flow: column wrap;
       align-items: flex-start;
       background: ${colors.none};
-      border-left: solid 1px ${colors.black};
-      width: 60%;
+      border-left: none;
+      width: 90%;
       padding: 0 2em;
       height: 100%;
+      ${above.large`
+      width: 60%;
+      border-left: solid 1px ${colors.black};
+      `}
       
       `
 export const StyledServicePhoto = styled.div`
+    display: none;
+
+      ${above.large`
       display: flex;
       justify-content: center;
       align-items: center;
       background: ${colors.none};
       width: 20%;
+      `}
       
       `
 export const StyledServiceFooter = styled.div`
@@ -147,22 +166,36 @@ export const StyledNote = styled.div`
     display: flex;
     justify-content: flex-start;
     align-items: center;
-    background: ${colors.none};
     width: 80%;
     padding: 0 0%;
     p{
       font-family: ${font.waveLight};
       font-size: ${size.Wmini};
+      color: ${colors.white};
+    }
+    ${above.large`
+    width: 80%;
+    p{
       color: ${colors.black};
     }
+
+  `}
     `
 export const StyledServiceNote = styled.div`
         display: flex;
-        justify-content: flex-start;
+        justify-content: center;
         align-items: center;
-        background: ${colors.none};
+        background: ${colors.green};
+        width: 100%;
+        padding: 0;     
+        ${above.large`
+        justify-content: flex-start;
         width: 90%;
-        padding: 0 0 3% 0;        
+        padding: 0 0 3% 0;     
+        background: ${colors.none};
+
+
+  `}   
     `
 
 // ESTILOS PARA NAV DE SERVICIOS
@@ -185,8 +218,5 @@ height: 100%;
   background: ${colors.none};
   width: 100%;
   height: 50%;
-
-
- 
   `}
 `

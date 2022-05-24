@@ -26,9 +26,8 @@ export const StyledNavbarServ = styled.div`
     justify-content: flex-start;
     align-items: flex-start;
     z-index: 12;
-    width: 30%;
+    width: auto;
     padding: 1em 0 0 1em;
-    height: 100%;
   ${above.medium`
       
   `}
@@ -181,32 +180,26 @@ export const OverlayMenu = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
-  display: flex;
+  display: ${props => (props.open ? 'flex' : 'none')};
   width: 90vw;
-  height: 40%;
+  height: ${props => (props.open ? "40%" : 0)};
+  transition: opacity 0.4s ease-in-out;
   list-style: none;
 
   div a{
-    opacity: ${props => (props.open ? 1 : 0)};
     font-family:  ${font.light};
     color: ${colors.white} ;
     font-size: ${size.Wtittle};
-    transition: opacity 0.4s ease-in-out;
   }
 
 `;
 export const OverlayFooter = styled.div`
-  flex-direction: row;
+  flex-flow: row wrap;
   justify-content: flex-start;
   align-items: center;
-  display: flex;
+  display: ${props => (props.open ? 'flex' : 'none')};
   width: 100%;
   background: ${colors.none};
-
-  div{
-    opacity: ${props => (props.open ? 1 : 0)};
-    transition: opacity 0.4s ease-in-out;
-  }
 
 `;
 
@@ -214,9 +207,9 @@ export const Contacto = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
-  width: 50vw;
-  height: 100%;
+  width: 50%;
   background: ${colors.none};
+
   a,p{
     font-family:  ${font.light};
     text-align: left;
@@ -227,9 +220,8 @@ export const Contacto = styled.div`
 `;
 export const Logo = styled.div`
   display: flex;
-  flex-direction: column;
-  width: 50vw;
-  height: 100%;
+  width: 50%;
+  height: auto;
   padding: 1em 0;
   background: ${colors.none};
 
