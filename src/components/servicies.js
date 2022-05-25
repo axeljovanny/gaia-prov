@@ -14,8 +14,7 @@ const SkinServiceDesc = ({ services, title }) => {
                 return (
                     <>
                         {
-                            node.title === title.title &&
-                            node.subcategory === 'aveda' && (
+                            node.title === title.title && (
                                 <>
                                     <DescTittle><p>{node.title}</p></DescTittle>
                                     <DescText><p>{node.description}</p></DescText>
@@ -46,7 +45,6 @@ const HairServiceDesc = ({ services, type }) => {
     const description = services.map(({ node }) => (
         node.type === type.type
         && node.description !== null
-        && node.subcategory === 'aveda'
         && (node.description)
     ))
     console.log(description);
@@ -61,7 +59,6 @@ const HairServiceDesc = ({ services, type }) => {
                     <>
                         {
                             node.type === type.type &&
-                            node.subcategory === 'aveda' &&
                             (
                                 <>
                                     <DescDetailsHair>
@@ -86,7 +83,6 @@ const BodyServiceDesc = ({ services, type }) => {
     const description = services.map(({ node }) => (
         node.type === type.type
         && node.description !== null
-        && node.subcategory === 'aveda'
         && (node.description)
     ))
     // console.log(description);
@@ -101,7 +97,6 @@ const BodyServiceDesc = ({ services, type }) => {
                     <>
                         {
                             node.type === type.type &&
-                            node.subcategory === 'aveda' &&
                             (
                                 <>
                                     <DescDetailsBody>

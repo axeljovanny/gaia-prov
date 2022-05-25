@@ -17,7 +17,6 @@ const initialTitle = 'SPECIAL';
 const BodyPage = () => {
     const bodyServices = useBodyService()
 
-    const [toggle, toggleNav] = useState(false);
     const [type, setType] = useState(initialTitle);
 
     const result = bodyServices.map(({ node }) => node.type)

@@ -18,7 +18,6 @@ const HairPage = () => {
   const hairServices = useHairService()
   // console.log(hairServices);
 
-  const [toggle, toggleNav] = useState(false);
   const [type, setType] = useState(initialTitle);
 
   const result = hairServices.map(({ node }) => node.type)

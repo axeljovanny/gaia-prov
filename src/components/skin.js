@@ -3,38 +3,36 @@ import { useStaticQuery, graphql } from "gatsby"
 import { SkinServiceDesc } from "./servicies";
 
 export const useSkinService = () => {
-    const data = useStaticQuery(
-        graphql`
+  const data = useStaticQuery(
+    graphql`
       query {
         allGoogleSkinSheet {
           edges {
             node {
-              id
               category
-              description
-              price
-              subcategory
-              time
               title
+              time
+              price
+              description
             }
           }
         }
       }
       `
-    )
-    return data.allGoogleSkinSheet.edges
+  )
+  return data.allGoogleSkinSheet.edges
 }
 
 const SkinService = (title) => {
-    const kawai = useSkinService()
-    return (
-        <>
-            <SkinServiceDesc services={kawai} title={title} />
-        </>
-    )
+  const kawai = useSkinService()
+  return (
+    <>
+      <SkinServiceDesc services={kawai} title={title} />
+    </>
+  )
 }
 
 
 export {
-    SkinService
+  SkinService
 }
