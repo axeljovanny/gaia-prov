@@ -15,6 +15,7 @@
     "clean": "gatsby clean"
   },
   "dependencies": {
+    "gbimage-bridge": "^0.2.1",
     "@loadable/component": "^5.15.2",
     "babel-plugin-styled-components": "^2.0.6",
     "gatsby": "^4.10.1",
