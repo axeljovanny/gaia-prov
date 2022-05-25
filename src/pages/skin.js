@@ -17,13 +17,13 @@ const SkinPage = () => {
 
   return (
     <StyledServicePage >
-      <ServiceNav></ServiceNav>
+      <ServiceNav siteTitle="skin"></ServiceNav>
       <StyledServiceContent>
         <StyledServiceTittle>
           {services.map(({ node }) => {
             return (
               <TextTittle key={node.id}>
-                <button onClick={() => setTitle(node.title)}>
+                <button onClick={() => setTitle(node.title)} >
                   {node.title}
                 </button>
               </TextTittle>

@@ -29,7 +29,7 @@ const HairPage = () => {
 
   return (
     <StyledServicePage >
-      <ServiceNav></ServiceNav>
+      <ServiceNav siteTitle="hair"></ServiceNav>
       <StyledServiceContent>
         <StyledServiceTittle>
           {sort.map((data) => {

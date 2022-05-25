@@ -28,7 +28,7 @@ const BodyPage = () => {
 
     return (
         <StyledServicePage >
-            <ServiceNav></ServiceNav>
+            <ServiceNav siteTitle="body"></ServiceNav>
             <StyledServiceContent>
                 <StyledServiceTittle>
                     {sort.map((data) => {

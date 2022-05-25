@@ -12,6 +12,7 @@ const Linea = Loadable(() => import("../assets/LineaSeleccion.svg"))
 
 
 const ServiceNav = ({ siteTitle }) => {
+    // const [select, setSelect] =useState
     const [toggle, toggleNav] = useState(false);
     return (
         <>
@@ -24,17 +25,17 @@ const ServiceNav = ({ siteTitle }) => {
                 </StyledHomeReturn>
                 <StyledNavbarServ>
                     <Text>
-                        <StyledService>
+                        <StyledService siteTitle="skin" select={siteTitle}>
                             <Link to="/skin">
                                 SKIN CARE
                             </Link>
                         </StyledService>
-                        <StyledService>
+                        <StyledService siteTitle="hair" select={siteTitle}>
                             <Link to="/hair">
                                 HAIR CARE
                             </Link>
                         </StyledService>
-                        <StyledService>
+                        <StyledService siteTitle="body" select={siteTitle}>
                             <Link to="/body">
                                 BODY CARE
                             </Link>

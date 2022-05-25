@@ -19,7 +19,7 @@ export const size = {
     Mheader: "calc(50px)",
     Wtittle: "calc(30px)",
     Mtittle: "calc(16px)",
-    Wtext: "calc(16px)",
+    Wtext: "calc(18px)",
     Mtext: "calc(14px)",
     Wmini: "calc(14px)",
     Mmini: "calc(12px)",

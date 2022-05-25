@@ -21,7 +21,7 @@ export const StyledServiceContent = styled.div`
     flex-flow: column nowrap;
     background: ${colors.none};
     width: 100%;
-    height: 60vh;
+    height: 50vh;
     ${above.large`
     flex-flow: row nowrap;
     
@@ -36,7 +36,7 @@ export const StyledServiceTittle = styled.div`
     width: 90%;
     ${above.large`
     justify-content: center;
-    align-items: flex-end;
+    align-items: flex-start;
     width: 25%;
     flex-flow: column nowrap;
     
@@ -48,6 +48,7 @@ export const TextTittle = styled.div`
     align-items: center;
     background: ${colors.none};
     width: 50%;
+    margin: 0.4em 25%;
     button{
       background: none;
       color: inherit;
@@ -55,17 +56,17 @@ export const TextTittle = styled.div`
       padding: 0;
       cursor: pointer;
       outline: inherit;
-      font-family: ${font.waveLight};
-        font-size: ${size.Mtittle};
-        color: ${colors.black};
+      color: ${colors.black}; //usar en SVG
+      font-family: ${font.waveMedium};
+      font-size: ${size.Wtext};
       }
       `
 export const DescTittle = styled.div`
       display: flex;
-      justify-content: flex-start;
+      justify-content: space-between;
       align-items: center;
       background: ${colors.none};
-      width: 70%;
+      width: 95%;
 
       p{
         font-family: ${font.waveLight};
@@ -88,11 +89,9 @@ export const DescTime = styled.div`
       align-items: center;
       background: ${colors.none};
       width: 20%;
-      p{
-        font-family: ${font.medium};
-        font-size: ${size.Wtext};
-        color: ${colors.black};
-      }
+      font-family: ${font.light};
+      font-size: ${size.Wmini};
+      color: ${colors.black};
       `
 export const DescPrice = styled.div`
       display: flex;
@@ -100,23 +99,46 @@ export const DescPrice = styled.div`
       align-items: center;
       background: ${colors.none};
       width: 20%;
-      p{
-        font-family: ${font.medium};
-        font-size: ${size.Wtext};
-        color: ${colors.black};
-      }
+      font-family: ${font.medium};
+      font-size: ${size.Wmini};
+      color: ${colors.black};
       `
-export const DescBook = styled.div`
+export const DescBook = styled.button`
       display: flex;
       justify-content: flex-end;
       align-items: center;
-      background: ${colors.none};
-      width: 60%;
-      p{
-        font-family: ${font.waveLight};
-        font-size: ${size.Wtext};
-        color: ${colors.black};
-      }
+      background-color: ${colors.green};
+      border: 0;
+      border-radius: .5rem;
+      box-sizing: border-box;
+      color: #111827;
+      color: ${colors.white};
+      font-family: ${font.waveLight};
+      font-size: ${size.Wmini};
+      line-height: 1.25rem;
+      padding: .5rem 1rem;
+      text-align: center;
+      text-decoration: none #D1D5DB solid;
+      text-decoration-thickness: auto;
+      box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+      cursor: pointer;
+      user-select: none;
+      -webkit-user-select: none;
+      touch-action: manipulation;
+
+
+    :hover {
+      background-color: ${colors.accentBlue};
+    }
+
+    :focus {
+      outline: 2px solid transparent;
+      outline-offset: 2px;
+    }
+
+    :focus-visible {
+      box-shadow: none;
+    }
       `
 export const DescText = styled.div`
       display: flex;
@@ -153,7 +175,10 @@ export const StyledServiceDesc = styled.div`
 
       ${above.large`
       width: 60%;
-      border-left: solid 1px ${colors.black};
+      justify-content: center;
+      flex-flow: column nowrap;
+      align-items: center;
+      border-left: solid 0.5px ${colors.black};
       `}
       
       `
@@ -207,13 +232,11 @@ export const StyledServiceNote = styled.div`
         background: ${colors.green};
         width: 100%;
         height: 25vh;
-        padding: 0;
         text-align: justify;
         ${above.large`
-        justify-content: space-around;
+        justify-content: center;
         align-items: flex-start;
         width: 90%;
-        padding: 0 0 3% 0;    
         height: 20vh; 
         background: ${colors.none};
 

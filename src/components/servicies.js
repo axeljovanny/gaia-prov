@@ -1,10 +1,8 @@
 import React from "react"
 import { Link } from "gatsby";
 import { DescTittle, DescText, DescDetails, DescTime, DescPrice, DescBook } from "../styles/js/skin";
-import Loadable from "@loadable/component"
 import { DescDetailsHair, DescPriceHair, DescTitleHair } from "../styles/js/hair";
 import { DescDetailsBody, DescNoteBody, DescPriceBody, DescTitleBody } from "../styles/js/body";
-const Flecha = Loadable(() => import("../assets/Flecha.svg"))
 
 
 const SkinServiceDesc = ({ services, title }) => {
@@ -16,7 +14,9 @@ const SkinServiceDesc = ({ services, title }) => {
                         {
                             node.title === title.title && (
                                 <>
-                                    <DescTittle><p>{node.title}</p></DescTittle>
+                                    <DescTittle><p>{node.title}</p>
+                                        <Link to="/"><DescBook>BOOK NOW</DescBook></Link>
+                                    </DescTittle>
                                     <DescText><p>{node.description}</p></DescText>
                                     <DescDetails>
                                         <DescTime>
@@ -25,12 +25,6 @@ const SkinServiceDesc = ({ services, title }) => {
                                         <DescPrice>
                                             {node.price}
                                         </DescPrice>
-                                        <DescBook>
-                                            <Link to="/">
-                                                BOOK NOW
-                                                <Flecha className="flecha"></Flecha>
-                                            </Link>
-                                        </DescBook>
                                     </DescDetails>
                                 </>
                             )}
@@ -51,7 +45,9 @@ const HairServiceDesc = ({ services, type }) => {
 
     return (
         <>
-            <DescTittle><p>{type.type}</p></DescTittle>
+            <DescTittle><p>{type.type}</p>
+                <Link to="/"><DescBook>BOOK NOW</DescBook></Link>
+            </DescTittle>
             <DescText><p>{description}</p></DescText>
 
             {services.map(({ node }) => {
@@ -89,7 +85,9 @@ const BodyServiceDesc = ({ services, type }) => {
 
     return (
         <>
-            <DescTittle><p>{type.type}</p></DescTittle>
+            <DescTittle><p>{type.type}</p>
+                <Link to="/"><DescBook>BOOK NOW</DescBook></Link>
+            </DescTittle>
             <DescText><p>{description}</p></DescText>
 
             {services.map(({ node }) => {

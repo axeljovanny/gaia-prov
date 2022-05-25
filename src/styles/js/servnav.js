@@ -94,7 +94,7 @@ display: none;
 
   a:link{
     font-family: ${font.waveLight};
-    font-size: ${size.Wtext};
+    font-size: ${size.Wmini};
     color: ${colors.black};
   }
   a:visited {
@@ -117,6 +117,11 @@ display: none;
   width: 25%;
   height: 100%;
   align-items: center;
+  a{
+    color: ${props => (props.select === props.siteTitle ? colors.green : colors.softBlack)}; //usar en SVG
+    font-family: ${props => (props.select === props.siteTitle ? font.waveSemi : font.waveMedium)};
+    font-size: ${size.Wtext};
+  }
 
  
   `}
