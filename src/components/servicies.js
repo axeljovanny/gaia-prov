@@ -12,7 +12,7 @@ const SkinServiceDesc = ({ services, title }) => {
         <>
             {services.map(({ node }) => {
                 return (
-                    <>
+                    <div key={node.id}>
                         {
                             node.title === title.title && (
                                 <>
@@ -34,7 +34,7 @@ const SkinServiceDesc = ({ services, title }) => {
                                     </DescDetails>
                                 </>
                             )}
-                    </>
+                    </div>
                 )
             })}
         </>
@@ -47,7 +47,7 @@ const HairServiceDesc = ({ services, type }) => {
         && node.description !== null
         && (node.description)
     ))
-    console.log(description);
+    // console.log(description);
 
     return (
         <>
@@ -56,7 +56,7 @@ const HairServiceDesc = ({ services, type }) => {
 
             {services.map(({ node }) => {
                 return (
-                    <>
+                    <div key={node.id}>
                         {
                             node.type === type.type &&
                             (
@@ -72,7 +72,7 @@ const HairServiceDesc = ({ services, type }) => {
                                 </>
                             )
                         }
-                    </>
+                    </div>
                 )
             })}
         </>
@@ -94,7 +94,7 @@ const BodyServiceDesc = ({ services, type }) => {
 
             {services.map(({ node }) => {
                 return (
-                    <>
+                    <div key={node.id}>
                         {
                             node.type === type.type &&
                             (
@@ -113,7 +113,7 @@ const BodyServiceDesc = ({ services, type }) => {
                                 </>
                             )
                         }
-                    </>
+                    </div>
                 )
             })}
         </>

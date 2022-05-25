@@ -9,6 +9,7 @@ export const useBodyService = () => {
         allGoogleBodySheet {
           edges {
             node {
+              id
               category
               type
               title

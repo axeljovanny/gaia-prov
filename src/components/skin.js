@@ -9,6 +9,7 @@ export const useSkinService = () => {
         allGoogleSkinSheet {
           edges {
             node {
+              id
               category
               title
               time

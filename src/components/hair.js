@@ -9,6 +9,7 @@ export const useHairService = () => {
         allGoogleHairSheet {
           edges {
             node {
+              id
               category
               type
               title

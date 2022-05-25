@@ -34,13 +34,11 @@ const HairPage = () => {
         <StyledServiceTittle>
           {sort.map((data) => {
             return (
-              <>
-                <TextTittle>
-                  <button onClick={() => setType(data)}>
-                    {data}
-                  </button>
-                </TextTittle>
-              </>
+              <TextTittle key={data}>
+                <button onClick={() => setType(data)}>
+                  {data}
+                </button>
+              </TextTittle>
             )
           })}
         </StyledServiceTittle>

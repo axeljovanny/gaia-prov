@@ -22,7 +22,7 @@ const SkinPage = () => {
         <StyledServiceTittle>
           {services.map(({ node }) => {
             return (
-              <TextTittle>
+              <TextTittle key={node.id}>
                 <button onClick={() => setTitle(node.title)}>
                   {node.title}
                 </button>
@@ -30,7 +30,7 @@ const SkinPage = () => {
             )
           })}
         </StyledServiceTittle>
-        <StyledServiceDesc >
+        <StyledServiceDesc>
           <SkinService title={title} />
         </StyledServiceDesc>
         <StyledServicePhoto>
