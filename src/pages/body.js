@@ -62,8 +62,7 @@ const BodyPage = () => {
             </StyledServiceContent>
             <StyledServiceNote>
                 <StyledNote><p>All facial treatments are customized to treat individual skin care needs and include skin analysis, cleansing, exfoliation, and treatment mask, and are completed with the application of serums, moisturizers and/or sun protection. A skin care prescription will be designed and recommended to help maintain the health and integrity of the skin. Add on service are included on the 1.5hr and 2hr services</p></StyledNote>
-                <StyledNote><p> © Gaia Evolution Spa & Salon  2022  |  Lucky Ducky Studio</p></StyledNote>
-            </StyledServiceNote>
+                <StyledNote><p> © Gaia Evolution Spa & Salon  {(new Date().getFullYear())} | <a href="https://luckyducky.studio/" rel="noreferrer" target="_blank">Lucky Ducky Studio</a></p></StyledNote>            </StyledServiceNote>
             {/* <StyledServiceFooter>
       </StyledServiceFooter> */}
         </StyledServicePage>
