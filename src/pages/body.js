@@ -1,6 +1,6 @@
 import { Link } from "gatsby";
 import React, { useState } from "react"
-import { StyledServiceContent, StyledServicePage, StyledServiceTittle, StyledServiceDesc, StyledServicePhoto, StyledServiceNote, StyledNote, TextTittle } from "../styles/js/skin";
+import { StyledServiceContent, StyledServicePage, StyledServiceTittle, StyledServiceDesc, StyledServicePhoto, StyledServiceNote, StyledNote, TextTittle, StyledSVG } from "../styles/js/skin";
 import '../styles/css/services.css'
 import { StaticImage } from "gatsby-plugin-image";
 import { motion } from "framer-motion";
@@ -42,12 +42,10 @@ const BodyPage = () => {
                         )
                     })}
                 </StyledServiceTittle>
+                <StyledSVG>
+                </StyledSVG>
                 <StyledServiceDesc >
                     <BodyService type={type} />
-                    <Link to="/">
-                        BOOK NOW
-                        <Flecha className="flecha"></Flecha>
-                    </Link>
                 </StyledServiceDesc>
                 <StyledServicePhoto>
                     <StaticImage
