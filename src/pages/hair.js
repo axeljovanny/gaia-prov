@@ -1,6 +1,6 @@
 import { Link } from "gatsby";
 import React, { useState } from "react"
-import { StyledServiceContent, StyledServicePage, StyledServiceTittle, StyledServiceDesc, StyledServicePhoto, StyledServiceNote, StyledNote, TextTittle } from "../styles/js/skin";
+import { StyledServiceContent, StyledServicePage, StyledServiceTittle, StyledServiceDesc, StyledServicePhoto, StyledServiceNote, StyledNote, TextTittle, StyledSVG } from "../styles/js/skin";
 import '../styles/css/services.css'
 import { StaticImage } from "gatsby-plugin-image";
 
@@ -28,7 +28,7 @@ const HairPage = () => {
 
 
   return (
-    <StyledServicePage >
+    <StyledServicePage siteTitle="hair">
       <ServiceNav siteTitle="hair"></ServiceNav>
       <StyledServiceContent>
         <StyledServiceTittle>
@@ -42,12 +42,10 @@ const HairPage = () => {
             )
           })}
         </StyledServiceTittle>
+        <StyledSVG>
+        </StyledSVG>
         <StyledServiceDesc >
           <HairService type={type} />
-          <Link to="/">
-            BOOK NOW
-            <Flecha className="flecha"></Flecha>
-          </Link>
         </StyledServiceDesc>
         <StyledServicePhoto>
           <StaticImage

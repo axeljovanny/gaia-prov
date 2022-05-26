@@ -36,7 +36,6 @@ const headertransition = keyframes`
 
 export const GlobalStyles = createGlobalStyle`
 body {
-  overflow-x: hidden;
   scroll-behavior: smooth;
   padding: 0;
   margin: 0;

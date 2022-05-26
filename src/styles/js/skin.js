@@ -8,7 +8,7 @@ export const StyledServicePage = styled.div`
     flex-flow: column nowrap;
     justify-content: center;
     align-items: center;
-    background: ${colors.softWhite};
+    background: ${props => (props.siteTitle === 'hair' ? colors.softWhite : colors.softWhite)}; //TODO: Cambiar color al estar en hair
     width: 100vw;
     height: 100vh;
 
@@ -67,6 +67,7 @@ export const DescTittle = styled.div`
       align-items: center;
       background: ${colors.none};
       width: 95%;
+      height: 10%; 
 
       p{
         font-family: ${font.waveLight};
@@ -145,6 +146,7 @@ export const DescText = styled.div`
       justify-content: flex-start;
       align-items: center;
       background: ${colors.none};
+      height: 30%; 
       width: 100%;
       p{
         font-family: ${font.light};
@@ -153,16 +155,18 @@ export const DescText = styled.div`
       }
       ${above.large`
       width: 80%;
+      height: 30%; 
+
       p{
         font-family: ${font.light};
-        font-size: ${size.Mtext};
+        font-size: ${size.Wtext};
         color: ${colors.black};
       }
       `}
       `
 export const StyledServiceDesc = styled.div`
       display: flex;
-      justify-content: flex-start;
+      justify-content: space-between;
       flex-flow: column nowrap;
       align-items: flex-start;
       text-align: justify;
@@ -171,13 +175,14 @@ export const StyledServiceDesc = styled.div`
       width: 90%;
       padding: 0 2em;
       height: 100%;
-      overflow:scroll;
+      overflow-y: scroll;
 
       ${above.large`
       width: 50%;
-      justify-content: center;
+      justify-content: flex-start;
       flex-flow: column nowrap;
-      align-items: center;
+      align-items: flex-start;
+      height: 90%;
       `}
       
       `
@@ -213,8 +218,8 @@ export const StyledServiceFooter = styled.div`
       align-items: center;
       background: ${colors.green};
       width: 100%;
-    height: 50vh;
-    
+      height: 50vh;
+
     `
 
 export const StyledNote = styled.div`
@@ -252,8 +257,6 @@ export const StyledServiceNote = styled.div`
         width: 90%;
         height: 20vh; 
         background: ${colors.none};
-
-
   `}   
     `
 

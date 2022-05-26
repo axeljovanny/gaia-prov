@@ -39,7 +39,7 @@ const SkinPage = () => {
         <StyledServicePhoto>
           <StaticImage
             className="container-prueba"
-            // imgClassName="logo"
+            imgClassName="logo"
             src="../images/Fotos/prueba1.jpg"
             alt="imagen de prueba"
             loading="eager"

@@ -2,7 +2,7 @@ import React from "react"
 import { Link } from "gatsby";
 import { DescTittle, DescText, DescDetails, DescTime, DescPrice, DescBook } from "../styles/js/skin";
 import { DescDetailsHair, DescPriceHair, DescTitleHair } from "../styles/js/hair";
-import { DescDetailsBody, DescNoteBody, DescPriceBody, DescTitleBody } from "../styles/js/body";
+import { Desc, DescDetailsBody, DescNoteBody, DescPriceBody, DescTitleBody } from "../styles/js/body";
 
 
 const SkinServiceDesc = ({ services, title }) => {
@@ -56,16 +56,14 @@ const HairServiceDesc = ({ services, type }) => {
                         {
                             node.type === type.type &&
                             (
-                                <>
-                                    <DescDetailsHair>
-                                        <DescTitleHair>
-                                            {node.title}
-                                        </DescTitleHair>
-                                        <DescPriceHair>
-                                            {node.price}
-                                        </DescPriceHair>
-                                    </DescDetailsHair>
-                                </>
+                                <DescDetailsHair>
+                                    <DescTitleHair>
+                                        {node.title}
+                                    </DescTitleHair>
+                                    <DescPriceHair>
+                                        {node.price}
+                                    </DescPriceHair>
+                                </DescDetailsHair>
                             )
                         }
                     </div>
@@ -88,7 +86,6 @@ const BodyServiceDesc = ({ services, type }) => {
             <DescTittle><p>{type.type}</p>
                 <Link to="/"><DescBook>BOOK NOW</DescBook></Link>
             </DescTittle>
-            <DescText><p>{description}</p></DescText>
 
             {services.map(({ node }) => {
                 return (
@@ -104,10 +101,14 @@ const BodyServiceDesc = ({ services, type }) => {
                                         <DescPriceBody>
                                             {node.price}
                                         </DescPriceBody>
+                                        <Desc>
+                                            {node.description}
+                                        </Desc>
                                         <DescNoteBody>
                                             {node.note}
                                         </DescNoteBody>
                                     </DescDetailsBody>
+
                                 </>
                             )
                         }
