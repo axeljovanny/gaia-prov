@@ -114,7 +114,7 @@ export const DescBook = styled.button`
       box-sizing: border-box;
       color: #111827;
       color: ${colors.white};
-      font-family: ${font.waveLight};
+      font-family: ${font.waveMedium};
       font-size: ${size.Wmini};
       line-height: 1.25rem;
       padding: .5rem 1rem;
@@ -233,10 +233,16 @@ export const StyledNote = styled.div`
       font-size: ${size.Mmini};
       color: ${colors.white};
     }
+    a{
+      color: ${colors.white};
+    }
     ${above.large`
     width: 80%;
     p{
       font-size: ${size.Wmini};
+      color: ${colors.black};
+    }
+    a{
       color: ${colors.black};
     }
 
