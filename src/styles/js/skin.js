@@ -174,11 +174,10 @@ export const StyledServiceDesc = styled.div`
       overflow:scroll;
 
       ${above.large`
-      width: 60%;
+      width: 50%;
       justify-content: center;
       flex-flow: column nowrap;
       align-items: center;
-      border-left: solid 0.5px ${colors.black};
       `}
       
       `
@@ -194,6 +193,20 @@ export const StyledServicePhoto = styled.div`
       `}
       
       `
+export const StyledSVG = styled.div`
+    display: none;
+
+      ${above.large`
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: ${colors.none};
+      width: 1%;
+      height: 90%;
+
+      `}
+`
+
 export const StyledServiceFooter = styled.div`
       display: flex;
       justify-content: center;

@@ -1,11 +1,12 @@
 import React, { useState } from "react"
-import { StyledServiceContent, StyledServicePage, StyledServiceTittle, StyledServiceDesc, StyledServicePhoto, StyledServiceNote, StyledNote, TextTittle } from "../styles/js/skin";
+import { StyledServiceContent, StyledServicePage, StyledServiceTittle, StyledServiceDesc, StyledServicePhoto, StyledServiceNote, StyledNote, TextTittle, StyledSVG } from "../styles/js/skin";
 import '../styles/css/services.css'
 import { StaticImage } from "gatsby-plugin-image";
 
 
 import { SkinService, useSkinService } from "../components/skin";
 import { ServiceNav } from "../components/servnav";
+import { Line } from "../styles/js/servnav";
 
 
 const initialTitle = 'GAIA SIGNATURE';
@@ -30,6 +31,8 @@ const SkinPage = () => {
             )
           })}
         </StyledServiceTittle>
+        <StyledSVG>
+        </StyledSVG>
         <StyledServiceDesc>
           <SkinService title={title} />
         </StyledServiceDesc>
