@@ -3,7 +3,7 @@ import React, { useState } from "react"
 import { StyledServiceContent, StyledServicePage, StyledServiceTittle, StyledServiceDesc, StyledServicePhoto, StyledServiceNote, StyledNote, TextTittle } from "../styles/js/skin";
 import '../styles/css/services.css'
 import { StaticImage } from "gatsby-plugin-image";
-
+import { motion } from "framer-motion";
 
 import Loadable from "@loadable/component"
 import { HairService, useHairService } from "../components/hair";
@@ -35,9 +35,9 @@ const HairPage = () => {
           {sort.map((data) => {
             return (
               <TextTittle key={data}>
-                <button onClick={() => setType(data)}>
+                <motion.button whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }} transition={{ ease: "linear" }} onClick={() => setType(data)}>
                   {data}
-                </button>
+                </motion.button>
               </TextTittle>
             )
           })}

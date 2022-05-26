@@ -5,10 +5,24 @@ import { OverlayMenu, StyledHomeReturn, StyledNavbarServ, StyledService, StyledS
 
 import { MapsIcon, FacebookIcon, InstagramIcon } from "../images/icons"
 import { colors } from "../utils/const"
+import { motion } from "framer-motion"
 
 import Loadable from "@loadable/component"
 const Flecha = Loadable(() => import("../assets/Flecha.svg"))
-const Linea = Loadable(() => import("../assets/LineaSeleccion.svg"))
+/* const Linea = Loadable(() => import("../assets/LineaSeleccion.svg")) */
+
+
+const draw = {
+    hidden: { pathLength: 0 },
+    visible: () => {
+      return {
+        pathLength: 1,
+        transition: {
+          pathLength: { type: "spring", duration: 1.5, bounce: 0 },
+        },
+      };
+    },
+  };
 
 
 const ServiceNav = ({ siteTitle }) => {
@@ -20,29 +34,84 @@ const ServiceNav = ({ siteTitle }) => {
                 <StyledHomeReturn>
                     <Link to="/">
                         <Flecha className="flecha"></Flecha>
-                        HOME
+                        <motion.p
+              /* ANIMACION */
+
+              whileHover={{ scale: 1.1 }}
+              whileTap={{ scale: 0.9 }}
+              transition={{ ease: "linear" }}
+            >
+              HOME
+            </motion.p>
                     </Link>
                 </StyledHomeReturn>
                 <StyledNavbarServ>
                     <Text>
                         <StyledService siteTitle="skin" select={siteTitle}>
                             <Link to="/skin">
-                                SKIN CARE
+                            <motion.p
+                  /* ANIMACION */
+
+                  whileHover={{ scale: 1.1 }}
+                  whileTap={{ scale: 0.9 }}
+                  transition={{ ease: "linear" }}
+                >
+                  SKIN CARE
+                </motion.p>
                             </Link>
                         </StyledService>
                         <StyledService siteTitle="hair" select={siteTitle}>
                             <Link to="/hair">
-                                HAIR CARE
+                            <motion.p
+                  /* ANIMACION */
+
+                  whileHover={{ scale: 1.1 }}
+                  whileTap={{ scale: 0.9 }}
+                  transition={{ ease: "linear" }}
+                >
+                  HAIR CARE
+                </motion.p>
                             </Link>
                         </StyledService>
                         <StyledService siteTitle="body" select={siteTitle}>
                             <Link to="/body">
-                                BODY CARE
+                            <motion.p
+                  /* ANIMACION */
+
+                  whileHover={{ scale: 1.1 }}
+                  whileTap={{ scale: 0.9 }}
+                  transition={{ ease: "linear" }}
+                >
+                  BODY CARE
+                </motion.p>
                             </Link>
                         </StyledService>
                     </Text>
                     <SVG>
-                        <Linea className="linea"></Linea>
+                    <div>
+            <motion.svg
+            width="1050"
+            height="3"
+            viewBox="0 0 1010 1"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <motion.path
+              d="M0 1H1090"
+              stroke="black"
+              strokeWidth=".2"
+              animate={{
+                pathLength: [0, 1],
+              }}
+              transition={{
+                times: [0, 1],
+                duration: 1
+              }}
+              variants={{ draw }}
+            />
+            {<motion.rect />}
+          </motion.svg>    
+                 </div>
                     </SVG>
 
                     <NavIcon onClick={() => toggleNav(!toggle)}>

@@ -2,6 +2,7 @@ import React, { useState } from "react"
 import { StyledServiceContent, StyledServicePage, StyledServiceTittle, StyledServiceDesc, StyledServicePhoto, StyledServiceNote, StyledNote, TextTittle, StyledSVG } from "../styles/js/skin";
 import '../styles/css/services.css'
 import { StaticImage } from "gatsby-plugin-image";
+import { motion } from "framer-motion";
 
 
 import { SkinService, useSkinService } from "../components/skin";
@@ -10,6 +11,19 @@ import { Line } from "../styles/js/servnav";
 
 
 const initialTitle = 'GAIA SIGNATURE';
+
+const draw = {
+  hidden: { pathLength: 0 },
+  visible: () => {
+    return {
+      pathLength: 1,
+      transition: {
+        pathLength: { type: "spring", duration: 1.5, bounce: 0 },
+      },
+    };
+  },
+};
+
 
 const SkinPage = () => {
   const services = useSkinService()
@@ -24,14 +38,38 @@ const SkinPage = () => {
           {services.map(({ node }) => {
             return (
               <TextTittle key={node.id}>
-                <button onClick={() => setTitle(node.title)} >
+                <motion.button whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }} transition={{ ease: "linear" }}  onClick={() => setTitle(node.title)}>
                   {node.title}
-                </button>
+                </motion.button>
               </TextTittle>
             )
           })}
         </StyledServiceTittle>
         <StyledSVG>
+        <div>
+            <motion.svg
+            width="3"
+            height="400"
+            viewBox="0 0 2 542"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <motion.path
+              d="M1 0V542"
+              stroke="black"
+              strokeWidth=".3"
+              animate={{
+                pathLength: [0, 1],
+              }}
+              transition={{
+                times: [0, 1],
+                duration: 1
+              }}
+              variants={{ draw }}
+            />
+            {<motion.rect />}
+          </motion.svg>    
+                 </div>
         </StyledSVG>
         <StyledServiceDesc>
           <SkinService title={title} />
