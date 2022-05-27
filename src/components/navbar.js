@@ -46,7 +46,7 @@ const Navbar = ({ siteTitle }) => {
                         </Link>
                     </Item>
                     <Item>
-                        <a href="https://gaia-evolution-spasalon.square.site/" target="_blank" rel="noreferrer">
+                        <a href="https://squareup.com/appointments/book/18a837f7-27d0-4fb3-9184-eed5ec31a526/9XWS7XZK8MK0T/services" target="_blank" rel="noreferrer">
                             <StyledButton className="button">
                                 BOOK NOW
                             </StyledButton>
@@ -84,7 +84,7 @@ const Navbar = ({ siteTitle }) => {
                         </Link>
                     </Item>
                     <Item onClick={() => toggleNav(!toggle)}>
-                        <a href="https://gaia-evolution-spasalon.square.site/" target="_blank" rel="noreferrer">
+                        <a href="https://squareup.com/appointments/book/18a837f7-27d0-4fb3-9184-eed5ec31a526/9XWS7XZK8MK0T/services" target="_blank" rel="noreferrer">
                             <StyledButton className="button">
                                 BOOK NOW
                             </StyledButton>
