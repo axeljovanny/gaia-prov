@@ -1,0 +1,28 @@
+/* CIRCULOS */
+
+.circulo1{
+    width: 20px;
+    height: 20px;
+    left: -33.5%;
+    top: -27%;
+    display:flex;
+    position:relative;
+  }
+  
+  .circulo2{
+    width: 20px;
+    min-height: 20px;
+    left: 0%;
+    top: -57%;
+    display:flex;
+    position:relative;
+  }
+  
+  .circulo3{
+    width: 20px;
+    min-height: 20px;
+    left: 34%;
+    top: -86.5%;
+    display:flex;
+    position:relative;
+  }

@@ -3,6 +3,7 @@ import { StyledServiceContent, StyledServicePage, StyledServiceTittle, StyledSer
 import '../styles/css/services.css'
 import { StaticImage } from "gatsby-plugin-image";
 import { motion } from "framer-motion";
+import { colors } from "../utils/const";
 
 
 import { SkinService, useSkinService } from "../components/skin";
@@ -38,11 +39,13 @@ const SkinPage = () => {
           {services.map(({ node }) => {
             return (
               node.category != null && (
-                <TextTittle key={node.id}>
-                  <motion.button whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }} transition={{ ease: "linear" }} onClick={() => setTitle(node.title)}>
-                    {node.title}
-                  </motion.button>
-                </TextTittle>
+              <TextTittle key={node.id}>
+                <motion.div initial={{opacity:0 }} animate={{opacity:1}} transition={{duration: .5}}>
+                <motion.button whileHover={{ scale: 1.1,color:colors.accentBlue }} whileTap={{ scale: 0.9 }} transition={{ ease: "linear" }}  onClick={() => setTitle(node.title)}>
+                  {node.title}
+                </motion.button>
+                </motion.div>
+              </TextTittle>
               )
             )
           })}
@@ -74,7 +77,9 @@ const SkinPage = () => {
           </div>
         </StyledSVG>
         <StyledServiceDesc>
+        <motion.div  initial={{opacity:0 }} animate={{opacity:1}} transition={{duration: .5, delay: .2}}>
           <SkinService title={title} />
+        </motion.div>
         </StyledServiceDesc>
         <StyledServicePhoto>
           <StaticImage
@@ -90,8 +95,8 @@ const SkinPage = () => {
         </StyledServicePhoto>
       </StyledServiceContent>
       <StyledServiceNote>
-        <StyledNote><p>All facial treatments are customized to treat individual skin care needs and include skin analysis, cleansing, exfoliation, and treatment mask, and are completed with the application of serums, moisturizers and/or sun protection. A skin care prescription will be designed and recommended to help maintain the health and integrity of the skin. Add on service are included on the 1.5hr and 2hr services</p></StyledNote>
-        <StyledNote><p> © Gaia Evolution Spa & Salon  {(new Date().getFullYear())} | <a href="https://luckyducky.studio/" rel="noreferrer" target="_blank">Lucky Ducky Studio</a></p></StyledNote>
+        <StyledNote><motion.p initial={{y:10 ,opacity:0 }} animate={{y:0 ,opacity:1}} transition={{duration: 1.3, delay: .5, ease:"backInOut"}}>All facial treatments are customized to treat individual skin care needs and include skin analysis, cleansing, exfoliation, and treatment mask, and are completed with the application of serums, moisturizers and/or sun protection. A skin care prescription will be designed and recommended to help maintain the health and integrity of the skin. Add on service are included on the 1.5hr and 2hr services</motion.p></StyledNote>
+        <StyledNote><motion.p initial={{y:10 ,opacity:0 }} animate={{y:0 ,opacity:1}} transition={{duration: 1.3, delay: .9 , ease:"backInOut"}}> © Gaia Evolution Spa & Salon  {(new Date().getFullYear())} | <a href="https://luckyducky.studio/" rel="noreferrer" target="_blank">Lucky Ducky Studio</a></motion.p></StyledNote>
       </StyledServiceNote>
     </StyledServicePage>
   )

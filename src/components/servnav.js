@@ -6,6 +6,7 @@ import { OverlayMenu, StyledHomeReturn, StyledNavbarServ, StyledService, StyledS
 import { MapsIcon, FacebookIcon, InstagramIcon } from "../images/icons"
 import { colors } from "../utils/const"
 import { motion } from "framer-motion"
+import "../styles/css/skin.css";
 
 import Loadable from "@loadable/component"
 const Flecha = Loadable(() => import("../assets/Flecha.svg"))
@@ -32,18 +33,17 @@ const ServiceNav = ({ siteTitle }) => {
         <>
             <StyledServiceNav>
                 <StyledHomeReturn>
-                    <Link to="/">
-                        <motion.p
-                            /* ANIMACION */
-
-                            whileHover={{ scale: 1.1 }}
-                            whileTap={{ scale: 0.9 }}
-                            transition={{ ease: "linear" }}
+                <motion.p
+             whileHover={{ scale: 1.5, color:colors.accentBlue}}
+             whileTap={{ scale: 0.9 }}
+             transition={{ ease: "linear" }}
                         >
-                            <Flecha className="flecha"></Flecha>
-                            HOME
-                        </motion.p>
+                    <Link to="/">
+
+                        <Flecha className="flecha"></Flecha>
+        
                     </Link>
+                    </motion.p>
                 </StyledHomeReturn>
                 <StyledNavbarServ>
                     <Text>
@@ -88,30 +88,111 @@ const ServiceNav = ({ siteTitle }) => {
                         </StyledService>
                     </Text>
                     <SVG>
-                        <div>
-                            <motion.svg
-                                width="1050"
-                                height="3"
-                                viewBox="0 0 1010 1"
-                                fill="none"
-                                xmlns="http://www.w3.org/2000/svg"
-                            >
-                                <motion.path
-                                    d="M0 1H1090"
-                                    stroke="black"
-                                    strokeWidth=".2"
-                                    animate={{
-                                        pathLength: [0, 1],
-                                    }}
-                                    transition={{
-                                        times: [0, 1],
-                                        duration: 1
-                                    }}
-                                    variants={{ draw }}
-                                />
-                                {<motion.rect />}
-                            </motion.svg>
-                        </div>
+                    <div>
+            <motion.svg
+            width="1050"
+            height="3"
+            viewBox="0 0 1010 1"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <motion.path
+              d="M0 1H1090"
+              stroke="black"
+              strokeWidth=".2"
+              animate={{
+                pathLength: [0, 1],
+              }}
+              transition={{
+                times: [0, 1],
+                duration: 1
+              }}
+              variants={{ draw }}
+            />
+            {<motion.rect />}
+          </motion.svg>    
+                 </div>
+
+                {/* CIrculo1 */}
+
+                <div
+      className="circulo1">
+        <motion.svg
+
+        initial={{opacity: 0}}
+        animate={{opacity:1}}
+        transition={{ delay: .5,duration: .5}}
+
+          xmlns="http://www.w3.org/2000/svg"
+          width="20"
+          height="20"
+          viewBox="0 0 26 26"
+        >
+          <circle
+            id="Elipse_7"
+            data-name="Elipse 7"
+            cx="13"
+            cy="13"
+            r="13"
+            fill="#828c7a"
+          />
+        </motion.svg>
+      </div>
+
+            {/* Circulo2 */}
+
+            <div 
+      className="circulo2">
+        <motion.svg
+
+        initial={{opacity: 0}}
+        animate={{opacity:1}}
+        transition={{ delay: .6,duration: .6}}
+
+          xmlns="http://www.w3.org/2000/svg"
+          width="20"
+          height="20"
+          viewBox="0 0 26 26"
+        >
+          <motion.circle
+            id="Elipse_7"
+            data-name="Elipse 7"
+            cx="13"
+            cy="13"
+            r="13"
+            fill="#828c7a"
+
+          />
+        </motion.svg>
+      </div>
+
+            {/* Circulo3 */}
+
+            <div
+      className="circulo3">
+        <motion.svg
+
+          initial={{opacity: 0}}
+          animate={{opacity:1}}
+          transition={{ delay: .7,duration: .7}}
+
+          xmlns="http://www.w3.org/2000/svg"
+          width="20"
+          height="20"
+          viewBox="0 0 26 26"
+        >
+          <circle
+            id="Elipse_7"
+            data-name="Elipse 7"
+            cx="13"
+            cy="13"
+            r="13"
+            fill="#828c7a"
+          />
+        </motion.svg>
+      </div>
+
+
                     </SVG>
 
                     <NavIcon onClick={() => toggleNav(!toggle)}>
