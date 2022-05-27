@@ -58,7 +58,7 @@ export const Desc = styled.div`
         color: ${colors.black};
       }
       ${above.large`
-      width: 100%;
+      width: 80%;
       height: auto; 
 
         font-family: ${font.light};

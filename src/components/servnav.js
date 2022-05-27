@@ -15,14 +15,14 @@ const Flecha = Loadable(() => import("../assets/Flecha.svg"))
 const draw = {
     hidden: { pathLength: 0 },
     visible: () => {
-      return {
-        pathLength: 1,
-        transition: {
-          pathLength: { type: "spring", duration: 1.5, bounce: 0 },
-        },
-      };
+        return {
+            pathLength: 1,
+            transition: {
+                pathLength: { type: "spring", duration: 1.5, bounce: 0 },
+            },
+        };
     },
-  };
+};
 
 
 const ServiceNav = ({ siteTitle }) => {
@@ -33,85 +33,85 @@ const ServiceNav = ({ siteTitle }) => {
             <StyledServiceNav>
                 <StyledHomeReturn>
                     <Link to="/">
-                        <Flecha className="flecha"></Flecha>
                         <motion.p
-              /* ANIMACION */
+                            /* ANIMACION */
 
-              whileHover={{ scale: 1.1 }}
-              whileTap={{ scale: 0.9 }}
-              transition={{ ease: "linear" }}
-            >
-              HOME
-            </motion.p>
+                            whileHover={{ scale: 1.1 }}
+                            whileTap={{ scale: 0.9 }}
+                            transition={{ ease: "linear" }}
+                        >
+                            <Flecha className="flecha"></Flecha>
+                            HOME
+                        </motion.p>
                     </Link>
                 </StyledHomeReturn>
                 <StyledNavbarServ>
                     <Text>
                         <StyledService siteTitle="skin" select={siteTitle}>
                             <Link to="/skin">
-                            <motion.p
-                  /* ANIMACION */
+                                <motion.p
+                                    /* ANIMACION */
 
-                  whileHover={{ scale: 1.1 }}
-                  whileTap={{ scale: 0.9 }}
-                  transition={{ ease: "linear" }}
-                >
-                  SKIN CARE
-                </motion.p>
+                                    whileHover={{ scale: 1.1 }}
+                                    whileTap={{ scale: 0.9 }}
+                                    transition={{ ease: "linear" }}
+                                >
+                                    SKIN CARE
+                                </motion.p>
                             </Link>
                         </StyledService>
                         <StyledService siteTitle="hair" select={siteTitle}>
                             <Link to="/hair">
-                            <motion.p
-                  /* ANIMACION */
+                                <motion.p
+                                    /* ANIMACION */
 
-                  whileHover={{ scale: 1.1 }}
-                  whileTap={{ scale: 0.9 }}
-                  transition={{ ease: "linear" }}
-                >
-                  HAIR CARE
-                </motion.p>
+                                    whileHover={{ scale: 1.1 }}
+                                    whileTap={{ scale: 0.9 }}
+                                    transition={{ ease: "linear" }}
+                                >
+                                    HAIR CARE
+                                </motion.p>
                             </Link>
                         </StyledService>
                         <StyledService siteTitle="body" select={siteTitle}>
                             <Link to="/body">
-                            <motion.p
-                  /* ANIMACION */
+                                <motion.p
+                                    /* ANIMACION */
 
-                  whileHover={{ scale: 1.1 }}
-                  whileTap={{ scale: 0.9 }}
-                  transition={{ ease: "linear" }}
-                >
-                  BODY CARE
-                </motion.p>
+                                    whileHover={{ scale: 1.1 }}
+                                    whileTap={{ scale: 0.9 }}
+                                    transition={{ ease: "linear" }}
+                                >
+                                    BODY CARE
+                                </motion.p>
                             </Link>
                         </StyledService>
                     </Text>
                     <SVG>
-                    <div>
-            <motion.svg
-            width="1050"
-            height="3"
-            viewBox="0 0 1010 1"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <motion.path
-              d="M0 1H1090"
-              stroke="black"
-              strokeWidth=".2"
-              animate={{
-                pathLength: [0, 1],
-              }}
-              transition={{
-                times: [0, 1],
-                duration: 1
-              }}
-              variants={{ draw }}
-            />
-            {<motion.rect />}
-          </motion.svg>    
-                 </div>
+                        <div>
+                            <motion.svg
+                                width="1050"
+                                height="3"
+                                viewBox="0 0 1010 1"
+                                fill="none"
+                                xmlns="http://www.w3.org/2000/svg"
+                            >
+                                <motion.path
+                                    d="M0 1H1090"
+                                    stroke="black"
+                                    strokeWidth=".2"
+                                    animate={{
+                                        pathLength: [0, 1],
+                                    }}
+                                    transition={{
+                                        times: [0, 1],
+                                        duration: 1
+                                    }}
+                                    variants={{ draw }}
+                                />
+                                {<motion.rect />}
+                            </motion.svg>
+                        </div>
                     </SVG>
 
                     <NavIcon onClick={() => toggleNav(!toggle)}>

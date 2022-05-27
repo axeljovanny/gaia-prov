@@ -37,39 +37,41 @@ const SkinPage = () => {
         <StyledServiceTittle>
           {services.map(({ node }) => {
             return (
-              <TextTittle key={node.id}>
-                <motion.button whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }} transition={{ ease: "linear" }}  onClick={() => setTitle(node.title)}>
-                  {node.title}
-                </motion.button>
-              </TextTittle>
+              node.category != null && (
+                <TextTittle key={node.id}>
+                  <motion.button whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }} transition={{ ease: "linear" }} onClick={() => setTitle(node.title)}>
+                    {node.title}
+                  </motion.button>
+                </TextTittle>
+              )
             )
           })}
         </StyledServiceTittle>
         <StyledSVG>
-        <div>
+          <div>
             <motion.svg
-            width="3"
-            height="400"
-            viewBox="0 0 2 542"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <motion.path
-              d="M1 0V542"
-              stroke="black"
-              strokeWidth=".3"
-              animate={{
-                pathLength: [0, 1],
-              }}
-              transition={{
-                times: [0, 1],
-                duration: 1
-              }}
-              variants={{ draw }}
-            />
-            {<motion.rect />}
-          </motion.svg>    
-                 </div>
+              width="3"
+              height="400"
+              viewBox="0 0 2 542"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <motion.path
+                d="M1 0V542"
+                stroke="black"
+                strokeWidth=".3"
+                animate={{
+                  pathLength: [0, 1],
+                }}
+                transition={{
+                  times: [0, 1],
+                  duration: 1
+                }}
+                variants={{ draw }}
+              />
+              {<motion.rect />}
+            </motion.svg>
+          </div>
         </StyledSVG>
         <StyledServiceDesc>
           <SkinService title={title} />
