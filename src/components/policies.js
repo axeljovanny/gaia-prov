@@ -16,7 +16,7 @@ const Policies = ({ children }) => (
                 loading="eager"
                 width={140}
                 layout="constrained"
-                formats={['auto', 'webp', 'avif']}
+                formats={['auto']}
                 quality='80'
             />
             <h1>GAIA EVOLUTION</h1>

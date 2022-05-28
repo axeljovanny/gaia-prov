@@ -26,7 +26,7 @@ const PoliciesPage = () => {
                   width: 2000
                   webpOptions: {quality: 90}
                   layout: CONSTRAINED
-                  formats: [AUTO, WEBP, AVIF]
+                  formats: [AUTO]
                 )
               }
             }
