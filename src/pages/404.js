@@ -24,7 +24,7 @@ const NotFoundPage = () => {
         alt="gaia fondo"
         loading="eager"
         layout="fullWidth"
-        formats={['auto']}
+        formats={['auto', 'webp', 'avif']}
         quality='80'
       />
       <Navbar />

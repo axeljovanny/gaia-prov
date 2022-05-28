@@ -14,7 +14,7 @@ const Skin = ({ children }) => (
                 loading="eager"
                 width={140}
                 layout="constrained"
-                formats={['auto']}
+                formats={['auto', 'webp', 'avif']}
                 quality='80'
             />
             <h1>GAIA EVOLUTION</h1>

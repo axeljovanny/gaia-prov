@@ -34,7 +34,7 @@ const Navbar = ({ siteTitle }) => {
                             loading="eager"
                             width={140}
                             placeholder="blurred"
-                            formats={['auto']}
+                            formats={['auto', 'webp', 'avif']}
                         />
                     </Link>
                 </StyledLogoContainer>

@@ -17,7 +17,7 @@ const Home = ({ children }) => (
                         loading="eager"
                         width={140}
                         layout="constrained"
-                        formats={['auto']}
+                        formats={['auto', 'webp', 'avif']}
                         quality='70'
                     />
                 </StyledLogoMobileContainer>

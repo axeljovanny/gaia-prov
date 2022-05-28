@@ -14,7 +14,7 @@ const IndexPage = () => {
           childImageSharp {
             gatsbyImageData(
               quality: 50
-              formats: [AUTO]
+              formats: [AUTO, WEBP, AVIF]
               layout: FULL_WIDTH
               webpOptions: {quality: 70}
             )

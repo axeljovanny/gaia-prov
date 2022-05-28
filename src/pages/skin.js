@@ -25,7 +25,7 @@ const SkinPage = () => {
                       layout: CONSTRAINED
                       width: 2000
                       webpOptions: {quality: 90}
-                      formats: [AUTO]
+                      formats: [AUTO, WEBP, AVIF]
                     )
                   }
                 }
