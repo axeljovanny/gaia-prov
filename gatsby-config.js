@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
     title: ``,
-    siteUrl: `https://www.yourdomain.tld`,
+    siteUrl: `https://gaiaevolutionspaandsalon.com/`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
