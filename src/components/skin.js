@@ -1,6 +1,6 @@
 import React from "react"
 import { useStaticQuery, graphql } from "gatsby"
-import { SkinServiceDesc } from "./servicies";
+import { SkinServiceDesc, SkinServiceMobileDesc } from "./servicies";
 
 export const useSkinService = () => {
   const data = useStaticQuery(
@@ -32,8 +32,16 @@ const SkinService = (title) => {
     </>
   )
 }
+const SkinMobileService = () => {
+  const kawai = useSkinService()
+  return (
+    <>
+      <SkinServiceMobileDesc services={kawai} />
+    </>
+  )
+}
 
 
 export {
-  SkinService
+  SkinService, SkinMobileService
 }

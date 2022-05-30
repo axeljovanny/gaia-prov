@@ -1,6 +1,6 @@
 import React from "react"
 import { useStaticQuery, graphql } from "gatsby"
-import { BodyServiceDesc } from "./servicies";
+import { BodyServiceDesc, BodyServiceMobileDesc } from "./servicies";
 
 export const useBodyService = () => {
   const data = useStaticQuery(
@@ -34,8 +34,17 @@ const BodyService = (type) => {
     </>
   )
 }
+const BodyMobileService = () => {
+  const kawai = useBodyService()
+  return (
+    <>
+      <BodyServiceMobileDesc services={kawai} />
+    </>
+  )
+}
 
 
 export {
-  BodyService
+  BodyService,
+  BodyMobileService
 }

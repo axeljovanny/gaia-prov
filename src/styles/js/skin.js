@@ -20,23 +20,23 @@ export const StyledServicePage = styled.div`
 `
 
 export const StyledServiceContent = styled.div`
+    display: none;
+
+    ${above.large`
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-flow: column nowrap;
     background: ${colors.none};
     width: 100%;
-    height: auto;
-    ${above.large`
     flex-flow: row nowrap;
     height: 50vh;
     `}
     `
 export const StyledServiceTittle = styled.div`
-    display: flex
-    flex-flow: row wrap;
+    display: none;
 
     ${above.large`
+    display: flex;
     flex-flow: column nowrap;
     justify-content: flex-start;
     align-items: flex-start;
@@ -322,3 +322,30 @@ height: 100%;
   height: 50%;
   `}
 `
+
+export const StyledServiceMobileContent = styled.div`
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: ${colors.red};
+    width: 100%;
+    flex-flow: column nowrap;
+
+    ${above.large`
+    display: none;
+    
+    `}
+    `
+
+export const Show = styled.div`
+    display: ${props => (props.open ? "flex" : "none")};
+    flex-direction: column;
+    background: ${colors.yell};
+    justify-content: center;
+    align-items: center;
+  
+    ${above.large` {
+      display: none;
+      }
+    `}
+  `;

@@ -1,6 +1,6 @@
 import React from "react"
 import { useStaticQuery, graphql } from "gatsby"
-import { HairServiceDesc } from "./servicies";
+import { HairServiceDesc, HairServiceMobileDesc } from "./servicies";
 
 export const useHairService = () => {
   const data = useStaticQuery(
@@ -14,7 +14,6 @@ export const useHairService = () => {
               type
               title
               price
-              note
               description
             }
           }
@@ -34,7 +33,17 @@ const HairService = (type) => {
   )
 }
 
+const HairMobileService = () => {
+  const kawai = useHairService()
+  return (
+    <>
+      <HairServiceMobileDesc services={kawai} />
+    </>
+  )
+}
+
 
 export {
-  HairService
+  HairService,
+  HairMobileService
 }
