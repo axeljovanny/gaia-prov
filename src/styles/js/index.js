@@ -69,7 +69,7 @@ ul {
   right: 0;
   top: 0;
   // animation: ${headertransition} 60s linear 10ms infinite;
-  //|transition: all 0.1s ease-in-out;
+  // transition: all 0.1s ease-in-out;
 }
 
 

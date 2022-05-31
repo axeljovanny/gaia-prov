@@ -1,17 +1,17 @@
 import React from "react"
 import { Footer, Home } from "../components";
-import { Navbar } from "../components/navbar"
-
+import { Navbar } from "../components/navbar";
 
 import { graphql, useStaticQuery } from 'gatsby'
 import { getImage } from "gatsby-plugin-image"
+
 import { BgImage } from "gbimage-bridge"
 
 const IndexPage = () => {
   const { backgroundImage123 } = useStaticQuery(
     graphql`
       query {
-        backgroundImage123: file(relativePath: {eq: "Backgrounds/Home.jpg"}) {
+        backgroundImage123: file(relativePath: {eq: "fondo.jpg"}) {
           childImageSharp {
             gatsbyImageData(
               quality: 50
@@ -28,15 +28,14 @@ const IndexPage = () => {
 
   return (
     <>
-      <div className="content">
-        <BgImage image={image} className="mastheadHome">
-        </BgImage>
-        <Navbar />
-        <Home />
-      </div>
-      <Footer />
 
-
+      <BgImage image={image} className="mastheadHome">
+        <div className="content">
+          <Navbar />
+          <Home />
+          <Footer />
+        </div>
+      </BgImage>
     </>
   )
 };

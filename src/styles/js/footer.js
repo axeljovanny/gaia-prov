@@ -10,7 +10,7 @@ export const StyledFooter = styled.div`
 
   position: relative;
   width: 100%;
-  height: 90vh;
+  height: auto;
   background: none;
 
   ${above.medium`
@@ -23,9 +23,9 @@ export const StyledFooter = styled.div`
   justify-content: center;
 
   position: relative;
-  width: 100vw;
-  height: 50vh;
-  background: ${colors.green};
+  width: 100%;
+  height: 15vh;
+  background: none;
 
   `}
 `
