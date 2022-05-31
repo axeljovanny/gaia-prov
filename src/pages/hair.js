@@ -1,16 +1,12 @@
 import React, { useState } from "react"
-import { StyledServiceContent, StyledServicePage, StyledServiceTittle, StyledServiceDesc, StyledServicePhoto, StyledServiceNote, StyledNote, TextTittle, StyledSVG, StyledServiceMobileContent, StyledService } from "../styles/js/skin";
+import { StyledServiceContent, StyledServicePage, StyledServiceTittle, StyledServiceDesc, StyledServicePhoto, StyledServiceNote, StyledNote, TextTittle, StyledSVG, StyledServiceMobileContent, StyledService, DescBook } from "../styles/js/skin";
 import { StaticImage } from "gatsby-plugin-image";
 import { motion } from "framer-motion";
 import { colors } from "../utils/const";
 import '../styles/css/skin.css'
 
-
-import Loadable from "@loadable/component"
 import { HairMobileService, HairService, useHairService } from "../components/hair";
 import { ServiceNav } from "../components/servnav";
-
-const Flecha = Loadable(() => import("../assets/Flecha.svg"))
 
 
 const initialTitle = 'HAIR CUTS';
@@ -103,15 +99,18 @@ const HairPage = () => {
       </StyledServiceContent>
       <StyledServiceMobileContent>
         <StyledService>
-          <h1>Hair Care</h1>
+          <h1>Hair care</h1>
           <h2>Services</h2>
+          <a href="https://squareup.com/appointments/book/18a837f7-27d0-4fb3-9184-eed5ec31a526/9XWS7XZK8MK0T/services" target="_blank" rel="noreferrer">
+            <DescBook>BOOK NOW</DescBook>
+          </a>
         </StyledService>
         <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: .5, delay: .2 }}>
           <HairMobileService />
         </motion.div>
       </StyledServiceMobileContent>
       <StyledServiceNote>
-        <StyledNote><motion.p initial={{ y: 10, opacity: 0 }} animate={{ y: 0, opacity: 1 }} transition={{ duration: 1.3, delay: .5, ease: "backInOut" }}>All facial treatments are customized to treat individual skin care needs and include skin analysis, cleansing, exfoliation, and treatment mask, and are completed with the application of serums, moisturizers and/or sun protection. A skin care prescription will be designed and recommended to help maintain the health and integrity of the skin. Add on service are included on the 1.5hr and 2hr services</motion.p></StyledNote>
+        <StyledNote><motion.p initial={{ y: 10, opacity: 0 }} animate={{ y: 0, opacity: 1 }} transition={{ duration: 1.3, delay: .5, ease: "backInOut" }}></motion.p></StyledNote>
         <StyledNote><motion.p initial={{ y: 10, opacity: 0 }} animate={{ y: 0, opacity: 1 }} transition={{ duration: 1.3, delay: .9, ease: "backInOut" }}> © Gaia Evolution Spa & Salon  {(new Date().getFullYear())} | <a href="https://luckyducky.studio/" rel="noreferrer" target="_blank">Lucky Ducky Studio</a></motion.p></StyledNote>
       </StyledServiceNote>
       {/* <StyledServiceFooter>

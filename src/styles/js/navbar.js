@@ -4,15 +4,13 @@ import { colors, font, size } from "../../utils/const"
 
 
 export const StyledNavbar = styled.div`
-    background: ${colors.none};
-    display: flex;
-    flex-direction: row;
-    justify-content: space-betwen;
-    align-items: center;
-    z-index: 12;
-    position: absolute;
-    width: 100vw;
-    height: 15vh;
+  background: ${colors.none};
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  z-index: 12;
+  width: auto;
+  margin: 3em 0 0 2em;
   ${above.medium`
       
   `}
@@ -20,9 +18,9 @@ export const StyledNavbar = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  whidth: 100vw;
-  //background: linear-gradient(to top, rgba(0, 0, 0, 0.0) 0%, ${colors.green} 150%);
-  background: ${colors.none};
+  width: 100vw;
+  margin: 0;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.0) 0%, ${colors.black} 150%);
   a{
     margin-left: auto;
     margin-right: auto;
@@ -69,7 +67,7 @@ margin: 54px 3vw;
 font-family: 'Montserrat', sans-serif;
 
 a{
-  font-family:  ${font.medium};
+  font-family:  ${font.waveMedium};
   color: ${colors.white} ;
   font-size: ${size.Wtext};
 }
@@ -93,14 +91,14 @@ export const NavIcon = styled.button`
     `}
 `;
 
-export const Line = styled.span`
+export const LineHome = styled.span`
     display: block;
     border-radius: 50px;
     width: 25px;
     height: 3px;
     margin: 5px;
-    color: ${colors.black};
-    background-color: ${colors.black};
+    color: ${colors.none};
+    background-color: ${props => (props.open ? colors.softWhite : colors.softWhite)};
     transition: width 0.4s ease-in-out;
 
     :nth-child(2) {

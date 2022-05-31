@@ -28,14 +28,12 @@ const IndexPage = () => {
 
   return (
     <>
-
-      <BgImage image={image} className="mastheadHome">
-        <div className="content">
-          <Navbar />
-          <Home />
-          <Footer />
-        </div>
-      </BgImage>
+      <BgImage image={image} className="mastheadHome" />
+      <div className="content">
+        <Navbar />
+        <Home />
+        <Footer />
+      </div>
     </>
   )
 };

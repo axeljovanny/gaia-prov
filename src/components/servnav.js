@@ -9,7 +9,7 @@ import { motion } from "framer-motion"
 import "../styles/css/skin.css";
 
 import Loadable from "@loadable/component"
-const Flecha = Loadable(() => import("../assets/Flecha.svg"))
+const Flecha = Loadable(() => import("../assets/arrow.svg"))
 /* const Linea = Loadable(() => import("../assets/LineaSeleccion.svg")) */
 
 
@@ -37,7 +37,7 @@ const ServiceNav = ({ siteTitle }) => {
                         whileHover={{ scale: 1.5, color: colors.accentBlue }}
                         whileTap={{ scale: 0.9 }}
                         transition={{ ease: "linear" }}
-                    ><Flecha className="flecha" />
+                    ><Flecha className="flechaHome" />
                     </motion.div>
                     <Link to="/">
                         HOME
@@ -202,15 +202,21 @@ const ServiceNav = ({ siteTitle }) => {
                 </StyledNavbarServ>
                 <Overlay open={toggle}>
                     <StyledIcons open={toggle}>
-                        <FacebookIcon fill={colors.white} className="svgAbout" />
-                        <InstagramIcon fill={colors.white} className="svgAbout" />
-                        <MapsIcon fill={colors.white} className="svgAbout" />
+                        <a href="https://www.facebook.com/GaiaEvolutionGroup/" rel="noreferrer" target="_blank">
+                            <FacebookIcon fill={colors.white} className="svgAbout" />
+                        </a>
+                        <a href="https://www.instagram.com/gaiaevolution/" rel="noreferrer" target="_blank">
+
+                            <InstagramIcon fill={colors.white} className="svgAbout" />
+                        </a>
+                        <a href="https://www.google.com/maps/place/Gaia+Evolution+Spa+and+Salon/@41.9245235,-87.7068398,19z/data=!3m2!4b1!5s0x880fcd657178d7e3:0x4804758ad15f5cf!4m5!3m4!1s0x880fcd65725634f9:0xf6193b2710f612ea!8m2!3d41.9245235!4d-87.7062926" rel="noreferrer" target="_blank">
+                            <MapsIcon fill={colors.white} className="svgAbout" />
+                        </a>
+
                     </StyledIcons>
                     <OverlayMenu open={toggle}>
                         <Item onClick={() => toggleNav(!toggle)}>
-                            <Link to="/">
-                                HOME
-                            </Link>
+                            <Link to="/">HOME</Link>
                         </Item>
                         <Item onClick={() => toggleNav(!toggle)}>
                             <Link to="/skin">

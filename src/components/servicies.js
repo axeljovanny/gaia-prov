@@ -6,7 +6,7 @@ import "../styles/css/skin.css";
 
 
 import Loadable from "@loadable/component"
-const Flecha = Loadable(() => import("../assets/Flecha.svg"))
+const Flecha = Loadable(() => import("../assets/arrow.svg"))
 
 
 
@@ -233,7 +233,7 @@ const BodyServiceMobileDesc = ({ services }) => {
 
                 return (
                     <>
-                        <DescTittle key={data} onClick={() => toggleNav(!toggle)}>
+                        <DescTittle key={data} open={toggle} onClick={() => toggleNav(!toggle)}>
                             <p>{data}</p>
                             <Flecha className="flecha" />
                         </DescTittle>

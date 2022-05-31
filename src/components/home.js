@@ -22,7 +22,8 @@ const Home = ({ children }) => (
                     />
                 </StyledLogoMobileContainer>
                 <h3>Welcome to</h3>
-                <h1>Gaia Evolution</h1>
+                <h1>Gaia</h1>
+                <h1>Evolution</h1>
                 <h3>Spa & Salon</h3>
 
                 <StyledButtonsContainer>

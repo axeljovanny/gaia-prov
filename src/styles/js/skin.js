@@ -93,9 +93,9 @@ export const DescTittle = styled.div`
       p{
         margin:0;
         width: 70%;
-        font-family: ${font.waveLight};
+        font-family: ${font.waveMedium};
         font-size: ${size.Mtittle};
-        color: ${colors.black};
+        color: ${colors.softBlack};
       }
       ${above.large`
       align-items: center;
@@ -305,8 +305,9 @@ export const StyledService = styled.div`
       flex-flow: column nowrap;
       background: ${colors.none};
       width: 100%;
+      gap: 0.5em;
       height: auto;
-      padding: 1em 0;
+      padding: 4em 0;
       line-height : 50px;
 
 
@@ -335,10 +336,10 @@ export const StyledNote = styled.div`
     p{
       font-family: ${font.light};
       font-size: ${size.Mmini};
-      color: ${colors.white};
+      color: ${colors.softBlack};
     }
     a{
-      color: ${colors.white};
+      color: ${colors.green};
     }
     ${above.large`
     width: 80%;
@@ -357,8 +358,9 @@ export const StyledServiceNote = styled.div`
         justify-content: space-around;
         flex-direction: column;
         align-items: center;
-        background: ${colors.green};
+        background: ${colors.softWhite};
         width: 100%;
+        margin: 1em 3em;
         height: 25%;
         text-align: justify;
         ${above.large`
@@ -417,7 +419,7 @@ export const Show = styled.div`
     justify-content: center;
     align-items: center;
     width: 100%;
-    padding: 2em 0;
+    padding: 3em 0;
   
     ${above.large` {
       display: none;

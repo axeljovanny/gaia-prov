@@ -120,6 +120,7 @@ export const StyledTitleContainer = styled.div`
   color: ${colors.white};
 
   h1{
+    line-height : 50px;
     font-family: ${font.bold};
     font-size: ${size.Mheader};
   }
@@ -138,6 +139,7 @@ export const StyledTitleContainer = styled.div`
   `}
   ${above.large`
   h1{
+    line-height : 70px;
     font-size: ${size.Wheader};
   }
 

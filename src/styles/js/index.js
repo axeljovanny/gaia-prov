@@ -68,17 +68,18 @@ ul {
   left: 0;
   right: 0;
   top: 0;
-  // animation: ${headertransition} 60s linear 10ms infinite;
-  // transition: all 0.1s ease-in-out;
+  animation: ${headertransition} 60s linear 10ms infinite;
+  transition: all 0.1s ease-in-out;
 }
 
 
 .content{
   display: flex;
-  align-items: center;
+  align-items: flex-start;
+  justify-content: flex-start;
   flex-direction: column;
   z-index: 10;
-  position: relative;
+  position: absolute;
   width: 100vw;
   height: 100vh;
   left: 0;

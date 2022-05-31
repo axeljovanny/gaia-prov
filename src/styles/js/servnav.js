@@ -30,8 +30,8 @@ export const StyledNavbarServ = styled.div`
     align-items: flex-start;
     z-index: 12;
     width: auto;
-    margin: 1em 0 0 1em;
-  ${above.large`
+    margin: 3em 0 0 2em;
+    ${above.large`
   display: flex;
   margin: 0;
   flex-flow: column nowrap;
@@ -84,7 +84,9 @@ display: none;
   flex-flow: row nowrap;
   background: ${colors.none};
   align-items: center;
+  
   a:link{
+    padding-left: 0.5em;
     font-family: ${font.waveLight};
     font-size: ${size.Wmini};
     color: ${colors.black};
@@ -126,6 +128,7 @@ export const NavIcon = styled.button`
     border: none;
     outline: none;
     position:fixed;
+    padding: 0;
 
     ${above.large` {
       display: none;
@@ -154,8 +157,8 @@ export const Overlay = styled.div`
   flex-direction: column;
   height: ${props => (props.open ? "100vh" : 0)};
   width: 100vw;
-  background: rgba(130, 140, 122, 0.8);
-  backdrop-filter: blur(5px);
+  background: rgba(130, 140, 122, 0.9);
+  backdrop-filter: blur(10px);
   transition: height 0.3s ease-in-out;
   position: fixed;
   top:0;
@@ -183,11 +186,6 @@ export const OverlayMenu = styled.div`
   transition: height 0.4s ease-in-out;
   list-style: none;
 
-  div a{
-    font-family:  ${font.light};
-    color: ${colors.white} ;
-    font-size: ${size.Wtittle};
-  }
 
 `;
 export const OverlayFooter = styled.div`
@@ -205,7 +203,7 @@ export const Contacto = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
-  width: 50%;
+  width: 40%;
   background: ${colors.none};
 
   a,p{
@@ -218,7 +216,7 @@ export const Contacto = styled.div`
 `;
 export const Logo = styled.div`
   display: flex;
-  width: 50%;
+  width: 40%;
   height: auto;
   padding: 1em 0;
   background: ${colors.none};
@@ -231,7 +229,7 @@ export const StyledIcons = styled.div`
     flex-direction: row;
     justify-content: flex-end;
     align-items: center;
-    padding: 1em;
+    padding: 3em 2em;
     gap: 1em;
     width: auto;
     opacity: ${props => (props.open ? 1 : 0)};
@@ -307,12 +305,11 @@ padding: 0;
 background-color: none;
 margin: .5em 0;
 font-family: 'Montserrat', sans-serif;
-
+ 
 a{
-  font-family:  ${font.waveLight};
-  color: ${colors.black} ;
-  font-size: ${size.Wtext};
+font-family:  ${font.waveMedium};
+color: ${colors.white} ;
+font-size: ${size.Wtittle};
 }
-
 
 `
