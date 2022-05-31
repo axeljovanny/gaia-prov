@@ -18,6 +18,7 @@ export const size = {
     Wheader: "calc(80px)",
     Mheader: "calc(50px)",
     Wtittle: "calc(30px)",
+    WList: "calc(16px)",
     Mtittle: "calc(16px)",
     Wtext: "calc(16px)",
     Mtext: "calc(14px)",

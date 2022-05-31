@@ -1,7 +1,7 @@
 import React, { useState } from "react"
 import { DescTittle, DescText, DescDetails, DescTime, DescPrice, DescBook, TextTittle, Show } from "../styles/js/skin";
-import { DescDetailsHair, DescPriceHair, DescTitleHair } from "../styles/js/hair";
-import { Desc, DescDetailsBody, DescNoteBody, DescPriceBody, DescTitleBody } from "../styles/js/body";
+import { DescDetailsHair, DescHairText, DescHairTittle, DescPriceHair, DescTitleHair } from "../styles/js/hair";
+import { Desc, DescBodyTittle, DescDetailsBody, DescNoteBody, DescPriceBody, DescTitleBody } from "../styles/js/body";
 import '../styles/css/services.css'
 
 
@@ -93,22 +93,14 @@ const SkinServiceMobileDesc = ({ services }) => {
 
 const HairServiceDesc = ({ services, type }) => {
 
-    const description = services.map(({ node }) => (
-        node.type === type.type
-        && node.description !== null
-        && (node.description)
-    ))
-    // console.log(description);
 
     return (
         <>
-            <DescTittle><p>{type.type}</p>
+            <DescHairTittle><p>{type.type}</p>
                 <a href="https://squareup.com/appointments/book/18a837f7-27d0-4fb3-9184-eed5ec31a526/9XWS7XZK8MK0T/services" target="_blank" rel="noreferrer">
                     <DescBook>BOOK NOW</DescBook>
                 </a>
-            </DescTittle>
-            <DescText><p>{description}</p></DescText>
-
+            </DescHairTittle>
             {services.map(({ node }) => {
                 return (
                     <div key={node.id}>
@@ -119,6 +111,7 @@ const HairServiceDesc = ({ services, type }) => {
                                     <DescTitleHair>
                                         {node.title}
                                     </DescTitleHair>
+                                    <DescHairText>{node.description}</DescHairText>
                                     <DescPriceHair>
                                         {node.price}
                                     </DescPriceHair>
@@ -182,20 +175,14 @@ const HairServiceMobileDesc = ({ services }) => {
 
 const BodyServiceDesc = ({ services, type }) => {
 
-    const description = services.map(({ node }) => (
-        node.type === type.type
-        && node.description !== null
-        && (node.description)
-    ))
-    // console.log(description);
 
     return (
         <>
-            <DescTittle><p>{type.type}</p>
+            <DescBodyTittle><p>{type.type}</p>
                 <a href="https://squareup.com/appointments/book/18a837f7-27d0-4fb3-9184-eed5ec31a526/9XWS7XZK8MK0T/services" target="_blank" rel="noreferrer">
                     <DescBook>BOOK NOW</DescBook>
                 </a>
-            </DescTittle>
+            </DescBodyTittle>
 
             {services.map(({ node }) => {
                 return (
@@ -211,9 +198,11 @@ const BodyServiceDesc = ({ services, type }) => {
                                         <DescPriceBody>
                                             {node.price}
                                         </DescPriceBody>
-                                        <Desc>
-                                            {node.description}
-                                        </Desc>
+                                        {node.description !== null &&
+                                            (<Desc>
+                                                {node.description}
+                                            </Desc>)}
+
                                         <DescNoteBody>
                                             {node.note}
                                         </DescNoteBody>

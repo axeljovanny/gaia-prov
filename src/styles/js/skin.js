@@ -4,16 +4,18 @@ import { colors, font, size } from "../../utils/const"
 
 
 export const StyledServicePage = styled.div`
+    position: absolute;
     display: flex;
     flex-flow: column nowrap;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
     background: ${props => (props.siteTitle === 'hair' ? colors.softWhite : colors.softWhite)}; //TODO: Cambiar color al estar en hair
     width: 100vw;
-    height: auto;
+    height: 100vh;
 
     ${above.large`
-    height: 100vh;
+    justify-content: center;
+
     
     `}
 
@@ -23,13 +25,14 @@ export const StyledServiceContent = styled.div`
     display: none;
 
     ${above.large`
+    position:relative;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    justify-content: flex-start;
+    align-items: flex-start;
     background: ${colors.none};
-    width: 100%;
+    width: 90%;
     flex-flow: row nowrap;
-    height: 50vh;
+    height: 60vh;
     `}
     `
 export const StyledServiceTittle = styled.div`
@@ -38,9 +41,12 @@ export const StyledServiceTittle = styled.div`
     ${above.large`
     display: flex;
     flex-flow: column nowrap;
-    justify-content: flex-start;
+    justify-content: center;
     align-items: flex-start;
     width: 20%;
+    height: 100%;
+    gap: 5px;
+    margin: 0 1% 0 0;
     
     `}
     `
@@ -51,7 +57,6 @@ export const TextTittle = styled.div`
         background: none;
         color: inherit;
         border: none;
-        padding: 0;
         cursor: pointer;
         outline: inherit;
         color: ${colors.black}; //usar en SVG
@@ -60,12 +65,16 @@ export const TextTittle = styled.div`
         }
       ${above.large`
       display: flex;
-      justify-content: flex-start;
-      align-items: center;
+      justify-content: space-between;
+      flex-flow: column wrap;
+      align-items: flex-start;
       background: ${colors.none};
       width: 100%;
       button{
-        margin: 0 0 0.3em 20%;
+        text-align: left;
+        color: ${colors.none}; //usar en SVG
+        font-family: ${font.waveLight};
+        font-size: ${size.WList};
       }
      
     
@@ -73,13 +82,13 @@ export const TextTittle = styled.div`
       `
 export const DescTittle = styled.div`
       display: flex;
-      justify-content: center;
+      justify-content: flex-end;
       align-items: center;
-      background: ${colors.yell};
+      background: ${colors.none};
       flex-flow: column nowrap;
       width: 100%;
-      height: 50%; 
-      padding : 0.1em 0;
+      height: auto; 
+      padding : 1.5em 0;
 
       p{
         margin:0;
@@ -88,10 +97,19 @@ export const DescTittle = styled.div`
         color: ${colors.black};
       }
       ${above.large`
-      justify-content: space-between;
+      align-items: baseline;
+      justify-content: flex-start;
       flex-flow: row wrap;
-      height: 20%; 
+      height: 10%; 
       padding: 0;
+      p{
+        width: 80%;
+        text-align: left;
+        margin:0;
+        font-family: ${font.waveMedium};
+        font-size: ${size.Wtittle};
+        color: ${colors.black};
+      }
 
     `}
       `
@@ -105,6 +123,8 @@ export const DescDetails = styled.div`
       padding: 10% 0;
       ${above.large`
       justify-content: flex-start;
+      padding: 1em 0;
+
     `}
       `
 export const DescTime = styled.div`
@@ -113,7 +133,7 @@ export const DescTime = styled.div`
       align-items: center;
       background: ${colors.none};
       width: 20%;
-      font-family: ${font.light};
+      font-family: ${font.medium};
       font-size: ${size.Wmini};
       color: ${colors.black};
       `
@@ -185,9 +205,10 @@ export const DescText = styled.div`
         color: ${colors.black};
       }
       ${above.large`
-      width: 80%;
-      height: 30%; 
-
+      width: 95%;
+      padding: 3em 0 0 0;
+      text-align: justify;
+      line-height : 23px;
       p{
         font-family: ${font.light};
         font-size: ${size.Wtext};
@@ -216,6 +237,7 @@ export const StyledServiceDesc = styled.div`
       align-items: flex-start;
       height: 90%;
       overflow-y: scroll;
+
 
       `}
       
@@ -289,9 +311,10 @@ export const StyledServiceNote = styled.div`
         align-items: center;
         background: ${colors.green};
         width: 100%;
-        height: 25vh;
+        height: 25%;
         text-align: justify;
         ${above.large`
+        margin: 1em 0;
         justify-content: center;
         align-items: flex-start;
         width: 90%;
@@ -327,9 +350,11 @@ export const StyledServiceMobileContent = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
-    background: ${colors.red};
+    background: ${colors.none};
     width: 100%;
     flex-flow: column nowrap;
+    height: 100vh;
+    overflow-y: scroll;
 
     ${above.large`
     display: none;

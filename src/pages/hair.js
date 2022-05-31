@@ -9,6 +9,7 @@ import { colors } from "../utils/const";
 import Loadable from "@loadable/component"
 import { HairMobileService, HairService, useHairService } from "../components/hair";
 import { ServiceNav } from "../components/servnav";
+import { StyledHairServiceTittle } from "../styles/js/hair";
 
 const Flecha = Loadable(() => import("../assets/Flecha.svg"))
 

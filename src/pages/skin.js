@@ -11,7 +11,7 @@ import { ServiceNav } from "../components/servnav";
 
 
 
-const initialTitle = 'GAIA SIGNATURE';
+const initialTitle = 'Gaia Signature';
 
 const draw = {
   hidden: { pathLength: 0 },
@@ -39,13 +39,13 @@ const SkinPage = () => {
           {services.map(({ node }) => {
             return (
               node.category != null && (
-                <TextTittle key={node.id}>
-                  <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: .5 }}>
+                <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: .5 }}>
+                  <TextTittle key={node.id}>
                     <motion.button whileHover={{ scale: 1.1, color: colors.accentBlue }} whileTap={{ scale: 0.9 }} transition={{ ease: "linear" }} onClick={() => setTitle(node.title)}>
                       {node.title}
                     </motion.button>
-                  </motion.div>
-                </TextTittle>
+                  </TextTittle>
+                </motion.div>
               )
             )
           })}

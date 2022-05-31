@@ -3,6 +3,7 @@ import { above } from "."
 import { colors, font, size } from "../../utils/const"
 
 export const StyledServiceNav = styled.div`
+    position: relative;
     display: flex;
     justify-content: flex-start;
     align-items: flex-start;
@@ -11,6 +12,7 @@ export const StyledServiceNav = styled.div`
     width: 100%;
     height: 10vh;
     ${above.large`
+    margin: 0;
     width: 90%;
     justify-content: center;
     height: 20vh;
@@ -28,21 +30,15 @@ export const StyledNavbarServ = styled.div`
     z-index: 12;
     width: auto;
     margin: 1em 0 0 1em;
-  ${above.medium`
-      
-  `}
   ${above.large`
   display: flex;
+  margin: 0;
   flex-flow: column nowrap;
   justify-content: center;
   align-items: center;
-  width: 90%;
+  width: 100%;
   background: ${colors.none};
-  a{
-    margin-left: auto;
-    margin-right: auto;
-  }
-
+  height: auto;
   
   `}
 `
@@ -68,7 +64,6 @@ display: none;
   ${above.large`
   display: flex;
   flex-flow: column nowrap;
-  gap:2em;
   justify-content: center;
   background: ${colors.none};
   width: 75%;
@@ -84,14 +79,10 @@ display: none;
 
   ${above.large`
   display: flex;
-  justify-content: flex-start;
-
+  justify-content: center;
+  flex-flow: row nowrap;
   background: ${colors.none};
-
-  align-items: flex-end;
-  width: 10%;
-  height: 100%;
-
+  align-items: center;
   a:link{
     font-family: ${font.waveLight};
     font-size: ${size.Wmini};
@@ -100,8 +91,6 @@ display: none;
   a:visited {
     color: ${colors.black};
   }
-    
- 
   `}
 `
 
