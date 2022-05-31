@@ -6,11 +6,11 @@ export const DescBodyTittle = styled.div`
       display: flex;
       justify-content: flex-end;
       align-items: center;
-      background: ${colors.red};
+      background: ${colors.none};
       flex-flow: column nowrap;
       width: 100%;
       height: auto; 
-      padding : 1.5em 0;
+      padding : 0;
 
       p{
         margin:0;
@@ -38,12 +38,16 @@ export const DescBodyTittle = styled.div`
 
 export const DescDetailsBody = styled.div`
       display: flex;
-      justify-content: start-flex;
+      justify-content: space-between;
       align-items: center;
       flex-flow: row wrap;
       background: ${colors.none};
+      width: 90vw;
+      padding: 5% 0;
+      ${above.large`
+      background: ${colors.none};
       width: 50vw;
-      padding: 3% 0;
+      `}
       `
 
 export const DescPriceBody = styled.div`
@@ -54,7 +58,15 @@ export const DescPriceBody = styled.div`
       width: auto;
         font-family: ${font.medium};
         font-size: ${size.Wtext};
+        color: ${colors.white};
+        padding-right: 3%;
+
+        ${above.large`
+        padding-right: 0;
+        font-family: ${font.medium};
+        font-size: ${size.Wtext};
         color: ${colors.black};
+      `}
       `
 export const DescTitleBody = styled.div`
       display: flex;
@@ -64,17 +76,28 @@ export const DescTitleBody = styled.div`
       width: 65%;
         font-family: ${font.medium};
         font-size: ${size.Wtext};
+        color: ${colors.white};
+        ${above.large`
+        font-family: ${font.medium};
+        font-size: ${size.Wtext};
         color: ${colors.black};
+      `}
       `
 export const DescNoteBody = styled.div`
       display: flex;
       justify-content: flex-start;
       align-items: center;
       background: ${colors.none};
-      width: 70%;
+      width: 100%;
         font-family: ${font.medium};
         font-size: ${size.Wmini};
+        color: ${colors.softWhite};
+        ${above.large`
+        width: 70%;
+        font-family: ${font.medium};
+        font-size: ${size.Wtext};
         color: ${colors.green};
+      `}
       `
 
 export const Desc = styled.div`
@@ -83,11 +106,12 @@ export const Desc = styled.div`
       align-items: center;
       background: ${colors.none};
       width: 100%;
-      p{
-        font-family: ${font.light};
-        font-size: ${size.Wtext};
-        color: ${colors.black};
-      }
+      text-align: justify;
+      padding: 2% 0;
+      font-family: ${font.light};
+      font-size: ${size.Wtext};
+      color: ${colors.white};
+      
       ${above.large`
       width: 85%;
       height: auto; 

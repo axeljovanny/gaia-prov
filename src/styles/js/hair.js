@@ -39,12 +39,17 @@ export const DescHairTittle = styled.div`
 export const DescDetailsHair = styled.div`
       display: flex;
       justify-content: center;
-      align-items: flex-start;
+      align-items: center;
       flex-flow: column wrap;
       background: ${colors.none};
       width: 100%;
       padding: 4% 0;
       height: 70%; 
+      ${above.large`
+      align-items: flex-start;
+
+      
+      `}
       `
 
 export const DescPriceHair = styled.div`
@@ -52,13 +57,33 @@ export const DescPriceHair = styled.div`
       justify-content: flex-start;
       align-items: center;
       background: ${colors.none};
-      width: 30%;
+      width: 90%;
+        font-family: ${font.medium};
+        font-size: ${size.Mtext};
+        color: ${colors.white};
+        padding: 1em 0;
+
+        ${above.large`
+        width: 30%;
+        padding:0;
+        align-items: center;
         font-family: ${font.medium};
         font-size: ${size.Mtext};
         color: ${colors.black};
+      
+      `}
       `
 export const DescTitleHair = styled.div`
       display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      background: ${colors.none};
+      width: 90vw;
+      font-family: ${font.medium};
+      font-size: ${size.WList};
+      color: ${colors.white};
+      padding: 1em 0;
+      ${above.large`
       justify-content: flex-start;
       align-items: center;
       background: ${colors.none};
@@ -66,6 +91,9 @@ export const DescTitleHair = styled.div`
       font-family: ${font.medium};
       font-size: ${size.WList};
       color: ${colors.black};
+      padding: 0;
+
+      `}
       `
 
 export const DescHairText = styled.div`
@@ -73,21 +101,18 @@ export const DescHairText = styled.div`
       align-items: center;
       background: ${colors.none};
       height: 30%; 
-      width: 100%;
-      p{
+      width: 90%;
+      text-align:justify;
         font-family: ${font.light};
         font-size: ${size.Wtext};
-        color: ${colors.black};
-      }
+        color: ${colors.white};
       ${above.large`
       padding: 0.5em 0;
       width: 95%;
       text-align: justify;
       line-height : 23px;
-      p{
         font-family: ${font.light};
         font-size: ${size.Wtext};
         color: ${colors.black};
-      }
       `}
       `

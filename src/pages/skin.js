@@ -1,6 +1,6 @@
 import React, { useState } from "react"
-import { StyledServiceContent, StyledServicePage, StyledServiceTittle, StyledServiceDesc, StyledServicePhoto, StyledServiceNote, StyledNote, TextTittle, StyledSVG, StyledServiceMobileContent } from "../styles/js/skin";
-import '../styles/css/services.css'
+import { StyledServiceContent, StyledServicePage, StyledServiceTittle, StyledServiceDesc, StyledServicePhoto, StyledServiceNote, StyledNote, TextTittle, StyledSVG, StyledServiceMobileContent, StyledService } from "../styles/js/skin";
+import '../styles/css/skin.css'
 import { StaticImage } from "gatsby-plugin-image";
 import { motion } from "framer-motion";
 import { colors } from "../utils/const";
@@ -95,6 +95,10 @@ const SkinPage = () => {
         </StyledServicePhoto>
       </StyledServiceContent>
       <StyledServiceMobileContent>
+        <StyledService>
+          <h1>Skin Care</h1>
+          <h2>Services</h2>
+        </StyledService>
         <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: .5, delay: .2 }}>
           <SkinMobileService />
         </motion.div>

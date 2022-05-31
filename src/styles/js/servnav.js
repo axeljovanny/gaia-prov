@@ -179,7 +179,7 @@ export const OverlayMenu = styled.div`
   display: ${props => (props.open ? 'flex' : 'none')};
   width: 90vw;
   height: ${props => (props.open ? "40%" : 0)};
-  transition: opacity 0.4s ease-in-out;
+  transition: height 0.4s ease-in-out;
   list-style: none;
 
   div a{

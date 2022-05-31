@@ -1,10 +1,10 @@
-import { Link } from "gatsby";
 import React, { useState } from "react"
-import { StyledServiceContent, StyledServicePage, StyledServiceTittle, StyledServiceDesc, StyledServicePhoto, StyledServiceNote, StyledNote, TextTittle, StyledSVG, StyledServiceMobileContent } from "../styles/js/skin";
+import { StyledServiceContent, StyledServicePage, StyledServiceTittle, StyledServiceDesc, StyledServicePhoto, StyledServiceNote, StyledNote, TextTittle, StyledSVG, StyledServiceMobileContent, StyledService } from "../styles/js/skin";
 import '../styles/css/services.css'
 import { StaticImage } from "gatsby-plugin-image";
 import { motion } from "framer-motion";
 import { colors } from "../utils/const";
+import '../styles/css/skin.css'
 
 
 import Loadable from "@loadable/component"
@@ -103,6 +103,10 @@ const BodyPage = () => {
 
       </StyledServiceContent>
       <StyledServiceMobileContent>
+        <StyledService>
+          <h1>Body Care</h1>
+          <h2>Services</h2>
+        </StyledService>
         <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: .5, delay: .2 }}>
           <BodyMobileService />
         </motion.div>

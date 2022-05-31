@@ -2,7 +2,12 @@ import React, { useState } from "react"
 import { DescTittle, DescText, DescDetails, DescTime, DescPrice, DescBook, TextTittle, Show } from "../styles/js/skin";
 import { DescDetailsHair, DescHairText, DescHairTittle, DescPriceHair, DescTitleHair } from "../styles/js/hair";
 import { Desc, DescBodyTittle, DescDetailsBody, DescNoteBody, DescPriceBody, DescTitleBody } from "../styles/js/body";
-import '../styles/css/services.css'
+import "../styles/css/skin.css";
+
+
+import Loadable from "@loadable/component"
+const Flecha = Loadable(() => import("../assets/Flecha.svg"))
+
 
 
 
@@ -57,13 +62,12 @@ const SkinServiceMobileDesc = ({ services }) => {
 
                 return (
                     <>
-                        <DescTittle key={data} onClick={() => toggleNav(!toggle)}><p>{data}</p>
-                            <a href="https://squareup.com/appointments/book/18a837f7-27d0-4fb3-9184-eed5ec31a526/9XWS7XZK8MK0T/services" target="_blank" rel="noreferrer">
-                                <DescBook>BOOK NOW</DescBook>
-                            </a>
+                        <DescTittle key={data} onClick={() => toggleNav(!toggle)}>
+                            <p>{data}</p>
+                            <Flecha className="flecha" />
                         </DescTittle>
                         <Show open={toggle}>
-                            <DescText>{description}</DescText>
+                            <DescText open={toggle}>{description}</DescText>
                             {services.map(({ node }) => {
                                 return (
                                     <div key={node.id}>
@@ -132,20 +136,18 @@ const HairServiceMobileDesc = ({ services }) => {
     return (
         <>
             {sort.map((data) => {
-                const description = services.map(({ node }) => (
-                    node.type === data
-                    && node.description !== null
-                    && (node.description)
-                ))
                 const [toggle, toggleNav] = useState(false);
 
                 return (
                     <>
-                        <TextTittle key={data} onClick={() => toggleNav(!toggle)}>
-                            {data}
-                        </TextTittle>
+                        {data !== null && data !== '' &&
+                            (
+                                <DescTittle key={data} onClick={() => toggleNav(!toggle)}>
+                                    <p>{data}</p>
+                                    <Flecha className="flecha" />
+                                </DescTittle>
+                            )}
                         <Show open={toggle}>
-                            <DescText>{description}</DescText>
                             {services.map(({ node }) => {
                                 return (
                                     <div key={node.id}>
@@ -156,6 +158,7 @@ const HairServiceMobileDesc = ({ services }) => {
                                                     <DescTitleHair>
                                                         {node.title}
                                                     </DescTitleHair>
+                                                    <DescHairText>{node.description}</DescHairText>
                                                     <DescPriceHair>
                                                         {node.price}
                                                     </DescPriceHair>
@@ -230,7 +233,9 @@ const BodyServiceMobileDesc = ({ services }) => {
 
                 return (
                     <>
-                        <DescTittle key={data} onClick={() => toggleNav(!toggle)}><p>{data}</p>
+                        <DescTittle key={data} onClick={() => toggleNav(!toggle)}>
+                            <p>{data}</p>
+                            <Flecha className="flecha" />
                         </DescTittle>
                         <Show open={toggle}>
                             {services.map(({ node }) => {

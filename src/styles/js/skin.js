@@ -82,26 +82,31 @@ export const TextTittle = styled.div`
       `
 export const DescTittle = styled.div`
       display: flex;
-      justify-content: flex-end;
+      justify-content: space-evenly;
       align-items: center;
       background: ${colors.none};
-      flex-flow: column nowrap;
-      width: 100%;
+      border-bottom: 0.5px solid ${colors.green};
+      flex-flow: row nowrap;
+      width: 100vw;
       height: auto; 
-      padding : 1.5em 0;
-
+      padding : 0.5em 0;
       p{
         margin:0;
+        width: 70%;
         font-family: ${font.waveLight};
-        font-size: ${size.Wtittle};
+        font-size: ${size.Mtittle};
         color: ${colors.black};
       }
       ${above.large`
-      align-items: baseline;
+      align-items: center;
+      width: 50vw;
+      background: ${colors.none};
       justify-content: flex-start;
       flex-flow: row wrap;
       height: 10%; 
       padding: 0;
+      border-bottom: none;
+
       p{
         width: 80%;
         text-align: left;
@@ -119,10 +124,12 @@ export const DescDetails = styled.div`
       justify-content: center;
       align-items: center;
       background: ${colors.none};
-      width: 100%;
-      padding: 10% 0;
+      width: 85vw;
+      padding: 0;
       ${above.large`
+      background: ${colors.none};
       justify-content: flex-start;
+      width: 30%;
       padding: 1em 0;
 
     `}
@@ -132,20 +139,30 @@ export const DescTime = styled.div`
       justify-content: flex-start;
       align-items: center;
       background: ${colors.none};
-      width: 20%;
+      width: 50%;
+      font-family: ${font.medium};
+      font-size: ${size.Wmini};
+      color: ${colors.white};
+      ${above.large`
       font-family: ${font.medium};
       font-size: ${size.Wmini};
       color: ${colors.black};
+      `}
       `
 export const DescPrice = styled.div`
       display: flex;
-      justify-content: flex-start;
+      justify-content: flex-end;
       align-items: center;
       background: ${colors.none};
-      width: 20%;
+      width: 50%;
+      font-family: ${font.medium};
+      font-size: ${size.Wmini};
+      color: ${colors.white};
+      ${above.large`
       font-family: ${font.medium};
       font-size: ${size.Wmini};
       color: ${colors.black};
+      `}
       `
 export const DescBook = styled.button`
       display: flex;
@@ -194,18 +211,21 @@ export const DescBook = styled.button`
 
 export const DescText = styled.div`
       display: flex;
-      justify-content: flex-start;
+      justify-content: center;
       align-items: center;
       background: ${colors.none};
       height: 30%; 
-      width: 100%;
-      p{
-        font-family: ${font.light};
-        font-size: ${size.Wtext};
-        color: ${colors.black};
-      }
+      width: 85%;
+      text-align: justify;
+      padding: 0 0 1em 0;
+      font-family: ${font.light};
+      font-size: ${size.Wtext};
+      color: ${colors.white};
+      
       ${above.large`
-      width: 95%;
+      width: 50vw;
+      justify-content: flex-start;
+      align-items: center;
       padding: 3em 0 0 0;
       text-align: justify;
       line-height : 23px;
@@ -275,6 +295,34 @@ export const StyledServiceFooter = styled.div`
       background: ${colors.green};
       width: 100%;
       height: 50vh;
+
+    `
+
+export const StyledService = styled.div`
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-flow: column nowrap;
+      background: ${colors.none};
+      width: 100%;
+      height: auto;
+      padding: 1em 0;
+      line-height : 50px;
+
+
+      h1{
+        margin:0;
+        font-family: ${font.waveMedium};
+        font-size: ${size.Wheader};
+        color: ${colors.green};
+    }
+      h2{
+        margin:0;
+        font-family: ${font.waveBold};
+        font-size: ${size.Wtittle};
+        color: ${colors.green};
+    }
+      
 
     `
 
@@ -348,8 +396,8 @@ height: 100%;
 
 export const StyledServiceMobileContent = styled.div`
     display: flex;
-    justify-content: center;
-    align-items: center;
+    justify-content: flex-start;
+    align-items: flex-start;
     background: ${colors.none};
     width: 100%;
     flex-flow: column nowrap;
@@ -365,9 +413,11 @@ export const StyledServiceMobileContent = styled.div`
 export const Show = styled.div`
     display: ${props => (props.open ? "flex" : "none")};
     flex-direction: column;
-    background: ${colors.yell};
+    background: ${colors.green};
     justify-content: center;
     align-items: center;
+    width: 100%;
+    padding: 2em 0;
   
     ${above.large` {
       display: none;
