@@ -86,30 +86,28 @@ const ServiceNav = ({ siteTitle }) => {
                         </StyledService>
                     </Text>
                     <SVG>
-                        <div>
-                            <motion.svg
-                                width="1050"
-                                height="3"
-                                viewBox="0 0 1010 1"
-                                fill="none"
-                                xmlns="http://www.w3.org/2000/svg"
-                            >
-                                <motion.path
-                                    d="M0 1H1090"
-                                    stroke="black"
-                                    strokeWidth=".2"
-                                    animate={{
-                                        pathLength: [0, 1],
-                                    }}
-                                    transition={{
-                                        times: [0, 1],
-                                        duration: 1
-                                    }}
-                                    variants={{ draw }}
-                                />
-                                {<motion.rect />}
-                            </motion.svg>
-                        </div>
+                        <motion.svg
+                            width="1050"
+                            height="3"
+                            viewBox="0 0 1010 1"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                        >
+                            <motion.path
+                                d="M0 1H1090"
+                                stroke="black"
+                                strokeWidth=".2"
+                                animate={{
+                                    pathLength: [0, 1],
+                                }}
+                                transition={{
+                                    times: [0, 1],
+                                    duration: 1
+                                }}
+                                variants={{ draw }}
+                            />
+                            {<motion.rect />}
+                        </motion.svg>
 
                         {/* CIrculo1 */}
 

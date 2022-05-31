@@ -59,13 +59,13 @@ export const StyledLogoMobileContainer = styled.div`
 
 h1{
     font-family:  ${font.medium};
-    color: ${colors.softYellow} ;
+    color: ${colors.white} ;
     font-size: ${size.Mtittle};
     margin-top: 0.5em ;
 }
 h2{
     font-family:  ${font.medium};
-    color: ${colors.softYellow} ;
+    color: ${colors.white} ;
     font-size: ${size.Mheader};
     margin: 0;
 }
@@ -104,13 +104,13 @@ export const StyledText = styled.div`
 
     h2{
         font-family:  ${font.bold};
-        color: ${colors.softYellow} ;
+        color: ${colors.white} ;
         font-size: ${size.Mtittle};
         margin: 0.5em 0;
     }
     h3{
         font-family:  ${font.medium};
-        color: ${colors.softYellow} ;
+        color: ${colors.green} ;
         font-size: ${size.Mmini};
         margin: 0.5em 0;
     }
@@ -130,7 +130,7 @@ export const StyledText = styled.div`
 
     h2{
         font-family:  ${font.bold};
-        color: ${colors.softYellow} ;
+        color: ${colors.white} ;
         font-size: ${size.Wtext};
     }
     p{
@@ -140,7 +140,7 @@ export const StyledText = styled.div`
     }
     h3{
         font-family:  ${font.medium};
-        color: ${colors.softYellow} ;
+        color: ${colors.green} ;
         font-size: ${size.Wmini};
     }
 

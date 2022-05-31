@@ -62,7 +62,9 @@ display: none;
 export const SVG = styled.div`
 display: none;
 
+
   ${above.large`
+  padding-top: 0.7em;
   display: flex;
   flex-flow: column nowrap;
   justify-content: center;

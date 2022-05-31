@@ -13,7 +13,6 @@ const pageStyles = {
   flexDirection: 'column',
   width: '100vw',
   display: "flex",
-  background: colors.green,
   justifyContent: "center",
   alignItems: "center",
 }
