@@ -1,7 +1,7 @@
 import React, { useState } from "react"
 import { Link } from "gatsby"
 import { StaticImage } from "gatsby-plugin-image"
-import { StyledLogoContainer, StyledItems, StyledNavbar } from "../styles/js/navbar"
+import { StyledLogoContainer, StyledItems, StyledNavbar, ItemNav } from "../styles/js/navbar"
 import { OverlayMenu, Overlay, Item, StyledIcons, NavIcon, Line, OverlayFooter, Contacto, Logo } from "../styles/js/servnav"
 
 import { MapsIcon, FacebookIcon, InstagramIcon } from "../images/icons"
@@ -18,16 +18,16 @@ const Navbar = ({ siteTitle }) => {
         <>
             <StyledNavbar>
                 <StyledItems>
-                    <Item>
+                    <ItemNav>
                         <Link to="/hair">
                             HAIR CARE
                         </Link>
-                    </Item>
-                    <Item>
+                    </ItemNav>
+                    <ItemNav>
                         <Link to="/skin">
                             SKIN CARE
                         </Link>
-                    </Item>
+                    </ItemNav>
                 </StyledItems>
 
                 <StyledLogoContainer >
@@ -47,16 +47,16 @@ const Navbar = ({ siteTitle }) => {
                 </StyledLogoContainer>
 
                 <StyledItems>
-                    <Item>
-                        <Link to="/policies">
+                    <ItemNav>
+                        <Link to="/body">
                             BODY CARE
                         </Link>
-                    </Item>
-                    <Item>
+                    </ItemNav>
+                    <ItemNav>
                         <a href="https://www.aveda.com/locator/get_the_facts.tmpl?vanity=1&SalonID=38631" target="_blank" rel="noreferrer">
                             PRODUCTS
                         </a>
-                    </Item>
+                    </ItemNav>
                 </StyledItems>
 
                 <NavIcon onClick={() => toggleNav(!toggle)}>

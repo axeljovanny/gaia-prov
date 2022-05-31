@@ -58,7 +58,7 @@ export const StyledItems = styled.div`
   `}
 `
 
-export const Item = styled.div`
+export const ItemNav = styled.div`
 display: flex;
 justify-content: center;
 align-items: center;
@@ -69,8 +69,8 @@ margin: 54px 3vw;
 font-family: 'Montserrat', sans-serif;
 
 a{
-  font-family:  ${font.waveLight};
-  color: ${colors.black} ;
+  font-family:  ${font.medium};
+  color: ${colors.white} ;
   font-size: ${size.Wtext};
 }
 

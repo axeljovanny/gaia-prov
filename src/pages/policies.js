@@ -1,17 +1,19 @@
 import React from "react"
 import { Policies } from "../components";
-import { Navbar } from "../components/navbar"
 
 import { graphql, useStaticQuery } from 'gatsby'
 import { getImage } from "gatsby-plugin-image"
 
 import { BgImage } from "gbimage-bridge"
+import { colors } from "../utils/const";
+import { Navbar } from "../components/navbar";
 
 
 const pageStyles = {
   flexDirection: 'column',
   width: '100vw',
   display: "flex",
+  background: colors.green,
   justifyContent: "center",
   alignItems: "center",
 }

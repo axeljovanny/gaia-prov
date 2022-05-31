@@ -228,9 +228,9 @@ const ServiceNav = ({ siteTitle }) => {
                             </Link>
                         </Item>
                         <Item onClick={() => toggleNav(!toggle)}>
-                            <Link to="/">
+                            <a href="https://www.aveda.com/locator/get_the_facts.tmpl?vanity=1&SalonID=38631" target="_blank" rel="noreferrer">
                                 SHOP
-                            </Link>
+                            </a>
                         </Item>
                         <Item onClick={() => toggleNav(!toggle)}>
                             <Link to="/policies">
