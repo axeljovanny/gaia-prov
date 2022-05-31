@@ -139,7 +139,7 @@ const HairServiceMobileDesc = ({ services }) => {
                 const [toggle, toggleNav] = useState(false);
 
                 return (
-                    <>
+                    <div key={data}>
                         {data !== null && data !== '' &&
                             (
                                 <DescTittle key={data} onClick={() => toggleNav(!toggle)}>
@@ -169,7 +169,7 @@ const HairServiceMobileDesc = ({ services }) => {
                                 )
                             })}
                         </Show>
-                    </>
+                    </div>
                 )
             })}
         </>

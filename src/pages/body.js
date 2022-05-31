@@ -8,6 +8,7 @@ import '../styles/css/skin.css'
 
 import { BodyMobileService, BodyService, useBodyService } from "../components/body";
 import { ServiceNav } from "../components/servnav";
+import CarouselComponent from "../components/galeria";
 
 
 const initialTitle = 'SPECIAL';
@@ -85,16 +86,7 @@ const BodyPage = () => {
           </motion.div>
         </StyledServiceDesc>
         <StyledServicePhoto>
-          <StaticImage
-            className="container-prueba"
-            // imgClassName="logo"
-            src="../images/Fotos/prueba1.jpg"
-            alt="imagen de prueba"
-            loading="eager"
-            layout="constrained"
-            formats={['auto', 'webp', 'avif']}
-            quality='70'
-          />
+          <CarouselComponent />
         </StyledServicePhoto>
 
       </StyledServiceContent>
@@ -111,7 +103,7 @@ const BodyPage = () => {
         </motion.div>
       </StyledServiceMobileContent>
       <StyledServiceNote>
-        <StyledNote><motion.p initial={{ y: 10, opacity: 0 }} animate={{ y: 0, opacity: 1 }} transition={{ duration: 1.3, delay: .5, ease: "backInOut" }}></motion.p></StyledNote>
+        <StyledNote><motion.p initial={{ y: 10, opacity: 0 }} animate={{ y: 0, opacity: 1 }} transition={{ duration: 1.3, delay: .5, ease: "backInOut" }}>Aveda and Eminence work as high quality organic products that are used to pamper your skin, body, and soul with their natural ingredients and holistic properties.</motion.p></StyledNote>
         <StyledNote><motion.p initial={{ y: 10, opacity: 0 }} animate={{ y: 0, opacity: 1 }} transition={{ duration: 1.3, delay: .9, ease: "backInOut" }}> © Gaia Evolution Spa & Salon  {(new Date().getFullYear())} | <a href="https://luckyducky.studio/" rel="noreferrer" target="_blank">Lucky Ducky Studio</a></motion.p></StyledNote></StyledServiceNote>
       {/* <StyledServiceFooter>
       </StyledServiceFooter> */}

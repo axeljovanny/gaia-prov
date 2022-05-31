@@ -1,11 +1,9 @@
 import React, { useState } from "react"
 import { StyledServiceContent, StyledServicePage, StyledServiceTittle, StyledServiceDesc, StyledServicePhoto, StyledServiceNote, StyledNote, TextTittle, StyledSVG, StyledServiceMobileContent, StyledService, DescBook } from "../styles/js/skin";
 import '../styles/css/skin.css'
-import { StaticImage } from "gatsby-plugin-image";
 import { motion } from "framer-motion";
 import { colors } from "../utils/const";
 import CarouselComponent from "../components/galeria";
-
 
 import { SkinMobileService, SkinService, useSkinService } from "../components/skin";
 import { ServiceNav } from "../components/servnav";
@@ -40,8 +38,8 @@ const SkinPage = () => {
           {services.map(({ node }) => {
             return (
               node.category != null && (
-                <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: .5 }}>
-                  <TextTittle key={node.id}>
+                <motion.div key={node.id} initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: .5 }}>
+                  <TextTittle>
                     <motion.button whileHover={{ scale: 1.1, color: colors.accentBlue }} whileTap={{ scale: 0.9 }} transition={{ ease: "linear" }} onClick={() => setTitle(node.title)}>
                       {node.title}
                     </motion.button>
@@ -83,7 +81,7 @@ const SkinPage = () => {
           </motion.div>
         </StyledServiceDesc>
         <StyledServicePhoto>
-                <CarouselComponent/>
+          <CarouselComponent />
         </StyledServicePhoto>
       </StyledServiceContent>
       <StyledServiceMobileContent>

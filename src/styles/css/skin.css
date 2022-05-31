@@ -39,3 +39,12 @@
   align-items: flex-end;
 }
 
+.container-prueba {
+  z-index: 10;
+  transform: translate(80px, 200px) scale(1.6);
+}
+
+.imgGallery {
+  width: auto;
+  height: 100%;
+}

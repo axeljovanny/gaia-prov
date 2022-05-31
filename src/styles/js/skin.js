@@ -270,7 +270,7 @@ export const StyledServicePhoto = styled.div`
       justify-content: center;
       align-items: center;
       background: ${colors.none};
-      width: 25%;
+      width: 19%;
       `}
       
       `

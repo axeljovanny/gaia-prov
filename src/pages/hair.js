@@ -7,6 +7,7 @@ import '../styles/css/skin.css'
 
 import { HairMobileService, HairService, useHairService } from "../components/hair";
 import { ServiceNav } from "../components/servnav";
+import CarouselComponent from "../components/galeria";
 
 
 const initialTitle = 'HAIR CUTS';
@@ -85,16 +86,7 @@ const HairPage = () => {
           </motion.div>
         </StyledServiceDesc>
         <StyledServicePhoto>
-          <StaticImage
-            className="container-prueba"
-            // imgClassName="logo"
-            src="../images/Fotos/prueba1.jpg"
-            alt="imagen de prueba"
-            loading="eager"
-            layout="constrained"
-            formats={['auto', 'webp', 'avif']}
-            quality='70'
-          />
+          <CarouselComponent />
         </StyledServicePhoto>
       </StyledServiceContent>
       <StyledServiceMobileContent>
@@ -110,7 +102,7 @@ const HairPage = () => {
         </motion.div>
       </StyledServiceMobileContent>
       <StyledServiceNote>
-        <StyledNote><motion.p initial={{ y: 10, opacity: 0 }} animate={{ y: 0, opacity: 1 }} transition={{ duration: 1.3, delay: .5, ease: "backInOut" }}></motion.p></StyledNote>
+        <StyledNote><motion.p initial={{ y: 10, opacity: 0 }} animate={{ y: 0, opacity: 1 }} transition={{ duration: 1.3, delay: .5, ease: "backInOut" }}>As Aveda salons, we are committed to caring for the earth and all its inhabitants. We are proud to be aligned with such an incredible leader in the salon & spa industry. Gaia Evolution uses  Aveda products to take care of your hair needs with the exception of Keratin Treatments.</motion.p></StyledNote>
         <StyledNote><motion.p initial={{ y: 10, opacity: 0 }} animate={{ y: 0, opacity: 1 }} transition={{ duration: 1.3, delay: .9, ease: "backInOut" }}> © Gaia Evolution Spa & Salon  {(new Date().getFullYear())} | <a href="https://luckyducky.studio/" rel="noreferrer" target="_blank">Lucky Ducky Studio</a></motion.p></StyledNote>
       </StyledServiceNote>
       {/* <StyledServiceFooter>
