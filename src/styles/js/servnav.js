@@ -8,6 +8,7 @@ export const StyledServiceNav = styled.div`
     justify-content: flex-start;
     align-items: flex-start;
     flex-flow: row nowrap;
+    z-index: 12;
     background: ${colors.none};
     width: 100%;
     height: 10vh;
