@@ -4,6 +4,7 @@ import '../styles/css/skin.css'
 import { StaticImage } from "gatsby-plugin-image";
 import { motion } from "framer-motion";
 import { colors } from "../utils/const";
+import CarouselComponent from "../components/galeria";
 
 
 import { SkinMobileService, SkinService, useSkinService } from "../components/skin";
@@ -82,16 +83,7 @@ const SkinPage = () => {
           </motion.div>
         </StyledServiceDesc>
         <StyledServicePhoto>
-          <StaticImage
-            className="container-prueba"
-            imgClassName="logo"
-            src="../images/Fotos/prueba1.jpg"
-            alt="imagen de prueba"
-            loading="eager"
-            layout="constrained"
-            formats={['auto', 'webp', 'avif']}
-            quality='70'
-          />
+                <CarouselComponent/>
         </StyledServicePhoto>
       </StyledServiceContent>
       <StyledServiceMobileContent>
