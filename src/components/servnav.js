@@ -248,8 +248,9 @@ const ServiceNav = ({ siteTitle }) => {
                                 className="logoFooter"
                                 src="../images/logo.png"
                                 alt="gaia logo nav"
+                                width={110}
                                 loading="eager"
-                                layout="fullWidth"
+                                layout="constrained"
                                 placeholder="blurred"
                                 formats={['auto', 'webp', 'avif']}
                                 quality={60}

@@ -15,7 +15,7 @@ const Home = ({ children }) => (
                         src="../images/logo.png"
                         alt="gaia logo home"
                         loading="eager"
-                        width={140}
+                        width={95}
                         layout="constrained"
                         formats={['auto', 'webp', 'avif']}
                         quality='70'

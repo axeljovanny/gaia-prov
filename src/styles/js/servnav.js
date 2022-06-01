@@ -159,8 +159,8 @@ export const Overlay = styled.div`
   flex-direction: column;
   height: ${props => (props.open ? "100vh" : 0)};
   width: 100vw;
-  background: rgba(130, 140, 122, 0.9);
-  backdrop-filter: blur(10px);
+  background: rgba(130, 140, 122, 0.95);
+  backdrop-filter: blur(20px);
   transition: height 0.3s ease-in-out;
   position: fixed;
   top:0;

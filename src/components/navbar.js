@@ -118,7 +118,8 @@ const Navbar = ({ siteTitle }) => {
                             src="../images/logo.png"
                             alt="gaia logo nav"
                             loading="eager"
-                            layout="fullWidth"
+                            width={110}
+                            layout="constrained"
                             placeholder="blurred"
                             formats={['auto', 'webp', 'avif']}
                             quality={60}
