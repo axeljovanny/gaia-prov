@@ -1,9 +1,14 @@
 import React, { useState } from "react"
 import { Link } from "gatsby"
 import { StaticImage } from "gatsby-plugin-image"
-import { StyledLogoContainer, Item, StyledItems, StyledButton, StyledNavbar, Overlay, OverlayMenu, NavIcon, Line, StyledIcons } from "../styles/js/navbar"
+import { StyledLogoContainer, StyledItems, StyledNavbar, ItemNav, LineHome } from "../styles/js/navbar"
+import { OverlayMenu, Overlay, Item, StyledIcons, NavIcon, Line, OverlayFooter, Contacto, Logo } from "../styles/js/servnav"
+
 import { MapsIcon, FacebookIcon, InstagramIcon } from "../images/icons"
 import { colors } from "../utils/const"
+
+
+
 
 
 const Navbar = ({ siteTitle }) => {
@@ -13,16 +18,16 @@ const Navbar = ({ siteTitle }) => {
         <>
             <StyledNavbar>
                 <StyledItems>
-                    <Item>
-                        <Link to="/skin">
-                            SKIN CARE
-                        </Link>
-                    </Item>
-                    <Item>
+                    <ItemNav>
                         <Link to="/hair">
                             HAIR CARE
                         </Link>
-                    </Item>
+                    </ItemNav>
+                    <ItemNav>
+                        <Link to="/skin">
+                            SKIN CARE
+                        </Link>
+                    </ItemNav>
                 </StyledItems>
 
                 <StyledLogoContainer >
@@ -32,36 +37,48 @@ const Navbar = ({ siteTitle }) => {
                             src="../images/logo.png"
                             alt="gaia logo nav"
                             loading="eager"
-                            width={140}
+                            width={110}
                             placeholder="blurred"
                             formats={['auto', 'webp', 'avif']}
+                            quality={100}
+
                         />
                     </Link>
                 </StyledLogoContainer>
 
                 <StyledItems>
-                    <Item>
-                        <Link to="/policies">
-                            POLICIES
+                    <ItemNav>
+                        <Link to="/body">
+                            BODY CARE
                         </Link>
-                    </Item>
-                    <Item>
-                        <a href="https://squareup.com/appointments/book/18a837f7-27d0-4fb3-9184-eed5ec31a526/9XWS7XZK8MK0T/services" target="_blank" rel="noreferrer">
-                            <StyledButton className="button">
-                                BOOK NOW
-                            </StyledButton>
+                    </ItemNav>
+                    <ItemNav>
+                        <a href="https://www.aveda.com/locator/get_the_facts.tmpl?vanity=1&SalonID=38631" target="_blank" rel="noreferrer">
+                            PRODUCTS
                         </a>
-                    </Item>
+                    </ItemNav>
                 </StyledItems>
 
                 <NavIcon onClick={() => toggleNav(!toggle)}>
-                    <Line open={toggle} />
-                    <Line open={toggle} />
-                    <Line open={toggle} />
+                    <LineHome open={toggle} />
+                    <LineHome open={toggle} />
+                    <LineHome open={toggle} />
                 </NavIcon>
 
             </StyledNavbar>
             <Overlay open={toggle}>
+                <StyledIcons open={toggle}>
+                    <a href="https://www.facebook.com/GaiaEvolutionGroup/" rel="noreferrer" target="_blank">
+                        <FacebookIcon fill={colors.white} className="svgAbout" />
+                    </a>
+                    <a href="https://www.instagram.com/gaiaevolution/" rel="noreferrer" target="_blank">
+
+                        <InstagramIcon fill={colors.white} className="svgAbout" />
+                    </a>
+                    <a href="https://www.google.com/maps/place/Gaia+Evolution+Spa+and+Salon/@41.9245235,-87.7068398,19z/data=!3m2!4b1!5s0x880fcd657178d7e3:0x4804758ad15f5cf!4m5!3m4!1s0x880fcd65725634f9:0xf6193b2710f612ea!8m2!3d41.9245235!4d-87.7062926" rel="noreferrer" target="_blank">
+                        <MapsIcon fill={colors.white} className="svgAbout" />
+                    </a>
+                </StyledIcons>
                 <OverlayMenu open={toggle}>
                     <Item onClick={() => toggleNav(!toggle)}>
                         <Link to="/">
@@ -79,24 +96,43 @@ const Navbar = ({ siteTitle }) => {
                         </Link>
                     </Item>
                     <Item onClick={() => toggleNav(!toggle)}>
+                        <Link to="/body">
+                            BODY CARE
+                        </Link>
+                    </Item>
+                    <Item onClick={() => toggleNav(!toggle)}>
+                        <Link to="/">
+                            SHOP
+                        </Link>
+                    </Item>
+                    <Item onClick={() => toggleNav(!toggle)}>
                         <Link to="/policies">
                             POLICIES
                         </Link>
                     </Item>
-                    <Item onClick={() => toggleNav(!toggle)}>
-                        <a href="https://squareup.com/appointments/book/18a837f7-27d0-4fb3-9184-eed5ec31a526/9XWS7XZK8MK0T/services" target="_blank" rel="noreferrer">
-                            <StyledButton className="button">
-                                BOOK NOW
-                            </StyledButton>
-                        </a>
-                    </Item>
                 </OverlayMenu>
-
-                <StyledIcons open={toggle}>
-                    <FacebookIcon fill={colors.white} className="svgAbout" />
-                    <InstagramIcon fill={colors.white} className="svgAbout" />
-                    <MapsIcon fill={colors.white} className="svgAbout" />
-                </StyledIcons>
+                <OverlayFooter open={toggle}>
+                    <Logo>
+                        <StaticImage
+                            className="logoFooter"
+                            src="../images/logo.png"
+                            alt="gaia logo nav"
+                            loading="eager"
+                            width={110}
+                            layout="constrained"
+                            placeholder="blurred"
+                            formats={['auto', 'webp', 'avif']}
+                            quality={60}
+                        />
+                    </Logo>
+                    <Contacto>
+                        <a href="tel:773-799-8843">773-799-8843</a>
+                        <a href="mailto:gaiaevolution@icloud.com">
+                            gaiaevolution@icloud.com
+                        </a>
+                        <p> 3143 W. Fullerton Ave. Chicago, IL</p>
+                    </Contacto>
+                </OverlayFooter>
             </Overlay>
         </>
     )
@@ -104,4 +140,5 @@ const Navbar = ({ siteTitle }) => {
 }
 
 
-export default Navbar
+
+export { Navbar }

@@ -4,15 +4,13 @@ import { colors, font, size } from "../../utils/const"
 
 
 export const StyledNavbar = styled.div`
-    background: none;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-betwen;
-    align-items: center;
-    z-index: 12;
-    position: absolute;
-    width: 100vw;
-    height: 15vh;
+  background: ${colors.none};
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  z-index: 12;
+  width: auto;
+  margin: 3em 0 0 2em;
   ${above.medium`
       
   `}
@@ -20,9 +18,9 @@ export const StyledNavbar = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  whidth: 100vw;
-  height: 20vh;
-  background: linear-gradient(to top, rgba(0, 0, 0, 0.0) 0%, ${colors.black} 100%);
+  width: 100vw;
+  margin: 0;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.0) 0%, ${colors.black} 150%);
   a{
     margin-left: auto;
     margin-right: auto;
@@ -35,16 +33,12 @@ export const StyledNavbar = styled.div`
 export const StyledLogoContainer = styled.div`
   display: none;
   ${above.medium`
-      
   `}
   ${above.large`
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 10vw;
-  height: 100%;
-
-  background: none;
+  background: ${colors.none};
 
   `}
 `
@@ -58,29 +52,24 @@ export const StyledItems = styled.div`
   display: flex;
   justify-content: center ;
   align-items: center;
-  width: 18vw;
-  height: 100%;
-  background: none ;
-  
+  background: ${colors.none};  
   `}
 `
 
-export const Item = styled.div`
+export const ItemNav = styled.div`
 display: flex;
 justify-content: center;
 align-items: center;
 list-style: none; 
 padding: 0;
 background-color: none;
-margin: 10px 0 10px 0;
-width: 100%;
-height: 10vh;
+margin: 54px 3vw;
 font-family: 'Montserrat', sans-serif;
 
 a{
-  font-family:  ${font.medium};
+  font-family:  ${font.waveMedium};
   color: ${colors.white} ;
-  font-size: ${size.Mmini};
+  font-size: ${size.Wtext};
 }
 
 
@@ -102,14 +91,14 @@ export const NavIcon = styled.button`
     `}
 `;
 
-export const Line = styled.span`
+export const LineHome = styled.span`
     display: block;
     border-radius: 50px;
     width: 25px;
     height: 3px;
     margin: 5px;
-    color: ${colors.white};
-    background-color: ${colors.white};
+    color: ${colors.none};
+    background-color: ${props => (props.open ? colors.softWhite : colors.softWhite)};
     transition: width 0.4s ease-in-out;
 
     :nth-child(2) {

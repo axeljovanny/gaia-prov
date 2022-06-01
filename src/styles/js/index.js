@@ -1,4 +1,5 @@
 import { css, createGlobalStyle, keyframes } from "styled-components"
+import { colors, font } from "../../utils/const"
 
 export const size = {
   small: 400,
@@ -35,12 +36,11 @@ const headertransition = keyframes`
 
 export const GlobalStyles = createGlobalStyle`
 body {
-  overflow-x: hidden;
   scroll-behavior: smooth;
   padding: 0;
   margin: 0;
-  font-family: Josefin;
-  background: black;
+  font-family: ${font.light};
+  background: ${colors.softWhite};
   height:100%; 
 }
 a {
@@ -64,26 +64,27 @@ ul {
 .mastheadHome {
   width: 100%;
   min-height: 100vh;
-  position: fixed !important;
+  position: absolute;
   left: 0;
   right: 0;
-  bottom: 0;
+  top: 0;
   animation: ${headertransition} 60s linear 10ms infinite;
-  |transition: all 0.1s ease-in-out;
+  transition: all 0.1s ease-in-out;
 }
 
 
 .content{
   display: flex;
-  align-items: center;
+  align-items: flex-start;
+  justify-content: flex-start;
   flex-direction: column;
   z-index: 10;
   position: absolute;
   width: 100vw;
-  height: 100%;
+  height: 100vh;
   left: 0;
   right: 0;
-  bottom: 0;
+  top: 0;
 }
 
 @media (min-width: 1140px) {

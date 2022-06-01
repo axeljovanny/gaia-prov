@@ -1,7 +1,8 @@
 import * as React from "react"
 import { Link } from "gatsby"
 import { StaticImage } from "gatsby-plugin-image"
-import { Footer, Navbar } from "../components"
+import { Footer } from "../components"
+import { Navbar } from "../components/navbar"
 
 const pageStyles = {
   flexDirection: 'column',

@@ -1,5 +1,6 @@
 import React from "react"
-import { Footer, Home, Navbar } from "../components";
+import { Footer, Home } from "../components";
+import { Navbar } from "../components/navbar";
 
 import { graphql, useStaticQuery } from 'gatsby'
 import { getImage } from "gatsby-plugin-image"
@@ -27,15 +28,12 @@ const IndexPage = () => {
 
   return (
     <>
-
-      <BgImage image={image} className="mastheadHome">
-      </BgImage>
+      <BgImage image={image} className="mastheadHome" />
       <div className="content">
         <Navbar />
         <Home />
         <Footer />
       </div>
-
     </>
   )
 };

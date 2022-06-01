@@ -15,10 +15,10 @@ module.exports = {
         name: `gatsby-starter-default`,
         short_name: `starter`,
         start_url: `/home`,
-        background_color: `#663399`,
-        theme_color: `#663399`,
+        background_color: `#F4F2EF`,
+        theme_color: `#F4F2EF`,
         display: `minimal-ui`,
-        icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
+        icon: `src/images/icon.png`, // This path is relative to the root of the site.
       },
     },
     {
@@ -27,6 +27,26 @@ module.exports = {
         name: `images`,
         path: `${__dirname}/src/images`,
       },
+    },
+    {
+      resolve: "gatsby-plugin-react-svg",
+      options: {
+        rule: {
+          include: /assets/ // See below to configure properly
+        }
+      }
+    },
+    // gatsby-config.js
+    // ...
+    {
+      resolve: 'gatsby-source-google-spreadsheets',
+      options: {
+        spreadsheetId: '1J1mOfNo2aM6GeUlZaw0bJwVnG3bkRGKAi_xFslILvWY',
+        worksheetTitle: 'Services',
+        credentials: require('./secret.json'),
+        filterNode: () => true,
+        mapNode: node => node
+      }
     },
   ],
 }

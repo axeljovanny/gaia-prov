@@ -86,17 +86,21 @@ export const StyledLogoMobileContainer = styled.div`
   justify-content: center ;
   align-items: center;
   width: 100vw;
-  height: 42%;
+  height: 40%;
   position: absolute;
   top: 0;
 
 .container-logo{
   width: 25vw;
+  height: 25.5vw;
+  padding: 10px;
 }
 ${above.medium`
 
 .container-logo{
   width: 18vw;
+  height: 18.5vw;
+  padding: 10px;
 }
 
 `}
@@ -120,6 +124,7 @@ export const StyledTitleContainer = styled.div`
   color: ${colors.white};
 
   h1{
+    line-height : 50px;
     font-family: ${font.bold};
     font-size: ${size.Mheader};
   }
@@ -138,6 +143,7 @@ export const StyledTitleContainer = styled.div`
   `}
   ${above.large`
   h1{
+    line-height : 70px;
     font-size: ${size.Wheader};
   }
 

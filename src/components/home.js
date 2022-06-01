@@ -15,14 +15,15 @@ const Home = ({ children }) => (
                         src="../images/logo.png"
                         alt="gaia logo home"
                         loading="eager"
-                        width={140}
+                        width={95}
                         layout="constrained"
                         formats={['auto', 'webp', 'avif']}
                         quality='70'
                     />
                 </StyledLogoMobileContainer>
                 <h3>Welcome to</h3>
-                <h1>Gaia Evolution</h1>
+                <h1>Gaia</h1>
+                <h1>Evolution</h1>
                 <h3>Spa & Salon</h3>
 
                 <StyledButtonsContainer>
