@@ -6,6 +6,8 @@ import { colors, font, size } from "../../utils/const"
 export const StyledNavbar = styled.div`
   background: ${colors.none};
   display: flex;
+  position: fixed;
+  top: 0;
   justify-content: flex-start;
   align-items: flex-start;
   z-index: 12;
@@ -20,7 +22,7 @@ export const StyledNavbar = styled.div`
   align-items: center;
   width: 100vw;
   margin: 0;
-  background: linear-gradient(to top, rgba(0, 0, 0, 0.0) 0%, ${colors.black} 150%);
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.0) 0%, ${colors.green} 300%);
   a{
     margin-left: auto;
     margin-right: auto;
@@ -67,8 +69,8 @@ margin: 54px 3vw;
 font-family: 'Montserrat', sans-serif;
 
 a{
-  font-family:  ${font.waveMedium};
-  color: ${colors.white} ;
+  font-family:  ${font.waveSemi};
+  color: ${colors.softBlack} ;
   font-size: ${size.Wtext};
 }
 
@@ -98,7 +100,7 @@ export const LineHome = styled.span`
     height: 3px;
     margin: 5px;
     color: ${colors.none};
-    background-color: ${props => (props.open ? colors.softWhite : colors.softWhite)};
+    background-color: ${props => (props.open ? colors.softWhite : colors.green)};
     transition: width 0.4s ease-in-out;
 
     :nth-child(2) {

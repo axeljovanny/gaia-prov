@@ -4,176 +4,142 @@ import { colors, font, size } from "../../utils/const"
 
 
 export const StyledHome = styled.div`
-  display: flex;
-  justify-content: center ;
-  align-items: center;
+  display: grid; 
+  grid-template-columns: repeat(3); 
+  grid-template-rows: repeat(3); 
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+
   width: 100vw;
+  height: 100vh;
+  padding-top: 0%;
+  background: ${colors.none};
+  ${above.large`  
+  grid-template-rows: repeat(2); 
+  `}
+`
+
+export const CircleNature = styled.div`
+  grid-area: 1 / 1 / 2 / 4;
+  width: 100vw;
+  height: 40vh;
+  background: ${colors.none};
+  ${above.large`
+  width: 20vw;
   height: 60vh;
-  padding-top:50%;
-  ${above.medium`
-      
-  `}
-  ${above.large`
-  padding-top: 5%;
-  height: 85vh;
-  
+  grid-area: 1 / 1 / 2 / 2;   
   `}
 `
-
-export const StyledButton = styled.button`
-  width: 140px;
-  height: 43px;
-
-  display: flex;
-  cursor: pointer;
-  align-items: center;
-  border-radius: 5px;
-  margin: 1rem auto;
-  justify-content: center ;
-  background-color: transparent; 
-  border: 1px ${colors.white} solid ;
-  font-family: ${font.medium};
-  color: ${colors.white};
-  font-size: ${size.Mtext};
-
-  :hover{
-    transition: 0.2s ;
-    -webkit-backdrop-filter: blur(10px);
-    backdrop-filter: blur(10px);
-    background-color: rgba(255, 255, 255, 0.2); 
-  }
-
-  ${above.medium`
-      
-  `}
-  ${above.large`
-  font-size: ${size.Mtext}; 
-    margin: 0 25px;
-
-  `}
-`
-
-export const StyledText = styled.div`
-  display: block;
-  right: 0;
-  float: right;
-  height: auto;
-  background: none;
-  text-align:center;
-  width: fit-content;
-  position: absolute; 
-  color: ${colors.white};
-  transform: rotate(90deg) translateY(-140px);
-  font-family: ${font.light};
-  font-size: ${size.Mmini};
-  letter-spacing: 1px;
-  ${above.medium`
-  transform: rotate(90deg) translateY(-120px);
-  font-size: ${size.Wmini};
-
-  `}
-  ${above.large`
-  transform: rotate(90deg) translateY(-110px);
-  font-size: ${size.Wmini};
-    
-
-`}
-`
-
-export const StyledLogoMobileContainer = styled.div`
-  
-  display: flex;
-  justify-content: center ;
-  align-items: center;
+export const LogoPrincipal = styled.div`
+  grid-area: 2 / 1 / 3 / 4;
   width: 100vw;
-  height: 40%;
-  position: absolute;
-  top: 0;
+  height: 20vh;
+  background: ${colors.none};
 
-.container-logo{
-  width: 25vw;
-  height: 25.5vw;
-  padding: 10px;
-}
-${above.medium`
-
-.container-logo{
-  width: 18vw;
-  height: 18.5vw;
-  padding: 10px;
-}
-
-`}
-${above.large`
-
-  display: none;
-
-  `}
-`
-
-export const StyledTitleContainer = styled.div`
-  width: 100%;
-  background: none;
-  font-size: 1rem;
-  height: auto;
-  align-items: center;
-  display: flex ;
-  justify-content: center ;
+  display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
 
-  color: ${colors.white};
-
-  h1{
-    line-height : 50px;
-    font-family: ${font.bold};
-    font-size: ${size.Mheader};
-  }
   h3{
-    margin: 0;
-    font-family: ${font.light};
+    line-height : 2vh;
+    margin:0;
+    height: auto;
+    font-family: ${font.waveLight};
+    font-size: ${size.Mtittle};
   }
-  
-
-  ${above.medium`
-  
-  h1{
-    font-size: ${size.Mheader};
+  svg{
+    width: 80%;
   }
-      
-  `}
   ${above.large`
-  h1{
-    line-height : 70px;
-    font-size: ${size.Wheader};
-  }
+  width: 60vw;
+  height: 60vh;
+  grid-area: 1 / 2 / 2 / 3;
 
-  .container-logo{
-    display: none;
-  }
-  .logo{
-    display: none;
-  }
+  justify-content: flex-end;
 
+  h3{
+    font-family: ${font.waveLight};
+    font-size: ${size.Wtext};
+  }
+  svg{
+    width: 60%;
+  }
   `}
 `
 
-export const StyledButtonsContainer = styled.div`
-  
-  width: 100%;
-  display: flex ;
+export const Gift = styled.div`
+  grid-area: 3 / 3 / 4 / 4;
+  width: calc(100vw / 3);
+  height: 40vh;
+  background: ${colors.none};
+
+  display: flex;
+  justify-content: flex-end;
   align-items: center;
-  justify-content: center ;
-  flex-direction: column;
-  font-family: ${font.bold}  
-  ${above.medium`
 
-  `}
   ${above.large`
-  
-    margin-top: 5rem; 
-    flex-direction: row;
+  justify-content: flex-end;
+  align-items: flex-end;
 
-
+  width: 20vw;
+  height: 60vh;
+  grid-area: 1 / 3 / 2 / 4; 
   `}
 `
+
+export const Social = styled.div`
+  grid-area: none;
+  ${above.large`
+  grid-area: 2 / 1 / 3 / 2; 
+  width: 20vw;
+  height: 40vh;
+  background: blue;
+  `}
+`
+
+export const PhoneLogo = styled.div`
+  grid-area: 3 / 2 / 4 / 3;
+  width: calc(100vw / 3);
+  height: 40vh;
+  background: ${colors.none};
+
+  display: flex;
+  justify-content: center ;
+  align-items: flex-end;
+
+  svg{
+    margin-bottom: 4vh;
+    width: 50px;
+    height: auto;
+  }
+
+  a{display: none;}
+
+  ${above.large`
+  width: 60vw;
+  height: 40vh;
+  grid-area: 2 / 2 / 3 / 3; 
+
+  a{
+    display:flex;
+    margin-bottom: 5vh;
+    font-family: ${font.medium};
+    font-size: ${size.Wtext};
+    color: ${colors.white};
+  }
+  `}
+`
+export const Scroll = styled.div`
+  grid-area: 3 / 1 / 4 / 2;
+  width: calc(100vw / 3);
+  height: 40vh;
+  background: green;
+  ${above.large`
+  width: 20vw;
+  height: 40vh;
+  grid-area: 2 / 3 / 3 / 4; 
+  `}
+`
+
 
