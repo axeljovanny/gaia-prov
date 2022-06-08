@@ -24,10 +24,21 @@ export const CircleNature = styled.div`
   width: 100vw;
   height: 40vh;
   background: ${colors.none};
+  display:flex;
+  align-items: center;
+  position: relative;
+  left: 35%;
+  top: -35%;
   ${above.large`
   width: 20vw;
   height: 60vh;
-  grid-area: 1 / 1 / 2 / 2;   
+  position: relative;
+  left: -33%;
+  top: 0;
+  grid-area: 1 / 1 / 2 / 2; 
+  div{
+    transform: translate(-200px);
+  }  
   `}
 `
 export const LogoPrincipal = styled.div`

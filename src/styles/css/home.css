@@ -27,9 +27,28 @@
   display: none;
 }
 .circle {
+    
   display: flex;
-  width: calc(350px + 2vh);
-  transform: translate(130px, -140px) scale(0.6);
+  width:100%;
+}
+
+.container{
+  background-color: none;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  width: 80%;
+  height: auto;
+
+}
+
+.LogoPrincipal{
+  background-color: none;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: auto;
 }
 
 @media only screen and (min-width: 1140px) {
@@ -52,7 +71,6 @@
   }
   .circle {
     display: flex;
-    width: calc(300px + 10vh);
-    transform: translate(-150px, 60px) scale(0.6);
+    width: 100%;
   }
 }
