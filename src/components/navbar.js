@@ -3,6 +3,7 @@ import { Link } from "gatsby"
 import { StaticImage } from "gatsby-plugin-image"
 import { StyledLogoContainer, StyledItems, StyledNavbar, ItemNav, LineHome } from "../styles/js/navbar"
 import { OverlayMenu, Overlay, Item, StyledIcons, NavIcon, Line, OverlayFooter, Contacto, Logo } from "../styles/js/servnav"
+import { motion } from "framer-motion"
 
 import { MapsIcon, FacebookIcon, InstagramIcon } from "../images/icons"
 import { colors } from "../utils/const"
@@ -19,19 +20,24 @@ const Navbar = ({ siteTitle }) => {
             <StyledNavbar>
                 <StyledItems>
                     <ItemNav>
+                        <motion.p whileHover={{scale: 1.1, priginX: 0}} whileTap={{ scale: 0.9}}>
                         <Link to="/hair">
-                            HAIR CARE
+                           <motion.a whileHover={{color:colors.accentBlue}}> HAIR CARE </motion.a>
                         </Link>
+                        </motion.p>
                     </ItemNav>
                     <ItemNav>
+                        <motion.p whileHover={{ scale: 1.1, priginX: 0}} whileTap={{ scale: 0.9}}>
                         <Link to="/skin">
-                            SKIN CARE
+                        <motion.a whileHover={{color:colors.accentBlue}}>SKIN CARE</motion.a>
                         </Link>
+                        </motion.p>
                     </ItemNav>
                 </StyledItems>
 
                 <StyledLogoContainer >
                     <Link to="/">
+                        <div className="logonav">
                         <StaticImage
                             className="logo"
                             src="../images/logo.png"
@@ -40,22 +46,23 @@ const Navbar = ({ siteTitle }) => {
                             width={110}
                             placeholder="blurred"
                             formats={['auto', 'webp', 'avif']}
-                            quality={100}
-
-                        />
+                            quality={100}/>
+                        </div>
                     </Link>
                 </StyledLogoContainer>
 
                 <StyledItems>
                     <ItemNav>
+                        <motion.p whileHover={{ scale: 1.1, priginX: 0}} whileTap={{ scale: 0.9}}>
                         <Link to="/body">
-                            BODY CARE
+                        <motion.a whileHover={{color:colors.accentBlue}}> BODY CARE </motion.a>
                         </Link>
+                        </motion.p>
                     </ItemNav>
                     <ItemNav>
-                        <a href="https://www.aveda.com/locator/get_the_facts.tmpl?vanity=1&SalonID=38631" target="_blank" rel="noreferrer">
+                        <motion.a whileHover={{scale:1.1,priginX: 0,color:colors.accentBlue}} href="https://www.aveda.com/locator/get_the_facts.tmpl?vanity=1&SalonID=38631" target="_blank" rel="noreferrer">
                             PRODUCTS
-                        </a>
+                        </motion.a>
                     </ItemNav>
                 </StyledItems>
 

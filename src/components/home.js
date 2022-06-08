@@ -1,5 +1,7 @@
 import React from "react"
 import "../styles/css/home.css"
+import { motion } from "framer-motion"
+import { colors } from "../utils/const"
 import { CircleNature, Gallery, Gift, LogoPrincipal, PhoneLogo, ProductContainer, Rectangulo, Rectangulo2, RectanguloProd, Scroll, Social, StyledHome, StyledProducts } from "../styles/js/home.js"
 import Loadable from "@loadable/component"
 import { StaticImage } from "gatsby-plugin-image"
@@ -15,13 +17,19 @@ const Circle = Loadable(() => import("../assets/NOVC.svg"))
 const Hero = ({ children }) => (
     <>
         <StyledHome>
-            <CircleNature>
-                <Circle className="circle" />
+            <CircleNature >
+                <motion.div  className="container" animate={{rotate:2160}} transition={{repeat:Infinity, duration:300, ease:"linear"}} whileHover={{rotate:4320 ,speed:200}}>
+                <Circle className="circle"/>
+                </motion.div>
             </CircleNature>
             <LogoPrincipal>
-                <h3>Welcome to</h3>
+                <motion.h3 initial={{ opacity: 0, y: -10}} animate={{ opacity: 1, y: 0 }} transition={{duration: 2.1,ease:"easeInOut", type:"spring"}}>
+                Welcome to
+                </motion.h3>
+                <motion.div className="LogoPrincipal" initial={{ opacity: 0, y: -10}} animate={{ opacity: 1, y: 0 }} transition={{duration: 2.1,ease:"easeInOut", type:"spring"}}>
                 <LogoWeb className="logo-web" />
                 <LogoMovil className="logo-movil" />
+                </motion.div>
             </LogoPrincipal>
             <Gift>
                 <GiftMovil className="gift-movil" />
@@ -32,7 +40,7 @@ const Hero = ({ children }) => (
             </Social>
             <PhoneLogo>
                 <Phone className="phone" />
-                <a href="tel:773-799-8843">773-799-8843</a>
+                <motion.a whileHover={{ scale: 1.1, priginX: 0, color:colors.accentBlue}} whileTap={{ scale: 0.9}} href="tel:773-799-8843">773-799-8843</motion.a>
             </PhoneLogo>
             <Scroll>
 
