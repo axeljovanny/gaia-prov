@@ -51,6 +51,28 @@
   height: auto;
 }
 
+.contProduct {
+  position: absolute;
+  background: none;
+  box-sizing: border-box;
+  transition: 400ms;
+}
+.contProduct:hover {
+  box-sizing: border-box;
+  transition: 400ms;
+  transform: translateY(-50px) scale(1.2) rotate(-2deg);
+}
+
+.imgProduct {
+  display: block;
+  box-sizing: border-box;
+  transition: 400ms;
+}
+.imgProduct:hover {
+  box-sizing: border-box;
+  transition: 400ms;
+}
+
 @media only screen and (min-width: 1140px) {
   .logo-web {
     display: flex;

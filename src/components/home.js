@@ -2,8 +2,9 @@ import React from "react"
 import "../styles/css/home.css"
 import { motion } from "framer-motion"
 import { colors } from "../utils/const"
-import { CircleNature, Gift, LogoPrincipal, PhoneLogo, Scroll, Social, StyledHome } from "../styles/js/home.js"
+import { CircleNature, Gallery, Gift, LogoPrincipal, PhoneLogo, ProductContainer, Rectangulo, Rectangulo2, RectanguloProd, Scroll, Social, StyledHome, StyledProducts } from "../styles/js/home.js"
 import Loadable from "@loadable/component"
+import { StaticImage } from "gatsby-plugin-image"
 const LogoWeb = Loadable(() => import("../assets/GEWeb.svg"))
 const LogoMovil = Loadable(() => import("../assets/GEMovil.svg"))
 const Phone = Loadable(() => import("../assets/Phone.svg"))
@@ -52,5 +53,59 @@ const Hero = ({ children }) => (
 const Wedo = ({ children }) => (
     <></>
 )
+const Products = ({ children }) => (
+    <StyledProducts>
+        <Gallery>
+            <ProductContainer>
+                <RectanguloProd>
+                    <Rectangulo />
+                    <StaticImage
+                        className="contProduct"
+                        imgClassName="imgProduct"
+                        src="../images/Products/PNG/Cherry.png"
+                        alt="producto"
+                        height={320}
+                        loading="lazy"
+                        formats={['auto', 'webp', 'avif']}
+                        quality='100'
+                    />
+                    <Rectangulo2 />
+                </RectanguloProd>
+            </ProductContainer>
+            <ProductContainer>
+                <RectanguloProd>
+                    <Rectangulo />
+                    <StaticImage
+                        className="contProduct"
+                        imgClassName="imgProduct"
+                        src="../images/Products/PNG/ShampureG.png"
+                        alt="producto"
+                        height={320}
+                        loading="lazy"
+                        formats={['auto', 'webp', 'avif']}
+                        quality='100'
+                    />
+                    <Rectangulo2 />
+                </RectanguloProd>
+            </ProductContainer>
+            <ProductContainer>
+                <RectanguloProd>
+                    <Rectangulo />
+                    <StaticImage
+                        className="contProduct"
+                        imgClassName="imgProduct"
+                        src="../images/Products/PNG/Invati.png"
+                        alt="producto"
+                        height={320}
+                        loading="lazy"
+                        formats={['auto', 'webp', 'avif']}
+                        quality='100'
+                    />
+                    <Rectangulo2 />
+                </RectanguloProd>
+            </ProductContainer>
+        </Gallery>
+    </StyledProducts>
+)
 
-export { Hero, Wedo }
+export { Hero, Wedo, Products }
