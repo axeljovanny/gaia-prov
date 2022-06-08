@@ -42,6 +42,9 @@ body {
   font-family: ${font.light};
   background: ${colors.softWhite};
   height:100%; 
+  overflow-x: hidden;
+  overflow-y: scroll;
+
 }
 a {
   text-decoration: none;

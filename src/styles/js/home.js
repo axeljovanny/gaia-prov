@@ -27,18 +27,11 @@ export const CircleNature = styled.div`
   display:flex;
   align-items: center;
   position: relative;
-  left: 35%;
-  top: -35%;
   ${above.large`
-  width: 20vw;
+  width: 19vw;
   height: 60vh;
   position: relative;
-  left: -33%;
-  top: 0;
   grid-area: 1 / 1 / 2 / 2; 
-  div{
-    transform: translate(-200px);
-  }  
   `}
 `
 export const LogoPrincipal = styled.div`
@@ -101,11 +94,26 @@ export const Gift = styled.div`
 
 export const Social = styled.div`
   grid-area: none;
+  display:none;
+
   ${above.large`
   grid-area: 2 / 1 / 3 / 2; 
-  width: 20vw;
+  width: 19vw;
   height: 40vh;
-  background: blue;
+
+  display:flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-start;
+  gap: 4em;
+
+  div {
+    padding: 10% 0;
+  }
+  svg{
+    width: 100%;
+    padding: 5% 0;
+  }
   `}
 `
 
@@ -145,11 +153,103 @@ export const Scroll = styled.div`
   grid-area: 3 / 1 / 4 / 2;
   width: calc(100vw / 3);
   height: 40vh;
-  background: green;
+  background: none;
   ${above.large`
   width: 20vw;
   height: 40vh;
   grid-area: 2 / 3 / 3 / 4; 
+  `}
+`
+///////// WEDO //////////
+export const StyledWedoSection = styled.div`
+  display:flex;
+  justify-content: center ;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  background: ${colors.softWhite};
+  ${above.large`
+  
+  `}
+`
+export const StyledWedo = styled.div`
+  display:flex;
+  justify-content: center ;
+  align-items: center;
+  flex-flow: column-reverse nowrap;
+  width: 90%;
+  height: 90%;
+  background: ${colors.none};
+  ${above.large`
+  width: 90%;
+  height: 70%;
+  flex-flow: row nowrap;
+
+  
+  `}
+`
+
+export const TextWedo = styled.div`
+  display:flex;
+  flex-flow: column nowrap;
+  justify-content: center ;
+  align-items: flex-start;
+  width: 100%;
+  height: 90%;
+  padding: 0;
+  background: ${colors.none};
+  
+  color: ${colors.black};
+
+  h1{ 
+    font-family: ${font.waveBold};
+    font-size: ${size.Wtittle};
+  }
+  h2{
+    font-family: ${font.light};
+    font-size: ${size.Wtittle};
+  }
+  h3{
+    text-align:justify;
+    font-family: ${font.light};
+    font-size: ${size.Wtext};
+  }
+  a{
+    display:flex;
+    justify-content: center ;
+    gap: 0.5em;
+    padding: 4em 0 0;
+    width: 100%;
+    color: ${colors.green};
+  }
+  ${above.large`
+  padding: 0 1em 0 4em;
+  width: 55%;
+  height: 90%;
+  a{
+    justify-content: flex-start ;
+  }
+  
+  `}
+`
+
+export const ImgsWedo = styled.div`
+  display:flex;
+  justify-content: center ;
+  align-items: center;
+  width: 50%;
+  height: 30%;
+  right: -10%;
+  top: 100%;
+  position: absolute;
+  background: ${colors.yell};
+  ${above.large`
+  position: relative;
+  right: auto;
+  top: auto;
+  width: 45%;
+  height: 90%;
+  
   `}
 `
 
@@ -163,7 +263,7 @@ export const StyledProducts = styled.div`
 
   width: 100vw;
   height: 100vh;
-  background: ${colors.none};
+  background: ${colors.red};
   ${above.large`  
   
   `}
@@ -218,7 +318,6 @@ export const RectanguloProd = styled.div`
 
   `}
 `
-
 export const Rectangulo = styled.div`
   position: absolute;
   bottom: -20px;
