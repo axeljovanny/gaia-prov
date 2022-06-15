@@ -59,7 +59,7 @@
 .contProduct:hover {
   box-sizing: border-box;
   transition: 400ms;
-  transform: translateY(-50px) scale(1.2) rotate(-2deg);
+  transform: translateY(-20px) scale(1.1) rotate(-2deg);
 }
 
 .imgProduct {
@@ -73,6 +73,10 @@
 }
 .flecha {
   transform: rotate(-90deg);
+}
+.product {
+  display: flex;
+  width: 80%;
 }
 
 @media only screen and (min-width: 1140px) {
