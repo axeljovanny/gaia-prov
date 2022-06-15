@@ -242,7 +242,7 @@ export const ImgsWedo = styled.div`
   right: -10%;
   top: 100%;
   position: absolute;
-  background: ${colors.yell};
+  background: ${colors.none};
   ${above.large`
   position: relative;
   right: auto;
@@ -330,3 +330,145 @@ export const BannerProducts = styled.div`
   `}
   `
 
+//////TRATAMIENTS
+
+export const StyledSkin = styled.div`
+  position: relative;
+  background: ${colors.none};
+  width: 100vw;
+  height: 100vh;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+
+  ${above.large` 
+  `}
+  `
+export const StyledHair = styled.div`
+  position: relative;
+  background: ${colors.green};
+  width: 100vw;
+  height: 100vh;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+
+  ${above.large` 
+  `}
+  `
+
+export const StyledTratamient = styled.div`
+  display:flex;
+  justify-content: center ;
+  align-items: center;
+  flex-flow: column-reverse nowrap;
+  width: 90%;
+  height: 90%;
+  background: ${colors.none};
+  ${above.large`
+  width: 80%;
+  height: 100%;
+  flex-flow: row nowrap;
+  justify-content: space-evenly ;
+
+  
+  `}
+`
+
+export const ImgSkin = styled.div`
+  display:flex;
+  justify-content: flex-start ;
+  align-items: center;
+  width: 50%;
+  height: 30%;
+  background: ${colors.none};
+  ${above.large`
+  width: 20%;
+  height: 90%;
+  `}
+`
+
+export const TextSkin = styled.div`
+  display:flex;
+  flex-flow: column nowrap;
+  justify-content: center ;
+  align-items: center;
+  width: 80%;
+  height: 90%;
+  padding: 0;
+  background: ${colors.none};
+  
+  color: ${colors.green};
+
+  h3{
+    text-align:justify;
+    font-family: ${font.light};
+    font-size: ${size.Wtext};
+  }
+  a{
+    display:flex;
+    justify-content: center ;
+    gap: 0.5em;
+    padding: 4em 0 0;
+    width: 100%;
+    color: ${colors.green};
+  }
+  ${above.large`
+  height: 50%;
+  justify-content: flex-end;
+  width: 45%;
+  a{
+    justify-content: flex-start ;
+  }
+  
+  `}
+`
+export const ImgHair = styled.div`
+  display:flex;
+  justify-content: flex-start ;
+  align-items: center;
+  width: 50%;
+  height: 30%;
+  background: ${colors.none};
+  ${above.large`
+  width: 25%;
+  height: 90%;
+  `}
+`
+
+export const TextHair = styled.div`
+  display:flex;
+  flex-flow: column nowrap;
+  justify-content: center ;
+  align-items: center;
+  width: 80%;
+  height: 90%;
+  padding: 0;
+  background: ${colors.none};
+  
+  color: ${colors.softWhite};
+
+  h3{
+    text-align:justify;
+    font-family: ${font.light};
+    font-size: ${size.Wtext};
+  }
+  a{
+    display:flex;
+    justify-content: center ;
+    gap: 0.5em;
+    padding: 4em 0 0;
+    width: 100%;
+    color: ${colors.softWhite};
+  }
+  ${above.large`
+  width: 45%;
+  height: 50%;
+  justify-content: flex-end;
+
+  a{
+    justify-content: flex-start ;
+  }
+  
+  `}
+`

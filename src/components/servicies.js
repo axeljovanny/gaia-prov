@@ -5,8 +5,7 @@ import { Desc, DescBodyTittle, DescDetailsBody, DescNoteBody, DescPriceBody, Des
 import "../styles/css/skin.css";
 
 
-import Loadable from "@loadable/component"
-const Flecha = Loadable(() => import("../assets/arrow.svg"))
+import { Flecha } from "../assets/Home"
 
 
 
@@ -64,7 +63,7 @@ const SkinServiceMobileDesc = ({ services }) => {
                     <>
                         <DescTittle key={data} onClick={() => toggleNav(!toggle)}>
                             <p>{data}</p>
-                            <Flecha className="flecha" />
+                            <Flecha className="flecha" stroke={colors.green} />
                         </DescTittle>
                         <Show open={toggle}>
                             <DescText open={toggle}>{description}</DescText>
@@ -144,7 +143,7 @@ const HairServiceMobileDesc = ({ services }) => {
                             (
                                 <DescTittle key={data} onClick={() => toggleNav(!toggle)}>
                                     <p>{data}</p>
-                                    <Flecha className="flecha" />
+                                    <Flecha className="flecha" stroke={colors.green} />
                                 </DescTittle>
                             )}
                         <Show open={toggle}>
@@ -235,7 +234,7 @@ const BodyServiceMobileDesc = ({ services }) => {
                     <>
                         <DescTittle key={data} open={toggle} onClick={() => toggleNav(!toggle)}>
                             <p>{data}</p>
-                            <Flecha className="flecha" />
+                            <Flecha className="flecha" stroke={colors.green} />
                         </DescTittle>
                         <Show open={toggle}>
                             {services.map(({ node }) => {

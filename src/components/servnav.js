@@ -8,9 +8,8 @@ import { colors } from "../utils/const"
 import { motion } from "framer-motion"
 import "../styles/css/skin.css";
 
-import Loadable from "@loadable/component"
-const Flecha = Loadable(() => import("../assets/arrow.svg"))
-/* const Linea = Loadable(() => import("../assets/LineaSeleccion.svg")) */
+import { Flecha } from "../assets/Home"
+
 
 
 const draw = {
@@ -37,7 +36,7 @@ const ServiceNav = ({ siteTitle }) => {
                         whileHover={{ scale: 1.5, color: colors.accentBlue }}
                         whileTap={{ scale: 0.9 }}
                         transition={{ ease: "linear" }}
-                    ><Flecha className="flechaHome" />
+                    ><Flecha className="flechaHome" stroke={colors.green} />
                     </motion.div>
                     <Link to="/">
                         HOME

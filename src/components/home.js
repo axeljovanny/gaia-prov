@@ -2,22 +2,17 @@ import React from "react"
 import "../styles/css/home.css"
 import { motion } from "framer-motion"
 import { colors } from "../utils/const"
-import { BannerProducts, CircleNature, Gallery, Gift, ImgsWedo, LogoPrincipal, PhoneLogo, ProductContainer, Rectangulo, Rectangulo2, RectanguloProd, Scroll, Social, StyledHome, StyledProducts, StyledWedo, StyledWedoSection, TextWedo } from "../styles/js/home.js"
+import { BannerProducts, CircleNature, Gift, ImgHair, ImgSkin, ImgsWedo, LogoPrincipal, PhoneLogo, Scroll, Social, StyledHair, StyledHome, StyledProducts, StyledSkin, StyledTratamient, StyledWedo, StyledWedoSection, TextHair, TextSkin, TextWedo } from "../styles/js/home.js"
 import { StaticImage } from "gatsby-plugin-image"
 
 import Loadable from "@loadable/component"
-const LogoWeb = Loadable(() => import("../assets/GEWeb.svg"))
-const LogoMovil = Loadable(() => import("../assets/GEMovil.svg"))
 const Phone = Loadable(() => import("../assets/Phone.svg"))
-const GiftWeb = Loadable(() => import("../assets/BuyAGiftCardTrazo.svg"))
-const GiftMovil = Loadable(() => import("../assets/GiftMovil.svg"))
-const Circle = Loadable(() => import("../assets/NOVC.svg"))
-const Flecha = Loadable(() => import("../assets/arrow.svg"))
-const Product = Loadable(() => import("../assets/Favorite.svg"))
 
 import { MapsIcon, FacebookIcon, InstagramIcon } from "../images/icons"
 import { Link } from "gatsby"
 import SwiperF from "./swiper"
+
+import { GiftMovil, GiftWeb, Circle, GEWeb, GEMovil, Skin, Hair, Flecha, Body } from "../assets/Home"
 
 
 const Hero = ({ children }) => (
@@ -25,30 +20,31 @@ const Hero = ({ children }) => (
         <StyledHome>
             <CircleNature >
                 <motion.div className="container" animate={{ rotate: -2160 }} transition={{ repeat: Infinity, duration: 300, ease: "linear" }} whileHover={{ rotate: -4320, speed: 200 }}>
-                    <Circle className="circle" />
+                    <Circle className="circle" fill={colors.green} />
                 </motion.div>
             </CircleNature>
             <LogoPrincipal>
                 <motion.div className="LogoPrincipal" initial={{ opacity: 0, y: -10 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 2.1, ease: "easeInOut", type: "spring" }}>
-                    <LogoWeb className="logo-web" />
-                    <LogoMovil className="logo-movil" />
+                    <GEWeb className="logo-web" fill={colors.black} />
+                    <GEMovil className="logo-movil" fill={colors.black} />
                 </motion.div>
             </LogoPrincipal>
             <Gift>
-                <GiftMovil className="gift-movil" />
-                <GiftWeb className="gift-web" />
+                {/* <GiftMovil className="gift-movil" /> */}
+                <GiftWeb className="gift-web" fill={colors.green} />
+                <GiftMovil className="gift-movil" fill={colors.green} fill2={colors.softWhite} />
             </Gift>
             <Social>
                 <div>
                     <a href="https://www.facebook.com/GaiaEvolutionGroup/" rel="noreferrer" target="_blank">
-                        <FacebookIcon fill={colors.softBlack} className="svgAbout" />
+                        <FacebookIcon fill={colors.black} className="svgAbout" />
                     </a>
                     <a href="https://www.instagram.com/gaiaevolution/" rel="noreferrer" target="_blank">
 
-                        <InstagramIcon fill={colors.softBlack} className="svgAbout" />
+                        <InstagramIcon fill={colors.black} className="svgAbout" />
                     </a>
                     <a href="https://www.google.com/maps/place/Gaia+Evolution+Spa+and+Salon/@41.9245235,-87.7068398,19z/data=!3m2!4b1!5s0x880fcd657178d7e3:0x4804758ad15f5cf!4m5!3m4!1s0x880fcd65725634f9:0xf6193b2710f612ea!8m2!3d41.9245235!4d-87.7062926" rel="noreferrer" target="_blank">
-                        <MapsIcon fill={colors.softBlack} className="svgAbout" />
+                        <MapsIcon fill={colors.black} className="svgAbout" />
                     </a>
                 </div>
             </Social>
@@ -71,17 +67,120 @@ const Wedo = ({ children }) => (
                 <h1>WHAT WE DO?</h1>
                 <h2>We are a group of professional Cosmetologists & Estheticians</h2>
                 <h3>that are hard working and staying up to date with the latest trends and technology in the beauty industry to bring our clients the best experience possible. Gaia Evolution Spa & Salon was created with the concept of rescue the use of natural & organic sources from our professional lines...</h3>
-                <Link>SEE MORE <Flecha className="flecha" /></Link>
+                <Link>SEE MORE <Flecha className="flecha" stroke={colors.green} /></Link>
             </TextWedo>
-            <ImgsWedo></ImgsWedo>
+            <ImgsWedo>
+                <StaticImage
+                    className="HomeWD2"
+                    imgClassName=""
+                    src="../images/Home/PNG/WWDArco.png"
+                    alt="Spa Image"
+                    height={270}
+                    loading="lazy"
+                    formats={['auto', 'webp', 'avif']}
+                    quality='100'
+                />
+                <StaticImage
+                    className="HomeWD1"
+                    imgClassName=""
+                    src="../images/Home/PNG/WWDHoja.png"
+                    alt="Spa products"
+                    height={270}
+                    loading="lazy"
+                    formats={['auto', 'webp', 'avif']}
+                    quality='100'
+                />
+            </ImgsWedo>
         </StyledWedo>
     </StyledWedoSection>
+)
+const Skincare = ({ children }) => (
+    <StyledSkin>
+        <StyledTratamient>
+            <Skin className="SkinSvg" fill={colors.green} />
+            <ImgSkin>
+                <StaticImage
+                    className="Skin"
+                    imgClassName=""
+                    src="../images/Home/PNG/SkinCare.png"
+                    alt="Spa Image"
+                    height={270}
+                    loading="lazy"
+                    formats={['auto', 'webp', 'avif']}
+                    quality='100'
+                />
+            </ImgSkin>
+            <TextSkin>
+                <h3>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley.</h3>
+                <Link>GO TO SKIN CARE <Flecha className="flecha" stroke={colors.green} /></Link>
+            </TextSkin>
+
+        </StyledTratamient>
+    </StyledSkin>
+)
+const Haircare = ({ children }) => (
+    <StyledHair>
+        <StyledTratamient>
+            <Hair className="HairSvg" fill={colors.softWhite} />
+            <TextHair>
+                <h3>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley.</h3>
+                <Link>GO TO SKIN CARE <Flecha className="flecha" stroke={colors.softWhite} /></Link>
+            </TextHair>
+            <ImgHair>
+                <StaticImage
+                    className="Hair"
+                    imgClassName=""
+                    src="../images/Home/PNG/HairCare.png"
+                    alt="Spa Image"
+                    height={270}
+                    loading="lazy"
+                    formats={['auto', 'webp', 'avif']}
+                    quality='100'
+                />
+            </ImgHair>
+
+
+        </StyledTratamient>
+    </StyledHair>
+)
+const Bodycare = ({ children }) => (
+    <StyledSkin>
+        <StyledTratamient>
+            <Body className="SkinSvg" fill={colors.green} />
+            <ImgSkin>
+                <StaticImage
+                    className="Skin"
+                    imgClassName=""
+                    src="../images/Home/PNG/BodyCare.png"
+                    alt="Spa Image"
+                    height={270}
+                    loading="lazy"
+                    formats={['auto', 'webp', 'avif']}
+                    quality='100'
+                />
+            </ImgSkin>
+            <TextSkin>
+                <h3>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley.</h3>
+                <Link>GO TO BODY CARE <Flecha className="flecha" stroke={colors.green} /></Link>
+            </TextSkin>
+
+        </StyledTratamient>
+    </StyledSkin>
 )
 const Products = ({ children }) => {
     return (
         <>
             <BannerProducts>
-                <Product className="product" />
+                <StaticImage
+                    className="Favorite"
+                    imgClassName=""
+                    src="../images/Home/PNG/FPArco.png"
+                    alt="Spa Image"
+                    height={270}
+                    loading="lazy"
+                    formats={['auto', 'webp', 'avif']}
+                    quality='100'
+                />
             </BannerProducts>
             <StyledProducts>
                 <SwiperF></SwiperF>
@@ -90,4 +189,4 @@ const Products = ({ children }) => {
     );
 }
 
-export { Hero, Wedo, Products }
+export { Hero, Wedo, Skincare, Haircare, Bodycare, Products }

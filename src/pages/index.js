@@ -8,7 +8,7 @@ import { BgImage } from "gbimage-bridge"
 
 import { Footer } from "../components";
 import { Navbar } from "../components/navbar";
-import { Hero, Products, Wedo } from "../components/home";
+import { Bodycare, Haircare, Hero, Products, Skincare, Wedo } from "../components/home";
 import '../styles/css/home.css'
 
 
@@ -40,6 +40,9 @@ const IndexPage = () => {
       </BgImage>
       <Navbar />
       <Wedo />
+      <Skincare />
+      <Haircare />
+      <Bodycare />
       <Products />
       {/* <Footer /> */}
     </>
