@@ -27,9 +27,6 @@ const Hero = ({ children }) => (
                 </motion.div>
             </CircleNature>
             <LogoPrincipal>
-                <motion.h3 initial={{ opacity: 0, y: -10 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 2.1, ease: "easeInOut", type: "spring" }}>
-                    Welcome to
-                </motion.h3>
                 <motion.div className="LogoPrincipal" initial={{ opacity: 0, y: -10 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 2.1, ease: "easeInOut", type: "spring" }}>
                     <LogoWeb className="logo-web" />
                     <LogoMovil className="logo-movil" />
