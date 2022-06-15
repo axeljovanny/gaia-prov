@@ -262,47 +262,18 @@ export const StyledProducts = styled.div`
   align-items: center;
 
   width: 100vw;
-  height: 100vh;
-  background: ${colors.red};
+  height: 80vh;
+  background: ${colors.none};
   ${above.large`  
   
   `}
 `
 
-export const Gallery = styled.div`
-  display: flex;
-  justify-content: center ;
-  align-items: center;
-
-  width: 90%;
-  height: 90%;
-  gap: 2%;
-  background: ${colors.none};
-  ${above.large`  
-
-  `}
-`
-export const ProductContainer = styled.div`
-  display: flex;
-  justify-content: center ;
-
-  align-items: center;
-
-  width: 30%;
-  height: 50%;
-  background: ${colors.none};
-  ${above.large`  
- 
-
-  `}
-`
 export const RectanguloProd = styled.div`
   width: 100%;
   height: 70%;
   max-width: 300px;
-  border-radius: 5px;
   background: ${colors.none};
-  padding: 15px;
   position: relative;
   display: flex;
   justify-content: center;
@@ -322,14 +293,40 @@ export const Rectangulo = styled.div`
   position: absolute;
   bottom: -20px;
   background: ${colors.green};
+  border-radius: 5px;
   width: 100%;
   height: 60%;
   `
 export const Rectangulo2 = styled.div`
   position: absolute;
-  bottom: -22%;
+  bottom: -12%;
   background: ${colors.softWhite};
-  width: 100%;
-  height: 15%;
+  width: 110%;
+  height: 20%;
+  ${above.large`  
+  height: 30%;
+  bottom: -10%;
+  `}
+  ${above.xlarge`  
+  height: 40%;
+  bottom: -12%;
+  `}
+  `
+
+export const BannerProducts = styled.div`
+  position: relative;
+  background: ${colors.green};
+  width: 100vw;
+  height: 70vh;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  border-top-right-radius: 60px;
+  border-bottom-left-radius: 60px;
+
+
+
+  ${above.large` 
+  `}
   `
 

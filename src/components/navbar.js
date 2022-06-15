@@ -20,17 +20,17 @@ const Navbar = ({ siteTitle }) => {
             <StyledNavbar>
                 <StyledItems>
                     <ItemNav>
-                        <motion.p whileHover={{scale: 1.1, priginX: 0}} whileTap={{ scale: 0.9}}>
-                        <Link to="/hair">
-                           <motion.a whileHover={{color:colors.accentBlue}}> HAIR CARE </motion.a>
-                        </Link>
+                        <motion.p whileHover={{ scale: 1.1, priginX: 0, color: colors.accentBlue }} whileTap={{ scale: 0.9 }}>
+                            <Link to="/hair">
+                                HAIR CARE
+                            </Link>
                         </motion.p>
                     </ItemNav>
                     <ItemNav>
-                        <motion.p whileHover={{ scale: 1.1, priginX: 0}} whileTap={{ scale: 0.9}}>
-                        <Link to="/skin">
-                        <motion.a whileHover={{color:colors.accentBlue}}>SKIN CARE</motion.a>
-                        </Link>
+                        <motion.p whileHover={{ scale: 1.1, priginX: 0, color: colors.accentBlue }} whileTap={{ scale: 0.9 }}>
+                            <Link to="/skin">
+                                SKIN CARE
+                            </Link>
                         </motion.p>
                     </ItemNav>
                 </StyledItems>
@@ -38,31 +38,31 @@ const Navbar = ({ siteTitle }) => {
                 <StyledLogoContainer >
                     <Link to="/">
                         <div className="logonav">
-                        <StaticImage
-                            className="logo"
-                            src="../images/logo.png"
-                            alt="gaia logo nav"
-                            loading="eager"
-                            width={110}
-                            placeholder="blurred"
-                            formats={['auto', 'webp', 'avif']}
-                            quality={100}/>
+                            <StaticImage
+                                className="logo"
+                                src="../images/logo.png"
+                                alt="gaia logo nav"
+                                loading="eager"
+                                width={110}
+                                placeholder="blurred"
+                                formats={['auto', 'webp', 'avif']}
+                                quality={100} />
                         </div>
                     </Link>
                 </StyledLogoContainer>
 
                 <StyledItems>
                     <ItemNav>
-                        <motion.p whileHover={{ scale: 1.1, priginX: 0}} whileTap={{ scale: 0.9}}>
-                        <Link to="/body">
-                        <motion.a whileHover={{color:colors.accentBlue}}> BODY CARE </motion.a>
-                        </Link>
+                        <motion.p whileHover={{ scale: 1.1, priginX: 0, color: colors.accentBlue }} whileTap={{ scale: 0.9 }}>
+                            <Link to="/body">
+                                BODY CARE
+                            </Link>
                         </motion.p>
                     </ItemNav>
                     <ItemNav>
-                        <motion.a whileHover={{scale:1.1,priginX: 0,color:colors.accentBlue}} href="https://www.aveda.com/locator/get_the_facts.tmpl?vanity=1&SalonID=38631" target="_blank" rel="noreferrer">
+                        <motion.p whileHover={{ scale: 1.1, priginX: 0, color: colors.accentBlue }} whileTap={{ scale: 0.9 }}>
                             PRODUCTS
-                        </motion.a>
+                        </motion.p>
                     </ItemNav>
                 </StyledItems>
 

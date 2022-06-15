@@ -2,7 +2,7 @@ import React from "react"
 import "../styles/css/home.css"
 import { motion } from "framer-motion"
 import { colors } from "../utils/const"
-import { CircleNature, Gallery, Gift, ImgsWedo, LogoPrincipal, PhoneLogo, ProductContainer, Rectangulo, Rectangulo2, RectanguloProd, Scroll, Social, StyledHome, StyledProducts, StyledWedo, StyledWedoSection, TextWedo } from "../styles/js/home.js"
+import { BannerProducts, CircleNature, Gallery, Gift, ImgsWedo, LogoPrincipal, PhoneLogo, ProductContainer, Rectangulo, Rectangulo2, RectanguloProd, Scroll, Social, StyledHome, StyledProducts, StyledWedo, StyledWedoSection, TextWedo } from "../styles/js/home.js"
 import { StaticImage } from "gatsby-plugin-image"
 
 import Loadable from "@loadable/component"
@@ -13,9 +13,11 @@ const GiftWeb = Loadable(() => import("../assets/BuyAGiftCardTrazo.svg"))
 const GiftMovil = Loadable(() => import("../assets/GiftMovil.svg"))
 const Circle = Loadable(() => import("../assets/NOVC.svg"))
 const Flecha = Loadable(() => import("../assets/arrow.svg"))
+const Product = Loadable(() => import("../assets/Favorite.svg"))
 
 import { MapsIcon, FacebookIcon, InstagramIcon } from "../images/icons"
 import { Link } from "gatsby"
+import SwiperF from "./swiper"
 
 
 const Hero = ({ children }) => (
@@ -75,59 +77,17 @@ const Wedo = ({ children }) => (
         </StyledWedo>
     </StyledWedoSection>
 )
-const Products = ({ children }) => (
-    <StyledProducts>
-        <Gallery>
-            <ProductContainer>
-                <RectanguloProd>
-                    <Rectangulo />
-                    <StaticImage
-                        className="contProduct"
-                        imgClassName="imgProduct"
-                        src="../images/Products/PNG/Cherry.png"
-                        alt="producto"
-                        height={320}
-                        loading="lazy"
-                        formats={['auto', 'webp', 'avif']}
-                        quality='100'
-                    />
-                    <Rectangulo2 />
-                </RectanguloProd>
-            </ProductContainer>
-            <ProductContainer>
-                <RectanguloProd>
-                    <Rectangulo />
-                    <StaticImage
-                        className="contProduct"
-                        imgClassName="imgProduct"
-                        src="../images/Products/PNG/ShampureG.png"
-                        alt="producto"
-                        height={320}
-                        loading="lazy"
-                        formats={['auto', 'webp', 'avif']}
-                        quality='100'
-                    />
-                    <Rectangulo2 />
-                </RectanguloProd>
-            </ProductContainer>
-            <ProductContainer>
-                <RectanguloProd>
-                    <Rectangulo />
-                    <StaticImage
-                        className="contProduct"
-                        imgClassName="imgProduct"
-                        src="../images/Products/PNG/Invati.png"
-                        alt="producto"
-                        height={320}
-                        loading="lazy"
-                        formats={['auto', 'webp', 'avif']}
-                        quality='100'
-                    />
-                    <Rectangulo2 />
-                </RectanguloProd>
-            </ProductContainer>
-        </Gallery>
-    </StyledProducts>
-)
+const Products = ({ children }) => {
+    return (
+        <>
+            <BannerProducts>
+                <Product className="product" />
+            </BannerProducts>
+            <StyledProducts>
+                <SwiperF></SwiperF>
+            </StyledProducts>
+        </>
+    );
+}
 
 export { Hero, Wedo, Products }
