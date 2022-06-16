@@ -12,7 +12,7 @@ import { MapsIcon, FacebookIcon, InstagramIcon } from "../images/icons"
 import { Link } from "gatsby"
 import SwiperF from "./swiper"
 
-import { GiftMovil, GiftWeb, Circle, GEWeb, GEMovil, Skin, Hair, Flecha, Body } from "../assets/Home"
+import { GiftMovil, GiftWeb, Circle, GEWeb, GEMovil, Skin, Hair, Flecha, Body, Favorite } from "../assets/Home"
 
 
 const Hero = ({ children }) => (
@@ -181,6 +181,8 @@ const Products = ({ children }) => {
                     formats={['auto', 'webp', 'avif']}
                     quality='100'
                 />
+                <Favorite className="ProductsSvg" fill={colors.softWhite} />
+
             </BannerProducts>
             <StyledProducts>
                 <SwiperF></SwiperF>

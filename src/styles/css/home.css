@@ -103,6 +103,11 @@
   transform: translate(10%, -100%);
   width: 60vw;
 }
+.ProductsSvg {
+  position: absolute;
+  transform: translate(1%, 20%) scale(1.08);
+  width: 60vw;
+}
 .HairSvg {
   position: absolute;
   transform: translate(-10%, -100%);
