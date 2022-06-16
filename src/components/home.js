@@ -2,7 +2,7 @@ import React from "react"
 import "../styles/css/home.css"
 import { motion } from "framer-motion"
 import { colors } from "../utils/const"
-import { BannerProducts, CircleNature, Gift, ImgHair, ImgSkin, ImgsWedo, LogoPrincipal, PhoneLogo, Scroll, Social, StyledHair, StyledHome, StyledProducts, StyledSkin, StyledTratamient, StyledWedo, StyledWedoSection, TextHair, TextSkin, TextWedo } from "../styles/js/home.js"
+import { BannerProducts, CircleNature, Gift, ImgHair, ImgSkin, ImgsWedo, LogoPrincipal, PhoneLogo, Scroll, Social, StyledHair, StyledHome, StyledMaps, StyledProducts, StyledSkin, StyledTratamient, StyledWedo, StyledWedoSection, TextHair, TextMaps, TextSkin, TextWedo, TransMap } from "../styles/js/home.js"
 import { StaticImage } from "gatsby-plugin-image"
 
 import Loadable from "@loadable/component"
@@ -12,7 +12,7 @@ import { MapsIcon, FacebookIcon, InstagramIcon } from "../images/icons"
 import { Link } from "gatsby"
 import SwiperF from "./swiper"
 
-import { GiftMovil, GiftWeb, Circle, GEWeb, GEMovil, Skin, Hair, Flecha, Body, Favorite } from "../assets/Home"
+import { Circle, GEWeb, GEMovil, Skin, Hair, Flecha, Body, Favorite } from "../assets/Home"
 
 
 const Hero = ({ children }) => (
@@ -29,11 +29,6 @@ const Hero = ({ children }) => (
                     <GEMovil className="logo-movil" fill={colors.black} />
                 </motion.div>
             </LogoPrincipal>
-            <Gift>
-                {/* <GiftMovil className="gift-movil" /> */}
-                <GiftWeb className="gift-web" fill={colors.green} />
-                <GiftMovil className="gift-movil" fill={colors.green} fill2={colors.softWhite} />
-            </Gift>
             <Social>
                 <div>
                     <a href="https://www.facebook.com/GaiaEvolutionGroup/" rel="noreferrer" target="_blank">
@@ -191,4 +186,37 @@ const Products = ({ children }) => {
     );
 }
 
-export { Hero, Wedo, Skincare, Haircare, Bodycare, Products }
+const Maps = ({ children }) => {
+    return (
+        <StyledMaps>
+
+            <StaticImage
+                className="Maps"
+                imgClassName=""
+                src="../images/Home/JPG/Mapa.jpg"
+                alt="Gaia Evolution maps"
+                height={800}
+                loading="lazy"
+                formats={['auto', 'webp', 'avif']}
+                quality='100'
+            />
+
+            <TransMap />
+            <TextMaps>
+                <h2>COME TO VISIT THE SPA</h2>
+                <h3>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's. standard dummy text ever since the 1500s, when an unknown printer took.</h3>
+                <Link>GO TO BODY CARE <Flecha className="flecha" stroke={colors.green} /></Link>
+
+            </TextMaps>
+            <TextMaps movil>
+
+                <h3>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's. standard dummy text ever since the 1500s, when an unknown printer took.</h3>
+                <Link>GO TO BODY CARE <Flecha className="flecha" stroke={colors.green} /></Link>
+
+            </TextMaps>
+
+        </StyledMaps>
+    );
+}
+
+export { Hero, Wedo, Skincare, Haircare, Bodycare, Products, Maps }

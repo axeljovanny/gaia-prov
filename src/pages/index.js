@@ -2,14 +2,16 @@ import React from "react"
 import { graphql, useStaticQuery } from 'gatsby'
 import { getImage } from "gatsby-plugin-image"
 import { BgImage } from "gbimage-bridge"
+import { colors } from "../utils/const"
 
 
 
-
-import { Footer } from "../components";
 import { Navbar } from "../components/navbar";
-import { Bodycare, Haircare, Hero, Products, Skincare, Wedo } from "../components/home";
+import { Bodycare, Haircare, Hero, Maps, Products, Skincare, Wedo } from "../components/home";
 import '../styles/css/home.css'
+import { Gift } from "../styles/js/home";
+import { GiftWeb, GiftMovil } from "../assets/Home";
+
 
 
 const IndexPage = () => {
@@ -44,7 +46,11 @@ const IndexPage = () => {
       <Haircare />
       <Bodycare />
       <Products />
-      {/* <Footer /> */}
+      <Maps />
+      <Gift>
+        <GiftWeb className="gift-web" fill={colors.green} fill2={colors.softWhite} />
+        <GiftMovil className="gift-movil" fill={colors.green} fill2={colors.softWhite} />
+      </Gift>
     </>
   )
 };

@@ -73,9 +73,11 @@ export const LogoPrincipal = styled.div`
 `
 
 export const Gift = styled.div`
-  grid-area: 3 / 3 / 4 / 4;
-  width: calc(100vw / 3);
-  height: 40vh;
+  position: fixed;
+  top: 60%;
+  right: 0;
+  width: 10vw;
+  height: 30vh;
   background: ${colors.none};
 
   display: flex;
@@ -85,10 +87,10 @@ export const Gift = styled.div`
   ${above.large`
   justify-content: flex-end;
   align-items: flex-end;
+  top: 40%;
+  width: 5vw;
+  height: 40vh;
 
-  width: 20vw;
-  height: 60vh;
-  grid-area: 1 / 3 / 2 / 4; 
   `}
 `
 
@@ -469,6 +471,115 @@ export const TextHair = styled.div`
   a{
     justify-content: flex-start ;
   }
+  
+  `}
+`
+
+//////MAPS
+
+export const StyledMaps = styled.div`
+  display:flex;
+  width: 100vw;
+  height: 80vh;
+  background: ${colors.none};
+  position: relative;
+
+  ${above.large`
+  width: 100vw;
+  height: 70vh;
+
+  
+  `}
+`
+export const TextMaps = styled.div`
+  display flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: column nowrap;
+  
+  width: 100%;
+  height: 20%;
+
+  background: ${colors.none};
+  position: absolute;
+  left:auto;
+  top: ${props => (props.movil ? "auto" : "0")};
+  bottom: ${props => (props.movil ? "15%" : "auto")};
+
+  h2{
+    width: 90%;
+    text-align: center;
+    font-family: ${font.waveBold};
+    font-size: ${size.Mheader};
+    color: ${colors.green};
+  }
+
+  h3{
+    display:${props => (props.movil ? "flex" : "none")};
+    width: 80%;
+    text-align: justify;
+    font-family: ${font.light};
+    font-size: ${size.Mtext};
+    color: ${colors.green};
+
+  }
+  a{
+    display: ${props => (props.movil ? "flex" : "none")};
+    justify-content: center ;
+    gap: 0.5em;
+    padding: 2em 0 0;
+    width: 100%;
+    color: ${colors.green};
+  }
+
+  ${above.large`
+  display ${props => (props.movil ? "none" : "flex")};
+  justify-content: flex-start;
+  align-items: flex-end;
+  width: 45%;
+  height: 70vh;
+  left:0;
+  top:auto;
+  h2{
+    margin:0;
+    width: 70%;
+    text-align: left;
+    font-family: ${font.waveBold};
+    font-size: ${size.Mheader};
+    color: ${colors.green};
+  }
+  h3{
+    display:flex;
+    width: 70%;
+    font-family: ${font.light};
+    font-size: ${size.Wtext};
+
+  }
+  a{
+    display: ${props => (props.movil ? "none" : "flex")};
+  }
+
+  
+  `}
+`
+
+export const TransMap = styled.div`
+  width: 100%;
+  height: 20%;
+  position: absolute;
+  left: auto;
+  top: 10%;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0) 0%, ${colors.softWhite} 40%);
+
+  ${above.large`
+  background: linear-gradient(to left, rgba(0, 0, 0, 0) 0%, ${colors.softWhite} 40%);
+
+  width: 30%;
+  height: 70vh;
+  left: 30%;
+  top: auto;
+
+
   
   `}
 `
