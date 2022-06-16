@@ -196,7 +196,7 @@ export const TextWedo = styled.div`
   flex-flow: column nowrap;
   justify-content: center ;
   align-items: flex-start;
-  width: 100%;
+  width: 80%;
   height: 90%;
   padding: 0;
   background: ${colors.none};
@@ -205,16 +205,16 @@ export const TextWedo = styled.div`
 
   h1{ 
     font-family: ${font.waveBold};
-    font-size: ${size.Wtittle};
+    font-size: ${size.Mtittle};
   }
   h2{
     font-family: ${font.light};
-    font-size: ${size.Wtittle};
+    font-size: ${size.Mtittle};
   }
   h3{
     text-align:justify;
     font-family: ${font.light};
-    font-size: ${size.Wtext};
+    font-size: ${size.Mtext};
   }
   a{
     display:flex;
@@ -231,6 +231,19 @@ export const TextWedo = styled.div`
   a{
     justify-content: flex-start ;
   }
+  h1{ 
+    font-family: ${font.waveBold};
+    font-size: ${size.Wtittle};
+  }
+  h2{
+    font-family: ${font.light};
+    font-size: ${size.Wtittle};
+  }
+  h3{
+    text-align:justify;
+    font-family: ${font.light};
+    font-size: ${size.Wtext};
+  }
   
   `}
 `
@@ -241,7 +254,7 @@ export const ImgsWedo = styled.div`
   align-items: center;
   width: 50%;
   height: 30%;
-  right: -10%;
+  right: -15%;
   top: 100%;
   position: absolute;
   background: ${colors.none};
@@ -288,6 +301,9 @@ export const RectanguloProd = styled.div`
   }
 
   ${above.large`  
+  width: 100%;
+  height: 70%;
+  max-width: 300px;
 
   `}
 `
@@ -319,16 +335,17 @@ export const BannerProducts = styled.div`
   position: relative;
   background: ${colors.green};
   width: 100vw;
-  height: 70vh;
+  height: 40vh;
   display:flex;
   justify-content: center;
   align-items: center;
+  border-top-right-radius: 0px;
+  border-bottom-left-radius: 0px;
+  ${above.large` 
+  width: 100vw;
+  height: 70vh;
   border-top-right-radius: 60px;
   border-bottom-left-radius: 60px;
-
-
-
-  ${above.large` 
   `}
   `
 
@@ -336,7 +353,7 @@ export const BannerProducts = styled.div`
 
 export const StyledSkin = styled.div`
   position: relative;
-  background: ${colors.none};
+  background: ${colors.softWhite};
   width: 100vw;
   height: 100vh;
   display:flex;
@@ -352,10 +369,15 @@ export const StyledHair = styled.div`
   width: 100vw;
   height: 100vh;
   display:flex;
+  justify-content: flex-end;
+  align-items: center;
+  flex-direction: column;
+
+  ${above.large` 
+  flex-direction: row;
   justify-content: center;
   align-items: center;
 
-  ${above.large` 
   `}
   `
 
@@ -441,10 +463,10 @@ export const ImgHair = styled.div`
 export const TextHair = styled.div`
   display:flex;
   flex-flow: column nowrap;
-  justify-content: center ;
+  justify-content: flex-end ;
   align-items: center;
   width: 80%;
-  height: 90%;
+  height: 70%;
   padding: 0;
   background: ${colors.none};
   

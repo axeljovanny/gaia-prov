@@ -12,7 +12,7 @@ import { MapsIcon, FacebookIcon, InstagramIcon } from "../images/icons"
 import { Link } from "gatsby"
 import SwiperF from "./swiper"
 
-import { Circle, GEWeb, GEMovil, Skin, Hair, Flecha, Body, Favorite } from "../assets/Home"
+import { Circle, GEWeb, GEMovil, Skin, Hair, Flecha, Body, Favorite, FavoriteMovil } from "../assets/Home"
 
 
 const Hero = ({ children }) => (
@@ -121,21 +121,19 @@ const Haircare = ({ children }) => (
                 <h3>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley.</h3>
                 <Link>GO TO SKIN CARE <Flecha className="flecha" stroke={colors.softWhite} /></Link>
             </TextHair>
-            <ImgHair>
-                <StaticImage
-                    className="Hair"
-                    imgClassName=""
-                    src="../images/Home/PNG/HairCare.png"
-                    alt="Spa Image"
-                    height={270}
-                    loading="lazy"
-                    formats={['auto', 'webp', 'avif']}
-                    quality='100'
-                />
-            </ImgHair>
-
-
         </StyledTratamient>
+        <ImgHair>
+            <StaticImage
+                className="Hair"
+                imgClassName=""
+                src="../images/Home/PNG/HairCare.png"
+                alt="Spa Image"
+                height={270}
+                loading="lazy"
+                formats={['auto', 'webp', 'avif']}
+                quality='100'
+            />
+        </ImgHair>
     </StyledHair>
 )
 const Bodycare = ({ children }) => (
@@ -177,6 +175,7 @@ const Products = ({ children }) => {
                     quality='100'
                 />
                 <Favorite className="ProductsSvg" fill={colors.softWhite} />
+                <FavoriteMovil className="ProductsSvgMovil" fill={colors.softWhite} />
 
             </BannerProducts>
             <StyledProducts>
