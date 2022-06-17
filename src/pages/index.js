@@ -45,22 +45,22 @@ const IndexPage = () => {
       <Wedo />
 
       <StyledSkin>
-      <motion.div initial={{opacity: 0}} whileInView={{opacity: 1}} transition={{ duration: 1.5}} viewport={{once: true}} >
-      <Skincare />
-      </motion.div>
+        <motion.div initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} transition={{ duration: 1.5 }} viewport={{ once: true }} style={{ width: "100%", display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
+          <Skincare />
+        </motion.div>
       </StyledSkin>
-      
-      
+
+
       <StyledHair>
-      <motion.div initial={{opacity: 0}} whileInView={{opacity: 1}} transition={{ duration: .5}} viewport={{once: true}} >
-      <Haircare />
-      </motion.div>
+        <motion.div initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} transition={{ duration: .5 }} viewport={{ once: true }} style={{ width: "100%", display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
+          <Haircare />
+        </motion.div>
       </StyledHair>
-     
+
       <StyledSkin>
-      <motion.div initial={{opacity: 0,}} whileInView={{opacity: 1,}} transition={{ duration: .5}} viewport={{once: true}} >
-      <Bodycare />
-      </motion.div>
+        <motion.div initial={{ opacity: 0, }} whileInView={{ opacity: 1, }} transition={{ duration: .5 }} viewport={{ once: true }} style={{ width: "100%", display: 'flex', justifyContent: 'center', alignItems: 'center' }} >
+          <Bodycare />
+        </motion.div>
       </StyledSkin>
 
       <Products />
