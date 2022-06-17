@@ -392,7 +392,7 @@ export const StyledHair = styled.div`
   width: 100vw;
   height: 100vh;
   display:flex;
-  justify-content: flex-end;
+  justify-content: center;
   align-items: center;
   flex-direction: column;
 
