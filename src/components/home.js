@@ -1,6 +1,6 @@
 import React from "react"
 import "../styles/css/home.css"
-import { motion } from "framer-motion"
+import {useViewportScroll,motion,useTransform} from "framer-motion"
 import { colors } from "../utils/const"
 import { BannerProducts, CircleNature, Gift, ImgHair, ImgSkin, ImgsWedo, LogoPrincipal, PhoneLogo, Scroll, Social, StyledHair, StyledHome, StyledMaps, StyledProducts, StyledSkin, StyledTratamient, StyledWedo, StyledWedoSection, TextHair, TextMaps, TextSkin, TextWedo, TransMap } from "../styles/js/home.js"
 import { StaticImage } from "gatsby-plugin-image"
@@ -55,7 +55,13 @@ const Hero = ({ children }) => (
 
 )
 
-const Wedo = ({ children }) => (
+const Wedo = ({ children }) => {
+
+    const { scrollY } = useViewportScroll();
+    const y1 = useTransform(scrollY, [0, 1500], [110, -50]);
+    const y2 = useTransform(scrollY, [0, 3100], [0, 30]);;
+
+    return(
     <StyledWedoSection>
         <StyledWedo>
             <TextWedo>
@@ -65,32 +71,35 @@ const Wedo = ({ children }) => (
                 <Link>SEE MORE <Flecha className="flecha" stroke={colors.green} /></Link>
             </TextWedo>
             <ImgsWedo>
-                <motion.div initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} transition={{ duration: 1.5 }} viewport={{ once: true }} style={{ alignContent: "center", display: "flex", alignItems: "center", justifyContent: "center" }}>
-                    <StaticImage
-                        className="HomeWD2"
-                        imgClassName=""
-                        src="../images/Home/PNG/WWDArco.png"
-                        alt="Spa Image"
-                        height={270}
-                        loading="lazy"
-                        formats={['auto', 'webp', 'avif']}
-                        quality='100'
-                    />
-                    <StaticImage
-                        className="HomeWD1"
-                        imgClassName=""
-                        src="../images/Home/PNG/WWDHoja.png"
-                        alt="Spa products"
-                        height={270}
-                        loading="lazy"
-                        formats={['auto', 'webp', 'avif']}
-                        quality='100'
-                    />
+            <motion.div initial={{opacity: 0, y:10 }} animate={{y:0}} whileInView={{opacity: 1}} transition={{ duration: 1}} viewport={{once: true}} style={{ y: y1,x:"80%", alignContent:"center" , display:"flex", alignItems:"center",justifyContent:"center", width:"100%", height:"100%"}}>
+                <StaticImage
+                    className="HomeWD2"
+                    imgClassName=""
+                    src="../images/Home/PNG/WWDArco.png"
+                    alt="Spa Image"
+                    height={270}
+                    loading="lazy"
+                    formats={['auto', 'webp', 'avif']}
+                    quality='100'
+                />
                 </motion.div>
+                <motion.div initial={{opacity: 0 }} whileInView={{opacity: 1}} transition={{ duration: 1}} viewport={{once: true}} style={{y: y2, x: -50 , alignContent:"center" , display:"flex", alignItems:"center",justifyContent:"center", width:"100%", height:"100%"}}>
+                <StaticImage
+                    className="HomeWD1"
+                    imgClassName=""
+                    src="../images/Home/PNG/WWDHoja.png"
+                    alt="Spa products"
+                    height={270}
+                    loading="lazy"
+                    formats={['auto', 'webp', 'avif']}
+                    quality='100'
+                />
+            </motion.div>
             </ImgsWedo>
         </StyledWedo>
     </StyledWedoSection>
 )
+}
 const Skincare = ({ children }) => (
     <StyledTratamient>
         <Skin className="SkinSvg" fill={colors.green} />
