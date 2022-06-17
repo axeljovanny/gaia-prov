@@ -6,6 +6,7 @@ import "../styles/css/skin.css";
 
 
 import { Flecha } from "../assets/Home"
+import { colors } from "../utils/const";
 
 
 

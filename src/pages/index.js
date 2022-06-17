@@ -3,13 +3,14 @@ import { graphql, useStaticQuery } from 'gatsby'
 import { getImage } from "gatsby-plugin-image"
 import { BgImage } from "gbimage-bridge"
 import { colors } from "../utils/const"
+import { motion } from "framer-motion"
 
 
 
 import { Navbar } from "../components/navbar";
 import { Bodycare, Haircare, Hero, Maps, Products, Skincare, Wedo } from "../components/home";
 import '../styles/css/home.css'
-import { Gift } from "../styles/js/home";
+import { Gift, StyledHair, StyledSkin } from "../styles/js/home";
 import { GiftWeb, GiftMovil } from "../assets/Home";
 
 
@@ -42,9 +43,26 @@ const IndexPage = () => {
       </BgImage>
       <Navbar />
       <Wedo />
+
+      <StyledSkin>
+      <motion.div initial={{opacity: 0}} whileInView={{opacity: 1}} transition={{ duration: 1.5}} viewport={{once: true}} >
       <Skincare />
+      </motion.div>
+      </StyledSkin>
+      
+      
+      <StyledHair>
+      <motion.div initial={{opacity: 0}} whileInView={{opacity: 1}} transition={{ duration: .5}} viewport={{once: true}} >
       <Haircare />
+      </motion.div>
+      </StyledHair>
+     
+      <StyledSkin>
+      <motion.div initial={{opacity: 0,}} whileInView={{opacity: 1,}} transition={{ duration: .5}} viewport={{once: true}} >
       <Bodycare />
+      </motion.div>
+      </StyledSkin>
+
       <Products />
       <Maps />
       <Gift>

@@ -59,12 +59,13 @@ const Wedo = ({ children }) => (
     <StyledWedoSection>
         <StyledWedo>
             <TextWedo>
-                <h1>WHAT WE DO?</h1>
-                <h2>We are a group of professional Cosmetologists & Estheticians</h2>
-                <h3>that are hard working and staying up to date with the latest trends and technology in the beauty industry to bring our clients the best experience possible. Gaia Evolution Spa & Salon was created with the concept of rescue the use of natural & organic sources from our professional lines...</h3>
+                <motion.h1  initial={{opacity: 0,}} whileInView={{opacity: 1}} transition={{ duration: 1.5}} viewport={{once: true}}>WHAT WE DO?</motion.h1>
+                <motion.h2  initial={{opacity: 0,}} whileInView={{opacity: 1}} transition={{ duration: 1.5}} viewport={{once: true}}>We are a group of professional Cosmetologists & Estheticians</motion.h2>
+                <motion.h3  initial={{opacity: 0,}} whileInView={{opacity: 1}} transition={{ duration: 1.5}} viewport={{once: true}}>that are hard working and staying up to date with the latest trends and technology in the beauty industry to bring our clients the best experience possible. Gaia Evolution Spa & Salon was created with the concept of rescue the use of natural & organic sources from our professional lines...</motion.h3>
                 <Link>SEE MORE <Flecha className="flecha" stroke={colors.green} /></Link>
             </TextWedo>
             <ImgsWedo>
+            <motion.div initial={{opacity: 0}} whileInView={{opacity: 1}} transition={{ duration: 1.5}} viewport={{once: true}} style={{ alignContent:"center" , display:"flex", alignItems:"center",justifyContent:"center"}}>
                 <StaticImage
                     className="HomeWD2"
                     imgClassName=""
@@ -85,12 +86,12 @@ const Wedo = ({ children }) => (
                     formats={['auto', 'webp', 'avif']}
                     quality='100'
                 />
+            </motion.div>
             </ImgsWedo>
         </StyledWedo>
     </StyledWedoSection>
 )
 const Skincare = ({ children }) => (
-    <StyledSkin>
         <StyledTratamient>
             <Skin className="SkinSvg" fill={colors.green} />
             <ImgSkin>
@@ -109,12 +110,10 @@ const Skincare = ({ children }) => (
                 <h3>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley.</h3>
                 <Link>GO TO SKIN CARE <Flecha className="flecha" stroke={colors.green} /></Link>
             </TextSkin>
-
         </StyledTratamient>
-    </StyledSkin>
 )
 const Haircare = ({ children }) => (
-    <StyledHair>
+    <>
         <StyledTratamient>
             <Hair className="HairSvg" fill={colors.softWhite} />
             <TextHair>
@@ -134,10 +133,10 @@ const Haircare = ({ children }) => (
                 quality='100'
             />
         </ImgHair>
-    </StyledHair>
+    </>
 )
 const Bodycare = ({ children }) => (
-    <StyledSkin>
+    
         <StyledTratamient>
             <Body className="SkinSvg" fill={colors.green} />
             <ImgSkin>
@@ -158,12 +157,12 @@ const Bodycare = ({ children }) => (
             </TextSkin>
 
         </StyledTratamient>
-    </StyledSkin>
 )
 const Products = ({ children }) => {
     return (
         <>
             <BannerProducts>
+            <motion.div initial={{opacity: 0}} whileInView={{opacity: 1}} transition={{ duration: 1.5}} viewport={{once: true}} style={{ alignContent:"center" , display:"flex", alignItems:"center",justifyContent:"center"}}>
                 <StaticImage
                     className="Favorite"
                     imgClassName=""
@@ -174,9 +173,13 @@ const Products = ({ children }) => {
                     formats={['auto', 'webp', 'avif']}
                     quality='100'
                 />
+                </motion.div>
+                <motion.div initial={{opacity: 0}} whileInView={{opacity: 1}} transition={{ duration: 1.5, delay: .5}} viewport={{once: true}} style={{ alignContent:"center" , display:"flex", alignItems:"center",justifyContent:"center"}}>
                 <Favorite className="ProductsSvg" fill={colors.softWhite} />
+                </motion.div>
+                <motion.div initial={{opacity: 0}} whileInView={{opacity: 1}} transition={{ duration: 1.5, delay: .5}} viewport={{once: true}} style={{ alignContent:"center" , display:"flex", alignItems:"center",justifyContent:"center"}}>
                 <FavoriteMovil className="ProductsSvgMovil" fill={colors.softWhite} />
-
+                </motion.div>
             </BannerProducts>
             <StyledProducts>
                 <SwiperF></SwiperF>
@@ -188,7 +191,7 @@ const Products = ({ children }) => {
 const Maps = ({ children }) => {
     return (
         <StyledMaps>
-
+<motion.div initial={{opacity: 0}} whileInView={{opacity: 1}} transition={{ duration: 1.5}} viewport={{once: true}} style={{ alignContent:"center" , display:"flex", alignItems:"center",justifyContent:"center"}}>
             <StaticImage
                 className="Maps"
                 imgClassName=""
@@ -199,17 +202,17 @@ const Maps = ({ children }) => {
                 formats={['auto', 'webp', 'avif']}
                 quality='100'
             />
-
+            </motion.div>
             <TransMap />
             <TextMaps>
-                <h2>COME TO VISIT THE SPA</h2>
-                <h3>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's. standard dummy text ever since the 1500s, when an unknown printer took.</h3>
+                <motion.h2 initial={{opacity: 0,}} whileInView={{opacity: 1}} transition={{ duration: 1.5}} viewport={{once: true}}>COME TO VISIT THE SPA</motion.h2>
+                <motion.h3 initial={{opacity: 0,}} whileInView={{opacity: 1}} transition={{ duration: 1.5}} viewport={{once: true}}>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's. standard dummy text ever since the 1500s, when an unknown printer took.</motion.h3>
                 <Link>GO TO BODY CARE <Flecha className="flecha" stroke={colors.green} /></Link>
 
             </TextMaps>
             <TextMaps movil>
 
-                <h3>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's. standard dummy text ever since the 1500s, when an unknown printer took.</h3>
+                <motion.h3 initial={{opacity: 0,}} whileInView={{opacity: 1}} transition={{ duration: 1.5}} viewport={{once: true}}>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's. standard dummy text ever since the 1500s, when an unknown printer took.</motion.h3>
                 <Link>GO TO BODY CARE <Flecha className="flecha" stroke={colors.green} /></Link>
 
             </TextMaps>
