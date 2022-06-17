@@ -246,6 +246,29 @@ export const TextWedo = styled.div`
   }
   
   `}
+
+  ${above.xlarge`
+  padding: 0 1em 0 4em;
+  width: 45%;
+  height: 90%;
+  a{
+    justify-content: flex-start ;
+  }
+  h1{ 
+    font-family: ${font.waveBold};
+    font-size: ${size.Wtittle};
+  }
+  h2{
+    font-family: ${font.light};
+    font-size: ${size.Wtittle};
+  }
+  h3{
+    text-align:justify;
+    font-family: ${font.light};
+    font-size: ${size.Wtext};
+  }
+  
+  `}
 `
 
 export const ImgsWedo = styled.div`
@@ -394,8 +417,9 @@ export const StyledTratamient = styled.div`
   height: 100%;
   flex-flow: row nowrap;
   justify-content: space-evenly ;
-
-  
+  `}
+  ${above.xlarge`
+  justify-content: center ;
   `}
 `
 
@@ -441,6 +465,15 @@ export const TextSkin = styled.div`
   height: 50%;
   justify-content: flex-end;
   width: 45%;
+  a{
+    justify-content: flex-start ;
+  }
+  
+  `}
+  ${above.xlarge`
+  height: 45%;
+  justify-content: flex-end;
+  width: 50%;
   a{
     justify-content: flex-start ;
   }
@@ -494,6 +527,12 @@ export const TextHair = styled.div`
     justify-content: flex-start ;
   }
   
+  `}
+
+  ${above.xlarge`
+  width: 45%;
+  height: 45%;
+  justify-content: flex-end;
   `}
 `
 
