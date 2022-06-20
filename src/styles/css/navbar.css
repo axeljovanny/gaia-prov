@@ -16,8 +16,21 @@
   margin: 0 auto;
 }
 
-.logonav{
+.logonav {
   background-color: none;
+}
+.svgAbout {
+  transform: scale(1);
+}
+
+@media only screen and (min-width: 480px) {
+  .svgAbout {
+    transform: scale(1.5);
+  }
+
+  .logoFooter {
+    transform: scale(0.9);
+  }
 }
 
 @keyframes headertransition {

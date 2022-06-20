@@ -43,6 +43,18 @@ export const StyledNavbarServ = styled.div`
   
   `}
 `
+export const StyledItems = styled.div`
+  display: none;
+  ${above.medium`
+      
+  `}
+  ${above.large`
+  display: flex;
+  justify-content: center ;
+  align-items: center;
+  background: ${colors.none};  
+  `}
+`
 
 export const Text = styled.div`
 display: none;
@@ -89,7 +101,7 @@ display: none;
   
   a:link{
     padding-left: 0.5em;
-    font-family: ${font.waveLight};
+    font-family: ${font.Llight};
     font-size: ${size.Wmini};
     color: ${colors.black};
   }
@@ -113,7 +125,7 @@ display: none;
   align-items: center;
   a{
     color: ${props => (props.select === props.siteTitle ? colors.green : colors.softBlack)}; //usar en SVG
-    font-family: ${props => (props.select === props.siteTitle ? font.waveSemi : font.waveMedium)};
+    font-family: ${props => (props.select === props.siteTitle ? font.Rsemi : font.Rmedium)};
     font-size: ${size.Wtext};
   }
 
@@ -130,7 +142,14 @@ export const NavIcon = styled.button`
     border: none;
     outline: none;
     position:fixed;
-    padding: 0;
+    padding: 1.5em 0em;
+
+    ${above.medium` {
+      transform: scale(1.5);
+      padding: 3em 3em;
+
+      }
+    `}
 
     ${above.large` {
       display: none;
@@ -159,13 +178,12 @@ export const Overlay = styled.div`
   flex-direction: column;
   height: ${props => (props.open ? "100vh" : 0)};
   width: 100vw;
-  background: rgba(130, 140, 122, 0.95);
-  backdrop-filter: blur(20px);
+  background: ${colors.green};
   transition: height 0.3s ease-in-out;
   position: fixed;
   top:0;
   z-index: 5;
-  justify-content: space-between;
+  justify-content: space-evenly;
   align-items: center;
   :nth-child(1n) {
     align-items: flex-end;
@@ -186,6 +204,8 @@ export const OverlayMenu = styled.div`
   width: 90vw;
   height: ${props => (props.open ? "40%" : 0)};
   transition: height 0.4s ease-in-out;
+  background: ${colors.none};
+
   list-style: none;
 
 
@@ -205,15 +225,22 @@ export const Contacto = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
-  width: 40%;
+  width: 50%;
   background: ${colors.none};
 
   a,p{
-    font-family:  ${font.light};
+    font-family:  ${font.Llight};
     text-align: left;
     color: ${colors.white} ;
-    font-size: ${size.Mtext};
+    font-size: ${size.Wtext};
   }
+  ${above.medium`
+  a,p{
+    font-family:  ${font.Llight};
+    text-align: left;
+    color: ${colors.white} ;
+    font-size: ${size.Mheader};
+  }  `}
 
 `;
 export const Logo = styled.div`
@@ -222,6 +249,9 @@ export const Logo = styled.div`
   height: auto;
   padding: 1em 0;
   background: ${colors.none};
+  ${above.medium`
+  height: 90%;
+  `}
 
 `;
 
@@ -230,8 +260,9 @@ export const StyledIcons = styled.div`
     height: ${props => (props.open ? "auto" : 0)};
     flex-direction: row;
     justify-content: flex-end;
+
     align-items: center;
-    padding: 3em 2em;
+    padding: 0em 2em;
     gap: 1em;
     width: auto;
     opacity: ${props => (props.open ? 1 : 0)};
@@ -241,6 +272,12 @@ export const StyledIcons = styled.div`
       width: 100%;
     }
     
+    ${above.medium`
+    flex-direction: row;
+    padding: 2em 5em;
+    gap: 2em;
+
+  `}
     ${above.large`
     padding-top: 5vh;
     display: ${props => props.footer ? 'none' : 'flex'};
@@ -285,18 +322,7 @@ export const StyledButton = styled.div`
   `}
     
 `
-export const StyledItems = styled.div`
-  display: none;
-  ${above.medium`
-      
-  `}
-  ${above.large`
-  display: flex;
-  justify-content: center ;
-  align-items: center;
-  background: ${colors.none};  
-  `}
-`
+
 
 export const Item = styled.div`
 display: flex;
@@ -309,9 +335,17 @@ margin: .5em 0;
 font-family: 'Montserrat', sans-serif;
  
 a{
-font-family:  ${font.waveMedium};
+font-family:  ${font.Rmedium};
 color: ${colors.white} ;
 font-size: ${size.Wtittle};
 }
+
+${above.medium`
+  a,p{
+    font-family:  ${font.Rregular};
+    text-align: left;
+    color: ${colors.white} ;
+    font-size: ${size.Wheader};
+  }  `}
 
 `

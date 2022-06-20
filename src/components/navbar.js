@@ -60,9 +60,9 @@ const Navbar = ({ siteTitle }) => {
                         </motion.p>
                     </ItemNav>
                     <ItemNav>
-                        <motion.p whileHover={{ scale: 1.1, priginX: 0, color: colors.accentBlue }} whileTap={{ scale: 0.9 }}>
+                        <motion.a whileHover={{ scale: 1.1, priginX: 0, color: colors.accentBlue }} whileTap={{ scale: 0.9 }}>
                             PRODUCTS
-                        </motion.p>
+                        </motion.a>
                     </ItemNav>
                 </StyledItems>
 
@@ -125,11 +125,10 @@ const Navbar = ({ siteTitle }) => {
                             src="../images/logo.png"
                             alt="gaia logo nav"
                             loading="eager"
-                            width={110}
-                            layout="constrained"
+                            width={120}
                             placeholder="blurred"
                             formats={['auto', 'webp', 'avif']}
-                            quality={60}
+                            quality={70}
                         />
                     </Logo>
                     <Contacto>

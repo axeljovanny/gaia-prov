@@ -69,9 +69,13 @@ margin: 54px 3vw;
 font-family: 'Montserrat', sans-serif;
 
 a{
-  font-family:  ${font.waveSemi};
-  color: ${colors.softBlack} ;
+  font-family:  ${font.Rlight};
+  color: ${colors.black} ;
   font-size: ${size.Wtext};
+}
+a:hover{
+  color: ${colors.accentBlue} ;
+
 }
 
 
