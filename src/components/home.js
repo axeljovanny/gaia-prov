@@ -131,7 +131,6 @@ const Skincare = ({ children }) => {
                 <Link>GO TO SKIN CARE <Flecha className="flecha" stroke={colors.green} /></Link>
             </TextSkin>
         </StyledTratamient>
-    </>
 )
 }
 const Haircare = ({ children }) => {
