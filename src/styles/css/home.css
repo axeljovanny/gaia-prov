@@ -10,6 +10,11 @@
 .logo-web {
   display: none;
 }
+
+.logo-footer {
+  display: flex;
+  width: 80%;
+}
 .logo-movil {
   display: flex;
 }
@@ -133,6 +138,11 @@
   }
   .logo-movil {
     display: none;
+  }
+  .logo-footer {
+    display: flex;
+    width: 50%;
+    transform: scale(0.8);
   }
   .phone {
     display: none;
