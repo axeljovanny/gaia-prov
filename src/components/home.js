@@ -13,6 +13,7 @@ import { Link } from "gatsby"
 import SwiperF from "./swiper"
 
 import { Circle, GEWeb, GEMovil, Skin, Hair, Flecha, Body, Favorite, FavoriteMovil } from "../assets/Home"
+import { unstable_renderSubtreeIntoContainer } from "react-dom"
 
 
 const Hero = ({ children }) => (
@@ -100,10 +101,19 @@ const Wedo = ({ children }) => {
     </StyledWedoSection>
 )
 }
-const Skincare = ({ children }) => (
+const Skincare = ({ children }) => {
+
+    const { scrollY } = useViewportScroll();
+    const y1 = useTransform(scrollY, [0, 3100], [0, 30]);;
+    const y2 = useTransform(scrollY, [0, 3200], [110, -40]);
+
+    return(
         <StyledTratamient>
+             <motion.div initial={{opacity: 0}} animate={{y:0}} whileInView={{opacity: 1}} transition={{ duration: 1.5}} viewport={{once: true}} style={{ y:y1, alignContent:"center" , display:"flex", alignItems:"center",justifyContent:"center", width:"100%", height:"100%"}}>
             <Skin className="SkinSvg" fill={colors.green} />
+            </motion.div>
             <ImgSkin>
+            <motion.div initial={{opacity: 0}} animate={{y:0}} whileInView={{opacity: 1}} transition={{ duration: 1.5}} viewport={{once: true}} style={{ y: y2, alignContent:"center" , display:"flex", alignItems:"center",justifyContent:"center", width:"100%", height:"100%"}}>
                 <StaticImage
                     className="Skin"
                     imgClassName=""
@@ -114,23 +124,34 @@ const Skincare = ({ children }) => (
                     formats={['auto', 'webp', 'avif']}
                     quality='100'
                 />
+                </motion.div>
             </ImgSkin>
             <TextSkin>
-                <h3>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley.</h3>
+                <motion.h3 initial={{ opacity: 0, }} whileInView={{ opacity: 1 }} transition={{ duration: 1.5 }} viewport={{ once: true }} >Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley.</motion.h3>
                 <Link>GO TO SKIN CARE <Flecha className="flecha" stroke={colors.green} /></Link>
             </TextSkin>
         </StyledTratamient>
 )
-const Haircare = ({ children }) => (
+}
+const Haircare = ({ children }) => {
+
+    const { scrollY } = useViewportScroll();
+    const y1 = useTransform(scrollY, [0, 4100], [0, 30]);;
+    const y2 = useTransform(scrollY, [0, 4200], [110, -40]);
+
+    return(
     <>
         <StyledTratamient>
+        <motion.div initial={{opacity: 0}} animate={{y:0}} whileInView={{opacity: 1}} transition={{ duration: 1.5}} viewport={{once: true}} style={{ y:y1, alignContent:"center" , display:"flex", alignItems:"center",justifyContent:"center", width:"100%", height:"100%"}}>
             <Hair className="HairSvg" fill={colors.softWhite} />
+            </motion.div>
             <TextHair>
-                <h3>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley.</h3>
+                <motion.h3 initial={{ opacity: 0, }} whileInView={{ opacity: 1 }} transition={{ duration: 1.5 }} viewport={{ once: true }}>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley.</motion.h3>
                 <Link>GO TO SKIN CARE <Flecha className="flecha" stroke={colors.softWhite} /></Link>
             </TextHair>
         </StyledTratamient>
         <ImgHair>
+        <motion.div initial={{opacity: 0}} animate={{y:0}} whileInView={{opacity: 1}} transition={{ duration: 2}} viewport={{once: true}} style={{ y: y2, alignContent:"center" , display:"flex", alignItems:"center",justifyContent:"center", width:"100%", height:"100%"}}>
             <StaticImage
                 className="Hair"
                 imgClassName=""
@@ -141,14 +162,26 @@ const Haircare = ({ children }) => (
                 formats={['auto', 'webp', 'avif']}
                 quality='100'
             />
+            </motion.div>
         </ImgHair>
     </>
 )
-const Bodycare = ({ children }) => (
+}
+const Bodycare = ({ children }) => {
+
+    const { scrollY } = useViewportScroll();
+    const y1 = useTransform(scrollY, [0, 6100], [0, 30]);;
+    const y2 = useTransform(scrollY, [0, 6200], [110, -40]);
+    
+
+        return(
     
         <StyledTratamient>
+             <motion.div initial={{opacity: 0}} animate={{y:0}} whileInView={{opacity: 1}} transition={{ duration: 2}} viewport={{once: true}} style={{ y: y1, alignContent:"center" , display:"flex", alignItems:"center",justifyContent:"center", width:"100%", height:"100%"}}>
             <Body className="SkinSvg" fill={colors.green} />
+            </motion.div>
             <ImgSkin>
+            <motion.div initial={{opacity: 0}} animate={{y:0}} whileInView={{opacity: 1}} transition={{ duration: 2}} viewport={{once: true}} style={{ y: y2, alignContent:"center" , display:"flex", alignItems:"center",justifyContent:"center", width:"100%", height:"100%"}}>
                 <StaticImage
                     className="Skin"
                     imgClassName=""
@@ -159,19 +192,26 @@ const Bodycare = ({ children }) => (
                     formats={['auto', 'webp', 'avif']}
                     quality='100'
                 />
+            </motion.div>
             </ImgSkin>
             <TextSkin>
-                <h3>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley.</h3>
+            <motion.h3 initial={{ opacity: 0, }} whileInView={{ opacity: 1 }} transition={{ duration: 1.5 }} viewport={{ once: true }}>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley.</motion.h3>
                 <Link>GO TO BODY CARE <Flecha className="flecha" stroke={colors.green} /></Link>
             </TextSkin>
 
         </StyledTratamient>
 )
+}
 const Products = ({ children }) => {
+
+    const { scrollY } = useViewportScroll();
+    const y1 = useTransform(scrollY, [0, 7100], [0, 30]);;
+    const y2 = useTransform(scrollY, [0, 7200], [110, -40]);
+
     return (
         <>
             <BannerProducts>
-            <motion.div initial={{opacity: 0}} whileInView={{opacity: 1}} transition={{ duration: 1.5}} viewport={{once: true}} style={{ alignContent:"center" , display:"flex", alignItems:"center",justifyContent:"center"}}>
+            <motion.div initial={{opacity: 0}} animate={{y:0}} whileInView={{opacity: 1}} transition={{ duration: 1.5}} viewport={{once: true}} style={{ y: y2,x:"48%", alignContent:"center" , display:"flex", alignItems:"center",justifyContent:"center", width:"100%", height:"100%"}}>
                 <StaticImage
                     className="Favorite"
                     imgClassName=""
@@ -183,7 +223,8 @@ const Products = ({ children }) => {
                     quality='100'
                 />
                 </motion.div>
-                <motion.div initial={{opacity: 0}} whileInView={{opacity: 1}} transition={{ duration: 1.5, delay: .5}} viewport={{once: true}} style={{ alignContent:"center" , display:"flex", alignItems:"center",justifyContent:"center"}}>
+                <motion.div initial={{opacity: 0}}  animate={{y:0}} whileInView={{opacity: 1}} transition={{ duration: 1.5, delay: .5}} viewport={{once: true}} style={{ y: y1, x
+                    :"-52%", alignContent:"center" , display:"flex", alignItems:"center",justifyContent:"center", width:"100%", height:"100%"}}>
                 <Favorite className="ProductsSvg" fill={colors.softWhite} />
                 </motion.div>
                 <motion.div initial={{opacity: 0}} whileInView={{opacity: 1}} transition={{ duration: 1.5, delay: .5}} viewport={{once: true}} style={{ alignContent:"center" , display:"flex", alignItems:"center",justifyContent:"center"}}>
