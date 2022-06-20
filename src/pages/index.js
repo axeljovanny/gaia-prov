@@ -12,6 +12,7 @@ import { Bodycare, Haircare, Hero, Maps, Products, Skincare, Wedo } from "../com
 import '../styles/css/home.css'
 import { Gift, StyledHair, StyledSkin } from "../styles/js/home";
 import { GiftWeb, GiftMovil } from "../assets/Home";
+import { Footer } from "../components"
 
 
 
@@ -63,6 +64,7 @@ const IndexPage = () => {
         <GiftWeb className="gift-web" fill={colors.green} fill2={colors.softWhite} />
         <GiftMovil className="gift-movil" fill={colors.green} fill2={colors.softWhite} />
       </Gift>
+      <Footer></Footer>
     </>
   )
 };

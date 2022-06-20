@@ -66,9 +66,9 @@ const Wedo = ({ children }) => {
     <StyledWedoSection>
         <StyledWedo>
             <TextWedo>
-                <motion.h1  initial={{opacity: 0,}} whileInView={{opacity: 1}} transition={{ duration: 1.5}} viewport={{once: true}}>WHAT WE DO?</motion.h1>
-                <motion.h2  initial={{opacity: 0,}} whileInView={{opacity: 1}} transition={{ duration: 1.5}} viewport={{once: true}}>We are a group of professional Cosmetologists & Estheticians</motion.h2>
-                <motion.h3  initial={{opacity: 0,}} whileInView={{opacity: 1}} transition={{ duration: 1.5}} viewport={{once: true}}>that are hard working and staying up to date with the latest trends and technology in the beauty industry to bring our clients the best experience possible. Gaia Evolution Spa & Salon was created with the concept of rescue the use of natural & organic sources from our professional lines...</motion.h3>
+                <motion.h1 initial={{ opacity: 0, }} whileInView={{ opacity: 1 }} transition={{ duration: 1.5 }} viewport={{ once: true }}>WHAT WE DO?</motion.h1>
+                <motion.h2 initial={{ opacity: 0, }} whileInView={{ opacity: 1 }} transition={{ duration: 1.5 }} viewport={{ once: true }}>We are a group of professional Cosmetologists & Estheticians</motion.h2>
+                <motion.h3 initial={{ opacity: 0, }} whileInView={{ opacity: 1 }} transition={{ duration: 1.5 }} viewport={{ once: true }}>that are hard working and staying up to date with the latest trends and technology in the beauty industry to bring our clients the best experience possible. Gaia Evolution Spa & Salon was created with the concept of rescue the use of natural & organic sources from our professional lines...</motion.h3>
                 <Link>SEE MORE <Flecha className="flecha" stroke={colors.green} /></Link>
             </TextWedo>
             <ImgsWedo>
@@ -115,9 +115,9 @@ const Skincare = ({ children }) => {
             <ImgSkin>
             <motion.div initial={{opacity: 0}} animate={{y:0}} whileInView={{opacity: 1}} transition={{ duration: 1.5}} viewport={{once: true}} style={{ y: y2, alignContent:"center" , display:"flex", alignItems:"center",justifyContent:"center", width:"100%", height:"100%"}}>
                 <StaticImage
-                    className="Skin"
+                    className="Hair"
                     imgClassName=""
-                    src="../images/Home/PNG/SkinCare.png"
+                    src="../images/Home/PNG/HairCare.png"
                     alt="Spa Image"
                     height={270}
                     loading="lazy"
@@ -131,6 +131,7 @@ const Skincare = ({ children }) => {
                 <Link>GO TO SKIN CARE <Flecha className="flecha" stroke={colors.green} /></Link>
             </TextSkin>
         </StyledTratamient>
+    </>
 )
 }
 const Haircare = ({ children }) => {
@@ -153,9 +154,9 @@ const Haircare = ({ children }) => {
         <ImgHair>
         <motion.div initial={{opacity: 0}} animate={{y:0}} whileInView={{opacity: 1}} transition={{ duration: 2}} viewport={{once: true}} style={{ y: y2, alignContent:"center" , display:"flex", alignItems:"center",justifyContent:"center", width:"100%", height:"100%"}}>
             <StaticImage
-                className="Hair"
+                className="Skin"
                 imgClassName=""
-                src="../images/Home/PNG/HairCare.png"
+                src="../images/Home/PNG/BodyCare.png"
                 alt="Spa Image"
                 height={270}
                 loading="lazy"
@@ -199,7 +200,7 @@ const Bodycare = ({ children }) => {
                 <Link>GO TO BODY CARE <Flecha className="flecha" stroke={colors.green} /></Link>
             </TextSkin>
 
-        </StyledTratamient>
+    </StyledTratamient>
 )
 }
 const Products = ({ children }) => {
@@ -227,8 +228,8 @@ const Products = ({ children }) => {
                     :"-52%", alignContent:"center" , display:"flex", alignItems:"center",justifyContent:"center", width:"100%", height:"100%"}}>
                 <Favorite className="ProductsSvg" fill={colors.softWhite} />
                 </motion.div>
-                <motion.div initial={{opacity: 0}} whileInView={{opacity: 1}} transition={{ duration: 1.5, delay: .5}} viewport={{once: true}} style={{ alignContent:"center" , display:"flex", alignItems:"center",justifyContent:"center"}}>
-                <FavoriteMovil className="ProductsSvgMovil" fill={colors.softWhite} />
+                <motion.div initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} transition={{ duration: 1.5, delay: .5 }} viewport={{ once: true }} style={{ alignContent: "center", display: "flex", alignItems: "center", justifyContent: "center" }}>
+                    <FavoriteMovil className="ProductsSvgMovil" fill={colors.softWhite} />
                 </motion.div>
             </BannerProducts>
             <StyledProducts>
@@ -241,28 +242,28 @@ const Products = ({ children }) => {
 const Maps = ({ children }) => {
     return (
         <StyledMaps>
-<motion.div initial={{opacity: 0}} whileInView={{opacity: 1}} transition={{ duration: 1.5}} viewport={{once: true}} style={{ alignContent:"center" , display:"flex", alignItems:"center",justifyContent:"center"}}>
-            <StaticImage
-                className="Maps"
-                imgClassName=""
-                src="../images/Home/JPG/Mapa.jpg"
-                alt="Gaia Evolution maps"
-                height={800}
-                loading="lazy"
-                formats={['auto', 'webp', 'avif']}
-                quality='100'
-            />
+            <motion.div initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} transition={{ duration: 1.5 }} viewport={{ once: true }} style={{ alignContent: "center", display: "flex", alignItems: "center", justifyContent: "center" }}>
+                <StaticImage
+                    className="Maps"
+                    imgClassName=""
+                    src="../images/Home/JPG/Mapa.jpg"
+                    alt="Gaia Evolution maps"
+                    height={800}
+                    loading="lazy"
+                    formats={['auto', 'webp', 'avif']}
+                    quality='100'
+                />
             </motion.div>
             <TransMap />
             <TextMaps>
-                <motion.h2 initial={{opacity: 0,}} whileInView={{opacity: 1}} transition={{ duration: 1.5}} viewport={{once: true}}>COME TO VISIT THE SPA</motion.h2>
-                <motion.h3 initial={{opacity: 0,}} whileInView={{opacity: 1}} transition={{ duration: 1.5}} viewport={{once: true}}>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's. standard dummy text ever since the 1500s, when an unknown printer took.</motion.h3>
+                <motion.h2 initial={{ opacity: 0, }} whileInView={{ opacity: 1 }} transition={{ duration: 1.5 }} viewport={{ once: true }}>COME TO VISIT THE SPA</motion.h2>
+                <motion.h3 initial={{ opacity: 0, }} whileInView={{ opacity: 1 }} transition={{ duration: 1.5 }} viewport={{ once: true }}>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's. standard dummy text ever since the 1500s, when an unknown printer took.</motion.h3>
                 <Link>GO TO BODY CARE <Flecha className="flecha" stroke={colors.green} /></Link>
 
             </TextMaps>
             <TextMaps movil>
 
-                <motion.h3 initial={{opacity: 0,}} whileInView={{opacity: 1}} transition={{ duration: 1.5}} viewport={{once: true}}>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's. standard dummy text ever since the 1500s, when an unknown printer took.</motion.h3>
+                <motion.h3 initial={{ opacity: 0, }} whileInView={{ opacity: 1 }} transition={{ duration: 1.5 }} viewport={{ once: true }}>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's. standard dummy text ever since the 1500s, when an unknown printer took.</motion.h3>
                 <Link>GO TO BODY CARE <Flecha className="flecha" stroke={colors.green} /></Link>
 
             </TextMaps>
