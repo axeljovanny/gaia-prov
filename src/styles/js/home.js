@@ -39,19 +39,10 @@ export const LogoPrincipal = styled.div`
   width: 100vw;
   height: 20vh;
   background: ${colors.none};
-
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-
-  h3{
-    line-height : 2vh;
-    margin:0;
-    height: auto;
-    font-family: ${font.waveLight};
-    font-size: ${size.Mtittle};
-  }
   svg{
     width: 80%;
   }
@@ -59,13 +50,8 @@ export const LogoPrincipal = styled.div`
   width: 60vw;
   height: 60vh;
   grid-area: 1 / 2 / 2 / 3;
-
   justify-content: flex-end;
 
-  h3{
-    font-family: ${font.waveLight};
-    font-size: ${size.Wtext};
-  }
   svg{
     width: 60%;
   }
@@ -85,12 +71,10 @@ export const Gift = styled.div`
   align-items: center;
 
   ${above.large`
-  justify-content: flex-end;
   align-items: flex-end;
   top: 40%;
   width: 5vw;
   height: 40vh;
-
   `}
 `
 
@@ -145,7 +129,7 @@ export const PhoneLogo = styled.div`
   a{
     display:flex;
     margin-bottom: 5vh;
-    font-family: ${font.medium};
+    font-family: ${font.Lregular};
     font-size: ${size.Wtext};
     color: ${colors.white};
   }
@@ -186,7 +170,6 @@ export const StyledWedo = styled.div`
   width: 90%;
   height: 70%;
   flex-flow: row nowrap;
-
   
   `}
 `
@@ -204,16 +187,20 @@ export const TextWedo = styled.div`
   color: ${colors.black};
 
   h1{ 
-    font-family: ${font.waveBold};
-    font-size: ${size.Mtittle};
+    width: 50%;
+    font-family: ${font.Rlight};
+    font-size: ${size.Mheader};
+    color: ${colors.green};
+
   }
   h2{
-    font-family: ${font.light};
+    font-family: ${font.Rthin};
     font-size: ${size.Mtittle};
+
   }
   h3{
     text-align:justify;
-    font-family: ${font.light};
+    font-family: ${font.Llight};
     font-size: ${size.Mtext};
   }
   a{
@@ -223,6 +210,8 @@ export const TextWedo = styled.div`
     padding: 4em 0 0;
     width: 100%;
     color: ${colors.green};
+    font-family: ${font.Lregular};
+    font-size: ${size.Mtext};
   }
   ${above.large`
   padding: 0 1em 0 4em;
@@ -230,18 +219,20 @@ export const TextWedo = styled.div`
   height: 90%;
   a{
     justify-content: flex-start ;
+    font-size: ${size.Wtext};
   }
   h1{ 
-    font-family: ${font.waveBold};
-    font-size: ${size.Wtittle};
+    width: 100%;
+    font-family: ${font.Rlight};
+    font-size: ${size.Wheader};
   }
   h2{
-    font-family: ${font.light};
+    font-family: ${font.Rthin};
     font-size: ${size.Wtittle};
   }
   h3{
     text-align:justify;
-    font-family: ${font.light};
+    font-family: ${font.Llight};
     font-size: ${size.Wtext};
   }
   
@@ -249,23 +240,23 @@ export const TextWedo = styled.div`
 
   ${above.xlarge`
   padding: 0 1em 0 4em;
-  width: 45%;
+  width: 30%;
   height: 90%;
   a{
     justify-content: flex-start ;
   }
   h1{ 
-    font-family: ${font.waveBold};
-    font-size: ${size.Wtittle};
+    font-family: ${font.Rsemi};
+    font-size: ${size.Xheader};
   }
   h2{
-    font-family: ${font.light};
-    font-size: ${size.Wtittle};
+    font-family: ${font.Rlight};
+    font-size: ${size.Xtittle};
   }
   h3{
     text-align:justify;
-    font-family: ${font.light};
-    font-size: ${size.Wtext};
+    font-family: ${font.Rlight};
+    font-size: ${size.Xtext};
   }
   
   `}
@@ -432,7 +423,7 @@ export const ImgSkin = styled.div`
   background: ${colors.none};
   ${above.large`
   width: 20%;
-  height: 90%;
+  height: 20%;
   `}
 `
 
@@ -446,12 +437,12 @@ export const TextSkin = styled.div`
   padding: 0;
   background: ${colors.none};
   
-  color: ${colors.green};
+  color: ${colors.black};
 
   h3{
     text-align:justify;
-    font-family: ${font.light};
-    font-size: ${size.Wtext};
+    font-family: ${font.Llight};
+    font-size: ${size.Mtext};
   }
   a{
     display:flex;
@@ -460,6 +451,8 @@ export const TextSkin = styled.div`
     padding: 4em 0 0;
     width: 100%;
     color: ${colors.green};
+    font-family: ${font.Lregular};
+    font-size: ${size.Mtext};
   }
   ${above.large`
   height: 50%;
@@ -467,6 +460,12 @@ export const TextSkin = styled.div`
   width: 45%;
   a{
     justify-content: flex-start ;
+    font-size: ${size.Wtext};
+  }
+  h3{
+    text-align:justify;
+    font-family: ${font.Llight};
+    font-size: ${size.Wtext};
   }
   
   `}
@@ -476,6 +475,11 @@ export const TextSkin = styled.div`
   width: 50%;
   a{
     justify-content: flex-start ;
+  }
+  h3{
+    text-align:justify;
+    font-family: ${font.Lthin};
+    font-size: ${size.Xtext};
   }
   
   `}
@@ -507,8 +511,8 @@ export const TextHair = styled.div`
 
   h3{
     text-align:justify;
-    font-family: ${font.light};
-    font-size: ${size.Wtext};
+    font-family: ${font.Llight};
+    font-size: ${size.Mtext};
   }
   a{
     display:flex;
@@ -517,6 +521,8 @@ export const TextHair = styled.div`
     padding: 4em 0 0;
     width: 100%;
     color: ${colors.softWhite};
+    font-family: ${font.Lregular};
+    font-size: ${size.Mtext};
   }
   ${above.large`
   width: 45%;
@@ -525,6 +531,12 @@ export const TextHair = styled.div`
 
   a{
     justify-content: flex-start ;
+    font-size: ${size.Wtext};
+  }
+  h3{
+    text-align:justify;
+    font-family: ${font.Llight};
+    font-size: ${size.Wtext};
   }
   
   `}
@@ -533,6 +545,14 @@ export const TextHair = styled.div`
   width: 45%;
   height: 45%;
   justify-content: flex-end;
+  a{
+    justify-content: flex-start ;
+  }
+  h3{
+    text-align:justify;
+    font-family: ${font.Lthin};
+    font-size: ${size.Xtext};
+  }
   `}
 `
 
@@ -570,7 +590,7 @@ export const TextMaps = styled.div`
   h2{
     width: 90%;
     text-align: center;
-    font-family: ${font.waveBold};
+    font-family: ${font.Rbold};
     font-size: ${size.Mheader};
     color: ${colors.green};
   }
@@ -579,7 +599,7 @@ export const TextMaps = styled.div`
     display:${props => (props.movil ? "flex" : "none")};
     width: 80%;
     text-align: justify;
-    font-family: ${font.light};
+    font-family: ${font.Rlight};
     font-size: ${size.Mtext};
     color: ${colors.green};
 
@@ -605,14 +625,14 @@ export const TextMaps = styled.div`
     margin:0;
     width: 70%;
     text-align: left;
-    font-family: ${font.waveBold};
+    font-family: ${font.Rbold};
     font-size: ${size.Mheader};
     color: ${colors.green};
   }
   h3{
     display:flex;
     width: 70%;
-    font-family: ${font.light};
+    font-family: ${font.Rlight};
     font-size: ${size.Wtext};
 
   }

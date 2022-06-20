@@ -52,7 +52,7 @@ export const Datos = styled.div`
 
   p, a{
     margin: 2%;
-    font-family: ${font.medium};
+    font-family: ${font.Lmedium};
     font-size: ${size.Mtext};
     color:${colors.softWhite};
 
@@ -118,7 +118,7 @@ export const Policies = styled.div`
   height: 25%;
 
   a{ display:flex;
-    font-family: ${font.medium};
+    font-family: ${font.Lmedium};
     font-size: ${size.Mtext};
     color:${colors.softWhite};}
   ${above.medium`
@@ -143,7 +143,7 @@ export const CreditsNote = styled.div`
     width: 90%;
     padding: 0 0%;
     p{
-      font-family: ${font.light};
+      font-family: ${font.Llight};
       font-size: ${size.Mmini};
       color: ${colors.white};
     }
