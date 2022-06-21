@@ -10,7 +10,7 @@ import "./swiper.css";
 
 // import required modules
 import { Navigation } from "swiper";
-import { Gallery, ProductContainer, Rectangulo, Rectangulo2, RectanguloProd } from "../styles/js/home.js"
+import { Gallery, ProductContainer, Rectangulo, Rectangulo2, RectanguloProd, TextProduct } from "../styles/js/home.js"
 import { StaticImage } from "gatsby-plugin-image"
 
 
@@ -60,6 +60,10 @@ export default function SwiperF() {
                             quality='100'
                         />
                         <Rectangulo2 />
+                        <TextProduct className="texto">
+                            <h3>NOMBRE DEL PRODUCTO</h3>
+                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's.</p>
+                        </TextProduct>
                     </RectanguloProd>
                 </SwiperSlide>
                 <SwiperSlide>
@@ -75,7 +79,10 @@ export default function SwiperF() {
                             formats={['auto', 'webp', 'avif']}
                             quality='100'
                         />
-                        <Rectangulo2 />
+                        <Rectangulo2 /><TextProduct className="texto">
+                            <h3>NOMBRE DEL PRODUCTO</h3>
+                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's.</p>
+                        </TextProduct>
                     </RectanguloProd>
                 </SwiperSlide>
                 <SwiperSlide>
@@ -91,7 +98,10 @@ export default function SwiperF() {
                             formats={['auto', 'webp', 'avif']}
                             quality='100'
                         />
-                        <Rectangulo2 />
+                        <Rectangulo2 /><TextProduct className="texto">
+                            <h3>NOMBRE DEL PRODUCTO</h3>
+                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's.</p>
+                        </TextProduct>
                     </RectanguloProd>
                 </SwiperSlide>
                 <SwiperSlide>
@@ -107,7 +117,10 @@ export default function SwiperF() {
                             formats={['auto', 'webp', 'avif']}
                             quality='100'
                         />
-                        <Rectangulo2 />
+                        <Rectangulo2 /><TextProduct className="texto">
+                            <h3>NOMBRE DEL PRODUCTO</h3>
+                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's.</p>
+                        </TextProduct>
                     </RectanguloProd>
                 </SwiperSlide>
 
