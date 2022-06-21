@@ -67,7 +67,7 @@ const Wedo = ({ children }) => {
                     <motion.h1 initial={{ opacity: 0, }} whileInView={{ opacity: 1 }} transition={{ duration: 1.5 }} viewport={{ once: true }}>What we do?</motion.h1>
                     <motion.h2 initial={{ opacity: 0, }} whileInView={{ opacity: 1 }} transition={{ duration: 1.5 }} viewport={{ once: true }}>We are a group of professional Cosmetologists & Estheticians</motion.h2>
                     <motion.h3 initial={{ opacity: 0, }} whileInView={{ opacity: 1 }} transition={{ duration: 1.5 }} viewport={{ once: true }}>That are hard working and staying up to date with the latest trends and technology in the beauty industry to bring our clients the best experience possible. Gaia Evolution Spa & Salon was created with the concept of rescue the use of natural & organic sources from our professional lines...</motion.h3>
-                    <Link>See more <Flecha className="flecha" stroke={colors.green} /></Link>
+                    <Link>See More <Flecha className="flecha" stroke={colors.green} /></Link>
                 </TextWedo>
                 <ImgsWedo>
                     <motion.div initial={{ opacity: 0, y: 10 }} animate={{ y: 0 }} whileInView={{ opacity: 1 }} transition={{ duration: 1 }} viewport={{ once: true }} style={{ y: y1, x: "80%", alignContent: "center", display: "flex", alignItems: "center", justifyContent: "center", width: "100%", height: "100%" }}>
@@ -138,7 +138,7 @@ const Skincare = ({ children }) => {
             </ImgSkin>
             <TextSkin>
                 <motion.h3 initial={{ opacity: 0, }} whileInView={{ opacity: 1 }} transition={{ duration: 1.5 }} viewport={{ once: true }} >Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley.</motion.h3>
-                <Link>Go to Skin care <Flecha className="flecha" stroke={colors.green} /></Link>
+                <Link>Go To Skin Care <Flecha className="flecha" stroke={colors.green} /></Link>
             </TextSkin>
         </StyledTratamient>
     )

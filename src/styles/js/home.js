@@ -27,6 +27,13 @@ export const CircleNature = styled.div`
   display:flex;
   align-items: center;
   position: relative;
+
+  ${above.medium`
+  width: 100vw;
+  height: 40vh;
+  grid-area: 1 / 1 / 2 / 4;
+  `}
+
   ${above.large`
   width: 19vw;
   height: 60vh;
@@ -69,6 +76,13 @@ export const Gift = styled.div`
   display: flex;
   justify-content: flex-end;
   align-items: center;
+
+  ${above.medium`
+  align-items: flex-end;
+  top: 25%;
+  width: 5vw;
+  height: 40vh;
+  `}
 
   ${above.large`
   align-items: flex-end;
@@ -211,6 +225,33 @@ export const TextWedo = styled.div`
     font-family: ${font.Lregular};
     font-size: ${size.Mtext};
   }
+
+  ${above.medium`
+  padding: 0 1em 0 0em;
+  width: 70%;
+  height: 80%;
+  a{
+    justify-content: flex-start ;
+    font-size: ${size.XList};
+    padding: 3em 0 0;
+  }
+  h1{ 
+    width: 100%;
+    font-family: ${font.Rregular};
+    font-size: ${size.Xheader};
+  }
+  h2{
+    font-family: ${font.Rthin};
+    font-size: ${size.Wtittle};
+  }
+  h3{
+    text-align:justify;
+    font-family: ${font.Llight};
+    font-size: ${size.Xtext};
+    line-height: 150%;
+  }
+  `}
+
   ${above.large`
   padding: 0 1em 0 4em;
   width: 55%;
@@ -270,13 +311,18 @@ export const ImgsWedo = styled.div`
   top: 100%;
   position: absolute;
   background: ${colors.none};
+
+  ${above.medium`
+  width: 45%;
+  height: 45%;
+  `}
+
   ${above.large`
   position: relative;
   right: auto;
   top: auto;
   width: 45%;
   height: 90%;
-  
   `}
 `
 
@@ -419,6 +465,12 @@ export const ImgSkin = styled.div`
   width: 50%;
   height: 30%;
   background: ${colors.none};
+
+  ${above.medium`
+  width: 40%;
+  height: 35%;
+  `}
+
   ${above.large`
   width: 20%;
   height: 20%;
@@ -452,6 +504,24 @@ export const TextSkin = styled.div`
     font-family: ${font.Lregular};
     font-size: ${size.Mtext};
   }
+
+  ${above.medium`
+  height: 40%;
+  width: 70%;
+  padding: 6em 0 0;
+  a{
+    justify-content: flex-start ;
+    font-size: ${size.XList};
+    padding: 2em 0 0;
+  }
+  h3{
+    text-align:justify;
+    font-family: ${font.Llight};
+    font-size: ${size.XList};
+    line-height: 150%;
+  }
+  `}
+
   ${above.large`
   height: 50%;
   justify-content: flex-end;
@@ -489,6 +559,12 @@ export const ImgHair = styled.div`
   width: 50%;
   height: 30%;
   background: ${colors.none};
+
+  ${above.medium`
+  width: 40%;
+  height: 35%;
+  `}
+
   ${above.large`
   width: 25%;
   height: 90%;
@@ -516,12 +592,31 @@ export const TextHair = styled.div`
     display:flex;
     justify-content: center ;
     gap: 0.5em;
-    padding: 4em 0 0;
+    padding: 2em 0 0;
     width: 100%;
     color: ${colors.softWhite};
     font-family: ${font.Lregular};
     font-size: ${size.Mtext};
+    background: ${colors.none};
   }
+
+  ${above.medium`
+  height: 40%;
+  width: 70%;
+  padding: 6em 0 0;
+  a{
+    justify-content: flex-end ;
+    font-size: ${size.XList};
+    padding: 2em 0 0;
+  }
+  h3{
+    text-align:justify;
+    font-family: ${font.Llight};
+    font-size: ${size.XList};
+    line-height: 150%;
+  }
+  `}
+
   ${above.large`
   width: 45%;
   height: 50%;
