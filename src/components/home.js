@@ -138,7 +138,7 @@ const Skincare = ({ children }) => {
             </ImgSkin>
             <TextSkin>
                 <motion.h3 initial={{ opacity: 0, }} whileInView={{ opacity: 1 }} transition={{ duration: 1.5 }} viewport={{ once: true }} >
-                Taking care of skin can also prevent wrinkles. Here are a few more benefits of a good skin care routine: A good skin care routine will reduce visible pores, wrinkles, and under eye circles. Protection from harmful sun rays will prevent sun damage, blemishes, and hyper-pigmentation.
+                Here at Gaia Evolution our mission is to create and provide healthy, effective skin care and wellness products designed to improve the skin and enhance holistic health, as well as improve the overall lifestyles of our clients by example and education. We work with Aveda and Eminence professional lines to bring that mission into reality by using natural, organic, vegan, and cruelty free products onto your skin.
                     </motion.h3>
                 <Link>Go to Skin Care <Flecha className="flecha" stroke={colors.green} /></Link>
             </TextSkin>
@@ -159,7 +159,7 @@ const Haircare = ({ children }) => {
                 </motion.div>
                 <TextHair>
                     <motion.h3 initial={{ opacity: 0, }} whileInView={{ opacity: 1 }} transition={{ duration: 1.5 }} viewport={{ once: true }}>
-                    Hair care is an overall term for parts of hygiene and cosmetology involving the hair on the human head. Hair care will differ according to one's hair type and according to various processes that can be applied to hair. All hair is not the same; indeed, hair is a manifestation of human diversity.
+                    Gaia Evolution is an Aveda Exclusive Salon. Aveda is a naturally derived line, some ingredients are Certified Organic, 100% Vegan & Cruelty Free. Its natural components do a fantastic job taking care of the hair integrity and providing incredible results. You will find a wide variety of products for any hair type or concerns. Haircuts and color services are completely customized for each guest through a previous consultation.
                     </motion.h3>
                     <Link>Go to Hair Care <Flecha className="flecha" stroke={colors.softWhite} /></Link>
                 </TextHair>
@@ -210,7 +210,7 @@ const Bodycare = ({ children }) => {
             </ImgSkin>
             <TextSkin>
                 <motion.h3 initial={{ opacity: 0, }} whileInView={{ opacity: 1 }} transition={{ duration: 1.5 }} viewport={{ once: true }}>
-                Body care means how an individual performs applications of dressings and ointments or lotions to their body, trims their toe- nails, and applies lotion to their feet. Assistance with body care in- cludes general skin care and the application of over-the-counter oint- ments or lotions.
+                We strive to provide holistic and natural solutions to improve the quality of life and wellbeing in a real and meaningful way. We offer services that will do just that, from reiki, to body wraps, and body detoxification for weight loss and spiritual growth.
                 </motion.h3>
                 <Link>Go to Body Care <Flecha className="flecha" stroke={colors.green} /></Link>
             </TextSkin>
@@ -271,13 +271,13 @@ const Maps = ({ children }) => {
             <TransMap />
             <TextMaps>
                 <CTVTS className="CTVTS" fill={colors.green} ></CTVTS>
-                <motion.h3 initial={{ opacity: 0, }} whileInView={{ opacity: 1 }} transition={{ duration: 1.5 }} viewport={{ once: true }}>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's. standard dummy text ever since the 1500s, when an unknown printer took.</motion.h3>
+               {/*  <motion.h3 initial={{ opacity: 0, }} whileInView={{ opacity: 1 }} transition={{ duration: 1.5 }} viewport={{ once: true }}>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's. standard dummy text ever since the 1500s, when an unknown printer took.</motion.h3> */}
                 <Link>Gaia Evolution in Google Maps<Flecha className="flecha" stroke={colors.green} /></Link>
 
             </TextMaps>
             <TextMaps movil>
 
-                <motion.h3 initial={{ opacity: 0, }} whileInView={{ opacity: 1 }} transition={{ duration: 1.5 }} viewport={{ once: true }}>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's. standard dummy text ever since the 1500s, when an unknown printer took.</motion.h3>
+                {/* <motion.h3 initial={{ opacity: 0, }} whileInView={{ opacity: 1 }} transition={{ duration: 1.5 }} viewport={{ once: true }}>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's. standard dummy text ever since the 1500s, when an unknown printer took.</motion.h3> */}
                 <Link>Gaia Evolution in Google Maps <Flecha className="flecha" stroke={colors.green} /></Link>
 
             </TextMaps>
