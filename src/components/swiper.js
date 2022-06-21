@@ -13,6 +13,9 @@ import { Navigation } from "swiper";
 import { Gallery, ProductContainer, Rectangulo, Rectangulo2, RectanguloProd, TextProduct } from "../styles/js/home.js"
 import { StaticImage } from "gatsby-plugin-image"
 
+//import librerias Framer motion
+import { motion } from "framer-motion";
+
 
 export default function SwiperF() {
     return (
@@ -61,8 +64,10 @@ export default function SwiperF() {
                         />
                         <Rectangulo2 />
                         <TextProduct className="texto">
-                            <h3>NOMBRE DEL PRODUCTO</h3>
-                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's.</p>
+                            <motion.div initial={{opacity: 0}} whileHover={{opacity:1}} transition={{duration: .5}}>
+                            <h3 >NOMBRE DEL PRODUCTO</h3>
+                            <a>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's.</a>
+                            </motion.div>
                         </TextProduct>
                     </RectanguloProd>
                 </SwiperSlide>
@@ -79,9 +84,12 @@ export default function SwiperF() {
                             formats={['auto', 'webp', 'avif']}
                             quality='100'
                         />
-                        <Rectangulo2 /><TextProduct className="texto">
-                            <h3>NOMBRE DEL PRODUCTO</h3>
-                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's.</p>
+                        <Rectangulo2 />
+                        <TextProduct className="texto">
+                        <motion.div initial={{opacity: 0}} whileHover={{opacity:1}} transition={{duration: .5}}>
+                            <h3 >NOMBRE DEL PRODUCTO</h3>
+                            <a>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's.</a>
+                            </motion.div>
                         </TextProduct>
                     </RectanguloProd>
                 </SwiperSlide>
@@ -98,9 +106,12 @@ export default function SwiperF() {
                             formats={['auto', 'webp', 'avif']}
                             quality='100'
                         />
-                        <Rectangulo2 /><TextProduct className="texto">
-                            <h3>NOMBRE DEL PRODUCTO</h3>
-                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's.</p>
+                        <Rectangulo2 />
+                        <TextProduct className="texto">
+                        <motion.div initial={{opacity: 0}} whileHover={{opacity:1}} transition={{duration: .5}}>
+                            <h3 >NOMBRE DEL PRODUCTO</h3>
+                            <a>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's.</a>
+                            </motion.div>
                         </TextProduct>
                     </RectanguloProd>
                 </SwiperSlide>
@@ -118,8 +129,10 @@ export default function SwiperF() {
                             quality='100'
                         />
                         <Rectangulo2 /><TextProduct className="texto">
-                            <h3>NOMBRE DEL PRODUCTO</h3>
-                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's.</p>
+                        <motion.div initial={{opacity: 0}} whileHover={{opacity:1}} transition={{duration: .5}}>
+                            <h3 >NOMBRE DEL PRODUCTO</h3>
+                            <a>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's.</a>
+                            </motion.div>
                         </TextProduct>
                     </RectanguloProd>
                 </SwiperSlide>
