@@ -2,7 +2,7 @@ import React from "react"
 import { StyledSocialContainer, StyledContainer, StyledFooter, StyledItem, StyledSocialItem, Datos, RS, Policies, Credits, CreditsNote, FooterIcons } from "../styles/js/footer"
 import { FacebookIcon, InstagramIcon, MapsIcon } from "../images/icons";
 import { colors } from "../utils/const"
-import { Flecha, GEWeb } from "../assets/Home";
+import { Flecha, GEFoot, GEWeb } from "../assets/Home";
 import { Link } from "gatsby";
 import { motion } from "framer-motion";
 import { StyledIcons } from "../styles/js/servnav";
@@ -14,7 +14,7 @@ const Footer = ({ children }) => (
     <>
         <StyledFooter>
             <StyledContainer >
-                <GEWeb className="logo-footer" fill={colors.white} />
+                <GEFoot className="logo-footer" fill={colors.white} />
                 <RS>
                     <FooterIcons>
                         <a href="https://www.facebook.com/GaiaEvolutionGroup/" rel="noreferrer" target="_blank">

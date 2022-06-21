@@ -86,19 +86,17 @@ export const Social = styled.div`
   grid-area: 2 / 1 / 3 / 2; 
   width: 19vw;
   height: 40vh;
+  background: ${colors.none};
+  transform: translateY(10%);
 
   display:flex;
   flex-direction: column;
-  justify-content: flex-end;
+  justify-content: center;
   align-items: flex-start;
-  gap: 4em;
-
-  div {
-    padding: 10% 0;
-  }
+  gap: 0.5em;
+  padding-left: 15%;
   svg{
-    width: 100%;
-    padding: 5% 0;
+    width: 70%;
   }
   `}
 `
@@ -113,20 +111,20 @@ export const PhoneLogo = styled.div`
   justify-content: center ;
   align-items: flex-end;
 
-  svg{
+  a svg{
     margin-bottom: 4vh;
     width: 50px;
     height: auto;
   }
 
-  a{display: none;}
+  a p{display: none;}
 
   ${above.large`
   width: 60vw;
   height: 40vh;
   grid-area: 2 / 2 / 3 / 3; 
 
-  a{
+  a p{
     display:flex;
     margin-bottom: 5vh;
     font-family: ${font.Lregular};

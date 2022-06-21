@@ -12,7 +12,7 @@ import { MapsIcon, FacebookIcon, InstagramIcon } from "../images/icons"
 import { Link } from "gatsby"
 import SwiperF from "./swiper"
 
-import { Circle, GEWeb, GEMovil, Skin, Hair, Flecha, Body, Favorite, FavoriteMovil } from "../assets/Home"
+import { Circle, GEWeb, GEMovil, Skin, Hair, Flecha, Body, Favorite, FavoriteMovil, CTVTS } from "../assets/Home"
 import { unstable_renderSubtreeIntoContainer } from "react-dom"
 
 
@@ -31,22 +31,20 @@ const Hero = ({ children }) => (
                 </motion.div>
             </LogoPrincipal>
             <Social>
-                <div>
-                    <a href="https://www.facebook.com/GaiaEvolutionGroup/" rel="noreferrer" target="_blank">
-                        <FacebookIcon fill={colors.black} className="svgAbout" />
-                    </a>
-                    <a href="https://www.instagram.com/gaiaevolution/" rel="noreferrer" target="_blank">
+                <a href="https://www.facebook.com/GaiaEvolutionGroup/" rel="noreferrer" target="_blank">
+                    <FacebookIcon fill={colors.black} className="svgAbout" />
+                </a>
+                <a href="https://www.instagram.com/gaiaevolution/" rel="noreferrer" target="_blank">
 
-                        <InstagramIcon fill={colors.black} className="svgAbout" />
-                    </a>
-                    <a href="https://www.google.com/maps/place/Gaia+Evolution+Spa+and+Salon/@41.9245235,-87.7068398,19z/data=!3m2!4b1!5s0x880fcd657178d7e3:0x4804758ad15f5cf!4m5!3m4!1s0x880fcd65725634f9:0xf6193b2710f612ea!8m2!3d41.9245235!4d-87.7062926" rel="noreferrer" target="_blank">
-                        <MapsIcon fill={colors.black} className="svgAbout" />
-                    </a>
-                </div>
+                    <InstagramIcon fill={colors.black} className="svgAbout" />
+                </a>
+                <a href="https://www.google.com/maps/place/Gaia+Evolution+Spa+and+Salon/@41.9245235,-87.7068398,19z/data=!3m2!4b1!5s0x880fcd657178d7e3:0x4804758ad15f5cf!4m5!3m4!1s0x880fcd65725634f9:0xf6193b2710f612ea!8m2!3d41.9245235!4d-87.7062926" rel="noreferrer" target="_blank">
+                    <MapsIcon fill={colors.black} className="svgAbout" />
+                </a>
             </Social>
             <PhoneLogo>
-                <Phone className="phone" />
-                <motion.a whileHover={{ scale: 1.1, priginX: 0, color: colors.accentBlue }} whileTap={{ scale: 0.9 }} href="tel:773-799-8843">773-799-8843</motion.a>
+                <motion.a whileHover={{ scale: 1.1, priginX: 0, color: colors.accentBlue }} whileTap={{ scale: 0.9 }} href="tel:773-799-8843"><Phone className="phone" /></motion.a>
+                <motion.a whileHover={{ scale: 1.1, priginX: 0, color: colors.accentBlue }} whileTap={{ scale: 0.9 }} href="tel:773-799-8843"><p>773-799-8843</p></motion.a>
             </PhoneLogo>
             <Scroll>
 
@@ -78,10 +76,10 @@ const Wedo = ({ children }) => {
                             imgClassName=""
                             src="../images/Home/PNG/WWDArco.png"
                             alt="Spa Image"
-                            height={270}
                             loading="lazy"
                             formats={['auto', 'webp', 'avif']}
                             quality='100'
+                            breakpoints={[750, 1080, 1366, 1920]}
                         />
                     </motion.div>
                     <motion.div initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} transition={{ duration: 1 }} viewport={{ once: true }} style={{ y: y2, x: -50, alignContent: "center", display: "flex", alignItems: "center", justifyContent: "center", width: "100%", height: "100%" }}>
@@ -90,7 +88,7 @@ const Wedo = ({ children }) => {
                             imgClassName=""
                             src="../images/Home/PNG/WWDHoja.png"
                             alt="Spa products"
-                            height={270}
+                            breakpoints={[750, 1080, 1366, 1920]}
                             loading="lazy"
                             formats={['auto', 'webp', 'avif']}
                             quality='100'
@@ -131,7 +129,7 @@ const Skincare = ({ children }) => {
                         imgClassName=""
                         src="../images/Home/PNG/SkinCare.png"
                         alt="Spa Image"
-                        height={270}
+                        breakpoints={[750, 1080, 1366, 1920]}
                         loading="lazy"
                         formats={['auto', 'webp', 'avif']}
                         quality='100'
@@ -173,7 +171,7 @@ const Haircare = ({ children }) => {
                         imgClassName=""
                         src="../images/Home/PNG/HairCare.png"
                         alt="Spa Image"
-                        height={270}
+                        breakpoints={[750, 1080, 1366, 1920]}
                         loading="lazy"
                         formats={['auto', 'webp', 'avif']}
                         quality='100'
@@ -203,7 +201,7 @@ const Bodycare = ({ children }) => {
                         imgClassName=""
                         src="../images/Home/PNG/BodyCare.png"
                         alt="Spa Image"
-                        height={270}
+                        breakpoints={[750, 1080, 1366, 1920]}
                         loading="lazy"
                         formats={['auto', 'webp', 'avif']}
                         quality='100'
@@ -234,7 +232,7 @@ const Products = ({ children }) => {
                         imgClassName=""
                         src="../images/Home/PNG/FPArco.png"
                         alt="Spa Image"
-                        height={270}
+                        breakpoints={[750, 1080, 1366, 1920]}
                         loading="lazy"
                         formats={['auto', 'webp', 'avif']}
                         quality='100'
@@ -264,7 +262,7 @@ const Maps = ({ children }) => {
                     imgClassName=""
                     src="../images/Home/JPG/Mapa.jpg"
                     alt="Gaia Evolution maps"
-                    height={800}
+                    breakpoints={[750, 1080, 1366, 1920]}
                     loading="lazy"
                     formats={['auto', 'webp', 'avif']}
                     quality='100'
@@ -272,7 +270,7 @@ const Maps = ({ children }) => {
             </motion.div>
             <TransMap />
             <TextMaps>
-                <motion.h2 initial={{ opacity: 0, }} whileInView={{ opacity: 1 }} transition={{ duration: 1.5 }} viewport={{ once: true }}>COME TO VISIT THE SPA</motion.h2>
+                <CTVTS className="CTVTS" fill={colors.green} ></CTVTS>
                 <motion.h3 initial={{ opacity: 0, }} whileInView={{ opacity: 1 }} transition={{ duration: 1.5 }} viewport={{ once: true }}>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's. standard dummy text ever since the 1500s, when an unknown printer took.</motion.h3>
                 <Link>Gaia Evolution in Google Maps<Flecha className="flecha" stroke={colors.green} /></Link>
 
