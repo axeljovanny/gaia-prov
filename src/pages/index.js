@@ -25,6 +25,7 @@ const IndexPage = () => {
             gatsbyImageData(
               quality: 70
               placeholder: BLURRED
+              breakpoints:[750, 1080, 1366, 1920]
               formats: [AUTO, WEBP, AVIF]
               layout: FULL_WIDTH
               webpOptions: {quality: 70}
@@ -46,23 +47,28 @@ const IndexPage = () => {
       <Wedo />
 
       <StyledSkin>
-          <Skincare />
+        <Skincare />
       </StyledSkin>
 
 
       <StyledHair>
-          <Haircare />
+        <Haircare />
       </StyledHair>
 
       <StyledSkin>
-          <Bodycare />
+        <Bodycare />
       </StyledSkin>
 
       <Products />
       <Maps />
       <Gift>
-        <GiftWeb className="gift-web" fill={colors.green} fill2={colors.softWhite} />
-        <GiftMovil className="gift-movil" fill={colors.green} fill2={colors.softWhite} />
+        <motion.a href="https://squareup.com/gift/FHH5R6M6H54FS/order" whileHover={{ scale: 1.1 }} style={{ display: "flex", justifyContent: "flex-end" }}>
+          <GiftWeb className="gift-web" fill={colors.green} fill2={colors.softWhite} />
+        </motion.a>
+        <motion.a href="https://squareup.com/gift/FHH5R6M6H54FS/order" whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }}>
+          <GiftMovil className="gift-movil" fill={colors.green} fill2={colors.softWhite} />
+        </motion.a>
+
       </Gift>
       <Footer></Footer>
     </>

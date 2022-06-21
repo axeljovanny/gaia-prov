@@ -8,6 +8,8 @@ import { motion } from "framer-motion"
 import { MapsIcon, FacebookIcon, InstagramIcon } from "../images/icons"
 import { colors } from "../utils/const"
 
+import Loadable from "@loadable/component"
+const Logow = Loadable(() => import("../assets/logo.svg"))
 
 
 
@@ -38,15 +40,7 @@ const Navbar = ({ siteTitle }) => {
                 <StyledLogoContainer >
                     <Link to="/">
                         <div className="logonav">
-                            <StaticImage
-                                className="logo"
-                                src="../images/logo.png"
-                                alt="gaia logo nav"
-                                loading="eager"
-                                width={110}
-                                placeholder="blurred"
-                                formats={['auto', 'webp', 'avif']}
-                                quality={100} />
+                            <Logow className="logo" />
                         </div>
                     </Link>
                 </StyledLogoContainer>
@@ -60,9 +54,11 @@ const Navbar = ({ siteTitle }) => {
                         </motion.p>
                     </ItemNav>
                     <ItemNav>
-                        <motion.a whileHover={{ scale: 1.1, priginX: 0, color: colors.accentBlue }} whileTap={{ scale: 0.9 }}>
-                            PRODUCTS
-                        </motion.a>
+                        <motion.p whileHover={{ scale: 1.1, priginX: 0, color: colors.accentBlue }} whileTap={{ scale: 0.9 }}>
+                            <Link to="/body">
+                                ABOUT US
+                            </Link>
+                        </motion.p>
                     </ItemNav>
                 </StyledItems>
 
