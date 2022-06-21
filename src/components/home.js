@@ -139,7 +139,9 @@ const Skincare = ({ children }) => {
                 </motion.div>
             </ImgSkin>
             <TextSkin>
-                <motion.h3 initial={{ opacity: 0, }} whileInView={{ opacity: 1 }} transition={{ duration: 1.5 }} viewport={{ once: true }} >Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley.</motion.h3>
+                <motion.h3 initial={{ opacity: 0, }} whileInView={{ opacity: 1 }} transition={{ duration: 1.5 }} viewport={{ once: true }} >
+                Taking care of skin can also prevent wrinkles. Here are a few more benefits of a good skin care routine: A good skin care routine will reduce visible pores, wrinkles, and under eye circles. Protection from harmful sun rays will prevent sun damage, blemishes, and hyper-pigmentation.
+                    </motion.h3>
                 <Link>Go to Skin care <Flecha className="flecha" stroke={colors.green} /></Link>
             </TextSkin>
         </StyledTratamient>
@@ -158,12 +160,14 @@ const Haircare = ({ children }) => {
                     <Hair className="HairSvg" fill={colors.softWhite} />
                 </motion.div>
                 <TextHair>
-                    <motion.h3 initial={{ opacity: 0, }} whileInView={{ opacity: 1 }} transition={{ duration: 1.5 }} viewport={{ once: true }}>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley.</motion.h3>
+                    <motion.h3 initial={{ opacity: 0, }} whileInView={{ opacity: 1 }} transition={{ duration: 1.5 }} viewport={{ once: true }}>
+                    Hair care is an overall term for parts of hygiene and cosmetology involving the hair on the human head. Hair care will differ according to one's hair type and according to various processes that can be applied to hair. All hair is not the same; indeed, hair is a manifestation of human diversity.
+                    </motion.h3>
                     <Link>Go to Hair care <Flecha className="flecha" stroke={colors.softWhite} /></Link>
                 </TextHair>
             </StyledTratamient>
             <ImgHair>
-                <motion.div initial={{ opacity: 0 }} animate={{ y: 0 }} whileInView={{ opacity: 1 }} transition={{ duration: 2 }} viewport={{ once: true }} style={{ y: y2, alignContent: "center", display: "flex", alignItems: "center", justifyContent: "center", width: "100%", height: "100%" }}>
+                <motion.div initial={{ opacity: 0 }} animate={{ y: 0 }} whileInView={{ opacity: 1 }} transition={{ duration: 2 }} viewport={{ once: true }} style={{ y: y2, alignContent: "center", display: "flex", alignItems: "center", justifyContent: "center", width: "100%", height: "100%",}}>
                     <StaticImage
                         className="Hair"
                         imgClassName=""
@@ -207,10 +211,11 @@ const Bodycare = ({ children }) => {
                 </motion.div>
             </ImgSkin>
             <TextSkin>
-                <motion.h3 initial={{ opacity: 0, }} whileInView={{ opacity: 1 }} transition={{ duration: 1.5 }} viewport={{ once: true }}>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley.</motion.h3>
+                <motion.h3 initial={{ opacity: 0, }} whileInView={{ opacity: 1 }} transition={{ duration: 1.5 }} viewport={{ once: true }}>
+                Body care means how an individual performs applications of dressings and ointments or lotions to their body, trims their toe- nails, and applies lotion to their feet. Assistance with body care in- cludes general skin care and the application of over-the-counter oint- ments or lotions.
+                </motion.h3>
                 <Link>Go to Body care <Flecha className="flecha" stroke={colors.green} /></Link>
             </TextSkin>
-
         </StyledTratamient>
     )
 }
@@ -236,9 +241,7 @@ const Products = ({ children }) => {
                     />
                 </motion.div>
                 <motion.div initial={{ opacity: 0 }} animate={{ y: 0 }} whileInView={{ opacity: 1 }} transition={{ duration: 1.5, delay: .5 }} viewport={{ once: true }} style={{
-                    y: y1, x
-                        : "-52%", alignContent: "center", display: "flex", alignItems: "center", justifyContent: "center", width: "100%", height: "100%"
-                }}>
+                    y: y1, x: "-52%", alignContent: "center", display: "flex", alignItems: "center", justifyContent: "center", width: "100%", height: "100%"}}>
                     <Favorite className="ProductsSvg" fill={colors.softWhite} />
                 </motion.div>
                 <motion.div initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} transition={{ duration: 1.5, delay: .5 }} viewport={{ once: true }} style={{ alignContent: "center", display: "flex", alignItems: "center", justifyContent: "center" }}>

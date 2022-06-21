@@ -60,8 +60,8 @@ export const TextTittle = styled.div`
         cursor: pointer;
         outline: inherit;
         color: ${colors.black}; //usar en SVG
-        font-family: ${font.waveMedium};
-        font-size: ${size.Wtext};
+        font-family: ${font.Rsemi};
+        font-size: ${size.Mtext};
         }
       ${above.large`
       display: flex;
@@ -72,12 +72,20 @@ export const TextTittle = styled.div`
       width: 100%;
       button{
         text-align: left;
-        color: ${colors.none}; //usar en SVG
-        font-family: ${font.waveLight};
-        font-size: ${size.WList};
+        color: ${colors.green}; //usar en SVG
+        font-family: ${font.Rsemi};
+        font-size: ${size.Wtext};
       }
-     
-    
+      `}
+
+      ${above.xlarge`
+      button{
+        text-align: left;
+        color: ${colors.green}; //usar en SVG
+        font-family: ${font.Rregular};
+        font-size: ${size.Xtext};
+      }
+
     `}
       `
 export const DescTittle = styled.div`
@@ -93,7 +101,7 @@ export const DescTittle = styled.div`
       p{
         margin:0;
         width: 70%;
-        font-family: ${font.waveMedium};
+        font-family: ${font.Rmedium};
         font-size: ${size.Mtittle};
         color: ${colors.softBlack};
       }
@@ -111,12 +119,20 @@ export const DescTittle = styled.div`
         width: 80%;
         text-align: left;
         margin:0;
-        font-family: ${font.waveMedium};
+        font-family: ${font.Rregular};
         font-size: ${size.Wtittle};
         color: ${colors.black};
       }
 
     `}
+    ${above.xlarge`
+    p{
+      font-family: ${font.Rregular};
+      font-size: ${size.Xtittle};
+      color: ${colors.black};
+    }
+
+  `}
       `
 
 export const DescDetails = styled.div`
@@ -140,12 +156,19 @@ export const DescTime = styled.div`
       align-items: center;
       background: ${colors.none};
       width: 50%;
-      font-family: ${font.medium};
-      font-size: ${size.Wmini};
+      font-family: ${font.Lblack};
+      font-size: ${size.Mtext};
       color: ${colors.white};
+
       ${above.large`
-      font-family: ${font.medium};
+      font-family: ${font.Lblack};
       font-size: ${size.Wmini};
+      color: ${colors.black};
+      `}
+
+      ${above.xlarge`
+      font-family: ${font.Lbold};
+      font-size: ${size.Xmini};
       color: ${colors.black};
       `}
       `
@@ -155,12 +178,19 @@ export const DescPrice = styled.div`
       align-items: center;
       background: ${colors.none};
       width: 50%;
-      font-family: ${font.medium};
-      font-size: ${size.Wmini};
+      font-family: ${font.Lblack};
+      font-size: ${size.Mtext};
       color: ${colors.white};
+
       ${above.large`
-      font-family: ${font.medium};
+      font-family: ${font.Lblack};
       font-size: ${size.Wmini};
+      color: ${colors.black};
+      `}
+
+      ${above.xlarge`
+      font-family: ${font.Lbold};
+      font-size: ${size.Xmini};
       color: ${colors.black};
       `}
       `
@@ -174,7 +204,7 @@ export const DescBook = styled.button`
       box-sizing: border-box;
       color: #111827;
       color: ${colors.white};
-      font-family: ${font.waveMedium};
+      font-family: ${font.Llight};
       font-size: ${size.Wmini};
       line-height: 1.25rem;
       padding: 1em 3rem;
@@ -218,8 +248,8 @@ export const DescText = styled.div`
       width: 85%;
       text-align: justify;
       padding: 0 0 1em 0;
-      font-family: ${font.light};
-      font-size: ${size.Wtext};
+      font-family: ${font.Lregular};
+      font-size: ${size.Wmini};
       color: ${colors.white};
       
       ${above.large`
@@ -230,11 +260,19 @@ export const DescText = styled.div`
       text-align: justify;
       line-height : 23px;
       p{
-        font-family: ${font.light};
+        font-family: ${font.Lregular};
         font-size: ${size.Wtext};
         color: ${colors.black};
       }
       `}
+      ${above.xlarge`
+      p{
+        font-family: ${font.Llight};
+        font-size: ${size.Xtext};
+        color: ${colors.black};
+      }
+
+    `}
       `
 export const StyledServiceDesc = styled.div`
       display: flex;
@@ -313,14 +351,14 @@ export const StyledService = styled.div`
 
       h1{
         margin:0;
-        font-family: ${font.waveMedium};
-        font-size: ${size.Wheader};
+        font-family: ${font.Rsemi};
+        font-size: ${size.Mheader};
         color: ${colors.green};
     }
       h2{
         margin:0;
-        font-family: ${font.waveBold};
-        font-size: ${size.Wtittle};
+        font-family: ${font.Rsemi};
+        font-size: ${size.Mtittle};
         color: ${colors.green};
     }
       
@@ -334,7 +372,7 @@ export const StyledNote = styled.div`
     width: 90%;
     padding: 0 0%;
     p{
-      font-family: ${font.light};
+      font-family: ${font.Lregular};
       font-size: ${size.Mmini};
       color: ${colors.softBlack};
     }
@@ -345,6 +383,18 @@ export const StyledNote = styled.div`
     width: 80%;
     p{
       font-size: ${size.Wmini};
+      color: ${colors.black};
+    }
+    a{
+      color: ${colors.black};
+    }
+
+  `}
+  ${above.xlarge`
+    width: 80%;
+    p{
+      font-family: ${font.Llight};
+      font-size: ${size.Xmini};
       color: ${colors.black};
     }
     a{
