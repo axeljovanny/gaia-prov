@@ -10,8 +10,11 @@ import "./swiper.css";
 
 // import required modules
 import { Navigation } from "swiper";
-import { Gallery, ProductContainer, Rectangulo, Rectangulo2, RectanguloProd } from "../styles/js/home.js"
+import { Gallery, ProductContainer, Rectangulo, Rectangulo2, RectanguloProd, TextProduct } from "../styles/js/home.js"
 import { StaticImage } from "gatsby-plugin-image"
+
+//import librerias Framer motion
+import { motion } from "framer-motion";
 
 
 export default function SwiperF() {
@@ -60,6 +63,12 @@ export default function SwiperF() {
                             quality='100'
                         />
                         <Rectangulo2 />
+                        <TextProduct className="texto">
+                            <motion.div initial={{opacity: 0}} whileHover={{opacity:1}} transition={{duration: .5}}>
+                            <h3 >NOMBRE DEL PRODUCTO</h3>
+                            <a>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's.</a>
+                            </motion.div>
+                        </TextProduct>
                     </RectanguloProd>
                 </SwiperSlide>
                 <SwiperSlide>
@@ -76,6 +85,12 @@ export default function SwiperF() {
                             quality='100'
                         />
                         <Rectangulo2 />
+                        <TextProduct className="texto">
+                        <motion.div initial={{opacity: 0}} whileHover={{opacity:1}} transition={{duration: .5}}>
+                            <h3 >NOMBRE DEL PRODUCTO</h3>
+                            <a>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's.</a>
+                            </motion.div>
+                        </TextProduct>
                     </RectanguloProd>
                 </SwiperSlide>
                 <SwiperSlide>
@@ -92,6 +107,12 @@ export default function SwiperF() {
                             quality='100'
                         />
                         <Rectangulo2 />
+                        <TextProduct className="texto">
+                        <motion.div initial={{opacity: 0}} whileHover={{opacity:1}} transition={{duration: .5}}>
+                            <h3 >NOMBRE DEL PRODUCTO</h3>
+                            <a>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's.</a>
+                            </motion.div>
+                        </TextProduct>
                     </RectanguloProd>
                 </SwiperSlide>
                 <SwiperSlide>
@@ -107,7 +128,12 @@ export default function SwiperF() {
                             formats={['auto', 'webp', 'avif']}
                             quality='100'
                         />
-                        <Rectangulo2 />
+                        <Rectangulo2 /><TextProduct className="texto">
+                        <motion.div initial={{opacity: 0}} whileHover={{opacity:1}} transition={{duration: .5}}>
+                            <h3 >NOMBRE DEL PRODUCTO</h3>
+                            <a>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's.</a>
+                            </motion.div>
+                        </TextProduct>
                     </RectanguloProd>
                 </SwiperSlide>
 

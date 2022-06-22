@@ -338,6 +338,8 @@ export const StyledProducts = styled.div`
   height: 80vh;
   background: ${colors.none};
   ${above.large`  
+  height: 80vh;
+
   
   `}
 `
@@ -358,35 +360,47 @@ export const RectanguloProd = styled.div`
     transition: 400ms;
   }
 
+
   ${above.large`  
   width: 100%;
-  height: 70%;
+  height: 100%;
   max-width: 300px;
 
   `}
 `
 export const Rectangulo = styled.div`
   position: absolute;
-  bottom: -20px;
+  bottom: 10%;
   background: ${colors.green};
   border-radius: 5px;
   width: 100%;
-  height: 60%;
+  height: 40%;
   `
 export const Rectangulo2 = styled.div`
   position: absolute;
-  bottom: -12%;
+  bottom: -7%;
   background: ${colors.softWhite};
   width: 110%;
-  height: 20%;
+  height: 40%;
   ${above.large`  
   height: 30%;
-  bottom: -10%;
+  bottom: 5%;
   `}
   ${above.xlarge`  
   height: 40%;
   bottom: -12%;
   `}
+  `
+export const TextProduct = styled.div`
+  width: 90%;
+  color: ${colors.green};
+  font-family: ${font.Lregular};
+  font-size: ${size.Mtext};
+  h3{
+    color: ${colors.black};
+    font-family: ${font.Llight};
+    font-size: ${size.Mtext};
+  }
   `
 
 export const BannerProducts = styled.div`

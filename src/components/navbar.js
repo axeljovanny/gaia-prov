@@ -55,7 +55,7 @@ const Navbar = ({ siteTitle }) => {
                     </ItemNav>
                     <ItemNav>
                         <motion.p whileHover={{ scale: 1.1, priginX: 0, color: colors.accentBlue }} whileTap={{ scale: 0.9 }}>
-                            <Link to="/body">
+                            <Link to="/">
                                 ABOUT US
                             </Link>
                         </motion.p>
