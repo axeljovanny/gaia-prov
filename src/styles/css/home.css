@@ -7,6 +7,16 @@
   top: 0;
 }
 
+.scroll {
+  display:none;
+}
+.scroll-movil {
+  display:block;
+  width: auto;
+  height: 40%;
+  transform: translateX(-100%);
+}
+
 .logo-web {
   display: none;
 }
@@ -26,14 +36,17 @@
   width: calc(25px + 2vh);
 }
 .gift-movil {
-  display: flex;
-  width: calc(80% + 2vh);
-  right: -10px;
+  display: block;
+  width: auto;
+  transform: translateX(10%);
 }
 .gift-web {
   display: none;
 }
 .circle {
+  display: none;
+}
+.circle-movil {
   display: flex;
   width: 100%;
   transform: scale(0.8);
@@ -41,12 +54,11 @@
 
 .container {
   background-color: none;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  width: 60%;
+  display: block;
   position: absolute;
-  left: 35%;
-  top: -35%;
+  right: -10%;
+  top: -15%;
 }
 
 .LogoPrincipal {
@@ -135,19 +147,17 @@
 
 @media only screen and (min-width: 480px) {
   .gift-movil {
-    display: flex;
-    position: fixed;
-    width: calc(7% + 2vh);
-    right: -10px;
+    display: block;
+    transform: translateX(10%);
+    width: 100%;
+    height: 100%;
   }
   .gift-web {
     display: none;
   }
 
-  .circle {
-    display: flex;
-    width: 100%;
-    transform: scale(1.3);
+  .circle-movil {
+    transform: scale(0.8);
   }
 
   .HomeWD2 {
@@ -180,9 +190,17 @@
     display: flex;
     width: 70%;
     transform: translate(0%, 40%);
-
   }
-
+  .container {
+    width: 50%;
+    right: 0%;
+  }
+  .scroll-movil {
+    transform: translateX(-200%);
+  }
+  .scroll {
+    display: none;
+  }
 }
 
 @media only screen and (min-width: 1140px) {
@@ -205,17 +223,23 @@
     display: none;
   }
   .gift-web {
-    display: flex;
-    width: calc(40% + 2vh);
+    display: block;
+    transform: translateX(10%);
+    width: 100%;
+    height: 100%;
   }
   .container {
-    left: -30%;
-    top: auto;
+    width: 100%;
+    right: 30%;
+    top: 30%;
+  }
+  .circle-movil {
+    display: none;
   }
   .circle {
     display: flex;
     width: 100%;
-    height: 100%;
+    transform: scale(0.9);
   }
   .Maps {
     display: flex;
@@ -266,13 +290,18 @@
   .ProductsSvgMovil {
     display: none;
   }
+  .scroll-movil {
+    display: none;
+  }
+  .scroll {
+    display:block;
+    width: auto;
+    height: 40%;
+    transform: translateX(300%);
+  }
 }
 
 @media only screen and (min-width: 1370px) {
-  .gift-web {
-    width: calc(2% + 1vh);
-  }
-
   .HomeWD1 {
     transform: translate(-60%, 20%) scale(0.8);
   }
@@ -311,5 +340,14 @@
   .Favorite {
     position: absolute;
     transform: scale(0.7);
+  }
+  .circle {
+    display: flex;
+    width: 100%;
+    transform: scale(1.3);
+  }
+  .container {
+    right: 50%;
+    width: 60%;
   }
 }

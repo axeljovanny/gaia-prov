@@ -11,7 +11,7 @@ import { Navbar } from "../components/navbar";
 import { Bodycare, Haircare, Hero, Maps, Products, Skincare, Wedo } from "../components/home";
 import '../styles/css/home.css'
 import { Gift, StyledHair, StyledSkin } from "../styles/js/home";
-import { GiftWeb, GiftMovil } from "../assets/Home";
+import { GiftWeb, GiftMovil, ShopWeb, ShopMovil } from "../assets/Home";
 import { Footer } from "../components"
 
 
@@ -28,7 +28,7 @@ const IndexPage = () => {
               breakpoints:[750, 1080, 1366, 1920]
               formats: [AUTO, WEBP, AVIF]
               layout: FULL_WIDTH
-              webpOptions: {quality: 70}
+              webpOptions: {quality: 80}
             )
           }
         }
@@ -62,10 +62,21 @@ const IndexPage = () => {
       <Products />
       <Maps />
       <Gift>
-        <motion.a href="https://squareup.com/gift/FHH5R6M6H54FS/order" whileHover={{ scale: 1.1 }} style={{ display: "flex", justifyContent: "flex-end" }}>
+        <motion.a href="https://squareup.com/gift/FHH5R6M6H54FS/order"
+          whileHover={{ scale: 1.1 }}>
+          <ShopWeb className="gift-web" fill={colors.green} fill2={colors.softWhite} />
+        </motion.a>
+        <motion.a href="https://squareup.com/gift/FHH5R6M6H54FS/order"
+          whileHover={{ scale: 1.05 }}>
           <GiftWeb className="gift-web" fill={colors.green} fill2={colors.softWhite} />
         </motion.a>
-        <motion.a href="https://squareup.com/gift/FHH5R6M6H54FS/order" whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }}>
+
+        <motion.a href="https://squareup.com/gift/FHH5R6M6H54FS/order"
+          whileTap={{ scale: 0.9 }}>
+          <ShopWeb className="gift-movil" fill={colors.green} fill2={colors.softWhite} />
+        </motion.a>
+        <motion.a href="https://squareup.com/gift/FHH5R6M6H54FS/order"
+          whileTap={{ scale: 0.9 }}>
           <GiftMovil className="gift-movil" fill={colors.green} fill2={colors.softWhite} />
         </motion.a>
 

@@ -1,7 +1,10 @@
-import { above } from "."
+import { above, aboveLand } from "."
 import styled from "styled-components"
 import { colors, font, size } from "../../utils/const"
 
+
+
+/// HERO SECTION 
 
 export const StyledHome = styled.div`
   display: grid; 
@@ -9,7 +12,6 @@ export const StyledHome = styled.div`
   grid-template-rows: repeat(3); 
   grid-column-gap: 0px;
   grid-row-gap: 0px;
-
   width: 100vw;
   height: 100vh;
   padding-top: 0%;
@@ -68,27 +70,33 @@ export const LogoPrincipal = styled.div`
 export const Gift = styled.div`
   position: fixed;
   top: 60%;
-  right: 0;
-  width: 10vw;
-  height: 30vh;
+  right: 0%;
+  width: 10%;
+  height: 30%;
   background: ${colors.none};
 
   display: flex;
   justify-content: flex-end;
-  align-items: center;
+  align-items: flex-end;
+  flex-direction: column;
+  gap 10%;
 
   ${above.medium`
-  align-items: flex-end;
-  top: 25%;
-  width: 5vw;
-  height: 40vh;
+  top: 50%;
+  width: 7%;
+  height: 35%;
   `}
 
   ${above.large`
+  justify-content: flex-start;
   align-items: flex-end;
-  top: 40%;
-  width: 5vw;
-  height: 40vh;
+  top: 20%;
+  width: 3%;
+  height: 40%;
+  `}
+
+  ${above.xlarge`
+  width: 2%;
   `}
 `
 
@@ -107,7 +115,7 @@ export const Social = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
-  gap: 0.5em;
+  gap: 0.3em;
   padding-left: 15%;
   svg{
     width: 70%;
@@ -151,13 +159,19 @@ export const Scroll = styled.div`
   grid-area: 3 / 1 / 4 / 2;
   width: calc(100vw / 3);
   height: 40vh;
-  background: none;
+  background: ${colors.none};
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+
   ${above.large`
+  align-items: flex-end;
   width: 20vw;
   height: 40vh;
   grid-area: 2 / 3 / 3 / 4; 
   `}
 `
+
 ///////// WEDO //////////
 export const StyledWedoSection = styled.div`
   display:flex;

@@ -18,9 +18,10 @@ export const above = Object.keys(size).reduce((acc, label) => {
   return acc
 }, {})
 
-export const aboveMax = Object.keys(size).reduce((acc, label) => {
+export const aboveLand = Object.keys(size).reduce((acc, label) => {
   acc[label] = (...args) => css`
-    @media (max-width: ${size[label]}px) {
+  @media screen and (orientation:landscape)
+  and (min-device-width: ${size[label]}px) {
       ${css(...args)}
     }
   `
