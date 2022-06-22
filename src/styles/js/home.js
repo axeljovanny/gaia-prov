@@ -706,6 +706,35 @@ export const TextMaps = styled.div`
     color: ${colors.green};
   }
 
+  ${above.medium`
+  
+  width: 100%;
+  height: 20%;
+
+  h3{
+    display:${props => (props.movil ? "flex" : "none")};
+    width: 80%;
+    text-align:justify;
+    font-family: ${font.Llight};
+    font-size: ${size.XList};
+    line-height: 150%;
+    color: ${colors.green};
+    background: ${colors.none};
+  }
+  a{
+    display: ${props => (props.movil ? "flex" : "none")};
+    justify-content: center ;
+    gap: 0.5em;
+    font-family: ${font.Lregular};
+    font-size: ${size.XList};
+    padding: 2em 0 0;
+    width: 100%;
+    color: ${colors.green};
+  }
+
+  
+  `}
+
   ${above.large`
   display ${props => (props.movil ? "none" : "flex")};
   justify-content: flex-start;

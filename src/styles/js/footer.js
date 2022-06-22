@@ -58,12 +58,29 @@ export const Datos = styled.div`
 
   }
   ${above.medium`
-  
+  align-items: center;
+
+  p, a{
+    margin: 3% 0%;
+    font-family: ${font.Lregular};
+    font-size: ${size.XList};
+    color:${colors.softWhite};
+
+  }
   `}
   ${above.large`
   padding-left: 5%;
   width: 45%;
   height: 40%;
+  align-items: flex-start;
+
+  p, a{
+    margin: 1% 0%;
+    font-family: ${font.Lregular};
+    font-size: ${size.Xtext};
+    color:${colors.softWhite};
+
+  }
 
 `}
 
@@ -97,7 +114,6 @@ export const Credits = styled.div`
   width: 100%;
   height: 10%;
   ${above.medium`
-  
   `}
   ${above.large`
   width: 100%;
@@ -120,10 +136,17 @@ export const Policies = styled.div`
   a{ display:flex;
     font-family: ${font.Lmedium};
     font-size: ${size.Mtext};
-    color:${colors.softWhite};}
+    color:${colors.softWhite};
+  }
+
   ${above.medium`
-  
+  a{ display:flex;
+    font-family: ${font.Lregular};
+    font-size: ${size.XList};
+    color:${colors.softWhite};
+  }
   `}
+
   ${above.large`
   justify-content: flex-end;
   width: 50%;
@@ -150,6 +173,12 @@ export const CreditsNote = styled.div`
     a{
       color: ${colors.white};
     }
+    ${above.medium`
+    p, a{
+    font-family: ${font.Lregular};
+    font-size: ${size.Wtext};
+    }
+  `}
     ${above.large`
     width: 90%;
     p{

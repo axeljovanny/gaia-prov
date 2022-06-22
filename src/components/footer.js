@@ -31,7 +31,7 @@ const Footer = ({ children }) => (
                     </FooterIcons>
                 </RS>
                 <Datos>
-                    <p className="tel1">
+                    <p className="tel1" >
                         <a href="tel:773-799-8843">773-799-8843</a>
                     </p>
                     <p className="email">
