@@ -115,11 +115,8 @@ export const Social = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
-  gap: 0.3em;
+  gap: 0.5em;
   padding-left: 15%;
-  svg{
-    width: 70%;
-  }
   `}
 `
 

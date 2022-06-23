@@ -1,4 +1,5 @@
 import styled from "styled-components"
+import { motion } from "framer-motion"
 import { above } from "."
 import { colors, font, size } from "../../utils/const"
 
@@ -58,7 +59,7 @@ export const StyledItems = styled.div`
   `}
 `
 
-export const ItemNav = styled.div`
+export const ItemNav = styled(motion.div)`
 display: flex;
 justify-content: center;
 align-items: center;

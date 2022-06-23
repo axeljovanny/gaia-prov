@@ -1,16 +1,16 @@
 import React, { useState } from "react"
 import { Link } from "gatsby"
 import { StaticImage } from "gatsby-plugin-image"
+import { motion } from "framer-motion"
+// Estilos
 import { StyledLogoContainer, StyledItems, StyledNavbar, ItemNav, LineHome } from "../styles/js/navbar"
 import { OverlayMenu, Overlay, Item, StyledIcons, NavIcon, Line, OverlayFooter, Contacto, Logo } from "../styles/js/servnav"
-import { motion } from "framer-motion"
-
+// SVG
 import { MapsIcon, FacebookIcon, InstagramIcon } from "../images/icons"
-import { colors } from "../utils/const"
-
 import Loadable from "@loadable/component"
 const Logow = Loadable(() => import("../assets/logo.svg"))
-
+//Constantes
+import { colors } from "../utils/const"
 
 
 
@@ -21,44 +21,34 @@ const Navbar = ({ siteTitle }) => {
         <>
             <StyledNavbar>
                 <StyledItems>
-                    <ItemNav>
-                        <motion.p whileHover={{ scale: 1.1, priginX: 0, color: colors.accentBlue }} whileTap={{ scale: 0.9 }}>
-                            <Link to="/hair">
-                                HAIR CARE
-                            </Link>
-                        </motion.p>
+                    <ItemNav 
+                    whileHover={{ scale: 1.1, priginX: 0, color: colors.accentBlue }} 
+                    whileTap={{ scale: 0.9 }}>
+                            <Link to="/hair"> HAIR CARE </Link>
                     </ItemNav>
-                    <ItemNav>
-                        <motion.p whileHover={{ scale: 1.1, priginX: 0, color: colors.accentBlue }} whileTap={{ scale: 0.9 }}>
-                            <Link to="/skin">
-                                SKIN CARE
-                            </Link>
-                        </motion.p>
+                    <ItemNav 
+                    whileHover={{ scale: 1.1, priginX: 0, color: colors.accentBlue }} 
+                    whileTap={{ scale: 0.9 }}>
+                            <Link to="/skin"> SKIN CARE </Link>
                     </ItemNav>
                 </StyledItems>
 
-                <StyledLogoContainer >
+                <StyledLogoContainer>
                     <Link to="/">
-                        <div className="logonav">
-                            <Logow className="logo" />
-                        </div>
+                        <Logow className="logo" />
                     </Link>
                 </StyledLogoContainer>
 
                 <StyledItems>
-                    <ItemNav>
-                        <motion.p whileHover={{ scale: 1.1, priginX: 0, color: colors.accentBlue }} whileTap={{ scale: 0.9 }}>
-                            <Link to="/body">
-                                BODY CARE
-                            </Link>
-                        </motion.p>
+                <ItemNav 
+                    whileHover={{ scale: 1.1, priginX: 0, color: colors.accentBlue }} 
+                    whileTap={{ scale: 0.9 }}>                            
+                    <Link to="/body"> BODY CARE </Link>
                     </ItemNav>
-                    <ItemNav>
-                        <motion.p whileHover={{ scale: 1.1, priginX: 0, color: colors.accentBlue }} whileTap={{ scale: 0.9 }}>
-                            <Link to="/">
-                                ABOUT US
-                            </Link>
-                        </motion.p>
+                    <ItemNav 
+                    whileHover={{ scale: 1.1, priginX: 0, color: colors.accentBlue }} 
+                    whileTap={{ scale: 0.9 }}>                            
+                        <Link to="/"> ABOUT US </Link>
                     </ItemNav>
                 </StyledItems>
 
