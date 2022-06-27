@@ -56,7 +56,7 @@ const IndexPage = () => {
       </StyledSkin>
       <Products />
       <Maps />
-      <Gift>
+      <Gift initial={{opacity:0}} animate={{opacity:1}} transition={{duration:1, delay:1.9}} >
         <motion.a href="https://squareup.com/gift/FHH5R6M6H54FS/order"
           whileHover={{ scale: 1.1 }}>
           <ShopWeb className="gift-web" fill={colors.green} fill2={colors.softWhite} />

@@ -1,6 +1,7 @@
 import { above, aboveLand } from "."
 import styled from "styled-components"
 import { colors, font, size } from "../../utils/const"
+import { motion } from "framer-motion"
 
 
 
@@ -67,7 +68,7 @@ export const LogoPrincipal = styled.div`
   `}
 `
 
-export const Gift = styled.div`
+export const Gift = styled(motion.div)`
   position: fixed;
   top: 60%;
   right: 0%;
@@ -100,7 +101,7 @@ export const Gift = styled.div`
   `}
 `
 
-export const Social = styled.div`
+export const Social = styled(motion.div)`
   grid-area: none;
   display:none;
 
@@ -355,7 +356,7 @@ export const StyledProducts = styled.div`
   `}
 `
 
-export const RectanguloProd = styled.div`
+export const RectanguloProd = styled(motion.div)`
   width: 100%;
   height: 70%;
   max-width: 300px;
@@ -379,7 +380,7 @@ export const RectanguloProd = styled.div`
 
   `}
 `
-export const Rectangulo = styled.div`
+export const Rectangulo = styled(motion.div)`
   position: absolute;
   bottom: 10%;
   background: ${colors.green};
@@ -402,7 +403,7 @@ export const Rectangulo2 = styled.div`
   bottom: -12%;
   `}
   `
-export const TextProduct = styled.div`
+export const TextProduct = styled (motion.div)`
   width: 90%;
   color: ${colors.green};
   font-family: ${font.Lregular};

@@ -4,12 +4,12 @@ import { Swiper, SwiperSlide } from "swiper/react";
 
 // Import Swiper styles
 import "swiper/css";
-import "swiper/css/pagination";
+import "swiper/css/navigation";
 
 import "./swiper.css";
 
 // import required modules
-import { Navigation } from "swiper";
+import { Pagination ,Navigation } from "swiper";
 import { Gallery, ProductContainer, Rectangulo, Rectangulo2, RectanguloProd, TextProduct } from "../styles/js/home.js"
 import { StaticImage } from "gatsby-plugin-image"
 
@@ -18,6 +18,47 @@ import { motion } from "framer-motion";
 
 
 export default function SwiperF() {
+
+
+
+    const animTxt = {
+        rest: {
+          opacity:0,
+          transition: {
+            duration: .1,
+            ease: "easeIn"
+          }
+        },
+        hover: {
+          opacity:1,
+          transition: {
+            duration: .5,
+            type: "tween",
+            ease: "easeOut"
+          }
+        }
+      };
+
+      const animImg = {
+        rest: {
+          scale:1,
+          rotate:0,
+          transition: {
+            duration: .1,
+            ease: "easeIn"
+          }
+        },
+        hover: {
+          scale:1.1,
+          rotate:-8,
+          transition: {
+            duration: 0.1,
+            type: "tween",
+            ease: "easeOut"
+          }
+        }
+      };
+
     return (
         <>
 
@@ -25,8 +66,9 @@ export default function SwiperF() {
                 slidesPerView={1}
                 spaceBetween={10}
 
+                modules={[Navigation, Pagination]}
                 navigation={true}
-                modules={[Navigation]}
+
 
                 className="mySwiper"
                 loop={true}
@@ -50,10 +92,12 @@ export default function SwiperF() {
                 }}
             >
                 <SwiperSlide>
-                    <RectanguloProd>
-                        <Rectangulo />
+                    <RectanguloProd 
+                        initial="rest" whileHover="hover" animate="rest">
+                        <Rectangulo/>
+                        <motion.div className="contProduct" variants={animImg}>
                         <StaticImage
-                            className="contProduct"
+                            /* className="contProduct" */
                             imgClassName="imgProduct"
                             src="../images/Products/PNG/Cherry.png"
                             alt="producto"
@@ -62,20 +106,19 @@ export default function SwiperF() {
                             formats={['auto', 'webp', 'avif']}
                             quality='100'
                         />
+                        </motion.div>
                         <Rectangulo2 />
-                        <TextProduct className="texto">
-                            <motion.div initial={{opacity: 0}} whileHover={{opacity:1}} transition={{duration: .5}}>
-                            <h3 >NOMBRE DEL PRODUCTO</h3>
-                            <a>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's.</a>
-                            </motion.div>
+                        <TextProduct className="texto" >
+                            <h3>NOMBRE DEL PRODUCTO 1</h3>
+                            <motion.a variants={animTxt}>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's.</motion.a>
                         </TextProduct>
                     </RectanguloProd>
                 </SwiperSlide>
                 <SwiperSlide>
-                    <RectanguloProd>
+                    <RectanguloProd initial="rest" whileHover="hover" animate="rest" >
                         <Rectangulo />
+                        <motion.div className="contProduct" variants={animImg}>
                         <StaticImage
-                            className="contProduct"
                             imgClassName="imgProduct"
                             src="../images/Products/PNG/HandRelief.png"
                             alt="producto"
@@ -84,20 +127,19 @@ export default function SwiperF() {
                             formats={['auto', 'webp', 'avif']}
                             quality='100'
                         />
+                        </motion.div>
                         <Rectangulo2 />
                         <TextProduct className="texto">
-                        <motion.div initial={{opacity: 0}} whileHover={{opacity:1}} transition={{duration: .5}}>
                             <h3 >NOMBRE DEL PRODUCTO</h3>
-                            <a>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's.</a>
-                            </motion.div>
+                            <motion.a variants={animTxt}>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's.</motion.a>
                         </TextProduct>
                     </RectanguloProd>
                 </SwiperSlide>
                 <SwiperSlide>
-                    <RectanguloProd>
+                    <RectanguloProd initial="rest" whileHover="hover" animate="rest">
                         <Rectangulo />
+                        <motion.div className="contProduct" variants={animImg}>
                         <StaticImage
-                            className="contProduct"
                             imgClassName="imgProduct"
                             src="../images/Products/PNG/Invati2.png"
                             alt="producto"
@@ -106,20 +148,19 @@ export default function SwiperF() {
                             formats={['auto', 'webp', 'avif']}
                             quality='100'
                         />
+                        </motion.div>
                         <Rectangulo2 />
                         <TextProduct className="texto">
-                        <motion.div initial={{opacity: 0}} whileHover={{opacity:1}} transition={{duration: .5}}>
                             <h3 >NOMBRE DEL PRODUCTO</h3>
-                            <a>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's.</a>
-                            </motion.div>
+                            <motion.a variants={animTxt}>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's.</motion.a>
                         </TextProduct>
-                    </RectanguloProd>
+                    </RectanguloProd >
                 </SwiperSlide>
                 <SwiperSlide>
-                    <RectanguloProd>
+                    <RectanguloProd initial="rest" whileHover="hover" animate="rest">
                         <Rectangulo />
+                        <motion.div className="contProduct" variants={animImg}>
                         <StaticImage
-                            className="contProduct"
                             imgClassName="imgProduct"
                             src="../images/Products/PNG/Shampure.png"
                             alt="producto"
@@ -128,15 +169,14 @@ export default function SwiperF() {
                             formats={['auto', 'webp', 'avif']}
                             quality='100'
                         />
-                        <Rectangulo2 /><TextProduct className="texto">
-                        <motion.div initial={{opacity: 0}} whileHover={{opacity:1}} transition={{duration: .5}}>
+                        </motion.div>
+                        <Rectangulo2 />
+                        <TextProduct className="texto">
                             <h3 >NOMBRE DEL PRODUCTO</h3>
-                            <a>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's.</a>
-                            </motion.div>
+                            <motion.a variants={animTxt}>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's.</motion.a>
                         </TextProduct>
                     </RectanguloProd>
                 </SwiperSlide>
-
             </Swiper>
         </>
     );

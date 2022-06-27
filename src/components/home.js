@@ -40,12 +40,12 @@ const Hero = ({ children }) => (
                     className="LogoPrincipal"
                     initial={{ opacity: 0, y: -10 }}
                     animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 2.1, ease: "easeInOut", type: "spring" }}>
+                    transition={{ duration: 2.1, ease: "easeInOut", type: "spring", delay:1 }}>
                     <GEWeb className="logo-web" fill={colors.black} />
                     <GEMovil className="logo-movil" fill={colors.black} />
                 </motion.div>
             </LogoPrincipal>
-            <Social>
+            <Social initial={{opacity:0}} animate={{opacity:1}} transition={{duration:1, delay:1.5}}>
                 <a href="https://www.facebook.com/GaiaEvolutionGroup/" rel="noreferrer" target="_blank">
                     <FacebookIcon fill={colors.green} className="svgAbout" />
                 </a>

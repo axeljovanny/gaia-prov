@@ -76,11 +76,6 @@
   box-sizing: border-box;
   transition: 400ms;
 }
-.contProduct:hover {
-  box-sizing: border-box;
-  transition: 400ms;
-  transform: translateY(-20px) scale(1.1) rotate(-2deg);
-}
 
 .imgProduct {
   display: block;
