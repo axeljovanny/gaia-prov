@@ -67,20 +67,6 @@ ul {
 }
 
 
-.content{
-  display: flex;
-  align-items: flex-start;
-  justify-content: flex-start;
-  flex-direction: column;
-  z-index: 10;
-  position: absolute;
-  width: 100vw;
-  height: 100vh;
-  left: 0;
-  right: 0;
-  top: 0;
-}
-
 @media (min-width: 1140px) {
   .masthead {
     background-size: cover;

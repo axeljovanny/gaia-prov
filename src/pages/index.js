@@ -4,7 +4,7 @@ import { getImage } from "gatsby-plugin-image"
 import { BgImage } from "gbimage-bridge"
 import { motion } from "framer-motion"
 // Componentes
-import { Navbar } from "../components/navbar";
+import { IconNav, Navbar } from "../components/navbar";
 import { Bodycare, Haircare, Hero, Maps, Products, Skincare, Wedo } from "../components/home";
 import { Footer } from "../components"
 // Estilos
@@ -43,7 +43,6 @@ const IndexPage = () => {
       <BgImage image={image} className="mastheadHome">
         <Hero />
       </BgImage>
-      <Navbar />
       <Wedo />
       <StyledSkin>
         <Skincare />
@@ -74,6 +73,7 @@ const IndexPage = () => {
           <GiftMovil className="gift-movil" fill={colors.green} fill2={colors.softWhite} />
         </motion.a>
       </Gift>
+      <Navbar />
       <Footer></Footer>
     </>
   )

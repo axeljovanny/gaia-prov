@@ -1,3 +1,4 @@
+import { motion } from "framer-motion"
 import styled from "styled-components"
 import { above } from "."
 import { colors, font, size } from "../../utils/const"
@@ -172,22 +173,18 @@ export const Line = styled.span`
     }
 `;
 
-export const Overlay = styled.div`
+export const Overlay = styled(motion.div)`
 
   display: flex;
   flex-direction: column;
-  height: ${props => (props.open ? "100vh" : 0)};
+  height: 10%;
   width: 100vw;
-  background: ${colors.green};
-  transition: height 0.3s ease-in-out;
   position: fixed;
-  top:0;
-  z-index: 5;
-  justify-content: space-evenly;
-  align-items: center;
-  :nth-child(1n) {
-    align-items: flex-end;
-  }
+  top: 0;
+  z-index: 12;
+  background: ${colors.none};
+
+
 
   ${above.large` {
     display: none;
@@ -196,25 +193,42 @@ export const Overlay = styled.div`
 `;
 
 
-export const OverlayMenu = styled.div`
+
+export const Over = styled(motion.div)`
+  flex-direction: column;
+  width: 100vw;
+  position: fixed;
+  top:0;
+
+  ${above.large` {
+    display: none;
+    }
+  `}
+`;
+export const OverButton = styled(motion.button)`
+  position: fixed;
+  z-index: 13;
+`;
+
+
+export const OverlayMenu = styled(motion.div)`
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
-  display: ${props => (props.open ? 'flex' : 'none')};
-  width: 90vw;
-  height: ${props => (props.open ? "40%" : 0)};
-  transition: height 0.4s ease-in-out;
+  display: flex;
+  width: 100%;
+  height: 60%;
   background: ${colors.none};
-
+  padding: 0em 15%;
   list-style: none;
 
 
 `;
-export const OverlayFooter = styled.div`
+export const OverlayFooter = styled(motion.div)`
   flex-flow: row wrap;
   justify-content: flex-start;
   align-items: center;
-  display: ${props => (props.open ? 'flex' : 'none')};
+  display: flex;
   width: 100%;
   height: 25%;
   background: ${colors.none};
@@ -256,21 +270,15 @@ export const Logo = styled.div`
 `;
 
 export const StyledIcons = styled.div`
-    display: ${props => props.open ? 'flex' : 'none'};
-    height: ${props => (props.open ? "auto" : 0)};
+    display: flex;
+    height: 15%;
+    background: ${colors.none};
     flex-direction: row;
     justify-content: flex-end;
-
     align-items: center;
     padding: 0em 2em;
     gap: 1em;
     width: auto;
-    opacity: ${props => (props.open ? 1 : 0)};
-    transition: opacity 1s ease-in-out;
-
-    svg{
-      width: 100%;
-    }
     
     ${above.medium`
     flex-direction: row;
@@ -280,7 +288,7 @@ export const StyledIcons = styled.div`
   `}
     ${above.large`
     padding-top: 5vh;
-    display: ${props => props.footer ? 'none' : 'flex'};
+    display: ${props => (props.footer ? 'none' : 'flex')};
     height: 50%;
     flex-direction: column;
     justify-content: flex-start;
