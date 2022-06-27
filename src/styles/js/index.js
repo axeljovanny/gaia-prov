@@ -45,7 +45,6 @@ body {
   background: ${colors.softWhite};
   height:100%; 
   overflow-x: hidden;
-  overflow-y: scroll;
 
 }
 a {

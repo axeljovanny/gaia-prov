@@ -347,7 +347,7 @@ export const StyledProducts = styled.div`
   align-items: center;
 
   width: 100vw;
-  height: 80vh;
+  height: 60vh;
   background: ${colors.none};
   ${above.large`  
   height: 80vh;
@@ -357,10 +357,10 @@ export const StyledProducts = styled.div`
 `
 
 export const RectanguloProd = styled(motion.div)`
-  width: 100%;
+  width: 80%;
   height: 70%;
   max-width: 300px;
-  background: ${colors.none};
+  background: ${colors.yell};
   position: relative;
   display: flex;
   justify-content: center;

@@ -42,6 +42,7 @@ export const StyledLogoContainer = styled.div`
   justify-content: center;
   align-items: center;
   background: ${colors.none};
+  width: 10%;
 
   `}
 `
