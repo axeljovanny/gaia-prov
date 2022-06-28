@@ -18,7 +18,6 @@ export const StyledNavbar = styled.div`
       
   `}
   ${above.large`
-  display: flex;
   justify-content: center;
   align-items: center;
   width: 100vw;
@@ -43,6 +42,11 @@ export const StyledLogoContainer = styled.div`
   align-items: center;
   background: ${colors.none};
   width: 10%;
+  a{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
 
   `}
 `
@@ -69,6 +73,8 @@ padding: 0;
 background-color: none;
 margin: 54px 3vw;
 font-family: 'Montserrat', sans-serif;
+background: ${colors.none};  
+
 
 a{
   font-family:  ${font.Rlight};

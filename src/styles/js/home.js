@@ -110,14 +110,14 @@ export const Social = styled(motion.div)`
   width: 19vw;
   height: 40vh;
   background: ${colors.none};
-  transform: translateY(10%);
 
   display:flex;
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
   gap: 0.5em;
-  padding-left: 15%;
+  a{padding-left: 15%;}
+  
   `}
 `
 
@@ -177,7 +177,7 @@ export const StyledWedoSection = styled.div`
   align-items: center;
   width: 100vw;
   height: 100vh;
-  background: ${colors.softWhite};
+  background: ${colors.none};
   ${above.large`
   
   `}
@@ -360,7 +360,7 @@ export const RectanguloProd = styled(motion.div)`
   width: 80%;
   height: 70%;
   max-width: 300px;
-  background: ${colors.yell};
+  background: ${colors.none};
   position: relative;
   display: flex;
   justify-content: center;
@@ -405,14 +405,30 @@ export const Rectangulo2 = styled.div`
   `
 export const TextProduct = styled (motion.div)`
   width: 90%;
-  color: ${colors.green};
-  font-family: ${font.Lregular};
-  font-size: ${size.Mtext};
   h3{
     color: ${colors.black};
     font-family: ${font.Llight};
     font-size: ${size.Mtext};
   }
+
+  ${above.large` 
+  
+  `}
+  `
+
+export const DescProduct = styled (motion.a)`
+    display: ${props => (props.movil ? "flex" : "none")};
+    color: ${colors.green};
+    font-family: ${font.Lregular};
+    font-size: ${size.Mtext};
+
+  ${above.large` 
+
+    display: ${props => (props.movil ? "none" : "flex")};
+    color: ${colors.red};
+    font-family: ${font.Lregular};
+    font-size: ${size.Mtext};
+  `}
   `
 
 export const BannerProducts = styled.div`
@@ -798,10 +814,10 @@ export const TransMap = styled.div`
   position: absolute;
   left: auto;
   top: 10%;
-  background: linear-gradient(to top, rgba(0, 0, 0, 0) 0%, ${colors.softWhite} 40%);
+  background: linear-gradient(to top, rgba(244, 242, 239, 0.1) 0%, ${colors.softWhite} 40%);
 
   ${above.large`
-  background: linear-gradient(to left, rgba(0, 0, 0, 0) 0%, ${colors.softWhite} 40%);
+  background: linear-gradient(to left, rgba(244, 242, 239, 0.1) 0%, ${colors.softWhite} 40%);
 
   width: 30%;
   height: 70vh;

@@ -73,7 +73,7 @@ const IndexPage = () => {
           <GiftMovil className="gift-movil" fill={colors.green} fill2={colors.softWhite} />
         </motion.a>
       </Gift>
-      <Navbar />
+       <Navbar />
       <Footer></Footer>
     </>
   )

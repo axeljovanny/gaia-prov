@@ -41,19 +41,10 @@
   .svgAbout {
     transform: scale(1);
   }
-  .logo {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 80%;
-    height: auto;
-    margin: 0 auto;
-  }
+
 }
 
 @media only screen and (min-width: 1400px) {
-  .logo {
-    width: 60%;
-  }
+
   
 }

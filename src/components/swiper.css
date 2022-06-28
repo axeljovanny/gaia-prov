@@ -1,6 +1,9 @@
 .swiper {
   width: 90%;
-  height: 60%;
+  height: 70%;
+  background: none;
+  z-index: 0;
+
 }
 
 .swiper-slide {
@@ -20,6 +23,7 @@
   -webkit-align-items: center;
   align-items: center;
   transition: transform 300ms ease 100ms;
+  margin-right: 0;
 }
 .swiper-slide:hover {
   transform: translateX(-5%);
@@ -49,17 +53,14 @@
   margin-right: auto;
 }
 .swiper-button-prev {
-  width: 5%;
-  color: black;
-  left: -1%;
-  opacity: 50%;
+  color: #2C2C2C;
+  transform: translateX(-40%);
 }
 
 .swiper-button-next {
-  width: 5%;
-  color: black;
-  right: -1%;
-  opacity: 50%;
+  color: #2C2C2C;
+  transform: translateX(40%);
+
 }
 
 @media only screen and (min-width: 1140px) {

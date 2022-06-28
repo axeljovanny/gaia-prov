@@ -1,7 +1,6 @@
 import React, { useState } from "react"
 import { StyledServiceContent, StyledServicePage, StyledServiceTittle, StyledServiceDesc, StyledServicePhoto, StyledServiceNote, StyledNote, TextTittle, StyledSVG, StyledServiceMobileContent, StyledService, DescBook } from "../styles/js/skin";
 import '../styles/css/services.css'
-import { StaticImage } from "gatsby-plugin-image";
 import { motion } from "framer-motion";
 import { colors } from "../utils/const";
 import '../styles/css/skin.css'

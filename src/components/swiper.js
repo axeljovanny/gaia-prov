@@ -10,7 +10,7 @@ import "./swiper.css";
 
 // import required modules
 import { Pagination ,Navigation } from "swiper";
-import { Gallery, ProductContainer, Rectangulo, Rectangulo2, RectanguloProd, TextProduct } from "../styles/js/home.js"
+import { DescProduct, Rectangulo, Rectangulo2, RectanguloProd, TextProduct } from "../styles/js/home.js"
 import { StaticImage } from "gatsby-plugin-image"
 
 //import librerias Framer motion
@@ -61,33 +61,28 @@ export default function SwiperF() {
 
     return (
         <>
-
             <Swiper
                 slidesPerView={1}
-                spaceBetween={10}
-
+                spaceBetween={0}
                 modules={[Navigation, Pagination]}
                 navigation={true}
-
-
-                className="mySwiper"
                 loop={true}
                 breakpoints={{
                     640: {
                         slidesPerView: 1,
-                        spaceBetween: 20,
+                        spaceBetween: "2%",
                     },
                     768: {
                         slidesPerView: 2,
-                        spaceBetween: 40,
+                        spaceBetween: "2%",
                     },
                     1024: {
                         slidesPerView: 3,
-                        spaceBetween: 50,
+                        spaceBetween: "2%",
                     },
                     1300: {
                         slidesPerView: 4,
-                        spaceBetween: 60,
+                        spaceBetween: "3%",
                     },
                 }}
             >
@@ -110,7 +105,8 @@ export default function SwiperF() {
                         <Rectangulo2 />
                         <TextProduct className="texto" >
                             <h3>NOMBRE DEL PRODUCTO 1</h3>
-                            <motion.a variants={animTxt}>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's.</motion.a>
+                            <DescProduct variants={animTxt}>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's.</DescProduct>
+                            <DescProduct movil>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's.</DescProduct>
                         </TextProduct>
                     </RectanguloProd>
                 </SwiperSlide>

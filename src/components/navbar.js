@@ -1,19 +1,16 @@
 import React, { useState, useRef } from "react"
 import { Link } from "gatsby"
-import { StaticImage } from "gatsby-plugin-image"
-import { motion, useCycle } from "framer-motion"
+import { useCycle } from "framer-motion"
 // Estilos
 import { StyledLogoContainer, StyledItems, StyledNavbar, ItemNav, LineHome } from "../styles/js/navbar"
-import { OverlayMenu, Overlay, Item, StyledIcons, NavIcon, Line, OverlayFooter, Contacto, Logo } from "../styles/js/servnav"
+import { Overlay } from "../styles/js/servnav"
 // SVG
-import { MapsIcon, FacebookIcon, InstagramIcon } from "../images/icons"
 import Loadable from "@loadable/component"
 const Logow = Loadable(() => import("../assets/logo.svg"))
 //Constantes
 import { colors } from "../utils/const"
 
 // NAV
-import { useDimensions } from "./nav/use-dimensions";
 import { MenuToggle } from "./nav/MenuToggle";
 import { Navigation } from "./nav/Navigation";
 import "./nav/styles.css";

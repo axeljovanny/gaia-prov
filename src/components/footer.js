@@ -5,7 +5,6 @@ import { colors } from "../utils/const"
 import { Flecha, GEFoot, GEWeb } from "../assets/Home";
 import { Link } from "gatsby";
 import { motion } from "framer-motion";
-import { StyledIcons } from "../styles/js/servnav";
 
 
 
@@ -44,7 +43,7 @@ const Footer = ({ children }) => (
                     </p>
                 </Datos>
                 <Policies>
-                    <Link>READ POLICIES <Flecha className="flecha" stroke={colors.softWhite} /></Link>
+                    <Link to="/" >READ POLICIES <Flecha className="flecha" stroke={colors.softWhite} /></Link>
                 </Policies>
                 <Credits>
                     <CreditsNote><motion.p initial={{ y: 10, opacity: 0 }} animate={{ y: 0, opacity: 1 }} transition={{ duration: 1.3, delay: .9, ease: "backInOut" }}> © Gaia Evolution Spa & Salon  {(new Date().getFullYear())} | <a href="https://luckyducky.studio/" rel="noreferrer" target="_blank">Lucky Ducky Studio</a></motion.p></CreditsNote>
