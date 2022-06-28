@@ -350,7 +350,7 @@ export const StyledProducts = styled.div`
   height: 60vh;
   background: ${colors.none};
   ${above.large`  
-  height: 80vh;
+  height: 70vh;
 
   
   `}
@@ -390,13 +390,13 @@ export const Rectangulo = styled(motion.div)`
   `
 export const Rectangulo2 = styled.div`
   position: absolute;
-  bottom: -7%;
+  bottom: -20%;
   background: ${colors.softWhite};
   width: 110%;
-  height: 40%;
+  height: 50%;
   ${above.large`  
-  height: 30%;
-  bottom: 5%;
+  height: 40%;
+  bottom: -8%;
   `}
   ${above.xlarge`  
   height: 40%;
@@ -405,6 +405,8 @@ export const Rectangulo2 = styled.div`
   `
 export const TextProduct = styled (motion.div)`
   width: 90%;
+  background: ${colors.none};
+
   h3{
     color: ${colors.black};
     font-family: ${font.Llight};
@@ -421,11 +423,10 @@ export const DescProduct = styled (motion.a)`
     color: ${colors.green};
     font-family: ${font.Lregular};
     font-size: ${size.Mtext};
+    text-align: center;
 
   ${above.large` 
-
     display: ${props => (props.movil ? "none" : "flex")};
-    color: ${colors.red};
     font-family: ${font.Lregular};
     font-size: ${size.Mtext};
   `}
