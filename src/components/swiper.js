@@ -153,8 +153,8 @@ export default function SwiperF() {
                         <Rectangulo2 />
                         <TextProduct className="texto" >
                             <h3>Botanical Repair strengthening leave-in treatment</h3>
-                            <DescProduct variants={animTxt}>Leave-in treatment instantly strengthens, repairs and helps protect against damage while building bonds for stronger hair from the inside out. Reduces frizz & detangles to help prevent breakage and protects against heat up to 450°, safeguarding against damage caused during blow-drying & heat styling.</DescProduct>
-                            <DescProduct movil>Leave-in treatment instantly strengthens, repairs and helps protect against damage while building bonds for stronger hair from the inside out. Reduces frizz & detangles to help prevent breakage and protects against heat up to 450°, safeguarding against damage caused during blow-drying & heat styling.</DescProduct>
+                            <DescProduct variants={animTxt}>Leave-in treatment instantly strengthens, repairs and helps protect against damage while building bonds for stronger hair from the inside out.</DescProduct>
+                            <DescProduct movil>Leave-in treatment instantly strengthens, repairs and helps protect against damage while building bonds for stronger hair from the inside out.</DescProduct>
                         </TextProduct>
                     </RectanguloProd>
                 </SwiperSlide>

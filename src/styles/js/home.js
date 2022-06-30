@@ -291,8 +291,9 @@ export const TextWedo = styled.div`
 
   ${above.xlarge`
   padding: 0 1em 0 4em;
-  width: 30%;
-  height: 90%;
+  width: 40%;
+  height: 80%;
+  
   a{
     justify-content: flex-start ;
   }
@@ -301,13 +302,18 @@ export const TextWedo = styled.div`
     font-size: ${size.Xheader};
   }
   h2{
-    font-family: ${font.Rlight};
-    font-size: ${size.Xtittle};
+    font-family: ${font.Rsemi};
+    font-size: ${size.XList};
   }
   h3{
     text-align:justify;
-    font-family: ${font.Rlight};
-    font-size: ${size.Xtext};
+    font-family: ${font.Llight};
+    font-size: ${size.WList};
+  }
+  a{
+    width: 19%;
+    font-family: ${font.Rbold};
+    font-size: ${size.Mtittle};
   }
   
   `}
@@ -400,7 +406,7 @@ export const Rectangulo2 = styled.div`
   `}
   ${above.xlarge`  
   height: 40%;
-  bottom: -12%;
+  bottom: -3%;
   `}
   `
 export const TextProduct = styled (motion.div)`
@@ -416,6 +422,17 @@ export const TextProduct = styled (motion.div)`
   ${above.large` 
   
   `}
+
+  ${above.xlarge` 
+  background: ${colors.none};
+  display: flex;
+
+  h3{
+    color: ${colors.black};
+    font-family: ${font.Rthin};
+    font-size: ${size.Wmini};
+  }
+  `}
   `
 
 export const DescProduct = styled (motion.a)`
@@ -430,6 +447,11 @@ export const DescProduct = styled (motion.a)`
     font-family: ${font.Lregular};
     font-size: ${size.Mtext};
   `}
+
+  ${above.xlarge` 
+  font-family: ${font.Llight};
+  font-size: ${size.Mtext};
+`}
   `
 
 export const BannerProducts = styled.div`
@@ -518,6 +540,12 @@ export const ImgSkin = styled.div`
   width: 20%;
   height: 20%;
   `}
+
+  ${above.xlarge`
+  width: 22%;
+  height: 25%;
+  `}
+
 `
 
 export const TextSkin = styled.div`
@@ -581,16 +609,19 @@ export const TextSkin = styled.div`
   
   `}
   ${above.xlarge`
-  height: 45%;
+  height: 32%;
   justify-content: flex-end;
-  width: 50%;
+  width: 60%;
+  padding: 5em 0 0;
   a{
+    font-family: ${font.Rbold};
+    font-size: ${size.Mtittle};
     justify-content: flex-start ;
   }
   h3{
     text-align:justify;
-    font-family: ${font.Lthin};
-    font-size: ${size.Xtext};
+    font-family: ${font.Llight};
+    font-size: ${size.WList};
   }
   
   `}
@@ -611,6 +642,11 @@ export const ImgHair = styled.div`
   ${above.large`
   width: 25%;
   height: 90%;
+  `}
+
+  ${above.xlarge`
+  width: 25%;
+  height: 30%;
   `}
 `
 
@@ -678,16 +714,18 @@ export const TextHair = styled.div`
   `}
 
   ${above.xlarge`
-  width: 45%;
-  height: 45%;
+  width: 58%;
+  height: 40%;
   justify-content: flex-end;
   a{
+    font-family: ${font.Rbold};
+    font-size: ${size.Mtittle};
     justify-content: flex-start ;
   }
   h3{
     text-align:justify;
-    font-family: ${font.Lthin};
-    font-size: ${size.Xtext};
+    font-family: ${font.Llight};
+    font-size: ${size.WList};
   }
   `}
 `
@@ -802,6 +840,15 @@ export const TextMaps = styled.div`
 
   }
   a{
+    display: ${props => (props.movil ? "none" : "flex")};
+  }
+
+  
+  `}
+
+  ${above.xlarge`
+  a{
+    margin-top: 18%;
     display: ${props => (props.movil ? "none" : "flex")};
   }
 

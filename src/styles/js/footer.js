@@ -16,6 +16,11 @@ export const StyledFooter = styled.div`
   height: 70vh;
 
   `}
+  ${above.xlarge`
+
+  height: 50vh;
+
+  `}
 `
 
 export const StyledContainer = styled.div`
@@ -99,6 +104,18 @@ export const RS = styled.div`
   background: ${colors.none};
   width: 50%;
   height: 40%;
+
+`}
+
+${above.xlarge`
+display:flex;  
+justify-content: center;
+align-items: center;
+flex-flow: column nowrap;
+
+background: ${colors.none};
+width: 65%;
+height: 40%;
 
 `}
 
@@ -190,6 +207,19 @@ export const CreditsNote = styled.div`
     }
 
   `}
+
+  ${above.xlarge`
+  width: 90%;
+  p{
+    padding-top: 12vh;
+    font-size: ${size.Wmini};
+    color: ${colors.white};
+  }
+  a{
+    color: ${colors.white};
+  }
+
+ `}
     `
 
 export const FooterIcons = styled.div`
