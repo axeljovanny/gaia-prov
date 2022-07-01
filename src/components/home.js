@@ -5,7 +5,7 @@ import { Link } from "gatsby"
 // Swiper
 import SwiperF from "./swiper"
 // Style componets
-import { BannerProducts, CircleNature, Gift, ImageWedo, ImgHair, ImgSkin, ImgsWedo, LogoPrincipal, PhoneLogo, Scroll, Social, StyledHair, StyledHome, StyledMaps, StyledProducts, StyledSkin, StyledTratamient, StyledWedo, StyledWedoSection, TextHair, TextMaps, TextSkin, TextWedo, TransMap } from "../styles/js/home.js"
+import { BannerProducts, CircleNature, Gift, ImageWedo, ImgHair, ImgSkin, ImgsWedo, LogoPrincipal, PhoneLogo, Scroll, Social, StyledHair, StyledHome, StyledMaps, StyledProducts, StyledSkin, StyledSvg, StyledTratamient, StyledWedo, StyledWedoSection, TextHair, TextMaps, TextSkin, TextWedo, TransMap } from "../styles/js/home.js"
 // Constantes
 import { colors } from "../utils/const"
 // SVG
@@ -147,7 +147,7 @@ const Skincare = ({ children }) => {
                     whileInView={{ opacity: 1 }}
                     transition={{ duration: 1.5 }}
                     viewport={{ once: true }}
-                    style={{ y: y2, bottom: 0, left: 0, width:"calc(40% + 2vw)", height:"calc(30% + 6vh)"}}>
+                    style={{ y: y2, bottom: 0, left: 0}}>
                     <StaticImage
                         className="Skin"
                         imgClassName=""
@@ -159,15 +159,15 @@ const Skincare = ({ children }) => {
                         quality='100'
                     />
                 </ImageWedo>
-            <motion.div
+            <StyledSvg
                 initial={{ opacity: 0 }}
                 animate={{ y: 0 }}
                 whileInView={{ opacity: 1 }}
                 transition={{ duration: 1.5 }}
                 viewport={{ once: true }}
-                style={{ y: y1, position: "absolute",width:"90%", top:"5%"}}>
+                style={{ y: y1}}>
                 <Skin className="SkinSvg" fill={colors.green} />
-            </motion.div>
+            </StyledSvg>
             <ImgSkin> 
                 <ImageWedo web
                     initial={{ opacity: 0 }}
@@ -211,7 +211,7 @@ const Haircare = ({ children }) => {
                     whileInView={{ opacity: 1 }}
                     transition={{ duration: 1.5 }}
                     viewport={{ once: true }}
-                    style={{ y: y2, bottom: 0, right: 0, width:"calc(40% + 2vw)", height:"calc(30% + 6vh)"}}>
+                    style={{ y: y2, bottom: 0, right: 0}}>
                     <StaticImage
                         className="Hair"
                         imgClassName=""
@@ -223,15 +223,21 @@ const Haircare = ({ children }) => {
                         quality='100'
                     />
                 </ImageWedo>
-            <motion.div
+            <StyledSvg
                 initial={{ opacity: 0 }}
                 animate={{ y: 0 }}
                 whileInView={{ opacity: 1 }}
                 transition={{ duration: 1.5 }}
                 viewport={{ once: true }}
-                style={{ y: y1, position: "absolute",width:"90%", top:"10%"}}>
-                <Body className="HairSvg" fill={colors.softWhite} />
-            </motion.div>
+                style={{ y: y1}}>
+                <Hair className="HairSvg" fill={colors.softWhite} />
+            </StyledSvg>
+            <TextHair>
+                <motion.h3 initial={{ opacity: 0, }} whileInView={{ opacity: 1 }} transition={{ duration: 1.5 }} viewport={{ once: true }}>
+                Gaia Evolution is an Aveda Exclusive Salon. Aveda is a naturally derived line, some ingredients are Certified Organic, 100% Vegan & Cruelty Free. Its natural components do a fantastic job taking care of the hair integrity and providing incredible results. You will find a wide variety of products for any hair type or concerns. Haircuts and color services are completely customized for each guest through a previous consultation.
+                </motion.h3>
+                <Link to="/hair">Go to Hair Care <Flecha className="flecha" stroke={colors.softWhite} /></Link>
+            </TextHair>
             <ImgSkin>
             <ImageWedo web
                     initial={{ opacity: 0 }}
@@ -239,11 +245,11 @@ const Haircare = ({ children }) => {
                     whileInView={{ opacity: 1 }}
                     transition={{ duration: 1.5 }}
                     viewport={{ once: true }}
-                    style={{ y: y2, bottom: 0, left: 0, width:"calc(40% + 2vw)", height:"calc(30% + 6vh)"}}>
+                    style={{ y: y2}}>
                     <StaticImage
                         className="Skin"
                         imgClassName=""
-                        src="../images/Home/PNG/HairCareMovil.png"
+                        src="../images/Home/PNG/HairCare.png"
                         alt="Spa Image"
                         breakpoints={[750, 1080, 1366, 1920]}
                         loading="lazy"
@@ -252,12 +258,6 @@ const Haircare = ({ children }) => {
                     />
                 </ImageWedo>
             </ImgSkin>
-            <TextHair>
-                <motion.h3 initial={{ opacity: 0, }} whileInView={{ opacity: 1 }} transition={{ duration: 1.5 }} viewport={{ once: true }}>
-                Gaia Evolution is an Aveda Exclusive Salon. Aveda is a naturally derived line, some ingredients are Certified Organic, 100% Vegan & Cruelty Free. Its natural components do a fantastic job taking care of the hair integrity and providing incredible results. You will find a wide variety of products for any hair type or concerns. Haircuts and color services are completely customized for each guest through a previous consultation.
-                </motion.h3>
-                <Link to="/hair">Go to Hair Care <Flecha className="flecha" stroke={colors.softWhite} /></Link>
-            </TextHair>
         </StyledTratamient>
     )
 }
@@ -277,7 +277,7 @@ const Bodycare = ({ children }) => {
                     whileInView={{ opacity: 1 }}
                     transition={{ duration: 1.5 }}
                     viewport={{ once: true }}
-                    style={{ y: y2, bottom: 0, left: 0, width:"calc(40% + 2vw)", height:"calc(30% + 6vh)"}}>
+                    style={{ y: y2, bottom: 0, left: 0}}>
                     <StaticImage
                         className="Skin"
                         imgClassName=""
@@ -289,15 +289,15 @@ const Bodycare = ({ children }) => {
                         quality='100'
                     />
                 </ImageWedo>
-            <motion.div
+            <StyledSvg
                 initial={{ opacity: 0 }}
                 animate={{ y: 0 }}
                 whileInView={{ opacity: 1 }}
                 transition={{ duration: 1.5 }}
                 viewport={{ once: true }}
-                style={{ y: y1, position: "absolute",width:"90%", top:"10%"}}>
+                style={{ y: y1}}>
                 <Body className="SkinSvg" fill={colors.green} />
-            </motion.div>
+            </StyledSvg>
             <ImgSkin>
             <ImageWedo web
                     initial={{ opacity: 0 }}
@@ -305,11 +305,11 @@ const Bodycare = ({ children }) => {
                     whileInView={{ opacity: 1 }}
                     transition={{ duration: 1.5 }}
                     viewport={{ once: true }}
-                    style={{ y: y2, bottom: 0, left: 0, width:"calc(40% + 2vw)", height:"calc(30% + 6vh)"}}>
+                    style={{ y: y2}}>
                     <StaticImage
                         className="Skin"
                         imgClassName=""
-                        src="../images/Home/PNG/BodyCareMovil.png"
+                        src="../images/Home/PNG/BodyCare.png"
                         alt="Spa Image"
                         breakpoints={[750, 1080, 1366, 1920]}
                         loading="lazy"

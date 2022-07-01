@@ -208,15 +208,26 @@ export const ImageWedo = styled(motion.div)`
 display: ${props => (props.movil ? "flex" : "none")};
 position: absolute;
 background: ${colors.none};
-
-
+width: calc(40% + 2vw); 
+height:calc(30% + 6vh);
 
 ${above.large`
 display: ${props => (props.web ? "flex" : "none")};
 align-content: center; 
 align-items: center; 
 justify-content: center; 
+width: 30%; 
+height: auto;
   
+  `}
+`
+
+export const StyledSvg = styled(motion.div)`
+  position:  absolute;
+  width: 90%; 
+  top:10%;
+${above.large`
+  top:40%;
   `}
 `
 
