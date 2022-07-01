@@ -17,6 +17,7 @@ export const StyledHome = styled.div`
   height: 100vh;
   padding-top: 0%;
   background: ${colors.none};
+  overflow-x: hidden;
   ${above.large`  
   grid-template-rows: repeat(2); 
   `}
@@ -176,10 +177,15 @@ export const StyledWedoSection = styled.div`
   justify-content: center ;
   align-items: center;
   width: 100vw;
-  height: 100vh;
+  height: 85vh;
   background: ${colors.none};
+  position: relative;
+  overflow-x: hidden;
+
+
   ${above.large`
-  
+  height: 100vh;
+
   `}
 `
 export const StyledWedo = styled.div`
@@ -194,6 +200,22 @@ export const StyledWedo = styled.div`
   width: 90%;
   height: 70%;
   flex-flow: row nowrap;
+  
+  `}
+`
+
+export const ImageWedo = styled(motion.div)`
+display: ${props => (props.movil ? "flex" : "none")};
+position: absolute;
+background: ${colors.none};
+
+
+
+${above.large`
+display: ${props => (props.web ? "flex" : "none")};
+align-content: center; 
+align-items: center; 
+justify-content: center; 
   
   `}
 `
@@ -231,7 +253,7 @@ export const TextWedo = styled.div`
     display:flex;
     justify-content: center ;
     gap: 0.5em;
-    padding: 4em 0 0;
+    padding: 2em 0 0;
     width: 100%;
     color: ${colors.green};
     font-family: ${font.Lregular};
@@ -320,22 +342,12 @@ export const TextWedo = styled.div`
 `
 
 export const ImgsWedo = styled.div`
+  display:none;
+
+  ${above.large`
   display:flex;
   justify-content: center ;
   align-items: center;
-  width: 50%;
-  height: 30%;
-  right: -15%;
-  top: 100%;
-  position: absolute;
-  background: ${colors.none};
-
-  ${above.medium`
-  width: 45%;
-  height: 45%;
-  `}
-
-  ${above.large`
   position: relative;
   right: auto;
   top: auto;
@@ -478,19 +490,20 @@ export const StyledSkin = styled.div`
   position: relative;
   background: ${colors.softWhite};
   width: 100vw;
-  height: 100vh;
-  display:flex;
+  height: 80vh;
+  display: flex;
   justify-content: center;
   align-items: center;
 
   ${above.large` 
+
   `}
   `
 export const StyledHair = styled.div`
   position: relative;
   background: ${colors.green};
   width: 100vw;
-  height: 100vh;
+  height: 80vh;
   display:flex;
   justify-content: center;
   align-items: center;
@@ -509,9 +522,10 @@ export const StyledTratamient = styled.div`
   justify-content: center ;
   align-items: center;
   flex-flow: column-reverse nowrap;
-  width: 90%;
-  height: 90%;
+  width: 100%;
+  height: 100%;
   background: ${colors.none};
+  position: relative;
   ${above.large`
   width: 80%;
   height: 100%;
@@ -524,19 +538,17 @@ export const StyledTratamient = styled.div`
 `
 
 export const ImgSkin = styled.div`
-  display:flex;
-  justify-content: flex-start ;
-  align-items: center;
-  width: 50%;
-  height: 30%;
-  background: ${colors.none};
+  
+display:none;
+
 
   ${above.medium`
-  width: 40%;
-  height: 35%;
   `}
 
   ${above.large`
+  display:flex;
+  justify-content: flex-start ;
+  align-items: center;
   width: 20%;
   height: 20%;
   `}
@@ -569,7 +581,7 @@ export const TextSkin = styled.div`
     display:flex;
     justify-content: center ;
     gap: 0.5em;
-    padding: 4em 0 0;
+    padding: 2em 0 0;
     width: 100%;
     color: ${colors.green};
     font-family: ${font.Lregular};

@@ -5,7 +5,7 @@ import { Link } from "gatsby"
 // Swiper
 import SwiperF from "./swiper"
 // Style componets
-import { BannerProducts, CircleNature, Gift, ImgHair, ImgSkin, ImgsWedo, LogoPrincipal, PhoneLogo, Scroll, Social, StyledHair, StyledHome, StyledMaps, StyledProducts, StyledSkin, StyledTratamient, StyledWedo, StyledWedoSection, TextHair, TextMaps, TextSkin, TextWedo, TransMap } from "../styles/js/home.js"
+import { BannerProducts, CircleNature, Gift, ImageWedo, ImgHair, ImgSkin, ImgsWedo, LogoPrincipal, PhoneLogo, Scroll, Social, StyledHair, StyledHome, StyledMaps, StyledProducts, StyledSkin, StyledTratamient, StyledWedo, StyledWedoSection, TextHair, TextMaps, TextSkin, TextWedo, TransMap } from "../styles/js/home.js"
 // Constantes
 import { colors } from "../utils/const"
 // SVG
@@ -86,6 +86,18 @@ const Wedo = ({ children }) => {
 
     return (
         <StyledWedoSection>
+            <ImageWedo movil initial={{ opacity: 0, y: 10 }} animate={{ y: 0 }} whileInView={{ opacity: 1 }} transition={{ duration: 1 }} viewport={{ once: true }} style={{ y: y1, top:0, right:0, width: "calc(25% + 2vw)", height: "calc(40% + 2vh)"}}>
+                <StaticImage
+                    className="HomeWDMovil"
+                    imgClassName=""
+                    src="../images/Home/PNG/WWDArcoMovil.png"
+                    alt="Spa Image"
+                    loading="lazy"
+                    layout="constrained"
+                    formats={['auto', 'webp', 'avif']}
+                    quality='100'
+                />
+            </ImageWedo>
             <StyledWedo>
                 <TextWedo>
                     <motion.h1 initial={{ opacity: 0, }} whileInView={{ opacity: 1 }} transition={{ duration: 1.5 }} viewport={{ once: true }}>What we do?</motion.h1>
@@ -94,7 +106,7 @@ const Wedo = ({ children }) => {
                     <Link to="/">See More <Flecha className="flecha" stroke={colors.green} /></Link>
                 </TextWedo>
                 <ImgsWedo>
-                    <motion.div initial={{ opacity: 0, y: 10 }} animate={{ y: 0 }} whileInView={{ opacity: 1 }} transition={{ duration: 1 }} viewport={{ once: true }} style={{ y: y1, x: "80%", alignContent: "center", display: "flex", alignItems: "center", justifyContent: "center", width: "100%", height: "100%" }}>
+                    <ImageWedo web initial={{ opacity: 0, y: 10 }} animate={{ y: 0 }} whileInView={{ opacity: 1 }} transition={{ duration: 1 }} viewport={{ once: true }} style={{ y: y1 }}>
                         <StaticImage
                             className="HomeWD2"
                             imgClassName=""
@@ -103,21 +115,19 @@ const Wedo = ({ children }) => {
                             loading="lazy"
                             formats={['auto', 'webp', 'avif']}
                             quality='100'
-                            breakpoints={[750, 1080, 1366, 1920]}
                         />
-                    </motion.div>
-                    <motion.div initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} transition={{ duration: 1 }} viewport={{ once: true }} style={{ y: y2, x: -50, alignContent: "center", display: "flex", alignItems: "center", justifyContent: "center", width: "100%", height: "100%" }}>
+                    </ImageWedo>
+                    <ImageWedo web initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} transition={{ duration: 1 }} viewport={{ once: true }} style={{ y: y2 }}>
                         <StaticImage
                             className="HomeWD1"
                             imgClassName=""
                             src="../images/Home/PNG/WWDHoja.png"
                             alt="Spa products"
-                            breakpoints={[750, 1080, 1366, 1920]}
                             loading="lazy"
                             formats={['auto', 'webp', 'avif']}
                             quality='100'
                         />
-                    </motion.div>
+                    </ImageWedo>
                 </ImgsWedo>
             </StyledWedo>
         </StyledWedoSection>
@@ -131,23 +141,41 @@ const Skincare = ({ children }) => {
 
     return (
         <StyledTratamient>
+            <ImageWedo movil
+                    initial={{ opacity: 0 }}
+                    animate={{ y: 0 }}
+                    whileInView={{ opacity: 1 }}
+                    transition={{ duration: 1.5 }}
+                    viewport={{ once: true }}
+                    style={{ y: y2, bottom: 0, left: 0, width:"calc(40% + 2vw)", height:"calc(30% + 6vh)"}}>
+                    <StaticImage
+                        className="Skin"
+                        imgClassName=""
+                        src="../images/Home/PNG/SkinCareMovil.png"
+                        alt="Spa Image"
+                        breakpoints={[750, 1080, 1366, 1920]}
+                        loading="lazy"
+                        formats={['auto', 'webp', 'avif']}
+                        quality='100'
+                    />
+                </ImageWedo>
             <motion.div
                 initial={{ opacity: 0 }}
                 animate={{ y: 0 }}
                 whileInView={{ opacity: 1 }}
                 transition={{ duration: 1.5 }}
                 viewport={{ once: true }}
-                style={{ y: y1, alignContent: "center", display: "flex", alignItems: "center", justifyContent: "center", width: "100%", height: "100%", position: "absolute" }}>
+                style={{ y: y1, position: "absolute",width:"90%", top:"5%"}}>
                 <Skin className="SkinSvg" fill={colors.green} />
             </motion.div>
-            <ImgSkin>
-                <motion.div
+            <ImgSkin> 
+                <ImageWedo web
                     initial={{ opacity: 0 }}
                     animate={{ y: 0 }}
                     whileInView={{ opacity: 1 }}
                     transition={{ duration: 1.5 }}
                     viewport={{ once: true }}
-                    style={{ y: y2, alignContent: "center", display: "flex", alignItems: "center", justifyContent: "center", width: "100%", height: "100%" }}>
+                    style={{ y: y2}}>
                     <StaticImage
                         className="Skin"
                         imgClassName=""
@@ -158,7 +186,7 @@ const Skincare = ({ children }) => {
                         formats={['auto', 'webp', 'avif']}
                         quality='100'
                     />
-                </motion.div>
+                </ImageWedo>
             </ImgSkin>
             <TextSkin>
                 <motion.h3 initial={{ opacity: 0, }} whileInView={{ opacity: 1 }} transition={{ duration: 1.5 }} viewport={{ once: true }} >
@@ -177,10 +205,34 @@ const Haircare = ({ children }) => {
 
     return (
         <>
+        <ImageWedo movil
+                    initial={{ opacity: 0 }}
+                    animate={{ y: 0 }}
+                    whileInView={{ opacity: 1 }}
+                    transition={{ duration: 1.5 }}
+                    viewport={{ once: true }}
+                    style={{ y: y2, bottom: 0, right: 0, width:"calc(40% + 2vw)", height:"calc(30% + 6vh)"}}>
+                    <StaticImage
+                        className="Skin"
+                        imgClassName=""
+                        src="../images/Home/PNG/HairCareMovil.png"
+                        alt="Spa Image"
+                        breakpoints={[750, 1080, 1366, 1920]}
+                        loading="lazy"
+                        formats={['auto', 'webp', 'avif']}
+                        quality='100'
+                    />
+                </ImageWedo>
             <StyledTratamient>
-                <motion.div initial={{ opacity: 0 }} animate={{ y: 0 }} whileInView={{ opacity: 1 }} transition={{ duration: 1.5 }} viewport={{ once: true }} style={{ y: y1, alignContent: "center", display: "flex", alignItems: "center", justifyContent: "center", width: "100%", height: "100%", position: "absolute" }}>
+                <motion.div
+                initial={{ opacity: 0 }}
+                animate={{ y: 0 }}
+                whileInView={{ opacity: 1 }}
+                transition={{ duration: 1.5 }}
+                viewport={{ once: true }}
+                style={{ y: y1, position: "absolute",width:"90%", top:"10%"}}>
                     <Hair className="HairSvg" fill={colors.softWhite} />
-                </motion.div>
+            </motion.div>
                 <TextHair>
                     <motion.h3 initial={{ opacity: 0, }} whileInView={{ opacity: 1 }} transition={{ duration: 1.5 }} viewport={{ once: true }}>
                         Gaia Evolution is an Aveda Exclusive Salon. Aveda is a naturally derived line, some ingredients are Certified Organic, 100% Vegan & Cruelty Free. Its natural components do a fantastic job taking care of the hair integrity and providing incredible results. You will find a wide variety of products for any hair type or concerns. Haircuts and color services are completely customized for each guest through a previous consultation.
@@ -189,18 +241,24 @@ const Haircare = ({ children }) => {
                 </TextHair>
             </StyledTratamient>
             <ImgHair>
-                <motion.div initial={{ opacity: 0 }} animate={{ y: 0 }} whileInView={{ opacity: 1 }} transition={{ duration: 2 }} viewport={{ once: true }} style={{ y: y2, alignContent: "center", display: "flex", alignItems: "center", justifyContent: "center", width: "100%", height: "100%", }}>
+            <ImageWedo web
+                    initial={{ opacity: 0 }}
+                    animate={{ y: 0 }}
+                    whileInView={{ opacity: 1 }}
+                    transition={{ duration: 1.5 }}
+                    viewport={{ once: true }}
+                    style={{ y: y2, bottom: 0, left: 0, width:"calc(40% + 2vw)", height:"calc(30% + 6vh)"}}>
                     <StaticImage
-                        className="Hair"
+                        className="Skin"
                         imgClassName=""
-                        src="../images/Home/PNG/HairCare.png"
+                        src="../images/Home/PNG/HairCareMovil.png"
                         alt="Spa Image"
                         breakpoints={[750, 1080, 1366, 1920]}
                         loading="lazy"
                         formats={['auto', 'webp', 'avif']}
                         quality='100'
                     />
-                </motion.div>
+                </ImageWedo>
             </ImgHair>
         </>
     )
@@ -215,22 +273,52 @@ const Bodycare = ({ children }) => {
     return (
 
         <StyledTratamient>
-            <motion.div initial={{ opacity: 0 }} animate={{ y: 0 }} whileInView={{ opacity: 1 }} transition={{ duration: 2 }} viewport={{ once: true }} style={{ y: y1, alignContent: "center", display: "flex", alignItems: "center", justifyContent: "center", width: "100%", height: "100%", position: "absolute" }}>
-                <Body className="SkinSvg" fill={colors.green} />
-            </motion.div>
-            <ImgSkin>
-                <motion.div initial={{ opacity: 0 }} animate={{ y: 0 }} whileInView={{ opacity: 1 }} transition={{ duration: 2 }} viewport={{ once: true }} style={{ y: y2, alignContent: "center", display: "flex", alignItems: "center", justifyContent: "center", width: "100%", height: "100%" }}>
+             <ImageWedo movil
+                    initial={{ opacity: 0 }}
+                    animate={{ y: 0 }}
+                    whileInView={{ opacity: 1 }}
+                    transition={{ duration: 1.5 }}
+                    viewport={{ once: true }}
+                    style={{ y: y2, bottom: 0, left: 0, width:"calc(40% + 2vw)", height:"calc(30% + 6vh)"}}>
                     <StaticImage
                         className="Skin"
                         imgClassName=""
-                        src="../images/Home/PNG/BodyCare.png"
+                        src="../images/Home/PNG/BodyCareMovil.png"
                         alt="Spa Image"
                         breakpoints={[750, 1080, 1366, 1920]}
                         loading="lazy"
                         formats={['auto', 'webp', 'avif']}
                         quality='100'
                     />
-                </motion.div>
+                </ImageWedo>
+            <motion.div
+                initial={{ opacity: 0 }}
+                animate={{ y: 0 }}
+                whileInView={{ opacity: 1 }}
+                transition={{ duration: 1.5 }}
+                viewport={{ once: true }}
+                style={{ y: y1, position: "absolute",width:"90%", top:"10%"}}>
+                <Body className="SkinSvg" fill={colors.green} />
+            </motion.div>
+            <ImgSkin>
+            <ImageWedo web
+                    initial={{ opacity: 0 }}
+                    animate={{ y: 0 }}
+                    whileInView={{ opacity: 1 }}
+                    transition={{ duration: 1.5 }}
+                    viewport={{ once: true }}
+                    style={{ y: y2, bottom: 0, left: 0, width:"calc(40% + 2vw)", height:"calc(30% + 6vh)"}}>
+                    <StaticImage
+                        className="Skin"
+                        imgClassName=""
+                        src="../images/Home/PNG/BodyCareMovil.png"
+                        alt="Spa Image"
+                        breakpoints={[750, 1080, 1366, 1920]}
+                        loading="lazy"
+                        formats={['auto', 'webp', 'avif']}
+                        quality='100'
+                    />
+                </ImageWedo>
             </ImgSkin>
             <TextSkin>
                 <motion.h3 initial={{ opacity: 0, }} whileInView={{ opacity: 1 }} transition={{ duration: 1.5 }} viewport={{ once: true }}>
