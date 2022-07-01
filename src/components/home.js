@@ -204,8 +204,8 @@ const Haircare = ({ children }) => {
     const y2 = useTransform(scrollY, [0, 4200], [110, -40]);
 
     return (
-        <>
-        <ImageWedo movil
+        <StyledTratamient>
+           <ImageWedo movil
                     initial={{ opacity: 0 }}
                     animate={{ y: 0 }}
                     whileInView={{ opacity: 1 }}
@@ -213,7 +213,7 @@ const Haircare = ({ children }) => {
                     viewport={{ once: true }}
                     style={{ y: y2, bottom: 0, right: 0, width:"calc(40% + 2vw)", height:"calc(30% + 6vh)"}}>
                     <StaticImage
-                        className="Skin"
+                        className="Hair"
                         imgClassName=""
                         src="../images/Home/PNG/HairCareMovil.png"
                         alt="Spa Image"
@@ -223,24 +223,16 @@ const Haircare = ({ children }) => {
                         quality='100'
                     />
                 </ImageWedo>
-            <StyledTratamient>
-                <motion.div
+            <motion.div
                 initial={{ opacity: 0 }}
                 animate={{ y: 0 }}
                 whileInView={{ opacity: 1 }}
                 transition={{ duration: 1.5 }}
                 viewport={{ once: true }}
                 style={{ y: y1, position: "absolute",width:"90%", top:"10%"}}>
-                    <Hair className="HairSvg" fill={colors.softWhite} />
+                <Body className="HairSvg" fill={colors.softWhite} />
             </motion.div>
-                <TextHair>
-                    <motion.h3 initial={{ opacity: 0, }} whileInView={{ opacity: 1 }} transition={{ duration: 1.5 }} viewport={{ once: true }}>
-                        Gaia Evolution is an Aveda Exclusive Salon. Aveda is a naturally derived line, some ingredients are Certified Organic, 100% Vegan & Cruelty Free. Its natural components do a fantastic job taking care of the hair integrity and providing incredible results. You will find a wide variety of products for any hair type or concerns. Haircuts and color services are completely customized for each guest through a previous consultation.
-                    </motion.h3>
-                    <Link to="/hair">Go to Hair Care <Flecha className="flecha" stroke={colors.softWhite} /></Link>
-                </TextHair>
-            </StyledTratamient>
-            <ImgHair>
+            <ImgSkin>
             <ImageWedo web
                     initial={{ opacity: 0 }}
                     animate={{ y: 0 }}
@@ -259,8 +251,14 @@ const Haircare = ({ children }) => {
                         quality='100'
                     />
                 </ImageWedo>
-            </ImgHair>
-        </>
+            </ImgSkin>
+            <TextHair>
+                <motion.h3 initial={{ opacity: 0, }} whileInView={{ opacity: 1 }} transition={{ duration: 1.5 }} viewport={{ once: true }}>
+                Gaia Evolution is an Aveda Exclusive Salon. Aveda is a naturally derived line, some ingredients are Certified Organic, 100% Vegan & Cruelty Free. Its natural components do a fantastic job taking care of the hair integrity and providing incredible results. You will find a wide variety of products for any hair type or concerns. Haircuts and color services are completely customized for each guest through a previous consultation.
+                </motion.h3>
+                <Link to="/hair">Go to Hair Care <Flecha className="flecha" stroke={colors.softWhite} /></Link>
+            </TextHair>
+        </StyledTratamient>
     )
 }
 const Bodycare = ({ children }) => {

@@ -663,83 +663,82 @@ export const ImgHair = styled.div`
 `
 
 export const TextHair = styled.div`
+display:flex;
+flex-flow: column nowrap;
+justify-content: center ;
+align-items: center;
+width: 80%;
+height: 90%;
+padding: 0;
+background: ${colors.none};
+
+color: ${colors.softWhite};
+
+h3{
+  text-align:justify;
+  font-family: ${font.Llight};
+  font-size: ${size.Mtext};
+}
+a{
   display:flex;
-  flex-flow: column nowrap;
-  justify-content: flex-end ;
-  align-items: center;
-  width: 80%;
-  height: 70%;
-  padding: 0;
-  background: ${colors.none};
-  
+  justify-content: center ;
+  gap: 0.5em;
+  padding: 2em 0 0;
+  width: 100%;
   color: ${colors.softWhite};
+  font-family: ${font.Lregular};
+  font-size: ${size.Mtext};
+}
 
-  h3{
-    text-align:justify;
-    font-family: ${font.Llight};
-    font-size: ${size.Mtext};
-  }
-  a{
-    display:flex;
-    justify-content: center ;
-    gap: 0.5em;
-    padding: 2em 0 0;
-    width: 100%;
-    color: ${colors.softWhite};
-    font-family: ${font.Lregular};
-    font-size: ${size.Mtext};
-    background: ${colors.none};
-  }
+${above.medium`
+height: 40%;
+width: 70%;
+padding: 6em 0 0;
+a{
+  justify-content: flex-start ;
+  font-size: ${size.XList};
+  padding: 2em 0 0;
+}
+h3{
+  text-align:justify;
+  font-family: ${font.Llight};
+  font-size: ${size.XList};
+  line-height: 150%;
+}
+`}
 
-  ${above.medium`
-  height: 40%;
-  width: 70%;
-  padding: 6em 0 0;
-  a{
-    justify-content: flex-end ;
-    font-size: ${size.XList};
-    padding: 2em 0 0;
-  }
-  h3{
-    text-align:justify;
-    font-family: ${font.Llight};
-    font-size: ${size.XList};
-    line-height: 150%;
-  }
-  `}
+${above.large`
+height: 50%;
+justify-content: flex-end;
+width: 45%;
+a{
+  justify-content: flex-start ;
+  font-size: ${size.Wtext};
+}
+h3{
+  text-align:justify;
+  font-family: ${font.Llight};
+  font-size: ${size.Wtext};
+}
 
-  ${above.large`
-  width: 45%;
-  height: 50%;
-  justify-content: flex-end;
+`}
+${above.xlarge`
+height: 32%;
+justify-content: flex-end;
+width: 60%;
+padding: 5em 0 0;
+a{
+  font-family: ${font.Rbold};
+  font-size: ${size.Mtittle};
+  justify-content: flex-start ;
+}
+h3{
+  text-align:justify;
+  font-family: ${font.Llight};
+  font-size: ${size.WList};
+}
 
-  a{
-    justify-content: flex-start ;
-    font-size: ${size.Wtext};
-  }
-  h3{
-    text-align:justify;
-    font-family: ${font.Llight};
-    font-size: ${size.Wtext};
-  }
-  
-  `}
-
-  ${above.xlarge`
-  width: 58%;
-  height: 40%;
-  justify-content: flex-end;
-  a{
-    font-family: ${font.Rbold};
-    font-size: ${size.Mtittle};
-    justify-content: flex-start ;
-  }
-  h3{
-    text-align:justify;
-    font-family: ${font.Llight};
-    font-size: ${size.WList};
-  }
-  `}
+`}
 `
 
 //////MAPS
