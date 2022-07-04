@@ -338,13 +338,13 @@ const Products = ({ children }) => {
             <BannerProducts>
                 <StaticImage
                     className="Favorite"
-                    imgClassName=""
-                    layout="constrained"
+                    layout="fixed"
                     src="../images/Home/PNG/FPArco.png"
                     alt="Spa Image"
                     loading="lazy"
                     formats={['auto', 'webp', 'avif']}
                     quality='100'
+                    width={145}
                 />
                 <motion.div initial={{ opacity: 0 }} animate={{ y: 0 }} whileInView={{ opacity: 1 }} transition={{ duration: 1.5, delay: .5 }} viewport={{ once: true }} style={{
                     y: y1, x: "-52%", alignContent: "center", display: "flex", alignItems: "center", justifyContent: "center", width: "100%", height: "100%"

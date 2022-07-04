@@ -24,12 +24,11 @@ const IndexPage = () => {
         backgroundImage123: file(relativePath: {eq: "Backgrounds/Home.jpg"}) {
           childImageSharp {
             gatsbyImageData(
-              quality: 80
               placeholder: BLURRED
               breakpoints:[750, 1080, 1366, 1920]
               formats: [AUTO, WEBP, AVIF]
               layout: FULL_WIDTH
-              webpOptions: {quality: 80}
+              webpOptions: {quality: 90}
             )
           }
         }

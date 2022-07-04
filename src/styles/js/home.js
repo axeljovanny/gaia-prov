@@ -225,7 +225,7 @@ height: auto;
 
 export const StyledSvg = styled(motion.div)`
   position:  absolute;
-  width: 90%; 
+  width: 80%; 
   top:15%;
 ${above.large`
   top:40%;
@@ -465,6 +465,7 @@ export const DescProduct = styled (motion.a)`
     font-family: ${font.Lregular};
     font-size: ${size.Mtext};
     text-align: justify;
+    width: 85%;
 
   ${above.large` 
     display: ${props => (props.movil ? "none" : "flex")};
