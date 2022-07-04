@@ -78,10 +78,10 @@ export const Gift = styled(motion.div)`
   background: ${colors.none};
 
   display: flex;
-  justify-content: flex-end;
+  justify-content: center;
   align-items: flex-end;
   flex-direction: column;
-  gap 10%;
+  gap 5%;
 
   ${above.medium`
   top: 50%;
@@ -90,6 +90,7 @@ export const Gift = styled(motion.div)`
   `}
 
   ${above.large`
+  gap 10%;
   justify-content: flex-start;
   align-items: flex-end;
   top: 20%;
@@ -177,7 +178,7 @@ export const StyledWedoSection = styled.div`
   justify-content: center ;
   align-items: center;
   width: 100vw;
-  height: 85vh;
+  height: 80vh;
   background: ${colors.none};
   position: relative;
   overflow-x: hidden;
@@ -208,15 +209,45 @@ export const ImageWedo = styled(motion.div)`
 display: ${props => (props.movil ? "flex" : "none")};
 position: absolute;
 background: ${colors.none};
+width: calc(20% + 2vw); 
+height: calc(45% + 2vh);
 
-
+${above.large`
+width: calc(40% + 2vw); 
+height: calc(30% + 6vh);
+display: ${props => (props.web ? "flex" : "none")};
+align-content: center; 
+align-items: center; 
+justify-content: center; 
+width: 30%; 
+height: auto;
+  
+  `}
+`
+export const ImageTratamients = styled(motion.div)`
+display: ${props => (props.movil ? "flex" : "none")};
+position: absolute;
+background: ${colors.none};
+width: calc(40% + 2vw); 
+height:calc(30% + 6vh);
 
 ${above.large`
 display: ${props => (props.web ? "flex" : "none")};
 align-content: center; 
 align-items: center; 
 justify-content: center; 
+width: 30%; 
+height: auto;
   
+  `}
+`
+
+export const StyledSvg = styled(motion.div)`
+  position:  absolute;
+  width: 80%; 
+  top:15%;
+${above.large`
+  top:40%;
   `}
 `
 
@@ -363,10 +394,12 @@ export const StyledProducts = styled.div`
   display: flex;
   justify-content: center ;
   align-items: center;
-
   width: 100vw;
-  height: 60vh;
+  height: 70vh;
   background: ${colors.none};
+  ${above.medium`  
+  height: 70vh;
+  `}
   ${above.large`  
   height: 70vh;
 
@@ -375,9 +408,8 @@ export const StyledProducts = styled.div`
 `
 
 export const RectanguloProd = styled(motion.div)`
-  width: 80%;
-  height: 70%;
-  max-width: 300px;
+  width: 100%;
+  height: 90%;
   background: ${colors.none};
   position: relative;
   display: flex;
@@ -400,32 +432,31 @@ export const RectanguloProd = styled(motion.div)`
 `
 export const Rectangulo = styled(motion.div)`
   position: absolute;
+  background: ${colors.green};
+  border-radius: 5px;
+  width: 75%;
+  height: 40%;
+  ${above.large`  
+  position: absolute;
   bottom: 10%;
   background: ${colors.green};
   border-radius: 5px;
   width: 100%;
   height: 40%;
-  `
-export const Rectangulo2 = styled.div`
-  position: absolute;
-  bottom: -20%;
-  background: ${colors.softWhite};
-  width: 110%;
-  height: 50%;
-  ${above.large`  
-  height: 40%;
-  bottom: -8%;
-  `}
-  ${above.xlarge`  
-  height: 40%;
-  bottom: -3%;
   `}
   `
+
 export const TextProduct = styled (motion.div)`
   width: 90%;
-  background: ${colors.none};
+  background: ${colors.softWhite};
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
 
   h3{
+    width: 80%;
     color: ${colors.black};
     font-family: ${font.Llight};
     font-size: ${size.Mtext};
@@ -452,7 +483,8 @@ export const DescProduct = styled (motion.a)`
     color: ${colors.green};
     font-family: ${font.Lregular};
     font-size: ${size.Mtext};
-    text-align: center;
+    text-align: justify;
+    width: 85%;
 
   ${above.large` 
     display: ${props => (props.movil ? "none" : "flex")};
@@ -474,13 +506,22 @@ export const BannerProducts = styled.div`
   display:flex;
   justify-content: center;
   align-items: center;
-  border-top-right-radius: 0px;
-  border-bottom-left-radius: 0px;
   ${above.large` 
   width: 100vw;
   height: 70vh;
   border-top-right-radius: 60px;
   border-bottom-left-radius: 60px;
+  `}
+  `
+export const BannerSvg = styled(motion.div)`
+  display: ${props => (props.movil ? "flex" : "none")};
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+  ${above.large` 
+  display: ${props => (props.movil ? "none" : "flex")};
   `}
   `
 
@@ -566,7 +607,7 @@ export const TextSkin = styled.div`
   justify-content: center ;
   align-items: center;
   width: 80%;
-  height: 90%;
+  height: 100%;
   padding: 0;
   background: ${colors.none};
   
@@ -663,83 +704,82 @@ export const ImgHair = styled.div`
 `
 
 export const TextHair = styled.div`
+display:flex;
+flex-flow: column nowrap;
+justify-content: center ;
+align-items: center;
+width: 80%;
+height: 90%;
+padding: 0;
+background: ${colors.none};
+
+color: ${colors.softWhite};
+
+h3{
+  text-align:justify;
+  font-family: ${font.Llight};
+  font-size: ${size.Mtext};
+}
+a{
   display:flex;
-  flex-flow: column nowrap;
-  justify-content: flex-end ;
-  align-items: center;
-  width: 80%;
-  height: 70%;
-  padding: 0;
-  background: ${colors.none};
-  
+  justify-content: center ;
+  gap: 0.5em;
+  padding: 2em 0 0;
+  width: 100%;
   color: ${colors.softWhite};
+  font-family: ${font.Lregular};
+  font-size: ${size.Mtext};
+}
 
-  h3{
-    text-align:justify;
-    font-family: ${font.Llight};
-    font-size: ${size.Mtext};
-  }
-  a{
-    display:flex;
-    justify-content: center ;
-    gap: 0.5em;
-    padding: 2em 0 0;
-    width: 100%;
-    color: ${colors.softWhite};
-    font-family: ${font.Lregular};
-    font-size: ${size.Mtext};
-    background: ${colors.none};
-  }
+${above.medium`
+height: 40%;
+width: 70%;
+padding: 6em 0 0;
+a{
+  justify-content: flex-start ;
+  font-size: ${size.XList};
+  padding: 2em 0 0;
+}
+h3{
+  text-align:justify;
+  font-family: ${font.Llight};
+  font-size: ${size.XList};
+  line-height: 150%;
+}
+`}
 
-  ${above.medium`
-  height: 40%;
-  width: 70%;
-  padding: 6em 0 0;
-  a{
-    justify-content: flex-end ;
-    font-size: ${size.XList};
-    padding: 2em 0 0;
-  }
-  h3{
-    text-align:justify;
-    font-family: ${font.Llight};
-    font-size: ${size.XList};
-    line-height: 150%;
-  }
-  `}
+${above.large`
+height: 50%;
+justify-content: flex-end;
+width: 45%;
+a{
+  justify-content: flex-start ;
+  font-size: ${size.Wtext};
+}
+h3{
+  text-align:justify;
+  font-family: ${font.Llight};
+  font-size: ${size.Wtext};
+}
 
-  ${above.large`
-  width: 45%;
-  height: 50%;
-  justify-content: flex-end;
+`}
+${above.xlarge`
+height: 32%;
+justify-content: flex-end;
+width: 60%;
+padding: 5em 0 0;
+a{
+  font-family: ${font.Rbold};
+  font-size: ${size.Mtittle};
+  justify-content: flex-start ;
+}
+h3{
+  text-align:justify;
+  font-family: ${font.Llight};
+  font-size: ${size.WList};
+}
 
-  a{
-    justify-content: flex-start ;
-    font-size: ${size.Wtext};
-  }
-  h3{
-    text-align:justify;
-    font-family: ${font.Llight};
-    font-size: ${size.Wtext};
-  }
-  
-  `}
-
-  ${above.xlarge`
-  width: 58%;
-  height: 40%;
-  justify-content: flex-end;
-  a{
-    font-family: ${font.Rbold};
-    font-size: ${size.Mtittle};
-    justify-content: flex-start ;
-  }
-  h3{
-    text-align:justify;
-    font-family: ${font.Llight};
-    font-size: ${size.WList};
-  }
-  `}
+`}
 `
 
 //////MAPS
@@ -747,7 +787,7 @@ export const TextHair = styled.div`
 export const StyledMaps = styled.div`
   display:flex;
   width: 100vw;
-  height: 80vh;
+  height: 50vh;
   background: ${colors.none};
   position: relative;
 
@@ -765,7 +805,7 @@ export const TextMaps = styled.div`
   flex-flow: column nowrap;
   
   width: 100%;
-  height: 20%;
+  height: ${props => (props.movil ? "10%" : "20%")};
 
   background: ${colors.none};
   position: absolute;

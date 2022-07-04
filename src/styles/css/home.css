@@ -36,9 +36,10 @@
   width: calc(25px + 2vh);
 }
 .gift-movil {
-  display: block;
-  width: auto;
-  transform: translateX(10%);
+  display: flex;
+  width: 100%;
+  height: auto;
+  transform: translateX(20%);
 }
 .gift-web {
   display: none;
@@ -73,19 +74,9 @@
 .contProduct {
   position: absolute;
   background: none;
-  box-sizing: border-box;
-  transition: 400ms;
+  top: 0%;
 }
 
-.imgProduct {
-  display: block;
-  box-sizing: border-box;
-  transition: 400ms;
-}
-.imgProduct:hover {
-  box-sizing: border-box;
-  transition: 400ms;
-}
 .flecha {
   transform: rotate(-90deg);
 }
@@ -97,10 +88,8 @@
   display: none;
 }
 .HomeWDMovil img{
-  position: absolute;
-  right: 0;
-  height: auto;
-  width: 100%;
+  height: 100%;
+  width: auto;
 
 }
 .HomeWD2 {
@@ -112,15 +101,15 @@
 
 }
 .Favorite {
-  position: absolute;
-  transform: scale(0.8);
+  width: 38%;
 }
+
 
 .Maps {
   position: absolute;
   display: flex;
   width: 100%;
-  height: 40%;
+  height: 50%;
   top: 20%;
 }
 .SkinSvg {
@@ -132,10 +121,7 @@
   display: none;
 }
 .ProductsSvgMovil {
-  display: flex;
-  position: absolute;
-  transform: translate(-55%, 25%) scale(1.08);
-  width: 90vw;
+  width: 90%;
 }
 .Hair {
   position: absolute;
@@ -148,13 +134,8 @@
 
 @media only screen and (min-width: 480px) {
   .gift-movil {
-    display: block;
-    transform: translateX(10%);
     width: 100%;
     height: 100%;
-  }
-  .gift-web {
-    display: none;
   }
 
   .circle-movil {
@@ -164,23 +145,17 @@
 
   .Skin {
     position: absolute;
-    transform: translate(-5%, 10%) scale(0.9);
   }
 
   .Hair {
-    transform: translate(-45%, -20%) scale(1.3);
   }
 
   .Favorite {
-    position: absolute;
-    transform: translate(0%, 5%) scale(0.77);
+    width: 30%;
   }
 
   .ProductsSvgMovil {
-    display: flex;
-    position: absolute;
-    transform: translate(-55%, 15%) scale(1.03);
-    width: 90vw;
+  width: 70vw;
   }
 
   .logo-footer {
@@ -267,10 +242,8 @@
   }
   .Skin {
     position: absolute;
-    transform: translate(-20%, 20%) scale(1.4);
   }
   .Hair {
-    transform: translate(-80%, 20%) scale(1);
   }
   .HairSvg {
     position: absolute;
@@ -279,7 +252,6 @@
   }
   .Favorite {
     position: absolute;
-    transform: scale(0.39);
   }
   .ProductsSvg {
     display: flex;
@@ -312,7 +284,6 @@
 
   .Skin {
     position: absolute;
-    transform: translate(-10%, 10%) scale(1);
   }
 
   .SkinSvg {
@@ -322,7 +293,6 @@
   }
 
   .Hair {
-    transform: translate(-60%, 20%) scale(0.8);
   }
 
   .HairSvg {

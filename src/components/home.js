@@ -5,7 +5,7 @@ import { Link } from "gatsby"
 // Swiper
 import SwiperF from "./swiper"
 // Style componets
-import { BannerProducts, CircleNature, Gift, ImageWedo, ImgHair, ImgSkin, ImgsWedo, LogoPrincipal, PhoneLogo, Scroll, Social, StyledHair, StyledHome, StyledMaps, StyledProducts, StyledSkin, StyledTratamient, StyledWedo, StyledWedoSection, TextHair, TextMaps, TextSkin, TextWedo, TransMap } from "../styles/js/home.js"
+import { BannerProducts, BannerSvg, CircleNature, Gift, ImageTratamients, ImageWedo, ImgHair, ImgSkin, ImgsWedo, LogoPrincipal, PhoneLogo, Scroll, Social, StyledHair, StyledHome, StyledMaps, StyledProducts, StyledSkin, StyledSvg, StyledTratamient, StyledWedo, StyledWedoSection, TextHair, TextMaps, TextSkin, TextWedo, TransMap } from "../styles/js/home.js"
 // Constantes
 import { colors } from "../utils/const"
 // SVG
@@ -86,7 +86,7 @@ const Wedo = ({ children }) => {
 
     return (
         <StyledWedoSection>
-            <ImageWedo movil initial={{ opacity: 0, y: 10 }} animate={{ y: 0 }} whileInView={{ opacity: 1 }} transition={{ duration: 1 }} viewport={{ once: true }} style={{ y: y1, top:0, right:0, width: "calc(25% + 2vw)", height: "calc(40% + 2vh)"}}>
+            <ImageWedo movil initial={{ opacity: 0, y: 10 }} animate={{ y: 0 }} whileInView={{ opacity: 1 }} transition={{ duration: 1 }} viewport={{ once: true }} style={{ y: y1, top:0, right:0}}>
                 <StaticImage
                     className="HomeWDMovil"
                     imgClassName=""
@@ -103,7 +103,7 @@ const Wedo = ({ children }) => {
                     <motion.h1 initial={{ opacity: 0, }} whileInView={{ opacity: 1 }} transition={{ duration: 1.5 }} viewport={{ once: true }}>What we do?</motion.h1>
                     <motion.h2 initial={{ opacity: 0, }} whileInView={{ opacity: 1 }} transition={{ duration: 1.5 }} viewport={{ once: true }}>We are a group of professional Cosmetologists & Estheticians</motion.h2>
                     <motion.h3 initial={{ opacity: 0, }} whileInView={{ opacity: 1 }} transition={{ duration: 1.5 }} viewport={{ once: true }}>That are hard working and staying up to date with the latest trends and technology in the beauty industry to bring our clients the best experience possible. Gaia Evolution Spa & Salon was created with the concept of rescue the use of natural & organic sources from our professional lines...</motion.h3>
-                    <Link to="/">See More <Flecha className="flecha" stroke={colors.green} /></Link>
+                    <Link to="/about">See More <Flecha className="flecha" stroke={colors.green} /></Link>
                 </TextWedo>
                 <ImgsWedo>
                     <ImageWedo web initial={{ opacity: 0, y: 10 }} animate={{ y: 0 }} whileInView={{ opacity: 1 }} transition={{ duration: 1 }} viewport={{ once: true }} style={{ y: y1 }}>
@@ -141,13 +141,13 @@ const Skincare = ({ children }) => {
 
     return (
         <StyledTratamient>
-            <ImageWedo movil
+            <ImageTratamients movil
                     initial={{ opacity: 0 }}
                     animate={{ y: 0 }}
                     whileInView={{ opacity: 1 }}
                     transition={{ duration: 1.5 }}
                     viewport={{ once: true }}
-                    style={{ y: y2, bottom: 0, left: 0, width:"calc(40% + 2vw)", height:"calc(30% + 6vh)"}}>
+                    style={{ y: y2, bottom: 0, left: 0}}>
                     <StaticImage
                         className="Skin"
                         imgClassName=""
@@ -158,18 +158,18 @@ const Skincare = ({ children }) => {
                         formats={['auto', 'webp', 'avif']}
                         quality='100'
                     />
-                </ImageWedo>
-            <motion.div
+                </ImageTratamients>
+            <StyledSvg
                 initial={{ opacity: 0 }}
                 animate={{ y: 0 }}
                 whileInView={{ opacity: 1 }}
                 transition={{ duration: 1.5 }}
                 viewport={{ once: true }}
-                style={{ y: y1, position: "absolute",width:"90%", top:"5%"}}>
+                style={{ y: y1}}>
                 <Skin className="SkinSvg" fill={colors.green} />
-            </motion.div>
+            </StyledSvg>
             <ImgSkin> 
-                <ImageWedo web
+                <ImageTratamients web
                     initial={{ opacity: 0 }}
                     animate={{ y: 0 }}
                     whileInView={{ opacity: 1 }}
@@ -186,7 +186,7 @@ const Skincare = ({ children }) => {
                         formats={['auto', 'webp', 'avif']}
                         quality='100'
                     />
-                </ImageWedo>
+                </ImageTratamients>
             </ImgSkin>
             <TextSkin>
                 <motion.h3 initial={{ opacity: 0, }} whileInView={{ opacity: 1 }} transition={{ duration: 1.5 }} viewport={{ once: true }} >
@@ -204,16 +204,16 @@ const Haircare = ({ children }) => {
     const y2 = useTransform(scrollY, [0, 4200], [110, -40]);
 
     return (
-        <>
-        <ImageWedo movil
+        <StyledTratamient>
+           <ImageTratamients movil
                     initial={{ opacity: 0 }}
                     animate={{ y: 0 }}
                     whileInView={{ opacity: 1 }}
                     transition={{ duration: 1.5 }}
                     viewport={{ once: true }}
-                    style={{ y: y2, bottom: 0, right: 0, width:"calc(40% + 2vw)", height:"calc(30% + 6vh)"}}>
+                    style={{ y: y2, bottom: 0, right: 0}}>
                     <StaticImage
-                        className="Skin"
+                        className="Hair"
                         imgClassName=""
                         src="../images/Home/PNG/HairCareMovil.png"
                         alt="Spa Image"
@@ -222,45 +222,43 @@ const Haircare = ({ children }) => {
                         formats={['auto', 'webp', 'avif']}
                         quality='100'
                     />
-                </ImageWedo>
-            <StyledTratamient>
-                <motion.div
+                </ImageTratamients>
+            <StyledSvg
                 initial={{ opacity: 0 }}
                 animate={{ y: 0 }}
                 whileInView={{ opacity: 1 }}
                 transition={{ duration: 1.5 }}
                 viewport={{ once: true }}
-                style={{ y: y1, position: "absolute",width:"90%", top:"10%"}}>
-                    <Hair className="HairSvg" fill={colors.softWhite} />
-            </motion.div>
-                <TextHair>
-                    <motion.h3 initial={{ opacity: 0, }} whileInView={{ opacity: 1 }} transition={{ duration: 1.5 }} viewport={{ once: true }}>
-                        Gaia Evolution is an Aveda Exclusive Salon. Aveda is a naturally derived line, some ingredients are Certified Organic, 100% Vegan & Cruelty Free. Its natural components do a fantastic job taking care of the hair integrity and providing incredible results. You will find a wide variety of products for any hair type or concerns. Haircuts and color services are completely customized for each guest through a previous consultation.
-                    </motion.h3>
-                    <Link to="/hair">Go to Hair Care <Flecha className="flecha" stroke={colors.softWhite} /></Link>
-                </TextHair>
-            </StyledTratamient>
-            <ImgHair>
-            <ImageWedo web
+                style={{ y: y1}}>
+                <Hair className="HairSvg" fill={colors.softWhite} />
+            </StyledSvg>
+            <TextHair>
+                <motion.h3 initial={{ opacity: 0, }} whileInView={{ opacity: 1 }} transition={{ duration: 1.5 }} viewport={{ once: true }}>
+                Gaia Evolution is an Aveda Exclusive Salon. Aveda is a naturally derived line, some ingredients are Certified Organic, 100% Vegan & Cruelty Free. Its natural components do a fantastic job taking care of the hair integrity and providing incredible results. You will find a wide variety of products for any hair type or concerns. Haircuts and color services are completely customized for each guest through a previous consultation.
+                </motion.h3>
+                <Link to="/hair">Go to Hair Care <Flecha className="flecha" stroke={colors.softWhite} /></Link>
+            </TextHair>
+            <ImgSkin>
+            <ImageTratamients web
                     initial={{ opacity: 0 }}
                     animate={{ y: 0 }}
                     whileInView={{ opacity: 1 }}
                     transition={{ duration: 1.5 }}
                     viewport={{ once: true }}
-                    style={{ y: y2, bottom: 0, left: 0, width:"calc(40% + 2vw)", height:"calc(30% + 6vh)"}}>
+                    style={{ y: y2}}>
                     <StaticImage
                         className="Skin"
                         imgClassName=""
-                        src="../images/Home/PNG/HairCareMovil.png"
+                        src="../images/Home/PNG/HairCare.png"
                         alt="Spa Image"
                         breakpoints={[750, 1080, 1366, 1920]}
                         loading="lazy"
                         formats={['auto', 'webp', 'avif']}
                         quality='100'
                     />
-                </ImageWedo>
-            </ImgHair>
-        </>
+                </ImageTratamients>
+            </ImgSkin>
+        </StyledTratamient>
     )
 }
 const Bodycare = ({ children }) => {
@@ -273,13 +271,13 @@ const Bodycare = ({ children }) => {
     return (
 
         <StyledTratamient>
-             <ImageWedo movil
+             <ImageTratamients movil
                     initial={{ opacity: 0 }}
                     animate={{ y: 0 }}
                     whileInView={{ opacity: 1 }}
                     transition={{ duration: 1.5 }}
                     viewport={{ once: true }}
-                    style={{ y: y2, bottom: 0, left: 0, width:"calc(40% + 2vw)", height:"calc(30% + 6vh)"}}>
+                    style={{ y: y2, bottom: 0, left: 0}}>
                     <StaticImage
                         className="Skin"
                         imgClassName=""
@@ -290,35 +288,35 @@ const Bodycare = ({ children }) => {
                         formats={['auto', 'webp', 'avif']}
                         quality='100'
                     />
-                </ImageWedo>
-            <motion.div
+                </ImageTratamients>
+            <StyledSvg
                 initial={{ opacity: 0 }}
                 animate={{ y: 0 }}
                 whileInView={{ opacity: 1 }}
                 transition={{ duration: 1.5 }}
                 viewport={{ once: true }}
-                style={{ y: y1, position: "absolute",width:"90%", top:"10%"}}>
+                style={{ y: y1}}>
                 <Body className="SkinSvg" fill={colors.green} />
-            </motion.div>
+            </StyledSvg>
             <ImgSkin>
-            <ImageWedo web
+            <ImageTratamients web
                     initial={{ opacity: 0 }}
                     animate={{ y: 0 }}
                     whileInView={{ opacity: 1 }}
                     transition={{ duration: 1.5 }}
                     viewport={{ once: true }}
-                    style={{ y: y2, bottom: 0, left: 0, width:"calc(40% + 2vw)", height:"calc(30% + 6vh)"}}>
+                    style={{ y: y2}}>
                     <StaticImage
                         className="Skin"
                         imgClassName=""
-                        src="../images/Home/PNG/BodyCareMovil.png"
+                        src="../images/Home/PNG/BodyCare.png"
                         alt="Spa Image"
                         breakpoints={[750, 1080, 1366, 1920]}
                         loading="lazy"
                         formats={['auto', 'webp', 'avif']}
                         quality='100'
                     />
-                </ImageWedo>
+                </ImageTratamients>
             </ImgSkin>
             <TextSkin>
                 <motion.h3 initial={{ opacity: 0, }} whileInView={{ opacity: 1 }} transition={{ duration: 1.5 }} viewport={{ once: true }}>
@@ -338,26 +336,34 @@ const Products = ({ children }) => {
     return (
         <>
             <BannerProducts>
-                <motion.div initial={{ opacity: 0 }} animate={{ y: 0 }} whileInView={{ opacity: 1 }} transition={{ duration: 1.5 }} viewport={{ once: true }} style={{ y: y2, x: "48%", alignContent: "center", display: "flex", alignItems: "center", justifyContent: "center", width: "100%", height: "100%" }}>
-                    <StaticImage
-                        className="Favorite"
-                        imgClassName=""
-                        src="../images/Home/PNG/FPArco.png"
-                        alt="Spa Image"
-                        breakpoints={[750, 1080, 1366, 1920]}
-                        loading="lazy"
-                        formats={['auto', 'webp', 'avif']}
-                        quality='100'
-                    />
-                </motion.div>
-                <motion.div initial={{ opacity: 0 }} animate={{ y: 0 }} whileInView={{ opacity: 1 }} transition={{ duration: 1.5, delay: .5 }} viewport={{ once: true }} style={{
-                    y: y1, x: "-52%", alignContent: "center", display: "flex", alignItems: "center", justifyContent: "center", width: "100%", height: "100%"
-                }}>
+               <StaticImage
+                    className="Favorite"
+                    layout="constrained"
+                    src="../images/Home/PNG/FPArco.png"
+                    alt="Spa Image"
+                    loading="lazy"
+                    formats={['auto', 'webp', 'avif']}
+                    quality='100'
+                    width={300}
+                />
+                  <BannerSvg 
+                  initial={{ opacity: 0 }} 
+                  animate={{ y: 0 }} 
+                  whileInView={{ opacity: 1 }} 
+                  transition={{ duration: 1.5, delay: .5 }} 
+                  viewport={{ once: true }} 
+                  style={{y: y1, x: "-52%"}}>
                     <Favorite className="ProductsSvg" fill={colors.softWhite} />
-                </motion.div>
-                <motion.div initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} transition={{ duration: 1.5, delay: .5 }} viewport={{ once: true }} style={{ alignContent: "center", display: "flex", alignItems: "center", justifyContent: "center" }}>
+                </BannerSvg>
+                <BannerSvg movil
+                initial={{ opacity: 0 }} 
+                whileInView={{ opacity: 1 }} 
+                transition={{ duration: 1.5, delay: .5 }} 
+                viewport={{ once: true }} 
+                style={{ y: y1 }}>
                     <FavoriteMovil className="ProductsSvgMovil" fill={colors.softWhite} />
-                </motion.div>
+                </BannerSvg> 
+                
             </BannerProducts>
             <StyledProducts>
                 <SwiperF></SwiperF>
@@ -368,7 +374,7 @@ const Products = ({ children }) => {
 const Maps = ({ children }) => {
     return (
         <StyledMaps>
-            <motion.div initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} transition={{ duration: 1.5 }} viewport={{ once: true }} style={{ alignContent: "center", display: "flex", alignItems: "center", justifyContent: "center", width: "100%" }}>
+            <motion.div initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} transition={{ duration: 1.5 }} viewport={{ once: true }}>
                 <StaticImage
                     className="Maps"
                     imgClassName=""
@@ -379,21 +385,16 @@ const Maps = ({ children }) => {
                     formats={['auto', 'webp', 'avif']}
                     quality='100'
                 />
-            </motion.div>
+           
             <TransMap />
             <TextMaps>
                 <CTVTS className="CTVTS" fill={colors.green} ></CTVTS>
-                {/*  <motion.h3 initial={{ opacity: 0, }} whileInView={{ opacity: 1 }} transition={{ duration: 1.5 }} viewport={{ once: true }}>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's. standard dummy text ever since the 1500s, when an unknown printer took.</motion.h3> */}
-                <Link to="/">Gaia Evolution in Google Maps<Flecha className="flecha" stroke={colors.green} /></Link>
-
-            </TextMaps>
+                <a href="https://www.google.com/maps/place/Gaia+Evolution+Spa+and+Salon/@41.9245235,-87.7068398,19z/data=!3m2!4b1!5s0x880fcd657178d7e3:0x4804758ad15f5cf!4m5!3m4!1s0x880fcd65725634f9:0xf6193b2710f612ea!8m2!3d41.9245235!4d-87.7062926" rel="noreferrer" target="_blank"> Gaia Evolution in Google Maps <Flecha className="flecha" stroke={colors.green} /></a >
+       </TextMaps>
             <TextMaps movil>
-
-                {/* <motion.h3 initial={{ opacity: 0, }} whileInView={{ opacity: 1 }} transition={{ duration: 1.5 }} viewport={{ once: true }}>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's. standard dummy text ever since the 1500s, when an unknown printer took.</motion.h3> */}
-                <Link to="/">Gaia Evolution in Google Maps <Flecha className="flecha" stroke={colors.green} /></Link>
-
+            <a href="https://www.google.com/maps/place/Gaia+Evolution+Spa+and+Salon/@41.9245235,-87.7068398,19z/data=!3m2!4b1!5s0x880fcd657178d7e3:0x4804758ad15f5cf!4m5!3m4!1s0x880fcd65725634f9:0xf6193b2710f612ea!8m2!3d41.9245235!4d-87.7062926" rel="noreferrer" target="_blank"> Gaia Evolution in Google Maps <Flecha className="flecha" stroke={colors.green} /></a >
             </TextMaps>
-
+        </motion.div>
         </StyledMaps>
     );
 }

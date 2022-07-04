@@ -8,7 +8,7 @@ export const StyledFooter = styled.div`
   align-items: center;
   justify-content: center;
   width: 100%;
-  height: 80vh;
+  height: 60vh;
   background: ${colors.green};
 
   ${above.large`
@@ -53,7 +53,7 @@ export const Datos = styled.div`
   background: ${colors.none};
 
   width: 80%;
-  height: 50%;
+  height: 45%;
 
   p, a{
     margin: 2%;
