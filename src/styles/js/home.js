@@ -395,7 +395,7 @@ export const StyledProducts = styled.div`
   justify-content: center ;
   align-items: center;
   width: 100vw;
-  height: 60vh;
+  height: 70vh;
   background: ${colors.none};
   ${above.medium`  
   height: 70vh;
