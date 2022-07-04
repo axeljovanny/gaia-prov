@@ -5,7 +5,7 @@ import { Link } from "gatsby"
 // Swiper
 import SwiperF from "./swiper"
 // Style componets
-import { BannerProducts, CircleNature, Gift, ImageWedo, ImgHair, ImgSkin, ImgsWedo, LogoPrincipal, PhoneLogo, Scroll, Social, StyledHair, StyledHome, StyledMaps, StyledProducts, StyledSkin, StyledSvg, StyledTratamient, StyledWedo, StyledWedoSection, TextHair, TextMaps, TextSkin, TextWedo, TransMap } from "../styles/js/home.js"
+import { BannerProducts, BannerSvg, CircleNature, Gift, ImageWedo, ImgHair, ImgSkin, ImgsWedo, LogoPrincipal, PhoneLogo, Scroll, Social, StyledHair, StyledHome, StyledMaps, StyledProducts, StyledSkin, StyledSvg, StyledTratamient, StyledWedo, StyledWedoSection, TextHair, TextMaps, TextSkin, TextWedo, TransMap } from "../styles/js/home.js"
 // Constantes
 import { colors } from "../utils/const"
 // SVG
@@ -336,24 +336,34 @@ const Products = ({ children }) => {
     return (
         <>
             <BannerProducts>
-                <StaticImage
+               <StaticImage
                     className="Favorite"
-                    layout="fixed"
+                    layout="constrained"
                     src="../images/Home/PNG/FPArco.png"
                     alt="Spa Image"
                     loading="lazy"
                     formats={['auto', 'webp', 'avif']}
                     quality='100'
-                    width={145}
+                    width={300}
                 />
-                <motion.div initial={{ opacity: 0 }} animate={{ y: 0 }} whileInView={{ opacity: 1 }} transition={{ duration: 1.5, delay: .5 }} viewport={{ once: true }} style={{
-                    y: y1, x: "-52%", alignContent: "center", display: "flex", alignItems: "center", justifyContent: "center", width: "100%", height: "100%"
-                }}>
+                  <BannerSvg 
+                  initial={{ opacity: 0 }} 
+                  animate={{ y: 0 }} 
+                  whileInView={{ opacity: 1 }} 
+                  transition={{ duration: 1.5, delay: .5 }} 
+                  viewport={{ once: true }} 
+                  style={{y: y1, x: "-52%"}}>
                     <Favorite className="ProductsSvg" fill={colors.softWhite} />
-                </motion.div>
-                <motion.div initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} transition={{ duration: 1.5, delay: .5 }} viewport={{ once: true }} style={{ position:"absolute", width:"100%", display: "flex", alignItems: "center", justifyContent: "center", y: y1 }}>
+                </BannerSvg>
+                <BannerSvg movil
+                initial={{ opacity: 0 }} 
+                whileInView={{ opacity: 1 }} 
+                transition={{ duration: 1.5, delay: .5 }} 
+                viewport={{ once: true }} 
+                style={{ y: y1 }}>
                     <FavoriteMovil className="ProductsSvgMovil" fill={colors.softWhite} />
-                </motion.div>
+                </BannerSvg> 
+                
             </BannerProducts>
             <StyledProducts>
                 <SwiperF></SwiperF>

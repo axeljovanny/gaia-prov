@@ -487,13 +487,22 @@ export const BannerProducts = styled.div`
   display:flex;
   justify-content: center;
   align-items: center;
-  border-top-right-radius: 0px;
-  border-bottom-left-radius: 0px;
   ${above.large` 
   width: 100vw;
   height: 70vh;
   border-top-right-radius: 60px;
   border-bottom-left-radius: 60px;
+  `}
+  `
+export const BannerSvg = styled(motion.div)`
+  display: ${props => (props.movil ? "flex" : "none")};
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+  ${above.large` 
+  display: ${props => (props.movil ? "none" : "flex")};
   `}
   `
 
