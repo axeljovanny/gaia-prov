@@ -86,7 +86,7 @@ const Wedo = ({ children }) => {
 
     return (
         <StyledWedoSection>
-            <ImageWedo movil initial={{ opacity: 0, y: 10 }} animate={{ y: 0 }} whileInView={{ opacity: 1 }} transition={{ duration: 1 }} viewport={{ once: true }} style={{ y: y1, top:0, right:0, width: "calc(25% + 2vw)", height: "calc(40% + 2vh)"}}>
+            <ImageWedo movil initial={{ opacity: 0, y: 10 }} animate={{ y: 0 }} whileInView={{ opacity: 1 }} transition={{ duration: 1 }} viewport={{ once: true }} style={{ y: y1, top:0, right:0}}>
                 <StaticImage
                     className="HomeWDMovil"
                     imgClassName=""

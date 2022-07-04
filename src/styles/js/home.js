@@ -209,10 +209,12 @@ export const ImageWedo = styled(motion.div)`
 display: ${props => (props.movil ? "flex" : "none")};
 position: absolute;
 background: ${colors.none};
-width: calc(40% + 2vw); 
-height:calc(30% + 6vh);
+width: calc(20% + 2vw); 
+height: calc(45% + 2vh);
 
 ${above.large`
+width: calc(40% + 2vw); 
+height: calc(30% + 6vh);
 display: ${props => (props.web ? "flex" : "none")};
 align-content: center; 
 align-items: center; 
