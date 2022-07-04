@@ -78,10 +78,10 @@ export const Gift = styled(motion.div)`
   background: ${colors.none};
 
   display: flex;
-  justify-content: flex-end;
+  justify-content: center;
   align-items: flex-end;
   flex-direction: column;
-  gap 10%;
+  gap 5%;
 
   ${above.medium`
   top: 50%;
@@ -90,6 +90,7 @@ export const Gift = styled(motion.div)`
   `}
 
   ${above.large`
+  gap 10%;
   justify-content: flex-start;
   align-items: flex-end;
   top: 20%;
@@ -177,7 +178,7 @@ export const StyledWedoSection = styled.div`
   justify-content: center ;
   align-items: center;
   width: 100vw;
-  height: 85vh;
+  height: 80vh;
   background: ${colors.none};
   position: relative;
   overflow-x: hidden;
@@ -225,7 +226,7 @@ height: auto;
 export const StyledSvg = styled(motion.div)`
   position:  absolute;
   width: 90%; 
-  top:10%;
+  top:15%;
 ${above.large`
   top:40%;
   `}
@@ -374,10 +375,12 @@ export const StyledProducts = styled.div`
   display: flex;
   justify-content: center ;
   align-items: center;
-
   width: 100vw;
   height: 60vh;
   background: ${colors.none};
+  ${above.medium`  
+  height: 70vh;
+  `}
   ${above.large`  
   height: 70vh;
 
@@ -386,9 +389,8 @@ export const StyledProducts = styled.div`
 `
 
 export const RectanguloProd = styled(motion.div)`
-  width: 80%;
-  height: 70%;
-  max-width: 300px;
+  width: 100%;
+  height: 90%;
   background: ${colors.none};
   position: relative;
   display: flex;
@@ -411,32 +413,31 @@ export const RectanguloProd = styled(motion.div)`
 `
 export const Rectangulo = styled(motion.div)`
   position: absolute;
+  background: ${colors.green};
+  border-radius: 5px;
+  width: 75%;
+  height: 40%;
+  ${above.large`  
+  position: absolute;
   bottom: 10%;
   background: ${colors.green};
   border-radius: 5px;
   width: 100%;
   height: 40%;
-  `
-export const Rectangulo2 = styled.div`
-  position: absolute;
-  bottom: -20%;
-  background: ${colors.softWhite};
-  width: 110%;
-  height: 50%;
-  ${above.large`  
-  height: 40%;
-  bottom: -8%;
-  `}
-  ${above.xlarge`  
-  height: 40%;
-  bottom: -3%;
   `}
   `
+
 export const TextProduct = styled (motion.div)`
   width: 90%;
-  background: ${colors.none};
+  background: ${colors.softWhite};
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
 
   h3{
+    width: 80%;
     color: ${colors.black};
     font-family: ${font.Llight};
     font-size: ${size.Mtext};
@@ -463,7 +464,7 @@ export const DescProduct = styled (motion.a)`
     color: ${colors.green};
     font-family: ${font.Lregular};
     font-size: ${size.Mtext};
-    text-align: center;
+    text-align: justify;
 
   ${above.large` 
     display: ${props => (props.movil ? "none" : "flex")};
@@ -577,7 +578,7 @@ export const TextSkin = styled.div`
   justify-content: center ;
   align-items: center;
   width: 80%;
-  height: 90%;
+  height: 100%;
   padding: 0;
   background: ${colors.none};
   
@@ -757,7 +758,7 @@ h3{
 export const StyledMaps = styled.div`
   display:flex;
   width: 100vw;
-  height: 80vh;
+  height: 50vh;
   background: ${colors.none};
   position: relative;
 
@@ -775,7 +776,7 @@ export const TextMaps = styled.div`
   flex-flow: column nowrap;
   
   width: 100%;
-  height: 20%;
+  height: ${props => (props.movil ? "10%" : "20%")};
 
   background: ${colors.none};
   position: absolute;

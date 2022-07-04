@@ -103,7 +103,7 @@ const Wedo = ({ children }) => {
                     <motion.h1 initial={{ opacity: 0, }} whileInView={{ opacity: 1 }} transition={{ duration: 1.5 }} viewport={{ once: true }}>What we do?</motion.h1>
                     <motion.h2 initial={{ opacity: 0, }} whileInView={{ opacity: 1 }} transition={{ duration: 1.5 }} viewport={{ once: true }}>We are a group of professional Cosmetologists & Estheticians</motion.h2>
                     <motion.h3 initial={{ opacity: 0, }} whileInView={{ opacity: 1 }} transition={{ duration: 1.5 }} viewport={{ once: true }}>That are hard working and staying up to date with the latest trends and technology in the beauty industry to bring our clients the best experience possible. Gaia Evolution Spa & Salon was created with the concept of rescue the use of natural & organic sources from our professional lines...</motion.h3>
-                    <Link to="/">See More <Flecha className="flecha" stroke={colors.green} /></Link>
+                    <Link to="/about">See More <Flecha className="flecha" stroke={colors.green} /></Link>
                 </TextWedo>
                 <ImgsWedo>
                     <ImageWedo web initial={{ opacity: 0, y: 10 }} animate={{ y: 0 }} whileInView={{ opacity: 1 }} transition={{ duration: 1 }} viewport={{ once: true }} style={{ y: y1 }}>
@@ -336,24 +336,22 @@ const Products = ({ children }) => {
     return (
         <>
             <BannerProducts>
-                <motion.div initial={{ opacity: 0 }} animate={{ y: 0 }} whileInView={{ opacity: 1 }} transition={{ duration: 1.5 }} viewport={{ once: true }} style={{ y: y2, x: "48%", alignContent: "center", display: "flex", alignItems: "center", justifyContent: "center", width: "100%", height: "100%" }}>
-                    <StaticImage
-                        className="Favorite"
-                        imgClassName=""
-                        src="../images/Home/PNG/FPArco.png"
-                        alt="Spa Image"
-                        breakpoints={[750, 1080, 1366, 1920]}
-                        loading="lazy"
-                        formats={['auto', 'webp', 'avif']}
-                        quality='100'
-                    />
-                </motion.div>
+                <StaticImage
+                    className="Favorite"
+                    imgClassName=""
+                    layout="constrained"
+                    src="../images/Home/PNG/FPArco.png"
+                    alt="Spa Image"
+                    loading="lazy"
+                    formats={['auto', 'webp', 'avif']}
+                    quality='100'
+                />
                 <motion.div initial={{ opacity: 0 }} animate={{ y: 0 }} whileInView={{ opacity: 1 }} transition={{ duration: 1.5, delay: .5 }} viewport={{ once: true }} style={{
                     y: y1, x: "-52%", alignContent: "center", display: "flex", alignItems: "center", justifyContent: "center", width: "100%", height: "100%"
                 }}>
                     <Favorite className="ProductsSvg" fill={colors.softWhite} />
                 </motion.div>
-                <motion.div initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} transition={{ duration: 1.5, delay: .5 }} viewport={{ once: true }} style={{ alignContent: "center", display: "flex", alignItems: "center", justifyContent: "center" }}>
+                <motion.div initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} transition={{ duration: 1.5, delay: .5 }} viewport={{ once: true }} style={{ position:"absolute", width:"100%", display: "flex", alignItems: "center", justifyContent: "center", y: y1 }}>
                     <FavoriteMovil className="ProductsSvgMovil" fill={colors.softWhite} />
                 </motion.div>
             </BannerProducts>
@@ -366,7 +364,7 @@ const Products = ({ children }) => {
 const Maps = ({ children }) => {
     return (
         <StyledMaps>
-            <motion.div initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} transition={{ duration: 1.5 }} viewport={{ once: true }} style={{ alignContent: "center", display: "flex", alignItems: "center", justifyContent: "center", width: "100%" }}>
+            <motion.div initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} transition={{ duration: 1.5 }} viewport={{ once: true }}>
                 <StaticImage
                     className="Maps"
                     imgClassName=""
@@ -377,21 +375,16 @@ const Maps = ({ children }) => {
                     formats={['auto', 'webp', 'avif']}
                     quality='100'
                 />
-            </motion.div>
+           
             <TransMap />
             <TextMaps>
                 <CTVTS className="CTVTS" fill={colors.green} ></CTVTS>
-                {/*  <motion.h3 initial={{ opacity: 0, }} whileInView={{ opacity: 1 }} transition={{ duration: 1.5 }} viewport={{ once: true }}>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's. standard dummy text ever since the 1500s, when an unknown printer took.</motion.h3> */}
-                <Link to="/">Gaia Evolution in Google Maps<Flecha className="flecha" stroke={colors.green} /></Link>
-
-            </TextMaps>
+                <a href="https://www.google.com/maps/place/Gaia+Evolution+Spa+and+Salon/@41.9245235,-87.7068398,19z/data=!3m2!4b1!5s0x880fcd657178d7e3:0x4804758ad15f5cf!4m5!3m4!1s0x880fcd65725634f9:0xf6193b2710f612ea!8m2!3d41.9245235!4d-87.7062926" rel="noreferrer" target="_blank"> Gaia Evolution in Google Maps <Flecha className="flecha" stroke={colors.green} /></a >
+       </TextMaps>
             <TextMaps movil>
-
-                {/* <motion.h3 initial={{ opacity: 0, }} whileInView={{ opacity: 1 }} transition={{ duration: 1.5 }} viewport={{ once: true }}>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's. standard dummy text ever since the 1500s, when an unknown printer took.</motion.h3> */}
-                <Link to="/">Gaia Evolution in Google Maps <Flecha className="flecha" stroke={colors.green} /></Link>
-
+            <a href="https://www.google.com/maps/place/Gaia+Evolution+Spa+and+Salon/@41.9245235,-87.7068398,19z/data=!3m2!4b1!5s0x880fcd657178d7e3:0x4804758ad15f5cf!4m5!3m4!1s0x880fcd65725634f9:0xf6193b2710f612ea!8m2!3d41.9245235!4d-87.7062926" rel="noreferrer" target="_blank"> Gaia Evolution in Google Maps <Flecha className="flecha" stroke={colors.green} /></a >
             </TextMaps>
-
+        </motion.div>
         </StyledMaps>
     );
 }

@@ -64,14 +64,8 @@ const IndexPage = () => {
           whileHover={{ scale: 1.05 }}>
           <GiftWeb className="gift-web" fill={colors.green} fill2={colors.softWhite} />
         </motion.a>
-        <motion.a href="https://squareup.com/gift/FHH5R6M6H54FS/order"
-          whileTap={{ scale: 0.9 }}>
           <ShopWeb className="gift-movil" fill={colors.green} fill2={colors.softWhite} />
-        </motion.a>
-        <motion.a href="https://squareup.com/gift/FHH5R6M6H54FS/order"
-          whileTap={{ scale: 0.9 }}>
           <GiftMovil className="gift-movil" fill={colors.green} fill2={colors.softWhite} />
-        </motion.a>
       </Gift>
        <Navbar />
       <Footer></Footer>
