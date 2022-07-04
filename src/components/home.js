@@ -5,7 +5,7 @@ import { Link } from "gatsby"
 // Swiper
 import SwiperF from "./swiper"
 // Style componets
-import { BannerProducts, BannerSvg, CircleNature, Gift, ImageWedo, ImgHair, ImgSkin, ImgsWedo, LogoPrincipal, PhoneLogo, Scroll, Social, StyledHair, StyledHome, StyledMaps, StyledProducts, StyledSkin, StyledSvg, StyledTratamient, StyledWedo, StyledWedoSection, TextHair, TextMaps, TextSkin, TextWedo, TransMap } from "../styles/js/home.js"
+import { BannerProducts, BannerSvg, CircleNature, Gift, ImageTratamients, ImageWedo, ImgHair, ImgSkin, ImgsWedo, LogoPrincipal, PhoneLogo, Scroll, Social, StyledHair, StyledHome, StyledMaps, StyledProducts, StyledSkin, StyledSvg, StyledTratamient, StyledWedo, StyledWedoSection, TextHair, TextMaps, TextSkin, TextWedo, TransMap } from "../styles/js/home.js"
 // Constantes
 import { colors } from "../utils/const"
 // SVG
@@ -141,7 +141,7 @@ const Skincare = ({ children }) => {
 
     return (
         <StyledTratamient>
-            <ImageWedo movil
+            <ImageTratamients movil
                     initial={{ opacity: 0 }}
                     animate={{ y: 0 }}
                     whileInView={{ opacity: 1 }}
@@ -158,7 +158,7 @@ const Skincare = ({ children }) => {
                         formats={['auto', 'webp', 'avif']}
                         quality='100'
                     />
-                </ImageWedo>
+                </ImageTratamients>
             <StyledSvg
                 initial={{ opacity: 0 }}
                 animate={{ y: 0 }}
@@ -169,7 +169,7 @@ const Skincare = ({ children }) => {
                 <Skin className="SkinSvg" fill={colors.green} />
             </StyledSvg>
             <ImgSkin> 
-                <ImageWedo web
+                <ImageTratamients web
                     initial={{ opacity: 0 }}
                     animate={{ y: 0 }}
                     whileInView={{ opacity: 1 }}
@@ -186,7 +186,7 @@ const Skincare = ({ children }) => {
                         formats={['auto', 'webp', 'avif']}
                         quality='100'
                     />
-                </ImageWedo>
+                </ImageTratamients>
             </ImgSkin>
             <TextSkin>
                 <motion.h3 initial={{ opacity: 0, }} whileInView={{ opacity: 1 }} transition={{ duration: 1.5 }} viewport={{ once: true }} >
@@ -205,7 +205,7 @@ const Haircare = ({ children }) => {
 
     return (
         <StyledTratamient>
-           <ImageWedo movil
+           <ImageTratamients movil
                     initial={{ opacity: 0 }}
                     animate={{ y: 0 }}
                     whileInView={{ opacity: 1 }}
@@ -222,7 +222,7 @@ const Haircare = ({ children }) => {
                         formats={['auto', 'webp', 'avif']}
                         quality='100'
                     />
-                </ImageWedo>
+                </ImageTratamients>
             <StyledSvg
                 initial={{ opacity: 0 }}
                 animate={{ y: 0 }}
@@ -239,7 +239,7 @@ const Haircare = ({ children }) => {
                 <Link to="/hair">Go to Hair Care <Flecha className="flecha" stroke={colors.softWhite} /></Link>
             </TextHair>
             <ImgSkin>
-            <ImageWedo web
+            <ImageTratamients web
                     initial={{ opacity: 0 }}
                     animate={{ y: 0 }}
                     whileInView={{ opacity: 1 }}
@@ -256,7 +256,7 @@ const Haircare = ({ children }) => {
                         formats={['auto', 'webp', 'avif']}
                         quality='100'
                     />
-                </ImageWedo>
+                </ImageTratamients>
             </ImgSkin>
         </StyledTratamient>
     )
@@ -271,7 +271,7 @@ const Bodycare = ({ children }) => {
     return (
 
         <StyledTratamient>
-             <ImageWedo movil
+             <ImageTratamients movil
                     initial={{ opacity: 0 }}
                     animate={{ y: 0 }}
                     whileInView={{ opacity: 1 }}
@@ -288,7 +288,7 @@ const Bodycare = ({ children }) => {
                         formats={['auto', 'webp', 'avif']}
                         quality='100'
                     />
-                </ImageWedo>
+                </ImageTratamients>
             <StyledSvg
                 initial={{ opacity: 0 }}
                 animate={{ y: 0 }}
@@ -299,7 +299,7 @@ const Bodycare = ({ children }) => {
                 <Body className="SkinSvg" fill={colors.green} />
             </StyledSvg>
             <ImgSkin>
-            <ImageWedo web
+            <ImageTratamients web
                     initial={{ opacity: 0 }}
                     animate={{ y: 0 }}
                     whileInView={{ opacity: 1 }}
@@ -316,7 +316,7 @@ const Bodycare = ({ children }) => {
                         formats={['auto', 'webp', 'avif']}
                         quality='100'
                     />
-                </ImageWedo>
+                </ImageTratamients>
             </ImgSkin>
             <TextSkin>
                 <motion.h3 initial={{ opacity: 0, }} whileInView={{ opacity: 1 }} transition={{ duration: 1.5 }} viewport={{ once: true }}>
