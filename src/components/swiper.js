@@ -358,7 +358,7 @@ export default function SwiperF() {
                         <StaticImage
                             /* className="contProduct" */
                             imgClassName="imgProduct"
-                            src="../images/Products/PNG/LiquidExfoliant.png"
+                            src="../images/Products/PNG/SkinToningAgent.png"
                             alt="producto"
                             height={270}
                             loading="lazy"
