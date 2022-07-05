@@ -1,6 +1,7 @@
 import styled from "styled-components"
 import { above } from "."
 import { colors, font, size } from "../../utils/const"
+import { motion } from "framer-motion"
 
 
 export const StyledServicePage = styled.div`
@@ -39,6 +40,7 @@ export const StyledServiceTittle = styled.div`
     display: none;
 
     ${above.large`
+    background: ${colors.none};
     display: flex;
     flex-flow: column nowrap;
     justify-content: center;
@@ -49,10 +51,22 @@ export const StyledServiceTittle = styled.div`
     margin: 0 1% 0 0;
     
     `}
+    ${above.xlarge`
+    background: ${colors.none};
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: flex-start;
+    width: 20%;
+    height: 100%;
+    gap: 10px;
+    margin: 0 1% 0 0;
+    
+    `}
     `
-export const TextTittle = styled.div`
+export const TextTittle = styled(motion.div)`
       display: flex;
-      width: auto;
+      width: auto%;
       button{
         background: none;
         color: inherit;
@@ -71,6 +85,9 @@ export const TextTittle = styled.div`
       background: ${colors.none};
       width: 100%;
       button{
+        width: 100%;
+        height: 100%;
+        position:initial;
         text-align: left;
         color: ${colors.green}; //usar en SVG
         font-family: ${font.Rsemi};
@@ -81,9 +98,10 @@ export const TextTittle = styled.div`
       ${above.xlarge`
       button{
         text-align: left;
-        color: ${colors.green}; //usar en SVG
-        font-family: ${font.Rregular};
-        font-size: ${size.Xtext};
+        background: ${colors.none}; 
+        color: ${colors.none}; //usar en SVG
+        font-family: ${font.Lregular};
+        font-size: ${size.Wmini};
       }
 
     `}
@@ -127,8 +145,8 @@ export const DescTittle = styled.div`
     `}
     ${above.xlarge`
     p{
-      font-family: ${font.Rregular};
-      font-size: ${size.Xtittle};
+      font-family: ${font.Rmedium};
+      font-size: ${size.XList};
       color: ${colors.black};
     }
 
@@ -168,8 +186,8 @@ export const DescTime = styled.div`
 
       ${above.xlarge`
       font-family: ${font.Lbold};
-      font-size: ${size.Xmini};
-      color: ${colors.black};
+      font-size: ${size.Mmini};
+      color: ${colors.softBlack};
       `}
       `
 export const DescPrice = styled.div`
@@ -190,13 +208,14 @@ export const DescPrice = styled.div`
 
       ${above.xlarge`
       font-family: ${font.Lbold};
-      font-size: ${size.Xmini};
-      color: ${colors.black};
+      font-size: ${size.Mmini};
+      color: ${colors.softBlack};
       `}
       `
 export const DescBook = styled.button`
+      left: auto;
       display: flex;
-      justify-content: flex-end;
+      justify-content: center;
       align-items: center;
       background-color: ${colors.green};
       border: 0;
@@ -204,10 +223,11 @@ export const DescBook = styled.button`
       box-sizing: border-box;
       color: #111827;
       color: ${colors.white};
-      font-family: ${font.Llight};
-      font-size: ${size.Wmini};
+      font-family: ${font.Rmedium};
+      font-size: ${size.Mmini};
       line-height: 1.25rem;
       padding: 1em 3rem;
+      width: 12%;
       text-align: center;
       text-decoration: none #D1D5DB solid;
       text-decoration-thickness: auto;
@@ -232,11 +252,18 @@ export const DescBook = styled.button`
     }
 
     ${above.large`
-    padding: .5rem 1rem;
+    padding: .5rem 2rem;
     button{
       padding: .5rem;
     }
       `}
+
+      ${above.xlarge`
+      padding: .1rem .1rem;
+      button{
+        padding: .5rem;
+      }
+        `}
     `
 
 export const DescText = styled.div`
@@ -268,7 +295,7 @@ export const DescText = styled.div`
       ${above.xlarge`
       p{
         font-family: ${font.Llight};
-        font-size: ${size.Xtext};
+        font-size: ${size.Wtext};
         color: ${colors.black};
       }
 
@@ -308,7 +335,16 @@ export const StyledServicePhoto = styled.div`
       justify-content: center;
       align-items: center;
       background: ${colors.none};
-      width: 19%;
+      width: 31%; 
+      margin: 6.8% -13% 0 0;
+      `}
+      ${above.xlarge`
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: ${colors.none};
+      width: 30%; 
+      margin: 8.8% -12% 0 0;
       `}
       
       `

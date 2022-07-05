@@ -35,8 +35,8 @@ export const DescBodyTittle = styled.div`
 
       ${above.xlarge`
       p{
-        font-family: ${font.Rregular};
-        font-size: ${size.Xtittle};
+        font-family: ${font.Rmedium};
+        font-size: ${size.XList};
         color: ${colors.black};
       }
   
@@ -78,8 +78,8 @@ export const DescPriceBody = styled.div`
 
       ${above.xlarge`
       font-family: ${font.Lbold};
-      font-size: ${size.Xmini};
-      color: ${colors.black};
+      font-size: ${size.Mmini};
+      color: ${colors.softBlack};
     
     `}
       `
@@ -100,8 +100,8 @@ export const DescTitleBody = styled.div`
       `}
 
       ${above.xlarge`
-      font-family: ${font.Lblack};
-      font-size: ${size.Xtext};
+      font-family: ${font.Lbold};
+      font-size: ${size.WList};
       color: ${colors.softBlack};
 
       `}
@@ -148,7 +148,7 @@ export const Desc = styled.div`
 
       ${above.xlarge`
       font-family: ${font.Llight};
-      font-size: ${size.Xtext};
+      font-size: ${size.Wtext};
       color: ${colors.black};
     `}
       `

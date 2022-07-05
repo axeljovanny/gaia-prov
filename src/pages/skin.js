@@ -7,6 +7,7 @@ import CarouselComponent from "../components/galeria";
 
 import { SkinMobileService, SkinService, useSkinService } from "../components/skin";
 import { ServiceNav } from "../components/servnav";
+import Galery from "../components/galeria";
 
 
 
@@ -38,13 +39,12 @@ const SkinPage = () => {
           {services.map(({ node }) => {
             return (
               node.category != null && (
-                <motion.div key={node.id} initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: .5 }}>
-                  <TextTittle>
-                    <motion.button whileHover={{ scale: 1.1, color: colors.accentBlue }} whileTap={{ scale: 0.9 }} transition={{ ease: "linear" }} onClick={() => setTitle(node.title)}>
+                
+                  <TextTittle key={node.id} initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: .5 }}>
+                    <motion.button whileHover={{ scale: 1.03, color: colors.accentBlue }} whileTap={{ scale: 0.9 }} transition={{ ease: "linear" }} onClick={() => setTitle(node.title)}>
                       {node.title}
                     </motion.button>
                   </TextTittle>
-                </motion.div>
               )
             )
           })}
@@ -81,7 +81,7 @@ const SkinPage = () => {
           </motion.div>
         </StyledServiceDesc>
         <StyledServicePhoto>
-          <CarouselComponent />
+          <Galery />
         </StyledServicePhoto>
       </StyledServiceContent>
       <StyledServiceMobileContent>

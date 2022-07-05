@@ -36,8 +36,8 @@ export const DescHairTittle = styled.div`
     `}
     ${above.xlarge`
     p{
-      font-family: ${font.Rregular};
-      font-size: ${size.Xtittle};
+      font-family: ${font.Rmedium};
+      font-size: ${size.XList};
       color: ${colors.black};
     }
 
@@ -83,8 +83,8 @@ export const DescPriceHair = styled.div`
 
       ${above.xlarge`
       font-family: ${font.Lbold};
-      font-size: ${size.Xmini};
-      color: ${colors.black};
+      font-size: ${size.Mmini};
+      color: ${colors.softBlack};
     
     `}
       `
@@ -111,8 +111,8 @@ export const DescTitleHair = styled.div`
 
       `}
       ${above.xlarge`
-      font-family: ${font.Lblack};
-      font-size: ${size.Xtext};
+      font-family: ${font.Lbold};
+      font-size: ${size.WList};
       color: ${colors.softBlack};
 
       `}
@@ -140,8 +140,8 @@ export const DescHairText = styled.div`
       `}
 
       ${above.xlarge`
-        font-family: ${font.Llight};
-        font-size: ${size.Xtext};
+      font-family: ${font.Llight};
+      font-size: ${size.Wtext};
         color: ${colors.black};
       `}
       `
