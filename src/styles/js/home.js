@@ -215,7 +215,7 @@ height: calc(45% + 2vh);
 ${above.large`
 width: calc(40% + 2vw); 
 height: calc(30% + 6vh);
-display: ${props => (props.web ? "flex" : "none")};
+display: ${props => (props.movil ? "none" : "flex")};
 align-content: center; 
 align-items: center; 
 justify-content: center; 
@@ -232,7 +232,7 @@ width: calc(40% + 2vw);
 height:calc(30% + 6vh);
 
 ${above.large`
-display: ${props => (props.web ? "flex" : "none")};
+display: ${props => (props.movil ? "none" : "flex")};
 align-content: center; 
 align-items: center; 
 justify-content: center; 
@@ -805,7 +805,7 @@ export const TextMaps = styled.div`
   flex-flow: column nowrap;
   
   width: 100%;
-  height: ${props => (props.movil ? "10%" : "20%")};
+  height: ${props => (props.movil ? "10%" : "25%")};
 
   background: ${colors.none};
   position: absolute;
