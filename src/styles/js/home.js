@@ -34,7 +34,7 @@ export const CircleNature = styled.div`
 
   ${above.medium`
   width: 100vw;
-  height: 40vh;
+  height: 35vh;
   grid-area: 1 / 1 / 2 / 4;
   `}
 
@@ -57,6 +57,11 @@ export const LogoPrincipal = styled.div`
   svg{
     width: 80%;
   }
+  ${above.medium`
+  svg{
+    width: 70%;
+  }
+  `}
   ${above.large`
   width: 60vw;
   height: 60vh;
@@ -183,7 +188,10 @@ export const StyledWedoSection = styled.div`
   position: relative;
   overflow-x: hidden;
 
+  ${above.medium`
+  height: 70vh;
 
+  `}
   ${above.large`
   height: 100vh;
 
@@ -197,6 +205,9 @@ export const StyledWedo = styled.div`
   width: 90%;
   height: 90%;
   background: ${colors.none};
+  ${above.medium`
+  width: 100%;
+  `}
   ${above.large`
   width: 90%;
   height: 70%;
@@ -211,7 +222,12 @@ position: absolute;
 background: ${colors.none};
 width: calc(20% + 2vw); 
 height: calc(45% + 2vh);
+top:0;
+right:0;
 
+${above.medium`
+right: -6%;
+`}
 ${above.large`
 width: calc(40% + 2vw); 
 height: calc(30% + 6vh);
@@ -231,6 +247,11 @@ background: ${colors.none};
 width: calc(40% + 2vw); 
 height:calc(30% + 6vh);
 
+${above.medium`
+width: calc(25% + 2vw); 
+height:calc(35% + 2vh);
+  
+  `}
 ${above.large`
 display: ${props => (props.movil ? "none" : "flex")};
 align-content: center; 
@@ -246,6 +267,9 @@ export const StyledSvg = styled(motion.div)`
   position:  absolute;
   width: 80%; 
   top:15%;
+${above.medium`
+  top:10%;
+  `}
 ${above.large`
   top:40%;
   `}
@@ -398,7 +422,7 @@ export const StyledProducts = styled.div`
   height: 70vh;
   background: ${colors.none};
   ${above.medium`  
-  height: 70vh;
+  height: 55vh;
   `}
   ${above.large`  
   height: 70vh;
@@ -423,6 +447,10 @@ export const RectanguloProd = styled(motion.div)`
   }
 
 
+  ${above.medium`  
+  height: 100%;
+
+  `}
   ${above.large`  
   width: 100%;
   height: 100%;
@@ -436,6 +464,10 @@ export const Rectangulo = styled(motion.div)`
   border-radius: 5px;
   width: 75%;
   height: 40%;
+  ${above.medium`
+  height: 30%;
+  
+  `}
   ${above.large`  
   position: absolute;
   bottom: 10%;
@@ -632,9 +664,9 @@ export const TextSkin = styled.div`
   ${above.medium`
   height: 40%;
   width: 70%;
-  padding: 6em 0 0;
+  padding: 2em 0 0;
   a{
-    justify-content: flex-start ;
+    justify-content: center ;
     font-size: ${size.XList};
     padding: 2em 0 0;
   }
@@ -734,9 +766,9 @@ a{
 ${above.medium`
 height: 40%;
 width: 70%;
-padding: 6em 0 0;
+padding: 4em 0 0;
 a{
-  justify-content: flex-start ;
+  justify-content: center ;
   font-size: ${size.XList};
   padding: 2em 0 0;
 }
@@ -791,6 +823,11 @@ export const StyledMaps = styled.div`
   background: ${colors.none};
   position: relative;
 
+  ${above.medium`
+  height: 60vh;
+
+  
+  `}
   ${above.large`
   width: 100vw;
   height: 70vh;
@@ -842,7 +879,7 @@ export const TextMaps = styled.div`
   ${above.medium`
   
   width: 100%;
-  height: 20%;
+  height: 25%;
 
   h3{
     display:${props => (props.movil ? "flex" : "none")};

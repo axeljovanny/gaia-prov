@@ -5,7 +5,7 @@ import { Link } from "gatsby"
 // Swiper
 import SwiperF from "./swiper"
 // Style componets
-import { BannerProducts, BannerSvg, CircleNature, Gift, ImageTratamients, ImageWedo, ImgHair, ImgSkin, ImgsWedo, LogoPrincipal, PhoneLogo, Scroll, Social, StyledHair, StyledHome, StyledMaps, StyledProducts, StyledSkin, StyledSvg, StyledTratamient, StyledWedo, StyledWedoSection, TextHair, TextMaps, TextSkin, TextWedo, TransMap } from "../styles/js/home.js"
+import { BannerProducts, BannerSvg, CircleNature, Gift, ImageTratamients, ImageWedo, ImgSkin, ImgsWedo, LogoPrincipal, PhoneLogo, Scroll, Social, StyledHome, StyledMaps, StyledProducts, StyledSkin, StyledSvg, StyledTratamient, StyledWedo, StyledWedoSection, TextHair, TextMaps, TextSkin, TextWedo, TransMap } from "../styles/js/home.js"
 // Constantes
 import { colors } from "../utils/const"
 // SVG
@@ -86,7 +86,7 @@ const Wedo = ({ children }) => {
 
     return (
         <StyledWedoSection>
-            <ImageWedo movil initial={{ opacity: 0, y: 10 }} animate={{ y: 0 }} whileInView={{ opacity: 1 }} transition={{ duration: 1 }} viewport={{ once: true }} style={{ y: y1, top:0, right:0}}>
+            <ImageWedo movil initial={{ opacity: 0, y: 10 }} animate={{ y: 0 }} whileInView={{ opacity: 1 }} transition={{ duration: 1 }} viewport={{ once: true }} style={{ y: y1}}>
                 <StaticImage
                     className="HomeWDMovil"
                     imgClassName=""
@@ -385,7 +385,7 @@ const Maps = ({ children }) => {
                         formats={['auto', 'webp', 'avif']}
                         quality='100'
                     />
-                <TransMap /> //difucion
+                <TransMap />
                 <TextMaps>
                     <CTVTS className="CTVTS" fill={colors.green} ></CTVTS>
                     <a href="https://www.google.com/maps/place/Gaia+Evolution+Spa+and+Salon/@41.9245235,-87.7068398,19z/data=!3m2!4b1!5s0x880fcd657178d7e3:0x4804758ad15f5cf!4m5!3m4!1s0x880fcd65725634f9:0xf6193b2710f612ea!8m2!3d41.9245235!4d-87.7062926" rel="noreferrer" target="_blank"> Gaia Evolution in Google Maps <Flecha className="flecha" stroke={colors.green} /></a >

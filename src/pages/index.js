@@ -63,7 +63,7 @@ const IndexPage = () => {
           whileHover={{ scale: 1.05 }}>
           <GiftWeb className="gift-web" fill={colors.green} fill2={colors.softWhite} />
         </motion.a>
-          <ShopWeb className="gift-movil" fill={colors.green} fill2={colors.softWhite} />
+          <ShopWeb className="gift-movil-store" fill={colors.green} fill2={colors.softWhite} />
           <GiftMovil className="gift-movil" fill={colors.green} fill2={colors.softWhite} />
       </Gift>
        <Navbar />

@@ -113,7 +113,6 @@ export default function SwiperF() {
                         <Rectangulo/>
                         <motion.div className="contProduct" variants={animImg}>
                         <StaticImage
-                            imgClassName="imgProduct"
                             src="../images/Products/PNG/B-Conditioner.png"
                             alt="producto"
                             height={270}

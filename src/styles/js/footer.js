@@ -11,6 +11,11 @@ export const StyledFooter = styled.div`
   height: 60vh;
   background: ${colors.green};
 
+  ${above.medium`
+
+  height: 50vh;
+
+  `}
   ${above.large`
 
   height: 70vh;

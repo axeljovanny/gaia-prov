@@ -59,10 +59,23 @@
 
 }
 
+@media only screen and (min-width: 480px) {
+  .swiper {
+    width: 80%;
+    height: 100%;
+    transform: translateY(7%);
+  
+  }
+  .contProduct{
+    background: aqua;
+  }
+
+}
 @media only screen and (min-width: 1140px) {
   .swiper {
     width: 90%;
     height: 70%;
+    transform: translateY(0%);
   }
 
   .swiper-slide .texto {

@@ -148,6 +148,7 @@
   }
 
   .Hair {
+    position: absolute;
   }
 
   .Favorite {
@@ -160,8 +161,8 @@
 
   .logo-footer {
     display: flex;
-    width: 70%;
-    transform: translate(0%, 40%);
+    width: 60%;
+    transform: translate(0%, 0%);
   }
   .container {
     width: 50%;
@@ -172,6 +173,11 @@
   }
   .scroll {
     display: none;
+  }
+  .contProduct {
+    position: absolute;
+    background: none;
+    top: 8%;
   }
 }
 
