@@ -155,7 +155,7 @@ export const PhoneLogo = styled.div`
     display:flex;
     margin-bottom: 5vh;
     font-family: ${font.Lregular};
-    font-size: ${size.Wtext};
+    font-size: ${size.Xtext};
     color: ${colors.white};
   }
   `}
@@ -260,6 +260,10 @@ width: 25%;
 height: auto;
   
   `}
+  ${above.xlarge`
+  gap: 5%;
+  width: 20%;
+   `}
 `
 
 export const StyledSvg = styled(motion.div)`
@@ -476,6 +480,10 @@ export const Rectangulo = styled(motion.div)`
   width: 100%;
   height: 60%;
   `}
+  ${above.xlarge`  
+  bottom: 50%;
+  height: 20%;
+  `}
   `
 
 export const TextProduct = styled (motion.div)`
@@ -607,6 +615,7 @@ export const StyledTratamient = styled.div`
   `}
   ${above.xlarge`
   justify-content: center ;
+  gap: 1%;
   `}
 `
 
@@ -696,7 +705,7 @@ export const TextSkin = styled.div`
   ${above.xlarge`
   height: 32%;
   justify-content: flex-end;
-  width: 60%;
+  width: 45%;
   padding: 5em 0 0;
   a{
     font-family: ${font.Rbold};
@@ -783,7 +792,7 @@ h3{
 ${above.large`
 height: 50%;
 justify-content: flex-end;
-width: 40%;
+width: 38%;
 a{
   justify-content: flex-start ;
   font-size: ${size.Wtext};
@@ -798,7 +807,7 @@ h3{
 ${above.xlarge`
 height: 32%;
 justify-content: flex-end;
-width: 60%;
+width: 45%;
 padding: 5em 0 0;
 a{
   font-family: ${font.Rbold};
@@ -806,6 +815,7 @@ a{
   justify-content: flex-start ;
 }
 h3{
+  padding: 0 2em 0 0;
   text-align:justify;
   font-family: ${font.Llight};
   font-size: ${size.WList};
