@@ -338,7 +338,7 @@ const Products = ({ children }) => {
             <BannerProducts>
                <StaticImage
                     className="Favorite"
-                    layout="constrained"
+                    layout="fullWidth"
                     src="../images/Home/PNG/FPArco.png"
                     alt="Spa Image"
                     loading="lazy"
