@@ -93,7 +93,7 @@ const Wedo = ({ children }) => {
                     src="../images/Home/PNG/WWDArcoMovil.png"
                     alt="Spa Image"
                     loading="lazy"
-                    layout="constrained"
+                    layout="fixed"
                     formats={['auto', 'webp', 'avif']}
                     quality='100'
                 />

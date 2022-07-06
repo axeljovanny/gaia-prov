@@ -87,6 +87,8 @@ const SkinServiceMobileDesc = ({ services }) => {
                                     </div>
                                 )
                             })}
+                            <a href="https://squareup.com/appointments/book/18a837f7-27d0-4fb3-9184-eed5ec31a526/9XWS7XZK8MK0T/services" target="_blank" rel="noreferrer">BOOK NOW </a>
+
                         </Show>
                     </>
                 )
@@ -162,7 +164,10 @@ const HairServiceMobileDesc = ({ services }) => {
                                                     <DescPriceHair>
                                                         {node.price}
                                                     </DescPriceHair>
+                                                    <a href="https://squareup.com/appointments/book/18a837f7-27d0-4fb3-9184-eed5ec31a526/9XWS7XZK8MK0T/services" target="_blank" rel="noreferrer">BOOK NOW </a>
+
                                                 </DescDetailsHair>
+
                                             )
                                         }
                                     </div>
@@ -257,6 +262,8 @@ const BodyServiceMobileDesc = ({ services }) => {
                                                     <DescNoteBody>
                                                         {node.note}
                                                     </DescNoteBody>
+                                                    <a href="https://squareup.com/appointments/book/18a837f7-27d0-4fb3-9184-eed5ec31a526/9XWS7XZK8MK0T/services" target="_blank" rel="noreferrer">BOOK NOW </a>
+
                                                 </DescDetailsBody>
                                             )
                                         }

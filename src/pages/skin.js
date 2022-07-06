@@ -87,9 +87,6 @@ const SkinPage = () => {
         <StyledService>
           <h1>Skin care</h1>
           <h2>Services</h2>
-          <a href="https://squareup.com/appointments/book/18a837f7-27d0-4fb3-9184-eed5ec31a526/9XWS7XZK8MK0T/services" target="_blank" rel="noreferrer">
-            <DescBook>BOOK NOW</DescBook>
-          </a>
         </StyledService>
         <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: .5, delay: .2 }}>
           <SkinMobileService />

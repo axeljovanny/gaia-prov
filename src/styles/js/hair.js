@@ -48,11 +48,20 @@ export const DescDetailsHair = styled.div`
       display: flex;
       justify-content: center;
       align-items: center;
-      flex-flow: column wrap;
+      flex-flow: column nowrap;
       background: ${colors.none};
       width: 100%;
       padding: 4% 0;
       height: 70%; 
+
+      a{
+        width: 100%;
+        padding: 1em 0;
+        font-family: ${font.Rmedium};
+        font-size: ${size.Mtittle};
+        color: ${colors.white};
+      }
+
       ${above.large`
       align-items: flex-start;
 

@@ -43,7 +43,7 @@ const Footer = ({ children }) => (
                     </p>
                 </Datos>
                 <Policies>
-                    <Link to="/" >READ POLICIES <Flecha className="flecha" stroke={colors.softWhite} /></Link>
+                    <Link to="/policies" >READ POLICIES <Flecha className="flecha" stroke={colors.softWhite} /></Link>
                 </Policies>
                 <Credits>
                     <CreditsNote><motion.p initial={{ y: 10, opacity: 0 }} animate={{ y: 0, opacity: 1 }} transition={{ duration: 1.3, delay: .9, ease: "backInOut" }}> © Gaia Evolution Spa & Salon  {(new Date().getFullYear())} | <a href="https://luckyducky.studio/" rel="noreferrer" target="_blank">Lucky Ducky Studio</a></motion.p></CreditsNote>

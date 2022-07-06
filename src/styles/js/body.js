@@ -4,9 +4,9 @@ import { colors, font, size } from "../../utils/const"
 
 export const DescBodyTittle = styled.div`
       display: flex;
-      justify-content: flex-end;
+      justify-content: center;
       align-items: center;
-      background: ${colors.none};
+      background: ${colors.red};
       flex-flow: column nowrap;
       width: 100%;
       height: auto; 
@@ -52,6 +52,13 @@ export const DescDetailsBody = styled.div`
       background: ${colors.none};
       width: 90vw;
       padding: 5% 0;
+
+      a{
+        padding: 1em 0;
+        font-family: ${font.Rmedium};
+        font-size: ${size.Mtittle};
+        color: ${colors.white};
+      }
       ${above.large`
       background: ${colors.none};
       width: 50vw;

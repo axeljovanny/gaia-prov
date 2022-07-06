@@ -160,6 +160,7 @@ export const DescDetails = styled.div`
       background: ${colors.none};
       width: 85vw;
       padding: 0;
+
       ${above.large`
       background: ${colors.none};
       justify-content: flex-start;
@@ -226,7 +227,7 @@ export const DescBook = styled.button`
       font-family: ${font.Rmedium};
       font-size: ${size.Mmini};
       line-height: 1.25rem;
-      padding: 1em 3rem;
+      padding: 1em 4rem;
       width: 12%;
       text-align: center;
       text-decoration: none #D1D5DB solid;
@@ -379,6 +380,32 @@ export const StyledService = styled.div`
       flex-flow: column nowrap;
       background: ${colors.none};
       width: 100%;
+      gap: 0em;
+      height: auto;
+      padding: 3em 0;
+      line-height : 50px;
+
+
+      h1{
+        margin:0;
+        font-family: ${font.Rsemi};
+        font-size: ${size.Mheader};
+        color: ${colors.green};
+    }
+      h2{
+        margin:0;
+        font-family: ${font.Rsemi};
+        font-size: ${size.Mtittle};
+        color: ${colors.green};
+    }
+
+    ${above.large`
+    display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-flow: column nowrap;
+      background: ${colors.none};
+      width: 100%;
       gap: 0.5em;
       height: auto;
       padding: 4em 0;
@@ -397,6 +424,8 @@ export const StyledService = styled.div`
         font-size: ${size.Mtittle};
         color: ${colors.green};
     }
+
+    `}
       
 
     `
@@ -506,6 +535,12 @@ export const Show = styled.div`
     align-items: center;
     width: 100%;
     padding: 3em 0;
+    a{
+      padding: 1em 0;
+      font-family: ${font.Rmedium};
+      font-size: ${size.Mtittle};
+      color: ${colors.white};
+    }
   
     ${above.large` {
       display: none;

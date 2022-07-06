@@ -25,6 +25,7 @@ const IndexPage = () => {
           childImageSharp {
             gatsbyImageData(
               placeholder: BLURRED
+              quality: 100
               breakpoints:[750, 1080, 1366, 1920]
               formats: [AUTO, WEBP, AVIF]
               layout: FULL_WIDTH
