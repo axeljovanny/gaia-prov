@@ -41,6 +41,12 @@
   height: auto;
   transform: translateX(20%);
 }
+.gift-movil-store {
+  display: flex;
+  width: 100%;
+  height: auto;
+  transform: translateX(20%);
+}
 .gift-web {
   display: none;
 }
