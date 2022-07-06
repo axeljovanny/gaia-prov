@@ -229,13 +229,12 @@ ${above.medium`
 right: -6%;
 `}
 ${above.large`
-width: calc(40% + 2vw); 
-height: calc(30% + 6vh);
 display: ${props => (props.movil ? "none" : "flex")};
+position: relative;
 align-content: center; 
 align-items: center; 
 justify-content: center; 
-width: 30%; 
+width: 45%; 
 height: auto;
   
   `}
@@ -257,7 +256,7 @@ display: ${props => (props.movil ? "none" : "flex")};
 align-content: center; 
 align-items: center; 
 justify-content: center; 
-width: 30%; 
+width: 25%; 
 height: auto;
   
   `}
@@ -400,6 +399,7 @@ export const ImgsWedo = styled.div`
   display:none;
 
   ${above.large`
+  background: ${colors.none};
   display:flex;
   justify-content: center ;
   align-items: center;
@@ -425,7 +425,7 @@ export const StyledProducts = styled.div`
   height: 55vh;
   `}
   ${above.large`  
-  height: 70vh;
+  height: 80vh;
 
   
   `}
@@ -465,7 +465,7 @@ export const Rectangulo = styled(motion.div)`
   width: 75%;
   height: 40%;
   ${above.medium`
-  height: 30%;
+  height: 40%;
   
   `}
   ${above.large`  
@@ -474,7 +474,7 @@ export const Rectangulo = styled(motion.div)`
   background: ${colors.green};
   border-radius: 5px;
   width: 100%;
-  height: 40%;
+  height: 60%;
   `}
   `
 
@@ -600,7 +600,7 @@ export const StyledTratamient = styled.div`
   background: ${colors.none};
   position: relative;
   ${above.large`
-  width: 80%;
+  width: 100%;
   height: 100%;
   flex-flow: row nowrap;
   justify-content: space-evenly ;
@@ -783,7 +783,7 @@ h3{
 ${above.large`
 height: 50%;
 justify-content: flex-end;
-width: 45%;
+width: 40%;
 a{
   justify-content: flex-start ;
   font-size: ${size.Wtext};
@@ -907,7 +907,7 @@ export const TextMaps = styled.div`
 
   ${above.large`
   display ${props => (props.movil ? "none" : "flex")};
-  justify-content: flex-start;
+  justify-content: center;
   align-items: flex-end;
   width: 45%;
   height: 70vh;

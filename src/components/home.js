@@ -352,7 +352,7 @@ const Products = ({ children }) => {
                   whileInView={{ opacity: 1 }} 
                   transition={{ duration: 1.5, delay: .5 }} 
                   viewport={{ once: true }} 
-                  style={{y: y1, x: "-52%"}}>
+                  style={{y: y1}}>
                     <Favorite className="ProductsSvg" fill={colors.softWhite} />
                 </BannerSvg>
                 <BannerSvg movil
