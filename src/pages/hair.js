@@ -7,7 +7,7 @@ import '../styles/css/skin.css'
 
 import { HairMobileService, HairService, useHairService } from "../components/hair";
 import { ServiceNav } from "../components/servnav";
-import CarouselComponent from "../components/galeria";
+import Galery from "../components/galeria";
 
 
 const initialTitle = 'HAIR CUTS';
@@ -86,7 +86,7 @@ const HairPage = () => {
           </motion.div>
         </StyledServiceDesc>
         <StyledServicePhoto>
-          <CarouselComponent />
+          <Galery />
         </StyledServicePhoto>
       </StyledServiceContent>
       <StyledServiceMobileContent>

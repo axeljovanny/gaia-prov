@@ -3,7 +3,6 @@ import { StyledServiceContent, StyledServicePage, StyledServiceTittle, StyledSer
 import '../styles/css/skin.css'
 import { motion } from "framer-motion";
 import { colors } from "../utils/const";
-import CarouselComponent from "../components/galeria";
 
 import { SkinMobileService, SkinService, useSkinService } from "../components/skin";
 import { ServiceNav } from "../components/servnav";
@@ -11,7 +10,7 @@ import Galery from "../components/galeria";
 
 
 
-const initialTitle = 'Gaia Signature';
+const initialTitle = 'GAIA SIGNATURE';
 
 const draw = {
   hidden: { pathLength: 0 },

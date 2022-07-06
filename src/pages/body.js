@@ -7,7 +7,7 @@ import '../styles/css/skin.css'
 
 import { BodyMobileService, BodyService, useBodyService } from "../components/body";
 import { ServiceNav } from "../components/servnav";
-import CarouselComponent from "../components/galeria";
+import Galery from "../components/galeria";
 
 
 const initialTitle = 'SPECIAL';
@@ -85,7 +85,7 @@ const BodyPage = () => {
           </motion.div>
         </StyledServiceDesc>
         <StyledServicePhoto>
-          <CarouselComponent />
+          <Galery />
         </StyledServicePhoto>
 
       </StyledServiceContent>

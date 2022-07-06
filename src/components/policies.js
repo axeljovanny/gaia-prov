@@ -6,7 +6,7 @@ import Footer from "./footer"
 
 
 const Policies = ({ children }) => (
-    <>
+    <div style={{background:"#828C7A"}}>
         <StyledLogoMobileContainer>
             <StaticImage
                 className="container-logo"
@@ -90,7 +90,7 @@ const Policies = ({ children }) => (
 
         </StyledContent>
         <Footer />
-    </>
+    </div>
 
 )
 
