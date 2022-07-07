@@ -378,9 +378,11 @@ const Products = ({ children }) => {
 const Maps = ({ children }) => {
     return (
         <StyledMaps initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} transition={{ duration: 1.5 }} viewport={{ once: true }}>
+                <TextMaps movil>
+                <a href="https://www.google.com/maps/place/Gaia+Evolution+Spa+and+Salon/@41.9245235,-87.7068398,19z/data=!3m2!4b1!5s0x880fcd657178d7e3:0x4804758ad15f5cf!4m5!3m4!1s0x880fcd65725634f9:0xf6193b2710f612ea!8m2!3d41.9245235!4d-87.7062926" rel="noreferrer" target="_blank"> Gaia Evolution in Google Maps <Flecha className="flecha" stroke={colors.green} /></a >
+                </TextMaps> 
                 <StaticImage
                         className="Maps"
-                        imgClassName=""
                         src="../images/Home/JPG/Mapa.jpg"
                         alt="Gaia Evolution maps"
                         breakpoints={[750, 1080, 1366, 1920]}
@@ -392,9 +394,6 @@ const Maps = ({ children }) => {
                 <TextMaps>
                     <CTVTS className="CTVTS" fill={colors.green} ></CTVTS>
                     <a href="https://www.google.com/maps/place/Gaia+Evolution+Spa+and+Salon/@41.9245235,-87.7068398,19z/data=!3m2!4b1!5s0x880fcd657178d7e3:0x4804758ad15f5cf!4m5!3m4!1s0x880fcd65725634f9:0xf6193b2710f612ea!8m2!3d41.9245235!4d-87.7062926" rel="noreferrer" target="_blank"> Gaia Evolution in Google Maps <Flecha className="flecha" stroke={colors.green} /></a >
-                </TextMaps>
-                <TextMaps movil>
-                <a href="https://www.google.com/maps/place/Gaia+Evolution+Spa+and+Salon/@41.9245235,-87.7068398,19z/data=!3m2!4b1!5s0x880fcd657178d7e3:0x4804758ad15f5cf!4m5!3m4!1s0x880fcd65725634f9:0xf6193b2710f612ea!8m2!3d41.9245235!4d-87.7062926" rel="noreferrer" target="_blank"> Gaia Evolution in Google Maps <Flecha className="flecha" stroke={colors.green} /></a >
                 </TextMaps>
         </StyledMaps>
     );
