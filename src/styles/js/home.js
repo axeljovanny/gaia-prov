@@ -187,6 +187,7 @@ export const StyledWedoSection = styled.div`
   background: ${colors.none};
   position: relative;
   overflow-x: hidden;
+  overflow-y: hidden;
 
   ${above.medium`
   height: 70vh;

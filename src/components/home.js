@@ -89,7 +89,6 @@ const Wedo = ({ children }) => {
             <ImageWedo movil initial={{ opacity: 0, y: 10 }} animate={{ y: 0 }} whileInView={{ opacity: 1 }} transition={{ duration: 1 }} viewport={{ once: true }} style={{ y: y1}}>
                 <StaticImage
                     className="HomeWDMovil"
-                    imgClassName=""
                     src="../images/Home/PNG/WWDArcoMovil.png"
                     alt="Spa Image"
                     loading="lazy"
