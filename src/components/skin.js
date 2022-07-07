@@ -12,6 +12,7 @@ export const useSkinService = () => {
               id
               category
               title
+              type
               time
               price
               description
@@ -24,11 +25,11 @@ export const useSkinService = () => {
   return data.allGoogleSkinSheet.edges
 }
 
-const SkinService = (title) => {
+const SkinService = (type) => {
   const kawai = useSkinService()
   return (
     <>
-      <SkinServiceDesc services={kawai} title={title} />
+      <SkinServiceDesc services={kawai} type={type} />
     </>
   )
 }

@@ -284,7 +284,7 @@ export const DescText = styled.div`
       width: 50vw;
       justify-content: flex-start;
       align-items: center;
-      padding: 3em 0 0 0;
+      padding: 1em 0 0 0;
       text-align: justify;
       line-height : 23px;
       p{

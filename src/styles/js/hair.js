@@ -55,8 +55,8 @@ export const DescDetailsHair = styled.div`
       height: 70%; 
 
       a{
-        width: 100%;
-        padding: 1em 0;
+        width: 90%;
+        padding: 1em;
         font-family: ${font.Rmedium};
         font-size: ${size.Mtittle};
         color: ${colors.white};

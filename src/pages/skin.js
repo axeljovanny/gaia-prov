@@ -28,23 +28,27 @@ const draw = {
 const SkinPage = () => {
   const services = useSkinService()
 
-  const [title, setTitle] = useState(initialTitle);
+  const [type, setTitle] = useState(initialTitle);
+
+  const result = services.map(({ node }) => node.type)
+  const sort = result.filter((item,
+    index) => result.indexOf(item) === index);
+
 
   return (
     <StyledServicePage >
       <ServiceNav siteTitle="skin"></ServiceNav>
       <StyledServiceContent>
         <StyledServiceTittle>
-          {services.map(({ node }) => {
+        {sort.map((data) => {
             return (
-              node.category != null && (
-                
-                  <TextTittle key={node.id} initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: .5 }}>
-                    <motion.button whileHover={{ scale: 1.03, color: colors.accentBlue }} whileTap={{ scale: 0.9 }} transition={{ ease: "linear" }} onClick={() => setTitle(node.title)}>
-                      {node.title}
-                    </motion.button>
-                  </TextTittle>
-              )
+              <TextTittle key={data}>
+                <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: .5 }}>
+                  <motion.button whileHover={{ scale: 1.1, color: colors.accentBlue }} whileTap={{ scale: 0.9 }} transition={{ ease: "linear" }} onClick={() => setTitle(data)}>
+                    {data}
+                  </motion.button>
+                </motion.div>
+              </TextTittle>
             )
           })}
         </StyledServiceTittle>
@@ -76,7 +80,7 @@ const SkinPage = () => {
         </StyledSVG>
         <StyledServiceDesc>
           <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: .5, delay: .2 }}>
-            <SkinService title={title} />
+            <SkinService type={type} />
           </motion.div>
         </StyledServiceDesc>
         <StyledServicePhoto>
