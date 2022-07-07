@@ -219,15 +219,14 @@ export const StyledWedo = styled.div`
 
 export const ImageWedo = styled(motion.div)`
 display: ${props => (props.movil ? "flex" : "none")};
-position: absolute;
 background: ${colors.none};
 width: calc(20% + 2vw); 
-height: calc(45% + 2vh);
+height: calc(40% + 2vh);
+position: absolute;
 top:0;
 right:0;
-
 ${above.medium`
-right: -6%;
+right: -8%;
 `}
 ${above.large`
 display: ${props => (props.movil ? "none" : "flex")};
@@ -827,11 +826,12 @@ h3{
 
 //////MAPS
 
-export const StyledMaps = styled.div`
+export const StyledMaps = styled(motion.div)`
   display:flex;
+  flex-flow: row nowrap;
   width: 100vw;
   height: 50vh;
-  background: ${colors.none};
+  background: ${colors.softWhite};
   position: relative;
 
   ${above.medium`

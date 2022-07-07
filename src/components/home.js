@@ -86,13 +86,18 @@ const Wedo = ({ children }) => {
 
     return (
         <StyledWedoSection>
-            <ImageWedo movil initial={{ opacity: 0, y: 10 }} animate={{ y: 0 }} whileInView={{ opacity: 1 }} transition={{ duration: 1 }} viewport={{ once: true }} style={{ y: y1}}>
+            <ImageWedo movil 
+            initial={{ opacity: 0, y: 10 }} 
+            animate={{ y: 0 }} 
+            whileInView={{ opacity: 1 }} 
+            transition={{ duration: 1 }} 
+            viewport={{ once: true }} style={{ y: y1}}>
                 <StaticImage
                     className="HomeWDMovil"
                     src="../images/Home/PNG/WWDArcoMovil.png"
                     alt="Spa Image"
                     loading="lazy"
-                    layout="fixed"
+                    layout="constrained"
                     formats={['auto', 'webp', 'avif']}
                     quality='100'
                 />
@@ -372,8 +377,7 @@ const Products = ({ children }) => {
 }
 const Maps = ({ children }) => {
     return (
-        <StyledMaps>
-            <motion.div initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} transition={{ duration: 1.5 }} viewport={{ once: true }}>
+        <StyledMaps initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} transition={{ duration: 1.5 }} viewport={{ once: true }}>
                 <StaticImage
                         className="Maps"
                         imgClassName=""
@@ -392,7 +396,6 @@ const Maps = ({ children }) => {
                 <TextMaps movil>
                 <a href="https://www.google.com/maps/place/Gaia+Evolution+Spa+and+Salon/@41.9245235,-87.7068398,19z/data=!3m2!4b1!5s0x880fcd657178d7e3:0x4804758ad15f5cf!4m5!3m4!1s0x880fcd65725634f9:0xf6193b2710f612ea!8m2!3d41.9245235!4d-87.7062926" rel="noreferrer" target="_blank"> Gaia Evolution in Google Maps <Flecha className="flecha" stroke={colors.green} /></a >
                 </TextMaps>
-            </motion.div>
         </StyledMaps>
     );
 }

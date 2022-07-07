@@ -94,7 +94,7 @@
   display: none;
 }
 .HomeWDMovil img{
-  height: 30%;
+  height: 100% ;
   width: auto;
 
 }
@@ -186,8 +186,8 @@
     top: 8%;
   }
   .HomeWDMovil img{
-    height: 42%;
     width: auto;
+    height: 100%;
   
   }
 }
