@@ -3,14 +3,14 @@ import { StyledServiceContent, StyledServicePage, StyledServiceTittle, StyledSer
 import '../styles/css/skin.css'
 import { motion } from "framer-motion";
 import { colors } from "../utils/const";
-import CarouselComponent from "../components/galeria";
 
 import { SkinMobileService, SkinService, useSkinService } from "../components/skin";
 import { ServiceNav } from "../components/servnav";
+import Galery from "../components/galeria";
 
 
 
-const initialTitle = 'Gaia Signature';
+const initialTitle = 'GAIA SIGNATURE';
 
 const draw = {
   hidden: { pathLength: 0 },
@@ -28,24 +28,27 @@ const draw = {
 const SkinPage = () => {
   const services = useSkinService()
 
-  const [title, setTitle] = useState(initialTitle);
+  const [type, setTitle] = useState(initialTitle);
+
+  const result = services.map(({ node }) => node.type)
+  const sort = result.filter((item,
+    index) => result.indexOf(item) === index);
+
 
   return (
     <StyledServicePage >
       <ServiceNav siteTitle="skin"></ServiceNav>
       <StyledServiceContent>
         <StyledServiceTittle>
-          {services.map(({ node }) => {
+        {sort.map((data) => {
             return (
-              node.category != null && (
-                <motion.div key={node.id} initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: .5 }}>
-                  <TextTittle>
-                    <motion.button whileHover={{ scale: 1.1, color: colors.accentBlue }} whileTap={{ scale: 0.9 }} transition={{ ease: "linear" }} onClick={() => setTitle(node.title)}>
-                      {node.title}
-                    </motion.button>
-                  </TextTittle>
+              <TextTittle key={data}>
+                <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: .5 }}>
+                  <motion.button whileHover={{ scale: 1.1, color: colors.accentBlue }} whileTap={{ scale: 0.9 }} transition={{ ease: "linear" }} onClick={() => setTitle(data)}>
+                    {data}
+                  </motion.button>
                 </motion.div>
-              )
+              </TextTittle>
             )
           })}
         </StyledServiceTittle>
@@ -77,20 +80,17 @@ const SkinPage = () => {
         </StyledSVG>
         <StyledServiceDesc>
           <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: .5, delay: .2 }}>
-            <SkinService title={title} />
+            <SkinService type={type} />
           </motion.div>
         </StyledServiceDesc>
         <StyledServicePhoto>
-          <CarouselComponent />
+          <Galery />
         </StyledServicePhoto>
       </StyledServiceContent>
       <StyledServiceMobileContent>
         <StyledService>
           <h1>Skin care</h1>
           <h2>Services</h2>
-          <a href="https://squareup.com/appointments/book/18a837f7-27d0-4fb3-9184-eed5ec31a526/9XWS7XZK8MK0T/services" target="_blank" rel="noreferrer">
-            <DescBook>BOOK NOW</DescBook>
-          </a>
         </StyledService>
         <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: .5, delay: .2 }}>
           <SkinMobileService />

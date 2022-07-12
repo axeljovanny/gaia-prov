@@ -5,28 +5,31 @@ import { Desc, DescBodyTittle, DescDetailsBody, DescNoteBody, DescPriceBody, Des
 import "../styles/css/skin.css";
 
 
-import Loadable from "@loadable/component"
-const Flecha = Loadable(() => import("../assets/arrow.svg"))
+import { Flecha } from "../assets/Home"
+import { colors } from "../utils/const";
 
 
 
 
-const SkinServiceDesc = ({ services, title }) => {
+const SkinServiceDesc = ({ services, type }) => {
     return (
         <>
+            <DescTittle><p>{type.type}</p>
+                <a href="https://squareup.com/appointments/book/18a837f7-27d0-4fb3-9184-eed5ec31a526/9XWS7XZK8MK0T/services" target="_blank" rel="noreferrer">
+                    <DescBook>BOOK NOW</DescBook>
+                </a>
+            </DescTittle>
             {services.map(({ node }) => {
-                console.log(node);
                 return (
                     <div key={node.id}>
                         {
-                            node.category != null &&
-                            node.title === title.title && (
-                                <>
-                                    <DescTittle><p>{node.title}</p>
-                                        <a href="https://squareup.com/appointments/book/18a837f7-27d0-4fb3-9184-eed5ec31a526/9XWS7XZK8MK0T/services" target="_blank" rel="noreferrer">
-                                            <DescBook>BOOK NOW</DescBook>
-                                        </a>
-                                    </DescTittle>
+                             node.type === type.type && (
+                                <DescDetailsHair> 
+                                {node.title !== node.type &&(
+                                    <DescTitleHair>
+                                        {node.title}
+                                    </DescTitleHair>
+                                )} 
                                     <DescText><p>{node.description}</p></DescText>
                                     <DescDetails>
                                         <DescTime>
@@ -36,7 +39,7 @@ const SkinServiceDesc = ({ services, title }) => {
                                             {node.price}
                                         </DescPrice>
                                     </DescDetails>
-                                </>
+                                </DescDetailsHair>
                             )
                         }
                     </div>
@@ -47,33 +50,37 @@ const SkinServiceDesc = ({ services, title }) => {
 }
 const SkinServiceMobileDesc = ({ services }) => {
 
-    const result = services.map(({ node }) => node.title)
+    const result = services.map(({ node }) => node.type)
     const sort = result.filter((item,
         index) => result.indexOf(item) === index);
     return (
         <>
             {sort.map((data) => {
-                const description = services.map(({ node }) => (
-                    node.title === data
-                    && node.description !== null
-                    && (node.description)
-                ))
                 const [toggle, toggleNav] = useState(false);
 
                 return (
-                    <>
+                    <div key={data}>
+                        {data !== null && data !== '' &&
+                            (
                         <DescTittle key={data} onClick={() => toggleNav(!toggle)}>
                             <p>{data}</p>
-                            <Flecha className="flecha" />
+                            <Flecha className="flecha" stroke={colors.green} />
                         </DescTittle>
+                         )}
                         <Show open={toggle}>
-                            <DescText open={toggle}>{description}</DescText>
                             {services.map(({ node }) => {
                                 return (
                                     <div key={node.id}>
                                         {
-                                            node.title === data &&
-                                            (
+                                             node.type === data &&
+                                             (
+                                                <DescDetailsHair>
+                                                {node.title !== node.type &&(
+                                                        <DescTitleHair>
+                                                            {node.title}
+                                                        </DescTitleHair>
+                                                    )} 
+                                                <DescHairText>{node.description}</DescHairText>
                                                 <DescDetails>
                                                     <DescTime>
                                                         {node.time}
@@ -82,13 +89,17 @@ const SkinServiceMobileDesc = ({ services }) => {
                                                         {node.price}
                                                     </DescPrice>
                                                 </DescDetails>
+                                            </DescDetailsHair>
+                                               
                                             )
                                         }
                                     </div>
                                 )
                             })}
+                            <a href="https://squareup.com/appointments/book/18a837f7-27d0-4fb3-9184-eed5ec31a526/9XWS7XZK8MK0T/services" target="_blank" rel="noreferrer">BOOK NOW </a>
+
                         </Show>
-                    </>
+                    </div>
                 )
             })}
         </>
@@ -144,7 +155,7 @@ const HairServiceMobileDesc = ({ services }) => {
                             (
                                 <DescTittle key={data} onClick={() => toggleNav(!toggle)}>
                                     <p>{data}</p>
-                                    <Flecha className="flecha" />
+                                    <Flecha className="flecha" stroke={colors.green} />
                                 </DescTittle>
                             )}
                         <Show open={toggle}>
@@ -162,7 +173,10 @@ const HairServiceMobileDesc = ({ services }) => {
                                                     <DescPriceHair>
                                                         {node.price}
                                                     </DescPriceHair>
+                                                    <a href="https://squareup.com/appointments/book/18a837f7-27d0-4fb3-9184-eed5ec31a526/9XWS7XZK8MK0T/services" target="_blank" rel="noreferrer">BOOK NOW </a>
+
                                                 </DescDetailsHair>
+
                                             )
                                         }
                                     </div>
@@ -235,7 +249,7 @@ const BodyServiceMobileDesc = ({ services }) => {
                     <>
                         <DescTittle key={data} open={toggle} onClick={() => toggleNav(!toggle)}>
                             <p>{data}</p>
-                            <Flecha className="flecha" />
+                            <Flecha className="flecha" stroke={colors.green} />
                         </DescTittle>
                         <Show open={toggle}>
                             {services.map(({ node }) => {
@@ -257,6 +271,8 @@ const BodyServiceMobileDesc = ({ services }) => {
                                                     <DescNoteBody>
                                                         {node.note}
                                                     </DescNoteBody>
+                                                    <a href="https://squareup.com/appointments/book/18a837f7-27d0-4fb3-9184-eed5ec31a526/9XWS7XZK8MK0T/services" target="_blank" rel="noreferrer">BOOK NOW </a>
+
                                                 </DescDetailsBody>
                                             )
                                         }

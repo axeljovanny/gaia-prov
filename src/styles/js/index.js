@@ -5,7 +5,8 @@ export const size = {
   small: 400,
   medium: 480,
   mediumL: 960,
-  large: 1140
+  large: 1140,
+  xlarge: 1400,
 }
 
 export const above = Object.keys(size).reduce((acc, label) => {
@@ -17,9 +18,10 @@ export const above = Object.keys(size).reduce((acc, label) => {
   return acc
 }, {})
 
-export const aboveMax = Object.keys(size).reduce((acc, label) => {
+export const aboveLand = Object.keys(size).reduce((acc, label) => {
   acc[label] = (...args) => css`
-    @media (max-width: ${size[label]}px) {
+  @media screen and (orientation:landscape)
+  and (min-device-width: ${size[label]}px) {
       ${css(...args)}
     }
   `
@@ -42,6 +44,8 @@ body {
   font-family: ${font.light};
   background: ${colors.softWhite};
   height:100%; 
+  overflow-x: hidden;
+
 }
 a {
   text-decoration: none;
@@ -61,31 +65,6 @@ ul {
   
 }
 
-.mastheadHome {
-  width: 100%;
-  min-height: 100vh;
-  position: absolute;
-  left: 0;
-  right: 0;
-  top: 0;
-  animation: ${headertransition} 60s linear 10ms infinite;
-  transition: all 0.1s ease-in-out;
-}
-
-
-.content{
-  display: flex;
-  align-items: flex-start;
-  justify-content: flex-start;
-  flex-direction: column;
-  z-index: 10;
-  position: absolute;
-  width: 100vw;
-  height: 100vh;
-  left: 0;
-  right: 0;
-  top: 0;
-}
 
 @media (min-width: 1140px) {
   .masthead {
@@ -97,4 +76,16 @@ ul {
 ::-webkit-scrollbar {
   display: none;
 }
+// @media screen and (min-width: 320px) and (max-width: 767px) and (orientation: landscape) { 
+//   html { 
+//     transform: rotate(90deg); 
+//     transform-origin: left top;
+//     width: 100vh; 
+//     overflow-x: hidden; 
+//     position: absolute; 
+//     top: 100%; 
+//     left: 0; 
+//   }
+// }
+
 `;

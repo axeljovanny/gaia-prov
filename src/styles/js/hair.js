@@ -14,8 +14,8 @@ export const DescHairTittle = styled.div`
 
       p{
         margin:0;
-        font-family: ${font.waveLight};
-        font-size: ${size.Wtittle};
+        font-family: ${font.Rregular};
+        font-size: ${size.Mtittle};
         color: ${colors.black};
       }
       ${above.large`
@@ -28,23 +28,40 @@ export const DescHairTittle = styled.div`
         width: 80%;
         text-align: left;
         margin:0;
-        font-family: ${font.waveMedium};
+        font-family: ${font.Rregular};
         font-size: ${size.Wtittle};
         color: ${colors.black};
       }
 
     `}
+    ${above.xlarge`
+    p{
+      font-family: ${font.Rmedium};
+      font-size: ${size.XList};
+      color: ${colors.black};
+    }
+
+  `}
       `
 
 export const DescDetailsHair = styled.div`
       display: flex;
       justify-content: center;
       align-items: center;
-      flex-flow: column wrap;
+      flex-flow: column nowrap;
       background: ${colors.none};
       width: 100%;
       padding: 4% 0;
       height: 70%; 
+
+      a{
+        width: 90%;
+        padding: 1em;
+        font-family: ${font.Rmedium};
+        font-size: ${size.Mtittle};
+        color: ${colors.white};
+      }
+
       ${above.large`
       align-items: flex-start;
 
@@ -58,7 +75,7 @@ export const DescPriceHair = styled.div`
       align-items: center;
       background: ${colors.none};
       width: 90%;
-        font-family: ${font.medium};
+        font-family: ${font.Lblack};
         font-size: ${size.Mtext};
         color: ${colors.white};
         padding: 1em 0;
@@ -67,11 +84,18 @@ export const DescPriceHair = styled.div`
         width: 30%;
         padding:0;
         align-items: center;
-        font-family: ${font.medium};
-        font-size: ${size.Mtext};
+        font-family: ${font.Lblack};
+        font-size: ${size.Wmini};
         color: ${colors.black};
       
       `}
+
+      ${above.xlarge`
+      font-family: ${font.Lbold};
+      font-size: ${size.Mmini};
+      color: ${colors.softBlack};
+    
+    `}
       `
 export const DescTitleHair = styled.div`
       display: flex;
@@ -79,19 +103,26 @@ export const DescTitleHair = styled.div`
       align-items: center;
       background: ${colors.none};
       width: 90vw;
-      font-family: ${font.medium};
-      font-size: ${size.WList};
+      font-family: ${font.Lregular};
+      font-size: ${size.Mtittle};
       color: ${colors.white};
       padding: 1em 0;
+
       ${above.large`
       justify-content: flex-start;
       align-items: center;
       background: ${colors.none};
       width: 70%;
-      font-family: ${font.medium};
-      font-size: ${size.WList};
-      color: ${colors.black};
+      font-family: ${font.Lblack};
+      font-size: ${size.Wtext};
+      color: ${colors.softBlack};
       padding: 0;
+
+      `}
+      ${above.xlarge`
+      font-family: ${font.Lbold};
+      font-size: ${size.WList};
+      color: ${colors.softBlack};
 
       `}
       `
@@ -103,16 +134,23 @@ export const DescHairText = styled.div`
       height: 30%; 
       width: 90%;
       text-align:justify;
-        font-family: ${font.light};
-        font-size: ${size.Wtext};
+        font-family: ${font.Lregular};
+        font-size: ${size.Wmini};
         color: ${colors.white};
+
       ${above.large`
       padding: 0.5em 0;
       width: 95%;
       text-align: justify;
       line-height : 23px;
-        font-family: ${font.light};
+        font-family: ${font.Lregular};
         font-size: ${size.Wtext};
+        color: ${colors.black};
+      `}
+
+      ${above.xlarge`
+      font-family: ${font.Llight};
+      font-size: ${size.Wtext};
         color: ${colors.black};
       `}
       `

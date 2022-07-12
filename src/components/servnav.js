@@ -8,9 +8,9 @@ import { colors } from "../utils/const"
 import { motion } from "framer-motion"
 import "../styles/css/skin.css";
 
-import Loadable from "@loadable/component"
-const Flecha = Loadable(() => import("../assets/arrow.svg"))
-/* const Linea = Loadable(() => import("../assets/LineaSeleccion.svg")) */
+import { Flecha } from "../assets/Home"
+import { IconNav } from "./navbar"
+
 
 
 const draw = {
@@ -37,7 +37,7 @@ const ServiceNav = ({ siteTitle }) => {
                         whileHover={{ scale: 1.5, color: colors.accentBlue }}
                         whileTap={{ scale: 0.9 }}
                         transition={{ ease: "linear" }}
-                    ><Flecha className="flechaHome" />
+                    ><Flecha className="flechaHome" stroke={colors.green} />
                     </motion.div>
                     <Link to="/">
                         HOME
@@ -190,82 +190,10 @@ const ServiceNav = ({ siteTitle }) => {
 
 
                     </SVG>
-
-                    <NavIcon onClick={() => toggleNav(!toggle)}>
-                        <Line open={toggle} />
-                        <Line open={toggle} />
-                        <Line open={toggle} />
-                    </NavIcon>
-
                 </StyledNavbarServ>
-                <Overlay open={toggle}>
-                    <StyledIcons open={toggle}>
-                        <a href="https://www.facebook.com/GaiaEvolutionGroup/" rel="noreferrer" target="_blank">
-                            <FacebookIcon fill={colors.white} className="svgAbout" />
-                        </a>
-                        <a href="https://www.instagram.com/gaiaevolution/" rel="noreferrer" target="_blank">
-
-                            <InstagramIcon fill={colors.white} className="svgAbout" />
-                        </a>
-                        <a href="https://www.google.com/maps/place/Gaia+Evolution+Spa+and+Salon/@41.9245235,-87.7068398,19z/data=!3m2!4b1!5s0x880fcd657178d7e3:0x4804758ad15f5cf!4m5!3m4!1s0x880fcd65725634f9:0xf6193b2710f612ea!8m2!3d41.9245235!4d-87.7062926" rel="noreferrer" target="_blank">
-                            <MapsIcon fill={colors.white} className="svgAbout" />
-                        </a>
-
-                    </StyledIcons>
-                    <OverlayMenu open={toggle}>
-                        <Item onClick={() => toggleNav(!toggle)}>
-                            <Link to="/">HOME</Link>
-                        </Item>
-                        <Item onClick={() => toggleNav(!toggle)}>
-                            <Link to="/skin">
-                                SKIN CARE
-                            </Link>
-                        </Item>
-                        <Item onClick={() => toggleNav(!toggle)}>
-                            <Link to="/hair">
-                                HAIR CARE
-                            </Link>
-                        </Item>
-                        <Item onClick={() => toggleNav(!toggle)}>
-                            <Link to="/body">
-                                BODY CARE
-                            </Link>
-                        </Item>
-                        <Item onClick={() => toggleNav(!toggle)}>
-                            <a href="https://www.aveda.com/locator/get_the_facts.tmpl?vanity=1&SalonID=38631" target="_blank" rel="noreferrer">
-                                SHOP
-                            </a>
-                        </Item>
-                        <Item onClick={() => toggleNav(!toggle)}>
-                            <Link to="/policies">
-                                POLICIES
-                            </Link>
-                        </Item>
-                    </OverlayMenu>
-                    <OverlayFooter open={toggle}>
-                        <Logo>
-                            <StaticImage
-                                className="logoFooter"
-                                src="../images/logo.png"
-                                alt="gaia logo nav"
-                                width={110}
-                                loading="eager"
-                                layout="constrained"
-                                placeholder="blurred"
-                                formats={['auto', 'webp', 'avif']}
-                                quality={60}
-                            />
-                        </Logo>
-                        <Contacto>
-                            <a href="tel:773-799-8843">773-799-8843</a>
-                            <a href="mailto:gaiaevolution@icloud.com">
-                                gaiaevolution@icloud.com
-                            </a>
-                            <p> 3143 W. Fullerton Ave. Chicago, IL</p>
-                        </Contacto>
-                    </OverlayFooter>
-                </Overlay>
+             
             </StyledServiceNav>
+            <IconNav></IconNav>
         </>
     )
 

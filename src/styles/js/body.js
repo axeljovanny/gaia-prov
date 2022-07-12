@@ -4,9 +4,9 @@ import { colors, font, size } from "../../utils/const"
 
 export const DescBodyTittle = styled.div`
       display: flex;
-      justify-content: flex-end;
+      justify-content: center;
       align-items: center;
-      background: ${colors.none};
+      background: ${colors.red};
       flex-flow: column nowrap;
       width: 100%;
       height: auto; 
@@ -14,8 +14,8 @@ export const DescBodyTittle = styled.div`
 
       p{
         margin:0;
-        font-family: ${font.waveLight};
-        font-size: ${size.Wtittle};
+        font-family: ${font.Rregular};
+        font-size: ${size.Mtittle};
         color: ${colors.black};
       }
       ${above.large`
@@ -28,11 +28,19 @@ export const DescBodyTittle = styled.div`
       height: auto;
       p{
         text-align: left;
-        font-family: ${font.waveMedium};
+        font-family: ${font.Rregular};
         font-size: ${size.Wtittle};
         color: ${colors.black};
       }
 
+      ${above.xlarge`
+      p{
+        font-family: ${font.Rmedium};
+        font-size: ${size.XList};
+        color: ${colors.black};
+      }
+  
+    `}
     `}
       `
 
@@ -44,6 +52,13 @@ export const DescDetailsBody = styled.div`
       background: ${colors.none};
       width: 90vw;
       padding: 5% 0;
+
+      a{
+        padding: 1em 0;
+        font-family: ${font.Rmedium};
+        font-size: ${size.Mtittle};
+        color: ${colors.white};
+      }
       ${above.large`
       background: ${colors.none};
       width: 50vw;
@@ -56,17 +71,24 @@ export const DescPriceBody = styled.div`
       align-items: center;
       background: ${colors.none};
       width: auto;
-        font-family: ${font.medium};
-        font-size: ${size.Wtext};
+        font-family: ${font.Lblack};
+        font-size: ${size.Mtext};
         color: ${colors.white};
         padding-right: 3%;
 
         ${above.large`
         padding-right: 0;
-        font-family: ${font.medium};
-        font-size: ${size.Wtext};
+        font-family: ${font.Lblack};
+        font-size: ${size.Wmini};
         color: ${colors.black};
       `}
+
+      ${above.xlarge`
+      font-family: ${font.Lbold};
+      font-size: ${size.Mmini};
+      color: ${colors.softBlack};
+    
+    `}
       `
 export const DescTitleBody = styled.div`
       display: flex;
@@ -74,14 +96,23 @@ export const DescTitleBody = styled.div`
       align-items: flex-start;
       background: ${colors.none};
       width: 65%;
-        font-family: ${font.medium};
-        font-size: ${size.Wtext};
+        font-family: ${font.Lregular};
+        font-size: ${size.Mtittle};
         color: ${colors.white};
+
         ${above.large`
-        font-family: ${font.medium};
+        font-family: ${font.Lblack};
         font-size: ${size.Wtext};
-        color: ${colors.black};
+        color: ${colors.softBlack};
       `}
+
+      ${above.xlarge`
+      font-family: ${font.Lbold};
+      font-size: ${size.WList};
+      color: ${colors.softBlack};
+
+      `}
+
       `
 export const DescNoteBody = styled.div`
       display: flex;
@@ -108,8 +139,8 @@ export const Desc = styled.div`
       width: 100%;
       text-align: justify;
       padding: 2% 0;
-      font-family: ${font.light};
-      font-size: ${size.Wtext};
+      font-family: ${font.Lregular};
+      font-size: ${size.Wmini};
       color: ${colors.white};
       
       ${above.large`
@@ -117,8 +148,14 @@ export const Desc = styled.div`
       height: auto; 
       padding: 0.5em 0;
 
-        font-family: ${font.light};
+        font-family: ${font.Lregular};
         font-size: ${size.Wtext};
         color: ${colors.black};
       `}
+
+      ${above.xlarge`
+      font-family: ${font.Llight};
+      font-size: ${size.Wtext};
+      color: ${colors.black};
+    `}
       `

@@ -1,14 +1,13 @@
 import React, { useState } from "react"
 import { StyledServiceContent, StyledServicePage, StyledServiceTittle, StyledServiceDesc, StyledServicePhoto, StyledServiceNote, StyledNote, TextTittle, StyledSVG, StyledServiceMobileContent, StyledService, DescBook } from "../styles/js/skin";
 import '../styles/css/services.css'
-import { StaticImage } from "gatsby-plugin-image";
 import { motion } from "framer-motion";
 import { colors } from "../utils/const";
 import '../styles/css/skin.css'
 
 import { BodyMobileService, BodyService, useBodyService } from "../components/body";
 import { ServiceNav } from "../components/servnav";
-import CarouselComponent from "../components/galeria";
+import Galery from "../components/galeria";
 
 
 const initialTitle = 'SPECIAL';
@@ -86,7 +85,7 @@ const BodyPage = () => {
           </motion.div>
         </StyledServiceDesc>
         <StyledServicePhoto>
-          <CarouselComponent />
+          <Galery />
         </StyledServicePhoto>
 
       </StyledServiceContent>
@@ -94,9 +93,6 @@ const BodyPage = () => {
         <StyledService>
           <h1>Body care</h1>
           <h2>Services</h2>
-          <a href="https://squareup.com/appointments/book/18a837f7-27d0-4fb3-9184-eed5ec31a526/9XWS7XZK8MK0T/services" target="_blank" rel="noreferrer">
-            <DescBook>BOOK NOW</DescBook>
-          </a>
         </StyledService>
         <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: .5, delay: .2 }}>
           <BodyMobileService />

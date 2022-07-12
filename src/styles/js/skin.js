@@ -1,6 +1,7 @@
 import styled from "styled-components"
 import { above } from "."
 import { colors, font, size } from "../../utils/const"
+import { motion } from "framer-motion"
 
 
 export const StyledServicePage = styled.div`
@@ -39,6 +40,7 @@ export const StyledServiceTittle = styled.div`
     display: none;
 
     ${above.large`
+    background: ${colors.none};
     display: flex;
     flex-flow: column nowrap;
     justify-content: center;
@@ -49,10 +51,22 @@ export const StyledServiceTittle = styled.div`
     margin: 0 1% 0 0;
     
     `}
+    ${above.xlarge`
+    background: ${colors.none};
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: flex-start;
+    width: 20%;
+    height: 100%;
+    gap: 10px;
+    margin: 0 1% 0 0;
+    
+    `}
     `
-export const TextTittle = styled.div`
+export const TextTittle = styled(motion.div)`
       display: flex;
-      width: auto;
+      width: auto%;
       button{
         background: none;
         color: inherit;
@@ -60,8 +74,8 @@ export const TextTittle = styled.div`
         cursor: pointer;
         outline: inherit;
         color: ${colors.black}; //usar en SVG
-        font-family: ${font.waveMedium};
-        font-size: ${size.Wtext};
+        font-family: ${font.Rsemi};
+        font-size: ${size.Mtext};
         }
       ${above.large`
       display: flex;
@@ -71,13 +85,25 @@ export const TextTittle = styled.div`
       background: ${colors.none};
       width: 100%;
       button{
+        width: 100%;
+        height: 100%;
+        position:initial;
         text-align: left;
-        color: ${colors.none}; //usar en SVG
-        font-family: ${font.waveLight};
-        font-size: ${size.WList};
+        color: ${colors.green}; //usar en SVG
+        font-family: ${font.Rsemi};
+        font-size: ${size.Wtext};
       }
-     
-    
+      `}
+
+      ${above.xlarge`
+      button{
+        text-align: left;
+        background: ${colors.none}; 
+        color: ${colors.none}; //usar en SVG
+        font-family: ${font.Lregular};
+        font-size: ${size.Wmini};
+      }
+
     `}
       `
 export const DescTittle = styled.div`
@@ -93,7 +119,7 @@ export const DescTittle = styled.div`
       p{
         margin:0;
         width: 70%;
-        font-family: ${font.waveMedium};
+        font-family: ${font.Rmedium};
         font-size: ${size.Mtittle};
         color: ${colors.softBlack};
       }
@@ -111,12 +137,20 @@ export const DescTittle = styled.div`
         width: 80%;
         text-align: left;
         margin:0;
-        font-family: ${font.waveMedium};
+        font-family: ${font.Rregular};
         font-size: ${size.Wtittle};
         color: ${colors.black};
       }
 
     `}
+    ${above.xlarge`
+    p{
+      font-family: ${font.Rmedium};
+      font-size: ${size.XList};
+      color: ${colors.black};
+    }
+
+  `}
       `
 
 export const DescDetails = styled.div`
@@ -126,6 +160,7 @@ export const DescDetails = styled.div`
       background: ${colors.none};
       width: 85vw;
       padding: 0;
+
       ${above.large`
       background: ${colors.none};
       justify-content: flex-start;
@@ -140,13 +175,20 @@ export const DescTime = styled.div`
       align-items: center;
       background: ${colors.none};
       width: 50%;
-      font-family: ${font.medium};
-      font-size: ${size.Wmini};
+      font-family: ${font.Lblack};
+      font-size: ${size.Mtext};
       color: ${colors.white};
+
       ${above.large`
-      font-family: ${font.medium};
+      font-family: ${font.Lblack};
       font-size: ${size.Wmini};
       color: ${colors.black};
+      `}
+
+      ${above.xlarge`
+      font-family: ${font.Lbold};
+      font-size: ${size.Mmini};
+      color: ${colors.softBlack};
       `}
       `
 export const DescPrice = styled.div`
@@ -155,18 +197,26 @@ export const DescPrice = styled.div`
       align-items: center;
       background: ${colors.none};
       width: 50%;
-      font-family: ${font.medium};
-      font-size: ${size.Wmini};
+      font-family: ${font.Lblack};
+      font-size: ${size.Mtext};
       color: ${colors.white};
+
       ${above.large`
-      font-family: ${font.medium};
+      font-family: ${font.Lblack};
       font-size: ${size.Wmini};
       color: ${colors.black};
       `}
+
+      ${above.xlarge`
+      font-family: ${font.Lbold};
+      font-size: ${size.Mmini};
+      color: ${colors.softBlack};
+      `}
       `
 export const DescBook = styled.button`
+      left: auto;
       display: flex;
-      justify-content: flex-end;
+      justify-content: center;
       align-items: center;
       background-color: ${colors.green};
       border: 0;
@@ -174,10 +224,11 @@ export const DescBook = styled.button`
       box-sizing: border-box;
       color: #111827;
       color: ${colors.white};
-      font-family: ${font.waveMedium};
-      font-size: ${size.Wmini};
+      font-family: ${font.Rmedium};
+      font-size: ${size.Mmini};
       line-height: 1.25rem;
-      padding: 1em 3rem;
+      padding: 1em 4rem;
+      width: 12%;
       text-align: center;
       text-decoration: none #D1D5DB solid;
       text-decoration-thickness: auto;
@@ -202,11 +253,18 @@ export const DescBook = styled.button`
     }
 
     ${above.large`
-    padding: .5rem 1rem;
+    padding: .5rem 2rem;
     button{
       padding: .5rem;
     }
       `}
+
+      ${above.xlarge`
+      padding: .1rem .1rem;
+      button{
+        padding: .5rem;
+      }
+        `}
     `
 
 export const DescText = styled.div`
@@ -218,23 +276,31 @@ export const DescText = styled.div`
       width: 85%;
       text-align: justify;
       padding: 0 0 1em 0;
-      font-family: ${font.light};
-      font-size: ${size.Wtext};
+      font-family: ${font.Lregular};
+      font-size: ${size.Wmini};
       color: ${colors.white};
       
       ${above.large`
       width: 50vw;
       justify-content: flex-start;
       align-items: center;
-      padding: 3em 0 0 0;
+      padding: 1em 0 0 0;
       text-align: justify;
       line-height : 23px;
       p{
-        font-family: ${font.light};
+        font-family: ${font.Lregular};
         font-size: ${size.Wtext};
         color: ${colors.black};
       }
       `}
+      ${above.xlarge`
+      p{
+        font-family: ${font.Llight};
+        font-size: ${size.Wtext};
+        color: ${colors.black};
+      }
+
+    `}
       `
 export const StyledServiceDesc = styled.div`
       display: flex;
@@ -270,7 +336,16 @@ export const StyledServicePhoto = styled.div`
       justify-content: center;
       align-items: center;
       background: ${colors.none};
-      width: 19%;
+      width: 31%; 
+      margin: 6.8% -13% 0 0;
+      `}
+      ${above.xlarge`
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: ${colors.none};
+      width: 30%; 
+      margin: 8.8% -12% 0 0;
       `}
       
       `
@@ -305,6 +380,32 @@ export const StyledService = styled.div`
       flex-flow: column nowrap;
       background: ${colors.none};
       width: 100%;
+      gap: 0em;
+      height: auto;
+      padding: 3em 0;
+      line-height : 50px;
+
+
+      h1{
+        margin:0;
+        font-family: ${font.Rsemi};
+        font-size: ${size.Mheader};
+        color: ${colors.green};
+    }
+      h2{
+        margin:0;
+        font-family: ${font.Rsemi};
+        font-size: ${size.Mtittle};
+        color: ${colors.green};
+    }
+
+    ${above.large`
+    display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-flow: column nowrap;
+      background: ${colors.none};
+      width: 100%;
       gap: 0.5em;
       height: auto;
       padding: 4em 0;
@@ -313,16 +414,18 @@ export const StyledService = styled.div`
 
       h1{
         margin:0;
-        font-family: ${font.waveMedium};
-        font-size: ${size.Wheader};
+        font-family: ${font.Rsemi};
+        font-size: ${size.Mheader};
         color: ${colors.green};
     }
       h2{
         margin:0;
-        font-family: ${font.waveBold};
-        font-size: ${size.Wtittle};
+        font-family: ${font.Rsemi};
+        font-size: ${size.Mtittle};
         color: ${colors.green};
     }
+
+    `}
       
 
     `
@@ -334,7 +437,7 @@ export const StyledNote = styled.div`
     width: 90%;
     padding: 0 0%;
     p{
-      font-family: ${font.light};
+      font-family: ${font.Lregular};
       font-size: ${size.Mmini};
       color: ${colors.softBlack};
     }
@@ -345,6 +448,18 @@ export const StyledNote = styled.div`
     width: 80%;
     p{
       font-size: ${size.Wmini};
+      color: ${colors.black};
+    }
+    a{
+      color: ${colors.black};
+    }
+
+  `}
+  ${above.xlarge`
+    width: 80%;
+    p{
+      font-family: ${font.Llight};
+      font-size: ${size.Xmini};
       color: ${colors.black};
     }
     a{
@@ -420,6 +535,12 @@ export const Show = styled.div`
     align-items: center;
     width: 100%;
     padding: 3em 0;
+    a{
+      padding: 1em 0;
+      font-family: ${font.Rmedium};
+      font-size: ${size.Mtittle};
+      color: ${colors.white};
+    }
   
     ${above.large` {
       display: none;

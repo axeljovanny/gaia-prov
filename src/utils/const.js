@@ -3,8 +3,8 @@ import '../styles/css/fonts.css'
 
 export const colors = {
     green: "#828C7A",
-    accentBlue: "#1E8594",
-    black: "#000000",
+    accentBlue: "#6D9886",
+    black: "#2C2C2C",
     softBlack: "#707070",
     softWhite: "#F4F2EF",
     white: "#FBFBFB",
@@ -15,28 +15,40 @@ export const colors = {
 }
 
 export const size = {
-    Wheader: "calc(80px)",
-    Mheader: "calc(50px)",
+    Xheader: "calc(38px)",
+    Xtittle: "calc(35px)",
+    XList: "calc(22px)",
+    Xtext: "calc(20px)",
+    Xmini: "calc(16px)",
+
+    Wheader: "calc(35px)",
     Wtittle: "calc(30px)",
-    WList: "calc(16px)",
-    Mtittle: "calc(20px)",
+    WList: "calc(18px)",
     Wtext: "calc(16px)",
-    Mtext: "calc(14px)",
     Wmini: "calc(14px)",
+
+    Mheader: "calc(30px)",
+    Mtittle: "calc(21pxpx)",
+    Mtext: "calc(14px)",
     Mmini: "calc(12px)",
 }
 
 export const font = {
-    bold: "MontserratBold",
-    medium: "MontserratMedium",
-    light: "MontserratLight",
-    branch: "Branch",
-    waveBold: "WaverlyBold",
-    waveExtra: "WaverlyExtra",
-    waveHeavy: "WaverlyHeavy",
-    waveLight: "WaverlyLight",
-    waveMedium: "WaverlyMedium",
-    waveSemi: "WaverlySemi",
-    waveThin: "WaverlyThin",
+
+    Lblack: "LatoBlack",
+    Lbold: "LatoBold",
+    Lregular: "LatoRegular",
+    Llight: "LatoLight",
+    Lthin: "LatoThin",
+
+    Rblack: "RaleBlack",
+    Rxbold: "RaleExtraBold",
+    Rbold: "RaleBold",
+    Rsemi: "RaleSemi",
+    Rregular: "RaleRegular",
+    Rmedium: "RaleMedium",
+    Rlight: "RaleLight",
+    Rxlight: "RaleExtraLight",
+    Rthin: "RaleThin",
 
 }

@@ -1,4 +1,5 @@
 import styled from "styled-components"
+import { motion } from "framer-motion"
 import { above } from "."
 import { colors, font, size } from "../../utils/const"
 
@@ -6,6 +7,8 @@ import { colors, font, size } from "../../utils/const"
 export const StyledNavbar = styled.div`
   background: ${colors.none};
   display: flex;
+  position: fixed;
+  top: 0;
   justify-content: flex-start;
   align-items: flex-start;
   z-index: 12;
@@ -15,12 +18,11 @@ export const StyledNavbar = styled.div`
       
   `}
   ${above.large`
-  display: flex;
   justify-content: center;
   align-items: center;
   width: 100vw;
   margin: 0;
-  background: linear-gradient(to top, rgba(0, 0, 0, 0.0) 0%, ${colors.black} 150%);
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.0) 0%, ${colors.green} 300%);
   a{
     margin-left: auto;
     margin-right: auto;
@@ -39,6 +41,12 @@ export const StyledLogoContainer = styled.div`
   justify-content: center;
   align-items: center;
   background: ${colors.none};
+  width: 10%;
+  a{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
 
   `}
 `
@@ -56,7 +64,7 @@ export const StyledItems = styled.div`
   `}
 `
 
-export const ItemNav = styled.div`
+export const ItemNav = styled(motion.div)`
 display: flex;
 justify-content: center;
 align-items: center;
@@ -65,11 +73,17 @@ padding: 0;
 background-color: none;
 margin: 54px 3vw;
 font-family: 'Montserrat', sans-serif;
+background: ${colors.none};  
+
 
 a{
-  font-family:  ${font.waveMedium};
-  color: ${colors.white} ;
+  font-family:  ${font.Rlight};
+  color: ${colors.black} ;
   font-size: ${size.Wtext};
+}
+a:hover{
+  color: ${colors.accentBlue} ;
+
 }
 
 
@@ -98,7 +112,7 @@ export const LineHome = styled.span`
     height: 3px;
     margin: 5px;
     color: ${colors.none};
-    background-color: ${props => (props.open ? colors.softWhite : colors.softWhite)};
+    background-color: ${props => (props.open ? colors.softWhite : colors.green)};
     transition: width 0.4s ease-in-out;
 
     :nth-child(2) {

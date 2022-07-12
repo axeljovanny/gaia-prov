@@ -23,6 +23,8 @@ export const StyledContent = styled.div`
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    background: ${colors.green} ;
+
 
     width: 100vw;
 
@@ -37,7 +39,7 @@ export const StyledContent = styled.div`
       
   `}
   ${above.large`
-    width: 70vw;
+    width: 100vw;
 
 
   `}
@@ -51,7 +53,7 @@ export const StyledLogoMobileContainer = styled.div`
   flex-direction: column;
 
   width: 100vw;
-  padding:10%;
+  padding: 10% 0;
 
 .container-logo{
   width: 25vw;

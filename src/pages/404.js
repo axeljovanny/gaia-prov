@@ -19,15 +19,6 @@ const pageStyles = {
 const NotFoundPage = () => {
   return (
     <>
-      <StaticImage
-        className="fondo"
-        src="../images/fondo.jpg"
-        alt="gaia fondo"
-        loading="eager"
-        layout="fullWidth"
-        formats={['auto', 'webp', 'avif']}
-        quality='80'
-      />
       <Navbar />
       <div style={pageStyles}>
         <title>Not found</title>

@@ -7,177 +7,241 @@ export const StyledFooter = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-
-  position: relative;
   width: 100%;
-  height: auto;
-  background: none;
+  height: 60vh;
+  background: ${colors.green};
 
   ${above.medium`
-      
+
+  height: 50vh;
+
   `}
   ${above.large`
- 
-  display: flex;
-  align-items: center;
-  justify-content: center;
 
-  position: relative;
-  width: 100%;
-  height: 15vh;
-  background: none;
+  height: 70vh;
+
+  `}
+  ${above.xlarge`
+
+  height: 50vh;
 
   `}
 `
 
 export const StyledContainer = styled.div`
-  display: inline table;
-  justify-content: center;
+  display:flex;  
+  justify-content: flex-start;
   align-items: center;
+  flex-flow: column wrap;
   
-  width: 100%;
-  height: 100%;
+  background: ${colors.none};
+
+  width: 90%;
+  height: 90%;
   ${above.medium`
   
   `}
   ${above.large`
-  
-  display: flex;
+  justify-content: space-between;
+  flex-flow: row wrap;
+  height: 80%;
+
+
+`}
+
+`
+export const Datos = styled.div`
+  display:flex;  
   justify-content: center;
+  align-items: flex-start;
+  flex-flow: column nowrap;
+  
+  background: ${colors.none};
+
+  width: 80%;
+  height: 45%;
+
+  p, a{
+    margin: 2%;
+    font-family: ${font.Lmedium};
+    font-size: ${size.Mtext};
+    color:${colors.softWhite};
+
+  }
+  ${above.medium`
   align-items: center;
 
-  width: 100%;
-  height: 100%;
+  p, a{
+    margin: 3% 0%;
+    font-family: ${font.Lregular};
+    font-size: ${size.XList};
+    color:${colors.softWhite};
+
+  }
+  `}
+  ${above.large`
+  padding-left: 5%;
+  width: 45%;
+  height: 40%;
+  align-items: flex-start;
+
+  p, a{
+    margin: 1% 0%;
+    font-family: ${font.Lregular};
+    font-size: ${size.Xtext};
+    color:${colors.softWhite};
+
+  }
+
 `}
 
 `
-
-export const StyledItem = styled.div`
-display: flex;
-justify-content: center;
-align-items: center;
-width: 100% auto;
-height: auto;
-margin: 0 auto;
-background: none;
-
-p a{
-  margin:0;
-  font-family:  ${font.bold};
-  color: ${colors.white} ;
-  font-size: ${size.Wtext};
-}
-p{
-  font-family:  ${font.bold};
-  color: ${colors.white} ;
-  font-size: ${size.Wmini};
-}
-.email,
-.tel1 {
-  display: none;
-  text-align: right;
-}
-
-.tel2 {
-    display: flex;
-    width: 100%;
-    margin: 10px auto;
-    justify-content: center;
-    background-color: none;
-    font-size: ${size.Wtext};
-    
-}
-
-${above.medium`
-
-.email,
-.tel1 {
-  display: none;
-    text-align: right;
-}
-
-`}
-${above.large`
-
-justify-content: center;
-align-items: center;
-width: 100%;
-height: 100%;
-margin: auto 10px;
-background: none;
-
-p a{
-  font-size: ${size.Wmini};
-}
-
-
-.email,
-.tel1,
-.direccion {
-    width: 100%;
-    padding-left: 25px;
-    padding-right: 25px;
-  }
-  
-  .email,
-  .tel1 {
-    text-align: right;
-    display:  inline;
-}
-
-.direccion {
-    text-align: left;
-  }
-  
-  .tel2 {
-      display: none;
-   
-      
-  }
+export const RS = styled.div`
+  display:none;
+  ${above.medium`
   
   `}
+  ${above.large`
+  display:flex;  
+  justify-content: center;
+  align-items: center;
+  flex-flow: column nowrap;
+  
+  background: ${colors.none};
+  width: 50%;
+  height: 40%;
 
-`
-export const StyledSocialContainer = styled.div`
-display: flex;
-justify-content: center;
-align-items: center;
-text-align: center;
-gap: 0.2em;
-height: fit-content;
-background-color: none;
-
-
-${above.medium`
-      
 `}
-${above.large`
-display: flex;
+
+${above.xlarge`
+display:flex;  
 justify-content: center;
 align-items: center;
-gap: 0.5em;
-width: 40%;
-height: 100%;
+flex-flow: column nowrap;
 
+background: ${colors.none};
+width: 20%;
+height: 40%;
 
 `}
 
 `
-export const StyledSocialItem = styled.div`
-display: flex;
-width: auto;
-justify-content: center ;
-align-items: center;
+export const Credits = styled.div`
+  display:flex;  
+  justify-content: center;
+  align-items: center;
+  flex-flow: column nowrap;
+  
+  background: ${colors.none};
 
-${above.medium`
-
-
+  width: 100%;
+  height: 10%;
+  ${above.medium`
+  `}
+  ${above.large`
+  width: 100%;
+  height: 20%;
 
 `}
-${above.large`
 
+`
+export const Policies = styled.div`
+  display:flex;  
+  justify-content: center;
+  align-items: center;
+  flex-flow: row nowrap;
+  
+  background: ${colors.none};
 
+  width: 100%;
+  height: 25%;
+
+  a{ display:flex;
+    font-family: ${font.Lmedium};
+    font-size: ${size.Mtext};
+    color:${colors.softWhite};
+  }
+
+  ${above.medium`
+  a{ display:flex;
+    font-family: ${font.Lregular};
+    font-size: ${size.XList};
+    color:${colors.softWhite};
+  }
+  `}
+
+  ${above.large`
+  justify-content: flex-end;
+  width: 50%;
+  height: 40%;
+  a{ 
+    padding-right:10%;
+  }
 
 `}
 
+`
+
+export const CreditsNote = styled.div`
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 90%;
+    padding: 0 0%;
+    p{
+      font-family: ${font.Llight};
+      font-size: ${size.Mmini};
+      color: ${colors.white};
+    }
+    a{
+      color: ${colors.white};
+    }
+    ${above.medium`
+    p, a{
+    font-family: ${font.Lregular};
+    font-size: ${size.Wtext};
+    }
+  `}
+    ${above.large`
+    width: 90%;
+    p{
+      font-size: ${size.Wmini};
+      color: ${colors.white};
+    }
+    a{
+      color: ${colors.white};
+    }
+
+  `}
+
+  ${above.xlarge`
+  width: 90%;
+  p{
+    padding-top: 12vh;
+    font-size: ${size.Wmini};
+    color: ${colors.white};
+  }
+  a{
+    color: ${colors.white};
+  }
+
+ `}
+    `
+
+export const FooterIcons = styled.div`
+    display: none;
+    
+    ${above.large`
+    display:flex;
+    padding-top: 0vh;
+    width: 80%;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 1vw;
+    svg{
+        width: 100%;
+        
+    }
+  `}
 `

@@ -1,3 +1,4 @@
+import { motion } from "framer-motion"
 import styled from "styled-components"
 import { above } from "."
 import { colors, font, size } from "../../utils/const"
@@ -41,6 +42,18 @@ export const StyledNavbarServ = styled.div`
   background: ${colors.none};
   height: auto;
   
+  `}
+`
+export const StyledItems = styled.div`
+  display: none;
+  ${above.medium`
+      
+  `}
+  ${above.large`
+  display: flex;
+  justify-content: center ;
+  align-items: center;
+  background: ${colors.none};  
   `}
 `
 
@@ -89,7 +102,7 @@ display: none;
   
   a:link{
     padding-left: 0.5em;
-    font-family: ${font.waveLight};
+    font-family: ${font.Llight};
     font-size: ${size.Wmini};
     color: ${colors.black};
   }
@@ -113,7 +126,7 @@ display: none;
   align-items: center;
   a{
     color: ${props => (props.select === props.siteTitle ? colors.green : colors.softBlack)}; //usar en SVG
-    font-family: ${props => (props.select === props.siteTitle ? font.waveSemi : font.waveMedium)};
+    font-family: ${props => (props.select === props.siteTitle ? font.Rsemi : font.Rmedium)};
     font-size: ${size.Wtext};
   }
 
@@ -130,7 +143,14 @@ export const NavIcon = styled.button`
     border: none;
     outline: none;
     position:fixed;
-    padding: 0;
+    padding: 1.5em 0em;
+
+    ${above.medium` {
+      transform: scale(1.5);
+      padding: 3em 3em;
+
+      }
+    `}
 
     ${above.large` {
       display: none;
@@ -153,23 +173,18 @@ export const Line = styled.span`
     }
 `;
 
-export const Overlay = styled.div`
+export const Overlay = styled(motion.div)`
 
   display: flex;
   flex-direction: column;
-  height: ${props => (props.open ? "100vh" : 0)};
+  height: 10%;
   width: 100vw;
-  background: rgba(130, 140, 122, 0.95);
-  backdrop-filter: blur(20px);
-  transition: height 0.3s ease-in-out;
   position: fixed;
-  top:0;
-  z-index: 5;
-  justify-content: space-between;
-  align-items: center;
-  :nth-child(1n) {
-    align-items: flex-end;
-  }
+  top: 0;
+  z-index: 12;
+  background: ${colors.none};
+
+
 
   ${above.large` {
     display: none;
@@ -178,23 +193,42 @@ export const Overlay = styled.div`
 `;
 
 
-export const OverlayMenu = styled.div`
+
+export const Over = styled(motion.div)`
+  flex-direction: column;
+  width: 100vw;
+  position: fixed;
+  top:0;
+
+  ${above.large` {
+    display: none;
+    }
+  `}
+`;
+export const OverButton = styled(motion.button)`
+  position: fixed;
+  z-index: 13;
+`;
+
+
+export const OverlayMenu = styled(motion.div)`
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
-  display: ${props => (props.open ? 'flex' : 'none')};
-  width: 90vw;
-  height: ${props => (props.open ? "40%" : 0)};
-  transition: height 0.4s ease-in-out;
+  display: flex;
+  width: 100%;
+  height: 60%;
+  background: ${colors.none};
+  padding: 0em 15%;
   list-style: none;
 
 
 `;
-export const OverlayFooter = styled.div`
+export const OverlayFooter = styled(motion.div)`
   flex-flow: row wrap;
   justify-content: flex-start;
   align-items: center;
-  display: ${props => (props.open ? 'flex' : 'none')};
+  display: flex;
   width: 100%;
   height: 25%;
   background: ${colors.none};
@@ -205,15 +239,22 @@ export const Contacto = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
-  width: 40%;
+  width: 50%;
   background: ${colors.none};
 
   a,p{
-    font-family:  ${font.light};
+    font-family:  ${font.Llight};
     text-align: left;
     color: ${colors.white} ;
-    font-size: ${size.Mtext};
+    font-size: ${size.Wtext};
   }
+  ${above.medium`
+  a,p{
+    font-family:  ${font.Llight};
+    text-align: left;
+    color: ${colors.white} ;
+    font-size: ${size.Mheader};
+  }  `}
 
 `;
 export const Logo = styled.div`
@@ -222,28 +263,32 @@ export const Logo = styled.div`
   height: auto;
   padding: 1em 0;
   background: ${colors.none};
+  ${above.medium`
+  height: 90%;
+  `}
 
 `;
 
 export const StyledIcons = styled.div`
-    display: ${props => props.open ? 'flex' : 'none'};
-    height: ${props => (props.open ? "auto" : 0)};
+    display: flex;
+    height: 15%;
+    background: ${colors.none};
     flex-direction: row;
     justify-content: flex-end;
     align-items: center;
-    padding: 3em 2em;
+    padding: 0em 2em;
     gap: 1em;
     width: auto;
-    opacity: ${props => (props.open ? 1 : 0)};
-    transition: opacity 1s ease-in-out;
-
-    svg{
-      width: 100%;
-    }
     
+    ${above.medium`
+    flex-direction: row;
+    padding: 2em 5em;
+    gap: 2em;
+
+  `}
     ${above.large`
     padding-top: 5vh;
-    display: ${props => props.footer ? 'none' : 'flex'};
+    display: ${props => (props.footer ? 'none' : 'flex')};
     height: 50%;
     flex-direction: column;
     justify-content: flex-start;
@@ -285,18 +330,7 @@ export const StyledButton = styled.div`
   `}
     
 `
-export const StyledItems = styled.div`
-  display: none;
-  ${above.medium`
-      
-  `}
-  ${above.large`
-  display: flex;
-  justify-content: center ;
-  align-items: center;
-  background: ${colors.none};  
-  `}
-`
+
 
 export const Item = styled.div`
 display: flex;
@@ -309,9 +343,17 @@ margin: .5em 0;
 font-family: 'Montserrat', sans-serif;
  
 a{
-font-family:  ${font.waveMedium};
+font-family:  ${font.Rmedium};
 color: ${colors.white} ;
 font-size: ${size.Wtittle};
 }
+
+${above.medium`
+  a,p{
+    font-family:  ${font.Rregular};
+    text-align: left;
+    color: ${colors.white} ;
+    font-size: ${size.Wheader};
+  }  `}
 
 `
