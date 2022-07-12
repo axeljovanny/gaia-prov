@@ -52,7 +52,7 @@ const Navbar = ({ siteTitle }) => {
                     <ItemNav 
                         whileHover={{ scale: 1.1, priginX: 0, color: colors.accentBlue }} 
                         whileTap={{ scale: 0.9 }}>                            
-                        <Link to="/about"> ABOUT US </Link>
+                        <Link to="/"> ABOUT US </Link>
                     </ItemNav>
                 </StyledItems>
             </StyledNavbar>
