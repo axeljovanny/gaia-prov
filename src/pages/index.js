@@ -56,7 +56,7 @@ const IndexPage = () => {
       <Products />
       <Maps />
       <Gift initial={{opacity:0}} animate={{opacity:1}} transition={{duration:1, delay:1.9}} >
-        <motion.a href="https://squareup.com/gift/FHH5R6M6H54FS/order"
+        <motion.a href="https://www.aveda.com/locator/get_the_facts.tmpl?vanity=1&SalonID=38631"
           whileHover={{ scale: 1.1 }}>
           <ShopWeb className="gift-web" fill={colors.green} fill2={colors.softWhite} />
         </motion.a>
@@ -64,8 +64,8 @@ const IndexPage = () => {
           whileHover={{ scale: 1.05 }}>
           <GiftWeb className="gift-web" fill={colors.green} fill2={colors.softWhite} />
         </motion.a>
-          <ShopWeb className="gift-movil-store" fill={colors.green} fill2={colors.softWhite} />
-          <GiftMovil className="gift-movil" fill={colors.green} fill2={colors.softWhite} />
+          <a href="https://www.aveda.com/locator/get_the_facts.tmpl?vanity=1&SalonID=38631" rel="noreferrer" target="_blank"><ShopWeb className="gift-movil-store" fill={colors.green} fill2={colors.softWhite} /></a>
+          <a href="https://squareup.com/gift/FHH5R6M6H54FS/order" rel="noreferrer" target="_blank" ><GiftMovil className="gift-movil" fill={colors.green} fill2={colors.softWhite} /> </a>
       </Gift>
        <Navbar />
       <Footer></Footer>
