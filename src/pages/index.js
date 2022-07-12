@@ -57,11 +57,11 @@ const IndexPage = () => {
       <Maps />
       <Gift initial={{opacity:0}} animate={{opacity:1}} transition={{duration:1, delay:1.9}} >
         <motion.a href="https://www.aveda.com/locator/get_the_facts.tmpl?vanity=1&SalonID=38631"
-          whileHover={{ scale: 1.1 }}>
+          whileHover={{ scale: 1.1 }} rel="noreferrer" target="_blank">
           <ShopWeb className="gift-web" fill={colors.green} fill2={colors.softWhite} />
         </motion.a>
         <motion.a href="https://squareup.com/gift/FHH5R6M6H54FS/order"
-          whileHover={{ scale: 1.05 }}>
+          whileHover={{ scale: 1.05 }} rel="noreferrer" target="_blank">
           <GiftWeb className="gift-web" fill={colors.green} fill2={colors.softWhite} />
         </motion.a>
           <a href="https://www.aveda.com/locator/get_the_facts.tmpl?vanity=1&SalonID=38631" rel="noreferrer" target="_blank"><ShopWeb className="gift-movil-store" fill={colors.green} fill2={colors.softWhite} /></a>
