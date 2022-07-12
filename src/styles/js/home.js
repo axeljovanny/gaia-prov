@@ -976,3 +976,21 @@ export const TransMap = styled.div`
   
   `}
 `
+export const ImgMap = styled.div`
+  position: absolute;
+  display: flex;
+  width: 100%;
+  height: 50%;
+  top: 20%;
+  
+  ${above.large`
+  width: 60%;
+  height: 90%;
+  justify-content: flex-end;
+  right: 0;
+  top: auto;
+
+
+  
+  `}
+`
