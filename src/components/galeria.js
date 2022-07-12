@@ -16,7 +16,7 @@ export default function Galery() {
         spaceBetween={0}
         effect={"fade"}
         autoplay={{
-          delay: 2500,
+          delay: 8000,
           disableOnInteraction: false
         }}
         modules={[EffectFade, Autoplay]}
@@ -29,8 +29,9 @@ export default function Galery() {
                     alt="imagen de prueba"
                     loading="eager"
                     layout="constrained"
+                    breakpoints={[750, 1080, 1366, 1920]}
                     formats={['auto', 'webp', 'avif']}
-                    quality='70'
+                    quality='90'
                 />
         </SwiperSlide>
         <SwiperSlide>
@@ -40,8 +41,9 @@ export default function Galery() {
                     alt="imagen de prueba"
                     loading="eager"
                     layout="constrained"
+                    breakpoints={[750, 1080, 1366, 1920]}
                     formats={['auto', 'webp', 'avif']}
-                    quality='70'
+                    quality='90'
                 />
         </SwiperSlide>
         <SwiperSlide>
@@ -51,8 +53,9 @@ export default function Galery() {
                     alt="imagen de prueba"
                     loading="eager"
                     layout="constrained"
+                    breakpoints={[750, 1080, 1366, 1920]}
                     formats={['auto', 'webp', 'avif']}
-                    quality='70'
+                    quality='90'
                 />
         </SwiperSlide>
         <SwiperSlide>
@@ -62,8 +65,9 @@ export default function Galery() {
                     alt="imagen de prueba"
                     loading="eager"
                     layout="constrained"
+                    breakpoints={[750, 1080, 1366, 1920]}
                     formats={['auto', 'webp', 'avif']}
-                    quality='70'
+                    quality='90'
                 />
         </SwiperSlide>
         <SwiperSlide>
@@ -73,8 +77,9 @@ export default function Galery() {
                     alt="imagen de prueba"
                     loading="eager"
                     layout="constrained"
+                    breakpoints={[750, 1080, 1366, 1920]}
                     formats={['auto', 'webp', 'avif']}
-                    quality='70'
+                    quality='90'
                 />
         </SwiperSlide>
         <SwiperSlide>
@@ -84,8 +89,9 @@ export default function Galery() {
                     alt="imagen de prueba"
                     loading="eager"
                     layout="constrained"
+                    breakpoints={[750, 1080, 1366, 1920]}
                     formats={['auto', 'webp', 'avif']}
-                    quality='70'
+                    quality='90'
                 />
         </SwiperSlide>
         <SwiperSlide>
@@ -95,8 +101,9 @@ export default function Galery() {
                     alt="imagen de prueba"
                     loading="eager"
                     layout="constrained"
+                    breakpoints={[750, 1080, 1366, 1920]}
                     formats={['auto', 'webp', 'avif']}
-                    quality='70'
+                    quality='90'
                 />
         </SwiperSlide>
         <SwiperSlide>
@@ -106,8 +113,9 @@ export default function Galery() {
                     alt="imagen de prueba"
                     loading="eager"
                     layout="constrained"
+                    breakpoints={[750, 1080, 1366, 1920]}
                     formats={['auto', 'webp', 'avif']}
-                    quality='70'
+                    quality='90'
                 />
         </SwiperSlide>
       </Swiper>

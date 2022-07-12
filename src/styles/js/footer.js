@@ -42,6 +42,7 @@ export const StyledContainer = styled.div`
   
   `}
   ${above.large`
+  justify-content: space-between;
   flex-flow: row wrap;
   height: 80%;
 
@@ -119,7 +120,7 @@ align-items: center;
 flex-flow: column nowrap;
 
 background: ${colors.none};
-width: 65%;
+width: 20%;
 height: 40%;
 
 `}
