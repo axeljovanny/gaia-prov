@@ -473,7 +473,7 @@ export const StyledPeopleSay = styled.div`
   align-items: center;
   
   width: 100vw;
-  height: 100vh;
+  height: 80vh;
   background: ${colors.none};
   ${above.large` 
   width: 100vw;
@@ -484,23 +484,48 @@ export const StyledPeopleSay = styled.div`
 
 export const CardPeopleSay = styled.div`
   display: flex; 
-  flex-flow: column wrap ;
+  flex-flow: column nowrap ;
   justify-content: center;
   align-items: flex-start;
   
   width: 80%;
-  height: auto;
+  height: 60%;
   background: ${colors.none};
   border: 1px solid ${colors.green};
 
-  h2{
-    margin-left: 10%;
+  h3{
+    margin: 10% 0 0 10%;
     width: 80%;
+    height: auto;
+    font-family: ${font.Lregular};
+    font-size: ${size.Wtext};
+    color: ${colors.black};
   }
   p{
-    margin-left: 10%;
+    margin: 0 0 10% 10%;
+    overflow-x: scroll;
     width: 80%;
+    font-family: ${font.Lregular};
+    font-size: ${size.Wtext};
+    color: ${colors.black};
   }
+.rating {
+			width: 80%;
+      height: auto;
+      margin: 0 0 10% 10%;
+			font-size: 20px;
+		}
+
+		.rating a,
+    .rating label {
+			color: #828C7A;
+			text-decoration: none;
+			-webkit-transition: color .4s;
+			-moz-transition: color .4s;
+			-o-transition: color .4s;
+			transition: color .4s;
+		}
+
   ${above.large` 
   width: 100vw;
   height: 100vh;
