@@ -4,7 +4,7 @@ import { getImage } from "gatsby-plugin-image"
 import { BgImage } from "gbimage-bridge"
 import { motion } from "framer-motion"
 // Componentes
-import { IconNav, Navbar } from "../components/navbar";
+import { Navbar } from "../components/navbar";
 import { Bodycare, Haircare, Hero, Maps, Products, Skincare, Wedo } from "../components/home";
 import { Footer } from "../components"
 // Estilos
@@ -67,7 +67,7 @@ const IndexPage = () => {
           <a href="https://www.aveda.com/locator/get_the_facts.tmpl?vanity=1&SalonID=38631" rel="noreferrer" target="_blank"><ShopWeb className="gift-movil-store" fill={colors.green} fill2={colors.softWhite} /></a>
           <a href="https://squareup.com/gift/FHH5R6M6H54FS/order" rel="noreferrer" target="_blank" ><GiftMovil className="gift-movil" fill={colors.green} fill2={colors.softWhite} /> </a>
       </Gift>
-       <Navbar />
+       <Navbar siteTitle="index" />
       <Footer></Footer>
     </>
   )

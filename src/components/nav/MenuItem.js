@@ -78,6 +78,11 @@ export const MenuItem = ({ toggle }) => {
             </Link>
         </Item>
         <Item>
+            <Link to="/about">
+                ABOUT
+            </Link>
+        </Item>
+        <Item>
             <Link to="/">
                 SHOP
             </Link>
