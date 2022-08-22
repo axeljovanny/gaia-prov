@@ -130,10 +130,31 @@
   align-items: center;
 }
 
+.imgSalon{
+  display: none;
+}
+
+.imgSalonMovil{
+  display: flex;
+  width: 100%;}
+
+.imgArcoMovil{
+  display: flex;
+  width: 90%;}
+
 @media only screen and (min-width: 480px) {
   .gift-movil {
     width: 100%;
     height: 100%;
+  }
+
+  .imgSalon{
+    display: flex;
+    width: 80%;
+  }
+  
+  .imgSalonMovil{
+    display: none;
   }
 
   .circle-movil {

@@ -1,8 +1,10 @@
 import React, { useState, useRef } from "react"
 import { Link } from "gatsby"
 import { useCycle } from "framer-motion"
+import { StaticImage } from "gatsby-plugin-image";
+
 // Estilos
-import { StyledLogoContainer, StyledItems, StyledNavbar, ItemNav, LineHome } from "../styles/js/navbar"
+import { StyledLogoContainer, StyledItems, StyledNavbar, ItemNav, LineHome, Mask } from "../styles/js/navbar"
 import { Overlay } from "../styles/js/servnav"
 // SVG
 import Loadable from "@loadable/component"
@@ -21,16 +23,66 @@ import "./nav/styles.css";
 const Navbar = ({ siteTitle }) => {
     const [toggle, toggleNav] = useState(false);
 
-    return (
-        <>
+    if (siteTitle === 'about') {
+        return (<>
+            <Mask />
             <StyledNavbar>
                 <StyledItems>
-                    <ItemNav 
+                    <ItemNav
                     whileHover={{ scale: 1.1, priginX: 0, color: colors.accentBlue }} 
                     whileTap={{ scale: 0.9 }}>
                         <Link to="/hair"> HAIR CARE </Link>
                     </ItemNav>
-                    <ItemNav 
+                    <ItemNav
+                    whileHover={{ scale: 1.1, priginX: 0, color: colors.accentBlue }} 
+                    whileTap={{ scale: 0.9 }}>
+                        <Link to="/skin"> SKIN CARE </Link>
+                    </ItemNav>
+                </StyledItems>
+
+                <StyledLogoContainer>
+                    <Link to="/">
+                        <StaticImage
+                        className="logo"
+                        src="../images/logo.png"
+                        alt="imagen de prueba"
+                        loading="eager"
+                        layout="constrained"
+                        breakpoints={[750, 1080, 1366, 1920]}
+                        formats={['auto', 'webp', 'avif']}
+                        quality='70'
+                        />
+                    </Link>
+                </StyledLogoContainer>
+
+                <StyledItems>
+                    <ItemNav
+                        whileHover={{ scale: 1.1, priginX: 0, color: colors.accentBlue }} 
+                        whileTap={{ scale: 0.9 }}>                            
+                        <Link to="/body"> BODY CARE </Link>
+                    </ItemNav>
+                    <ItemNav
+                        whileHover={{ scale: 1.1, priginX: 0, color: colors.accentBlue }} 
+                        whileTap={{ scale: 0.9 }}>                            
+                        <Link to="/about"> ABOUT US </Link>
+                    </ItemNav>
+                </StyledItems>
+            </StyledNavbar>
+            <IconNav/>            
+        </>)
+    }
+
+    if (siteTitle === 'index') {
+    return (
+        <>  <Mask/>
+            <StyledNavbar>
+                <StyledItems>
+                    <ItemNav home
+                    whileHover={{ scale: 1.1, priginX: 0, color: colors.accentBlue }} 
+                    whileTap={{ scale: 0.9 }}>
+                        <Link to="/hair"> HAIR CARE </Link>
+                    </ItemNav>
+                    <ItemNav home
                     whileHover={{ scale: 1.1, priginX: 0, color: colors.accentBlue }} 
                     whileTap={{ scale: 0.9 }}>
                         <Link to="/skin"> SKIN CARE </Link>
@@ -44,21 +96,22 @@ const Navbar = ({ siteTitle }) => {
                 </StyledLogoContainer>
 
                 <StyledItems>
-                    <ItemNav 
+                    <ItemNav home
                         whileHover={{ scale: 1.1, priginX: 0, color: colors.accentBlue }} 
                         whileTap={{ scale: 0.9 }}>                            
                         <Link to="/body"> BODY CARE </Link>
                     </ItemNav>
-                    <ItemNav 
+                    <ItemNav home
                         whileHover={{ scale: 1.1, priginX: 0, color: colors.accentBlue }} 
                         whileTap={{ scale: 0.9 }}>                            
-                        <Link to="/"> ABOUT US </Link>
+                        <Link to="/about"> ABOUT US </Link>
                     </ItemNav>
                 </StyledItems>
             </StyledNavbar>
             <IconNav/>            
         </>
     )
+    }
 
 }
 

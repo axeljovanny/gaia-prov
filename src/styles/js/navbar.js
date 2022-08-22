@@ -22,7 +22,7 @@ export const StyledNavbar = styled.div`
   align-items: center;
   width: 100vw;
   margin: 0;
-  background: linear-gradient(to top, rgba(0, 0, 0, 0.0) 0%, ${colors.green} 300%);
+
   a{
     margin-left: auto;
     margin-right: auto;
@@ -31,6 +31,20 @@ export const StyledNavbar = styled.div`
   
   `}
 `
+export const Mask = styled.div`
+display: none;
+
+${above.large`
+display: flex;
+  position: fixed;
+  z-index: 11;
+  top: 0;
+  width: 100vw;
+  height: 20vh;
+  backdrop-filter: blur(10px);
+  mask: linear-gradient(to top, transparent, black 60%);
+  `}
+  `
 
 export const StyledLogoContainer = styled.div`
   display: none;
@@ -78,15 +92,13 @@ background: ${colors.none};
 
 a{
   font-family:  ${font.Rlight};
-  color: ${colors.black} ;
+  color: ${props => (props.home ? colors.black : colors.white)};
   font-size: ${size.Wtext};
 }
 a:hover{
   color: ${colors.accentBlue} ;
 
 }
-
-
 `
 /*
  Movil menu
