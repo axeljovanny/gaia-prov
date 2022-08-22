@@ -28,7 +28,7 @@ export const size = {
     Wmini: "calc(14px)",
 
     Mheader: "calc(30px)",
-    Mtittle: "calc(21pxpx)",
+    Mtittle: "calc(21px)",
     Mtext: "calc(14px)",
     Mmini: "calc(12px)",
 }
