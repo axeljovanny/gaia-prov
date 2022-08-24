@@ -31,7 +31,7 @@ export default function PeopleSay() {
     const services = useReviewsService()
     return (
         <>
-        <h1>WHAT PEOPLE SAY</h1>
+        <h1>What People Say..</h1>
             <Swiper
                 slidesPerView={1}
                 spaceBetween={0}
@@ -59,10 +59,10 @@ export default function PeopleSay() {
             >
                 {services.map(({ node }) => {
                 return (
-                    <SwiperSlide>
+                    <SwiperSlide key={node.name}>
                       <CardPeopleSay>
                       <h3>{node.name}</h3>
-                      <div class="rating ">
+                      <div className="rating ">
                         <a href="#5" title="Give 5 stars">★</a>
                         <a href="#4" title="Give 4 stars">★</a>
                         <a href="#3" title="Give 3 stars">★</a>

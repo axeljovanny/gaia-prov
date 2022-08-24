@@ -50,7 +50,7 @@ const AboutGallery = () => {
   
     return (
       < >
-        <Gallery photos={photos} onClick={openLightbox} />
+        <Gallery photos={photos} onClick={openLightbox}  key={photos.id}/>
             <ModalGateway>
               {viewerIsOpen ? (
                 <Modal onClose={closeLightbox}>

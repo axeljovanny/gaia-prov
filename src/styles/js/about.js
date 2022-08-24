@@ -162,8 +162,11 @@ export const StyledFirst = styled.div`
   align-items: center;
 
   width: 100vw;
-  height: 80vh;
+  height: auto;
   background: ${colors.none};
+
+  text-align: justify;
+  word-spacing:-2px;  
   ${above.large` 
   height: 80vh;
   `}
@@ -176,25 +179,29 @@ export const StyledText = styled.div`
   align-items: flex-start;
 
   width: 80%;
-  height: 90%;
+  height: 100%;
   background: ${colors.none};
 
   h1{
     width: 80%;
+    padding: 10% 0;
     font-family: ${font.Rsemi};
     font-size: ${size.Mheader};
     color: ${colors.black};
   }
   p{
-    text-align: justify;
-    font-family: ${font.Lregular};
+    margin: 5% 0;
+    font-family: ${font.Llight};
     font-size: ${size.WList};
     color: ${colors.black};
   }
+  p:nth-child(3) {
+    padding: 0 0 10% 0;
+  }
+
 
   ${above.large` 
   width: 70%;
-  height: 90%;
   h1{
     font-family: ${font.Lregular};
     font-size: ${size.WTitle};
@@ -228,10 +235,10 @@ export const ImgOne = styled.div`
   flex-direction: column;
   align-items: center;
 
-  width: 100%;
-  height: 65%;
+  width: 110%;
+  height: 60%;
   background: ${colors.none};
-  padding: 0 0 4em 0;
+  padding: 0 0;
 
   ${above.large` 
   align-items: flex-start;
@@ -252,14 +259,17 @@ export const TextOne = styled.div`
   padding: 1em 0 3em 0;
 
   h2{
+    text-align: justify;
+    word-spacing:-2px;  
+    padding: 10% 0;
     width: 100%;
-    font-family: ${font.Lregular};
+    font-family: ${font.Rsemi};
     font-size: ${size.Mtittle};
     color: ${colors.white};
   }
   p{
     margin: 0.3em 0;
-    font-family: ${font.Lregular};
+    font-family: ${font.Llight};
     font-size: ${size.Wtext};
     color: ${colors.white};
   }
@@ -292,13 +302,15 @@ export const StyledThree = styled.div`
   flex-flow: row wrap ;
   justify-content: center;
   align-items: center;
+  padding: 0 0 10% 0;
   
   width: 100vw;
-  height: 100vh;
+  height: auto;
   background: ${colors.none};
+  text-align: justify;
+  word-spacing:-2px;  
   ${above.large` 
   width: 100vw;
-  height: 100vh;
   `}
 
   `
@@ -306,14 +318,15 @@ export const StyledThree = styled.div`
   display: flex; 
   flex-direction: column;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
 
   width: 100%;
-  height: 10%;
+  padding: 5% 10%;
 
-  font-family: ${font.Lregular};
-  font-size: ${size.Mtittle};
-  color: ${colors.black};
+  h1{font-family: ${font.Lregular};
+  font-size: ${size.WTitle};
+  color: ${colors.black};}
+  
 
   background: ${colors.none};
   ${above.large` 
@@ -327,8 +340,10 @@ export const ImgArc = styled.div`
   flex-flow: row wrap ;
   justify-content: center;
   align-items: center;
+  margin: 0;
+  padding: 0;
 
-  width: 40%;
+  width: 30%;
   height: auto;
   background: ${colors.none};
   ${above.large` 
@@ -342,57 +357,48 @@ export const TexTwo = styled.div`
   display: flex; 
   flex-direction: column;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
+  margin: 5% 0;
+
 
   width: 100%;
-  height: 30%;
+  height: auto;
   background: ${colors.none};
 
-  h2{ 
-    display: flex; 
-  justify-content: center;
-  align-items: center;
-    width: 100%;
-    font-family: ${font.Llight};
-    font-size: ${size.Mtittle};
-    color: ${colors.black};
-  }
   p{ 
-    margin: 0.5em 2em ;
-    font-family: ${font.Lregular};
-    font-size: ${size.Wtext};
+    margin: 0.5em 10%;
+    font-family: ${font.Llight};
+    font-size: ${size.WList};
     color: ${colors.black};
   }
   ${above.large` 
   width: 50%;
-  height: 50%;
   `}
 `
 export const TexFive = styled.div`
   display: flex; 
   flex-direction: column;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
+  padding: 5% 0;
 
   width: 100%;
   height: 30%;
   background: ${colors.green};
 
-  h2{ 
-    display: flex; 
-  justify-content: center;
-  align-items: center;
-    width: 100%;
-    font-family: ${font.Llight};
-    font-size: ${size.Mtittle};
-    color: ${colors.white};
-  }
+  h2{
+    margin: 0.5em 10%;
+  font-family: ${font.Lregular};
+  font-size: ${size.WTitle};
+  color: ${colors.white};
+}
   p{ 
-    margin: 0.5em 2em ;
-    font-family: ${font.Lregular};
-    font-size: ${size.Wtext};
+    margin: 0.5em 10%;
+    font-family: ${font.Llight};
+    font-size: ${size.WList};
     color: ${colors.white};
   }
+
   ${above.large` 
   width: 50%;
   height: 50%;
@@ -404,17 +410,17 @@ export const TexThree = styled.div`
   justify-content: center;
   align-items: flex-start;
 
-  width: 60%;
+  width: 70%;
   height: auto;
   background: ${colors.none};
 
   h2{ width: 90%; }
-  p{ width: 85%;
-      margin: 0.5em ;
-      font-family: ${font.Lregular};
-      font-size: ${size.Wtext};
-      color: ${colors.black};
-     }
+  p{ 
+    margin: 0 15% 10% 10%;
+    font-family: ${font.Llight};
+    font-size: ${size.WList};
+    color: ${colors.black};
+  }
   ${above.large` 
   width: 100%;
   height: 40%;
@@ -423,32 +429,7 @@ export const TexThree = styled.div`
   p{ width: 80%; }
   `}
 `
-export const TexFour = styled.div`
-  display: flex; 
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
 
-
-  width: 100%;
-  height: auto;
-  background: ${colors.none};
-
-  h2{ width: 90%; }
-  p{ width: 85%;
-      margin: 0.5em ;
-      font-family: ${font.Lregular};
-      font-size: ${size.Wtext};
-      color: ${colors.black};
-     }
-  ${above.large` 
-  width: 100%;
-  height: 40%;
-
-  h2{ width: 70%; }
-  p{ width: 80%; }
-  `}
-`
 
 export const StyledFour = styled.div`
   display: flex; 
@@ -459,6 +440,8 @@ export const StyledFour = styled.div`
   width: 100vw;
   height: auto;
   background: ${colors.green};
+
+  padding: 10% 0;
   ${above.large` 
   width: 100vw;
   height: 100vh;
@@ -469,12 +452,19 @@ export const StyledFour = styled.div`
 export const StyledPeopleSay = styled.div`
   display: flex; 
   justify-content: center;
-  flex-flow: column wrap ;
+  flex-flow: column nowrap ;
   align-items: center;
+  padding: 10% 0;
   
   width: 100vw;
-  height: 80vh;
+  height: 60vh;
   background: ${colors.none};
+  h1{
+    margin: 0.5em 10%;
+  font-family: ${font.Lregular};
+  font-size: ${size.WTitle};
+  color: ${colors.black};
+}
   ${above.large` 
   width: 100vw;
   height: 100vh;
@@ -489,9 +479,9 @@ export const CardPeopleSay = styled.div`
   align-items: flex-start;
   
   width: 80%;
-  height: 60%;
+  height: 90%;
   background: ${colors.none};
-  border: 1px solid ${colors.green};
+  border: 1px solid rgba(130, 140, 122, 0.3);
 
   h3{
     margin: 10% 0 0 10%;

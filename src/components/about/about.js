@@ -94,14 +94,14 @@ const About = ({ children }) => (
     </ImgOne>
     <TextOne>
     <h2>Gaia Evolution Group is a highly qualify professionals trained in several fields such as:</h2>
-    <p>Cosmetologists (Hair Care Professionals)</p>
-    <p>Estheticians (Skin Care Professionals)</p>
-    <p>Reiki (Healing Energy Therapists)</p>
+    <p>- Cosmetologists (Hair Care Professionals)</p>
+    <p>- Estheticians (Skin Care Professionals)</p>
+    <p>- Reiki (Healing Energy Therapists)</p>
     </TextOne>
  </StyledTwo>
  <StyledThree>
     <OurServicesText>
-    OUR SERVICES
+    <h1>Our Services</h1>
     </OurServicesText>
     <TexTwo>
     <p>Gaia Evolution Group support all individuals to avoid the loss of its inner and outer beauty and as their own  harmony. We believe that human beings deserve quality life in all  aspects: physical, emotional and spiritual. Gaia Group always work though the evolution, innovation and renewal in all areas of our company.</p>
@@ -111,7 +111,7 @@ const About = ({ children }) => (
     <StaticImage
             className="imgArcoMovil"
             imgClassName=""
-            src="../../images/About/PNG/OurServiceMovil.png"
+            src="../../images/About/PNG/WWDArcoMovil.png"
             layout="constrained"
             breakpoints={[750, 1080, 1366, 1920]}
             alt="Spa Image"
@@ -121,11 +121,14 @@ const About = ({ children }) => (
         />
     </ImgArc>
     <TexThree>
-    <p>We are always looking for continues improvement in all our services and areas through constant training of all our staff. Our Group believe that human beings would achieve their full potential through the emotional balance by unifying the Body, Soul and Spirit. That is why we have combined and offering to our clients’ various services to select the best preference.</p>
+    <p>We are always looking for continues improvement in all our services and areas through constant training of all our staff. </p>
+    <p>  Our Group believe that human beings would achieve their full potential through the emotional balance by unifying the Body, Soul and Spirit. </p>
     </TexThree>
-    <TexFour>
-    <p>full potential through the emotional balance by unifying the Body, Soul and Spirit. That is why we have combined and offering to our clients’ various services to select the best preference.</p>
-    </TexFour>
+    <TexTwo>
+    <p>  That is why we have combined and offering to our clients’ various services to select the best preference.</p>
+    <p>Full potential through the emotional balance by unifying the Body, Soul and Spirit. </p>
+    <p>That is why we have combined and offering to our clients’ various services to select the best preference.</p>
+    </TexTwo>
 
 </StyledThree>
 <StyledFour>
