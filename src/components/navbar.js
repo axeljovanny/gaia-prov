@@ -68,7 +68,7 @@ const Navbar = ({ siteTitle }) => {
                     </ItemNav>
                 </StyledItems>
             </StyledNavbar>
-            <IconNav/>            
+            <IconNav siteTitle="about"/>            
         </>)
     }
 
@@ -116,7 +116,7 @@ const Navbar = ({ siteTitle }) => {
 }
 
 
-const IconNav = () => {
+const IconNav = ({ siteTitle }) => {
     const [isOpen, toggleOpen] = useCycle(false, true);
     const containerRef = useRef(null);
   
@@ -125,7 +125,7 @@ const IconNav = () => {
         initial={false}
         animate={isOpen ? "open" : "closed"}
         ref={containerRef}>
-        <MenuToggle toggle={() => toggleOpen()} />
+        <MenuToggle toggle={() => toggleOpen()} siteTitle={siteTitle} />
         <Navigation open={isOpen}/>
       </Overlay>
     );
