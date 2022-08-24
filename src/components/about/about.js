@@ -7,7 +7,7 @@ import { CircleNature, LogoPrincipal, PhoneLogo, Scroll, Social} from "../../sty
 import { colors } from "../../utils/const"
 // SVG
 import { FacebookIcon, InstagramIcon, TiktokIcon } from "../../images/icons"
-import { Phone ,GEWeb, GEMovil} from "../../assets/Home"
+import { Phone ,GEWeb, GEMovil, ScrollArrow} from "../../assets/Home"
 // CSS
 import "../../styles/css/home.css"
 import { ImgArc, ImgOne, OurServicesText, StyledAbout, StyledFirst, StyledFour, StyledPeopleSay, StyledText, StyledThree, StyledTwo, TexFive, TexFour, TexThree, TextOne, TexTwo } from "../../styles/js/about.js"
@@ -52,7 +52,10 @@ const HeroAbout = ({ children }) => (
                     <p>773-799-8843</p>
                 </motion.a>
             </PhoneLogo>
-            <Scroll/>
+            <Scroll>  
+            <ScrollArrow fill={colors.white} className="scroll" />
+                <ScrollArrow fill={colors.white} className="scroll-movil" />
+            </Scroll>
         </StyledAbout >
     </>
 
