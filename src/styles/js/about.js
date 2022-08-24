@@ -314,7 +314,7 @@ export const StyledThree = styled.div`
   `}
 
   `
-  export const OurServicesText = styled.div`
+  export const OurServicesText = styled(motion.div)`
   display: flex; 
   flex-direction: column;
   justify-content: center;
@@ -335,7 +335,7 @@ export const StyledThree = styled.div`
   `}
 `
 
-export const ImgArc = styled.div`
+export const ImgArc = styled(motion.div)`
   display: flex; 
   flex-flow: row wrap ;
   justify-content: center;

@@ -40,7 +40,7 @@ const HeroAbout = ({ children }) => (
                     <TiktokIcon fill={colors.white} className="svgAbout" />
                 </a>
             </Social>
-            <PhoneLogo>
+            <PhoneLogo initial={{opacity:0}} animate={{opacity:1}} transition={{duration:1, delay:2.5}}>
                 <motion.a
                     whileHover={{ priginX: 0, color: colors.accentBlue }}
                     whileTap={{ scale: 0.9 }} href="tel:773-799-8843">
@@ -62,9 +62,9 @@ const About = ({ children }) => (
 <>
  <StyledFirst> 
     <StyledText> 
-        <h1>We are a group of professional Cosmetologists & Estheticians</h1>
-        <p>That are hard working and staying up to date with the latest trends and technology in the beauty industry to bring our clients the best experience possible. Gaia Evolution Spa & Salon was created with the concept of rescue the use of natural & organic sources from our professional lines; Aveda & Eminence are used for our skincare, bodycare & haircare services, complementing them with holistic therapies.</p>
-        <p> We created a peaceful athmosphere to enjoy during your service because everything we do at Gaia is done with love, dedication and care to all our guests!</p>
+        <motion.h1 initial={{ opacity: 0, }} whileInView={{ opacity: 1 }} transition={{ duration: 1.5 }} viewport={{ once: true }}>We are a group of professional Cosmetologists & Estheticians</motion.h1>
+        <motion.p initial={{ opacity: 0, }} whileInView={{ opacity: 1 }} transition={{ duration: 1.5 }} viewport={{ once: true }}>That are hard working and staying up to date with the latest trends and technology in the beauty industry to bring our clients the best experience possible. Gaia Evolution Spa & Salon was created with the concept of rescue the use of natural & organic sources from our professional lines; Aveda & Eminence are used for our skincare, bodycare & haircare services, complementing them with holistic therapies.</motion.p>
+        <motion.p initial={{ opacity: 0, }} whileInView={{ opacity: 1 }} transition={{ duration: 1.5 }} viewport={{ once: true }}> We created a peaceful athmosphere to enjoy during your service because everything we do at Gaia is done with love, dedication and care to all our guests!</motion.p>
     </StyledText>
  </StyledFirst>
  <StyledTwo>
@@ -93,21 +93,21 @@ const About = ({ children }) => (
         />
     </ImgOne>
     <TextOne>
-    <h2>Gaia Evolution Group is a highly qualify professionals trained in several fields such as:</h2>
-    <p>- Cosmetologists (Hair Care Professionals)</p>
-    <p>- Estheticians (Skin Care Professionals)</p>
-    <p>- Reiki (Healing Energy Therapists)</p>
+    <motion.h2 initial={{ opacity: 0, }} whileInView={{ opacity: 1 }} transition={{ duration: 1.5 }} viewport={{ once: true }}>Gaia Evolution Group is a highly qualify professionals trained in several fields such as:</motion.h2>
+    <motion.p initial={{ opacity: 0, }} whileInView={{ opacity: 1 }} transition={{ duration: 1.5 }} viewport={{ once: true }}>- Cosmetologists (Hair Care Professionals)</motion.p>
+    <motion.p initial={{ opacity: 0, }} whileInView={{ opacity: 1 }} transition={{ duration: 1.5 }} viewport={{ once: true }}>- Estheticians (Skin Care Professionals)</motion.p>
+    <motion.p initial={{ opacity: 0, }} whileInView={{ opacity: 1 }} transition={{ duration: 1.5 }} viewport={{ once: true }}>- Reiki (Healing Energy Therapists)</motion.p>
     </TextOne>
  </StyledTwo>
  <StyledThree>
-    <OurServicesText>
-    <h1>Our Services</h1>
+    <OurServicesText initial={{ opacity: 0, }} whileInView={{ opacity: 1 }} transition={{ duration: 1.5 }} viewport={{ once: true }}>
+    <motion.h1 initial={{ opacity: 0, }} whileInView={{ opacity: 1 }} transition={{ duration: 1.5 }} viewport={{ once: true }}>Our Services</motion.h1>
     </OurServicesText>
     <TexTwo>
-    <p>Gaia Evolution Group support all individuals to avoid the loss of its inner and outer beauty and as their own  harmony. We believe that human beings deserve quality life in all  aspects: physical, emotional and spiritual. Gaia Group always work though the evolution, innovation and renewal in all areas of our company.</p>
-    <p>Organic sources for skincare, haircare and complementing with wellness therapies.</p>
+    <motion.p initial={{ opacity: 0, }} whileInView={{ opacity: 1 }} transition={{ duration: 1.5 }} viewport={{ once: true }}>Gaia Evolution Group support all individuals to avoid the loss of its inner and outer beauty and as their own  harmony. We believe that human beings deserve quality life in all  aspects: physical, emotional and spiritual. Gaia Group always work though the evolution, innovation and renewal in all areas of our company.</motion.p>
+    <motion.p initial={{ opacity: 0, }} whileInView={{ opacity: 1 }} transition={{ duration: 1.5 }} viewport={{ once: true }}>Organic sources for skincare, haircare and complementing with wellness therapies.</motion.p>
     </TexTwo>
-    <ImgArc>
+    <ImgArc initial={{ opacity: 0, }} whileInView={{ opacity: 1 }} transition={{ duration: 1.5 }} viewport={{ once: true }}>
     <StaticImage
             className="imgArcoMovil"
             imgClassName=""
@@ -121,31 +121,31 @@ const About = ({ children }) => (
         />
     </ImgArc>
     <TexThree>
-    <p>We are always looking for continues improvement in all our services and areas through constant training of all our staff. </p>
-    <p>  Our Group believe that human beings would achieve their full potential through the emotional balance by unifying the Body, Soul and Spirit. </p>
+    <motion.p initial={{ opacity: 0, }} whileInView={{ opacity: 1 }} transition={{ duration: 1.5 }} viewport={{ once: true }}>We are always looking for continues improvement in all our services and areas through constant training of all our staff. </motion.p>
+    <motion.p initial={{ opacity: 0, }} whileInView={{ opacity: 1 }} transition={{ duration: 1.5 }} viewport={{ once: true }}>  Our Group believe that human beings would achieve their full potential through the emotional balance by unifying the Body, Soul and Spirit. </motion.p>
     </TexThree>
     <TexTwo>
-    <p>  That is why we have combined and offering to our clients’ various services to select the best preference.</p>
-    <p>Full potential through the emotional balance by unifying the Body, Soul and Spirit. </p>
-    <p>That is why we have combined and offering to our clients’ various services to select the best preference.</p>
+    <motion.p initial={{ opacity: 0, }} whileInView={{ opacity: 1 }} transition={{ duration: 1.5 }} viewport={{ once: true }}>  That is why we have combined and offering to our clients’ various services to select the best preference.</motion.p>
+    <motion.p initial={{ opacity: 0, }} whileInView={{ opacity: 1 }} transition={{ duration: 1.5 }} viewport={{ once: true }}>Full potential through the emotional balance by unifying the Body, Soul and Spirit. </motion.p>
+    <motion.p initial={{ opacity: 0, }} whileInView={{ opacity: 1 }} transition={{ duration: 1.5 }} viewport={{ once: true }}>That is why we have combined and offering to our clients’ various services to select the best preference.</motion.p>
     </TexTwo>
 
 </StyledThree>
 <StyledFour>
     <TexFive>
-    <h2>MISSION</h2>
-    <p>Our mission is to be the leader group highly qualified in the fields of Cosmetology, Skin Care, Healing Energy Therapies. Satisfying our client needs and exceeding their expectations providing an excellent customer
-    service.</p>
+    <motion.h2 initial={{ opacity: 0, }} whileInView={{ opacity: 1 }} transition={{ duration: 1.5 }} viewport={{ once: true }}>MISSION</motion.h2>
+    <motion.p initial={{ opacity: 0, }} whileInView={{ opacity: 1 }} transition={{ duration: 1.5 }} viewport={{ once: true }}>Our mission is to be the leader group highly qualified in the fields of Cosmetology, Skin Care, Healing Energy Therapies. Satisfying our client needs and exceeding their expectations providing an excellent customer
+    service.</motion.p>
     </TexFive>
     <ImgArc>
     </ImgArc>
     <ImgArc>
     </ImgArc>
     <TexFive>
-    <h2>VISION</h2>
-    <p>Our vision is to be the company chosen for its innovation, development
+    <motion.h2 initial={{ opacity: 0, }} whileInView={{ opacity: 1 }} transition={{ duration: 1.5 }} viewport={{ once: true }}>VISION</motion.h2>
+    <motion.p initial={{ opacity: 0, }} whileInView={{ opacity: 1 }} transition={{ duration: 1.5 }} viewport={{ once: true }}>Our vision is to be the company chosen for its innovation, development
     and services through the expansion of human consciousness through
-    the use of natural resources.</p>
+    the use of natural resources.</motion.p>
     </TexFive>
 </StyledFour>
 <StyledPeopleSay>

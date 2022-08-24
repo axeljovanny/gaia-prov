@@ -128,7 +128,7 @@ export const Social = styled(motion.div)`
   `}
 `
 
-export const PhoneLogo = styled.div`
+export const PhoneLogo = styled(motion.div)`
   grid-area: 3 / 2 / 4 / 3;
   width: calc(100vw / 3);
   height: 40vh;
