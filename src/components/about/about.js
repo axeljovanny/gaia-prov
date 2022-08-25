@@ -96,21 +96,35 @@ const About = ({ children }) => (
         />
     </ImgOne>
     <TextOne>
-    <motion.h2 initial={{ opacity: 0, }} whileInView={{ opacity: 1 }} transition={{ duration: 1.5 }} viewport={{ once: true }}>Gaia Evolution Group is a highly qualify professionals trained in several fields such as:</motion.h2>
-    <motion.p initial={{ opacity: 0, }} whileInView={{ opacity: 1 }} transition={{ duration: 1.5 }} viewport={{ once: true }}>- Cosmetologists (Hair Care Professionals)</motion.p>
-    <motion.p initial={{ opacity: 0, }} whileInView={{ opacity: 1 }} transition={{ duration: 1.5 }} viewport={{ once: true }}>- Estheticians (Skin Care Professionals)</motion.p>
-    <motion.p initial={{ opacity: 0, }} whileInView={{ opacity: 1 }} transition={{ duration: 1.5 }} viewport={{ once: true }}>- Reiki (Healing Energy Therapists)</motion.p>
+    <motion.h1 initial={{ opacity: 0, }} whileInView={{ opacity: 1 }} transition={{ duration: 1.5 }} viewport={{ once: true }}>Gaia Evolution Group is a highly qualify professionals trained in several fields such as:</motion.h1>
+    <motion.p initial={{ opacity: 0, }} whileInView={{ opacity: 1 }} transition={{ duration: 1.5 }} viewport={{ once: true }}>* Cosmetologists ( Hair Care Professionals )</motion.p>
+    <motion.p initial={{ opacity: 0, }} whileInView={{ opacity: 1 }} transition={{ duration: 1.5 }} viewport={{ once: true }}>* Estheticians ( Skin Care Professionals )</motion.p>
+    <motion.p initial={{ opacity: 0, }} whileInView={{ opacity: 1 }} transition={{ duration: 1.5 }} viewport={{ once: true }}>° Reiki ( Healing Energy Therapists )</motion.p>
     </TextOne>
  </StyledTwo>
  <StyledThree>
     <OurServicesText initial={{ opacity: 0, }} whileInView={{ opacity: 1 }} transition={{ duration: 1.5 }} viewport={{ once: true }}>
     <motion.h1 initial={{ opacity: 0, }} whileInView={{ opacity: 1 }} transition={{ duration: 1.5 }} viewport={{ once: true }}>Our Services</motion.h1>
     </OurServicesText>
+   
     <TexTwo>
     <motion.p initial={{ opacity: 0, }} whileInView={{ opacity: 1 }} transition={{ duration: 1.5 }} viewport={{ once: true }}>Gaia Evolution Group support all individuals to avoid the loss of its inner and outer beauty and as their own  harmony. We believe that human beings deserve quality life in all  aspects: physical, emotional and spiritual. Gaia Group always work though the evolution, innovation and renewal in all areas of our company.</motion.p>
     <motion.p initial={{ opacity: 0, }} whileInView={{ opacity: 1 }} transition={{ duration: 1.5 }} viewport={{ once: true }}>Organic sources for skincare, haircare and complementing with wellness therapies.</motion.p>
     </TexTwo>
     <ImgArc initial={{ opacity: 0, }} whileInView={{ opacity: 1 }} transition={{ duration: 1.5 }} viewport={{ once: true }}>
+        <StaticImage
+                className="imgArco"
+                imgClassName=""
+                src="../../images/About/PNG/OurService.png"
+                layout="constrained"
+                breakpoints={[750, 1080, 1366, 1920]}
+                alt="Spa Image"
+                loading="lazy"
+                formats={['auto', 'webp', 'avif']}
+                quality='100'
+            />
+    </ImgArc>
+    <ImgArc movil initial={{ opacity: 0, }} whileInView={{ opacity: 1 }} transition={{ duration: 1.5 }} viewport={{ once: true }}>
     <StaticImage
             className="imgArcoMovil"
             imgClassName=""
@@ -127,7 +141,7 @@ const About = ({ children }) => (
     <motion.p initial={{ opacity: 0, }} whileInView={{ opacity: 1 }} transition={{ duration: 1.5 }} viewport={{ once: true }}>We are always looking for continues improvement in all our services and areas through constant training of all our staff. </motion.p>
     <motion.p initial={{ opacity: 0, }} whileInView={{ opacity: 1 }} transition={{ duration: 1.5 }} viewport={{ once: true }}>  Our Group believe that human beings would achieve their full potential through the emotional balance by unifying the Body, Soul and Spirit. </motion.p>
     </TexThree>
-    <TexTwo>
+    <TexTwo second>
     <motion.p initial={{ opacity: 0, }} whileInView={{ opacity: 1 }} transition={{ duration: 1.5 }} viewport={{ once: true }}>  That is why we have combined and offering to our clients’ various services to select the best preference.</motion.p>
     <motion.p initial={{ opacity: 0, }} whileInView={{ opacity: 1 }} transition={{ duration: 1.5 }} viewport={{ once: true }}>Full potential through the emotional balance by unifying the Body, Soul and Spirit. </motion.p>
     <motion.p initial={{ opacity: 0, }} whileInView={{ opacity: 1 }} transition={{ duration: 1.5 }} viewport={{ once: true }}>That is why we have combined and offering to our clients’ various services to select the best preference.</motion.p>
@@ -135,21 +149,43 @@ const About = ({ children }) => (
 
 </StyledThree>
 <StyledFour>
+<ImgArc>
+    <StaticImage
+            className="imgArco"
+            imgClassName=""
+            src="../../images/About/PNG/Mission.png"
+            layout="constrained"
+            breakpoints={[750, 1080, 1366, 1920]}
+            alt="Spa Image"
+            loading="lazy"
+            formats={['auto', 'webp', 'avif']}
+            quality='100'
+        />
+    </ImgArc>
     <TexFive>
     <motion.h2 initial={{ opacity: 0, }} whileInView={{ opacity: 1 }} transition={{ duration: 1.5 }} viewport={{ once: true }}>MISSION</motion.h2>
     <motion.p initial={{ opacity: 0, }} whileInView={{ opacity: 1 }} transition={{ duration: 1.5 }} viewport={{ once: true }}>Our mission is to be the leader group highly qualified in the fields of Cosmetology, Skin Care, Healing Energy Therapies. Satisfying our client needs and exceeding their expectations providing an excellent customer
     service.</motion.p>
     </TexFive>
-    <ImgArc>
-    </ImgArc>
-    <ImgArc>
-    </ImgArc>
     <TexFive>
     <motion.h2 initial={{ opacity: 0, }} whileInView={{ opacity: 1 }} transition={{ duration: 1.5 }} viewport={{ once: true }}>VISION</motion.h2>
     <motion.p initial={{ opacity: 0, }} whileInView={{ opacity: 1 }} transition={{ duration: 1.5 }} viewport={{ once: true }}>Our vision is to be the company chosen for its innovation, development
     and services through the expansion of human consciousness through
     the use of natural resources.</motion.p>
     </TexFive>
+    <ImgArc>
+    <StaticImage
+            className="imgArco"
+            imgClassName=""
+            src="../../images/About/PNG/Vision.png"
+            layout="constrained"
+            breakpoints={[750, 1080, 1366, 1920]}
+            alt="Spa Image"
+            loading="lazy"
+            formats={['auto', 'webp', 'avif']}
+            quality='100'
+        />
+    </ImgArc>
 </StyledFour>
 <StyledPeopleSay>
     <PeopleSay/>

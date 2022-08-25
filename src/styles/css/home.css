@@ -142,15 +142,26 @@
   display: flex;
   width: 100%;}
 
+  .imgArco{
+    display: none;}
+
+
 @media only screen and (min-width: 480px) {
   .gift-movil {
     width: 100%;
     height: 100%;
   }
 
+.imgArcoMovil{
+  display: none;}
+
+.imgArco{
+  display: flex;
+  width: 100%;}
+
   .imgSalon{
     display: flex;
-    width: 80%;
+    width: 100%;
   }
   
   .imgSalonMovil{
