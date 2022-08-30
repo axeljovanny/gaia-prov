@@ -144,6 +144,12 @@
 
   .imgArco{
     display: none;}
+  
+.imgArcoWeb{
+    display: none;}
+
+.imgMV{
+      display: none;}
 
 
 @media only screen and (min-width: 480px) {
@@ -158,6 +164,10 @@
 .imgArco{
   display: flex;
   width: 100%;}
+
+  .imgMV{
+    display: flex;
+    width: 100%;}
 
   .imgSalon{
     display: flex;
@@ -221,6 +231,17 @@
     display: flex;
     width: 100%;
   }
+  .imgArcoWeb{
+    display: flex;
+    width: 100%;}
+
+  .imgArco{
+      display: none;}
+    
+  .imgMV{
+    display: flex;
+    width: 100%;}
+
   .logo-movil {
     display: none;
   }

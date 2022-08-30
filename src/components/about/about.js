@@ -10,7 +10,7 @@ import { FacebookIcon, InstagramIcon, TiktokIcon } from "../../images/icons"
 import { Phone ,GEWeb, GEMovil, ScrollArrow} from "../../assets/Home"
 // CSS
 import "../../styles/css/home.css"
-import { ImgArc, ImgOne, OurServicesText, StyledAbout, StyledFirst, StyledFour, StyledPeopleSay, StyledText, StyledThree, StyledTwo, TexFive, TexFour, TexThree, TextOne, TexTwo } from "../../styles/js/about.js"
+import { ImgArc, ImgOne, ImgVM, OurServicesText, StyledAbout, StyledFirst, StyledFour, StyledPeopleSay, StyledText, StyledThree, StyledTwo, TexFive, TexFour, TexThree, TextOne, TexTwo } from "../../styles/js/about.js"
 import { StaticImage } from "gatsby-plugin-image"
 import PeopleSay from "./people.js"
 
@@ -66,7 +66,8 @@ const About = ({ children }) => (
  <StyledFirst> 
     <StyledText> 
         <motion.h1 initial={{ opacity: 0, }} whileInView={{ opacity: 1 }} transition={{ duration: 1.5 }} viewport={{ once: true }}>We are a group of professional Cosmetologists & Estheticians</motion.h1>
-        <motion.p initial={{ opacity: 0, }} whileInView={{ opacity: 1 }} transition={{ duration: 1.5 }} viewport={{ once: true }}>That are hard working and staying up to date with the latest trends and technology in the beauty industry to bring our clients the best experience possible. Gaia Evolution Spa & Salon was created with the concept of rescue the use of natural & organic sources from our professional lines; Aveda & Eminence are used for our skincare, bodycare & haircare services, complementing them with holistic therapies.</motion.p>
+        <motion.p initial={{ opacity: 0, }} whileInView={{ opacity: 1 }} transition={{ duration: 1.5 }} viewport={{ once: true }}>That are hard working and staying up to date with the latest trends and technology in the beauty industry to bring our clients the best experience possible. </motion.p>
+        <motion.p initial={{ opacity: 0, }} whileInView={{ opacity: 1 }} transition={{ duration: 1.5 }} viewport={{ once: true }}>Gaia Evolution Spa & Salon was created with the concept of rescue the use of natural & organic sources from our professional lines; Aveda & Eminence are used for our skincare, bodycare & haircare services, complementing them with holistic therapies.</motion.p>
         <motion.p initial={{ opacity: 0, }} whileInView={{ opacity: 1 }} transition={{ duration: 1.5 }} viewport={{ once: true }}> We created a peaceful athmosphere to enjoy during your service because everything we do at Gaia is done with love, dedication and care to all our guests!</motion.p>
     </StyledText>
  </StyledFirst>
@@ -141,17 +142,30 @@ const About = ({ children }) => (
     <motion.p initial={{ opacity: 0, }} whileInView={{ opacity: 1 }} transition={{ duration: 1.5 }} viewport={{ once: true }}>We are always looking for continues improvement in all our services and areas through constant training of all our staff. </motion.p>
     <motion.p initial={{ opacity: 0, }} whileInView={{ opacity: 1 }} transition={{ duration: 1.5 }} viewport={{ once: true }}>  Our Group believe that human beings would achieve their full potential through the emotional balance by unifying the Body, Soul and Spirit. </motion.p>
     </TexThree>
-    <TexTwo second>
+    <TexFour >
     <motion.p initial={{ opacity: 0, }} whileInView={{ opacity: 1 }} transition={{ duration: 1.5 }} viewport={{ once: true }}>  That is why we have combined and offering to our clients’ various services to select the best preference.</motion.p>
     <motion.p initial={{ opacity: 0, }} whileInView={{ opacity: 1 }} transition={{ duration: 1.5 }} viewport={{ once: true }}>Full potential through the emotional balance by unifying the Body, Soul and Spirit. </motion.p>
     <motion.p initial={{ opacity: 0, }} whileInView={{ opacity: 1 }} transition={{ duration: 1.5 }} viewport={{ once: true }}>That is why we have combined and offering to our clients’ various services to select the best preference.</motion.p>
-    </TexTwo>
+    </TexFour>
+    <ImgArc initial={{ opacity: 0, }} whileInView={{ opacity: 1 }} transition={{ duration: 1.5 }} viewport={{ once: true }}>
+        <StaticImage
+                className="imgArcoWeb"
+                imgClassName=""
+                src="../../images/About/PNG/OurService.png"
+                layout="constrained"
+                breakpoints={[750, 1080, 1366, 1920]}
+                alt="Spa Image"
+                loading="lazy"
+                formats={['auto', 'webp', 'avif']}
+                quality='100'
+            />
+    </ImgArc>
 
 </StyledThree>
 <StyledFour>
-<ImgArc>
+<ImgVM>
     <StaticImage
-            className="imgArco"
+            className="imgMV"
             imgClassName=""
             src="../../images/About/PNG/Mission.png"
             layout="constrained"
@@ -161,7 +175,7 @@ const About = ({ children }) => (
             formats={['auto', 'webp', 'avif']}
             quality='100'
         />
-    </ImgArc>
+    </ImgVM>
     <TexFive>
     <motion.h2 initial={{ opacity: 0, }} whileInView={{ opacity: 1 }} transition={{ duration: 1.5 }} viewport={{ once: true }}>MISSION</motion.h2>
     <motion.p initial={{ opacity: 0, }} whileInView={{ opacity: 1 }} transition={{ duration: 1.5 }} viewport={{ once: true }}>Our mission is to be the leader group highly qualified in the fields of Cosmetology, Skin Care, Healing Energy Therapies. Satisfying our client needs and exceeding their expectations providing an excellent customer
@@ -173,9 +187,9 @@ const About = ({ children }) => (
     and services through the expansion of human consciousness through
     the use of natural resources.</motion.p>
     </TexFive>
-    <ImgArc>
+    <ImgVM>
     <StaticImage
-            className="imgArco"
+            className="imgMV"
             imgClassName=""
             src="../../images/About/PNG/Vision.png"
             layout="constrained"
@@ -185,7 +199,7 @@ const About = ({ children }) => (
             formats={['auto', 'webp', 'avif']}
             quality='100'
         />
-    </ImgArc>
+    </ImgVM>
 </StyledFour>
 <StyledPeopleSay>
     <PeopleSay/>

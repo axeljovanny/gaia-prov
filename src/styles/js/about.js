@@ -165,12 +165,11 @@ export const StyledFirst = styled.div`
   height: auto;
   background: ${colors.none};
 
-  text-align: justify;
-  word-spacing:-2px;  
   ${above.medium` 
   padding: 10% 0;
   `}
   ${above.large` 
+  padding: 5% 0;
   `}
 `
 
@@ -185,6 +184,8 @@ export const StyledText = styled.div`
   background: ${colors.none};
 
   h1{
+    text-align: justify;
+    word-spacing:-2px;  
     width: 80%;
     padding: 10% 0;
     font-family: ${font.Rsemi};
@@ -192,12 +193,14 @@ export const StyledText = styled.div`
     color: ${colors.black};
   }
   p{
-    margin: 5% 0;
+    text-align: justify;
+    word-spacing:-2px;  
+    padding: 5% 0;
     font-family: ${font.Llight};
     font-size: ${size.WList};
     color: ${colors.black};
   }
-  p:nth-child(3) {
+  p:nth-child(4) {
     padding: 0 0 10% 0;
   }
 
@@ -207,12 +210,26 @@ export const StyledText = styled.div`
     font-size: ${size.WTitle};
   }
   p{
-    margin: 3% 0;
+    padding: 3% 0;
     font-size: ${size.WList};
   }
   `}
   ${above.large` 
+  align-items: center;
 
+  h1{
+    text-align: center;
+    width: 80%;
+    padding: 3% 0;
+    font-size: ${size.WTitle};
+  }
+  p{
+    background: ${colors.none};
+    width: 90%;
+    padding: 2% 0 ;
+    margin: 0;
+    font-size: ${size.XList};
+  }
   `}
 `
 
@@ -231,7 +248,9 @@ export const StyledTwo = styled.div`
   flex-direction: row;
   `}
   ${above.large` 
-  flex-direction: row;
+  padding: 1% 0;
+  align-items: flex-start;
+  justify-content: flex-start;
   
   `}
 `
@@ -250,10 +269,7 @@ export const ImgOne = styled.div`
 
   `}
   ${above.large` 
-  align-items: flex-start;
-
-  width: 110%;
-  height: 60%;
+  width: 50%;
   `}
 `
 export const TextOne = styled.div`
@@ -296,36 +312,48 @@ export const TextOne = styled.div`
     font-size: ${size.WList};
   }
   `}
-  ${above.large` 
+  ${above.large`
+  width: 80%;
+  h1{
+    font-family: ${font.Rsemi};
+    font-size: ${size.WTitle};
+    text-align: left;
+  }
+  p{
+    font-size: ${size.XList};
+  }
  
   `}
 `
 
 export const StyledThree = styled.div`
-  display: flex; 
-  flex-flow: row wrap ;
-  justify-content: center;
-  align-items: center;
+  display: grid;
+  grid-template-columns: repeat(2, auto);
+  grid-template-rows: repeat(4, auto);
+  grid-column-gap: 0px;
+  grid-row-gap: 0px; 
   padding: 10% 0;
   
   width: 100vw;
   height: auto;
+
   background: ${colors.none};
-  text-align: justify;
-  word-spacing:-2px;  
   ${above.large` 
-  width: 100vw;
+  padding: 5% 0;
+
   `}
 
   `
   export const OurServicesText = styled(motion.div)`
+  grid-area: 1 / 1 / 2 / 3;
   display: flex; 
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
 
-  width: 100%;
+  width: 70vw;
   padding: 0 10%;
+  height: auto;
 
   h1{font-family: ${font.Lregular};
   font-size: ${size.WTitle};
@@ -333,41 +361,21 @@ export const StyledThree = styled.div`
   
 
   background: ${colors.none};
-  ${above.large` 
-  width: 100%;
-  height: 10%;
-  `}
-`
-
-export const ImgArc = styled(motion.div)`
-  display: ${props => (props.movil ? "flex" : "none")};
-  flex-flow: row wrap ;
-  justify-content: center;
-  align-items: center;
-  margin: 0;
+  ${above.large`
   padding: 0;
-
-  width: 40%;
-  height: auto;
-  background: ${colors.none};
-  ${above.medium` 
-  display: ${props => (props.movil ? "none" : "flex")};
-  align-items: flex-start;
-  width: 35%;
-  `}
-  ${above.large` 
-  flex-direction: column;
-  width: 50%;
-  height: 60%;
+  align-items: center;
+  width: 100%;
   `}
 `
-
 export const TexTwo = styled.div`
+  grid-area: 2 / 1 / 3 / 3; 
   display: flex; 
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
   margin: 5% 0;
+  text-align: justify;
+  word-spacing: -1px; 
 
 
   width: 100%;
@@ -381,13 +389,136 @@ export const TexTwo = styled.div`
     color: ${colors.black};
   }
   ${above.medium` 
-  width: ${props => (props.second ? "95%" : "50%")};
-
+  grid-area: 2 / 1 / 3 / 2;
+  width: 100%;
+  p{ 
+    margin: 2% 5% 0 20%;
+    font-family: ${font.Llight};
+    font-size: 17px;
+    color: ${colors.black};
+  }
   `}
   ${above.large` 
-  width: 50%;
+  width: 60vw;
+  
+  p{
+    font-size: ${size.XList};
+  }
   `}
 `
+
+export const TexThree = styled.div`
+  grid-area: 3 / 2 / 4 / 3; 
+  display: flex; 
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  text-align: justify;
+  word-spacing: -1px; 
+
+  width: 100%;
+  height: auto;
+  background: ${colors.none};
+
+  h2{ width: 90%; }
+  p{ 
+    margin: 0 15% 10% 10%;
+    font-family: ${font.Llight};
+    font-size: ${size.WList};
+    color: ${colors.black};
+  }
+  ${above.medium` 
+  grid-area: 3 / 1 / 4 / 2;
+
+  width: 100%;
+  p{ 
+    margin: 2% 5% 0 20%;
+    word-spacing: -1px; 
+    font-family: ${font.Llight};
+    font-size: 17px;
+    color: ${colors.black};
+  }
+  `}
+  ${above.large` 
+  width: 60vw;
+  p{
+    font-size: ${size.XList};
+  }
+  `}
+`
+export const TexFour = styled.div`
+  grid-area: 4 / 1 / 5 / 3;
+  display: flex; 
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  text-align: justify;
+  word-spacing: -1px; 
+  margin: 5% 0;
+
+
+  width: 100%;
+  height: auto;
+  background: ${colors.none};
+
+  h2{ width: 90%; }
+  p{ 
+    margin: 5% 10%;
+    font-family: ${font.Llight};
+    font-size: ${size.WList};
+    color: ${colors.black};
+  }
+  ${above.medium` 
+  width: 100%;
+  grid-area: 4 / 1 / 5 / 3;
+  margin: 3% 0;
+
+  p{ 
+    margin: 1% 12%;
+    word-spacing: -1px; 
+    font-family: ${font.Llight};
+    font-size: 17px;
+    color: ${colors.black};
+  }
+  `}
+  ${above.large` 
+  p{
+    font-size: ${size.XList};
+  }  
+  `}
+`
+
+export const ImgArc = styled(motion.div)`
+  grid-area: 3 / 1 / 4 / 2;
+  margin: 0;
+  padding: 0;
+
+  width: 100%;
+  height: auto;
+  background: ${colors.none};
+  ${above.medium` 
+  grid-area: 2 / 2 / 4 / 3;
+  width: 90%;
+  `}
+  ${above.large` 
+  width: 70%;
+  `}
+`
+export const ImgVM = styled(motion.div)`
+  margin: 0;
+  padding: 0;
+
+  width: 100%;
+  height: auto;
+  background: ${colors.none};
+  ${above.medium` 
+  width: 40%;
+  `}
+  ${above.large` 
+  width: 30%;
+  `}
+`
+
 export const TexFive = styled.div`
   display: flex; 
   flex-direction: column;
@@ -414,46 +545,19 @@ export const TexFive = styled.div`
 
   ${above.medium` 
   width: 50%;
-  `}
-  ${above.large` 
-  width: 50%;
-  height: 50%;
-  `}
-`
-export const TexThree = styled.div`
-  display: flex; 
-  flex-direction: column;
-  justify-content: center;
-  align-items: flex-start;
-
-  width: 60%;
-  height: auto;
-  background: ${colors.none};
-
-  h2{ width: 90%; }
   p{ 
-    margin: 0 15% 10% 10%;
+    margin: 0.5em 10%;
     font-family: ${font.Llight};
     font-size: ${size.WList};
-    color: ${colors.black};
-  }
-  ${above.medium` 
-  width: 75%;
-
-  p{ 
-    margin: 5% 0 0 0;
-    width: 100%; 
+    color: ${colors.white};
   }
   `}
   ${above.large` 
-  width: 100%;
-  height: 40%;
-
-  h2{ width: 70%; }
-  p{ width: 80%; }
+  p{ 
+    font-size: ${size.XList};
+  }
   `}
 `
-
 
 export const StyledFour = styled.div`
   display: flex; 
