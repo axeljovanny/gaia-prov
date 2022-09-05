@@ -20,36 +20,6 @@ export const StyledAbout = styled.div`
   grid-template-rows: repeat(2); 
   `}
 `
-
-export const LogoPrincipal = styled.div`
-  grid-area: 2 / 1 / 3 / 4;
-  width: 100vw;
-  height: 20vh;
-  background: ${colors.none};
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  svg{
-    width: 80%;
-  }
-  ${above.medium`
-  svg{
-    width: 70%;
-  }
-  `}
-  ${above.large`
-  width: 60vw;
-  height: 60vh;
-  grid-area: 1 / 2 / 2 / 3;
-  justify-content: flex-end;
-
-  svg{
-    width: 60%;
-  }
-  `}
-`
-
 export const Gift = styled(motion.div)`
   position: fixed;
   top: 60%;
@@ -83,76 +53,6 @@ export const Gift = styled(motion.div)`
   width: 2%;
   `}
 `
-
-export const Social = styled(motion.div)`
-  grid-area: none;
-  display:none;
-
-  ${above.large`
-  grid-area: 2 / 1 / 3 / 2; 
-  width: 19vw;
-  height: 40vh;
-  background: ${colors.none};
-
-  display:flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: flex-start;
-  gap: 0.5em;
-  a{padding-left: 15%;}
-  
-  `}
-`
-
-export const PhoneLogo = styled.div`
-  grid-area: 3 / 2 / 4 / 3;
-  width: calc(100vw / 3);
-  height: 40vh;
-  background: ${colors.none};
-
-  display: flex;
-  justify-content: center ;
-  align-items: flex-end;
-
-  a svg{
-    margin-bottom: 4vh;
-    width: 50px;
-    height: auto;
-  }
-
-  a p{display: none;}
-
-  ${above.large`
-  width: 60vw;
-  height: 40vh;
-  grid-area: 2 / 2 / 3 / 3; 
-
-  a p{
-    display:flex;
-    margin-bottom: 5vh;
-    font-family: ${font.Lregular};
-    font-size: ${size.Xtext};
-    color: ${colors.white};
-  }
-  `}
-`
-export const Scroll = styled.div`
-  grid-area: 3 / 1 / 4 / 2;
-  width: calc(100vw / 3);
-  height: 40vh;
-  background: ${colors.none};
-  display: flex;
-  justify-content: center;
-  align-items: flex-end;
-
-  ${above.large`
-  align-items: flex-end;
-  width: 20vw;
-  height: 40vh;
-  grid-area: 2 / 3 / 3 / 4; 
-  `}
-`
-
 /// ABOUT SECTION 
 
 export const StyledFirst = styled.div`
@@ -160,10 +60,9 @@ export const StyledFirst = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-
   width: 100vw;
   height: auto;
-  background: ${colors.none};
+  background: ${colors.red};
 
   ${above.medium` 
   padding: 10% 0;

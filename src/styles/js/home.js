@@ -139,7 +139,7 @@ export const PhoneLogo = styled(motion.div)`
   align-items: flex-end;
 
   a svg{
-    margin-bottom: 4vh;
+    margin-bottom: 8vh;
     width: 50px;
     height: auto;
   }

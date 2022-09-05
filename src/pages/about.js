@@ -57,9 +57,9 @@ const AboutPage = () => {
         </motion.a>
         <motion.a href="https://squareup.com/gift/FHH5R6M6H54FS/order"
           whileHover={{ scale: 1.05 }} rel="noreferrer" target="_blank">
-          <GiftWeb className="gift-web" fill={colors.green} fill2={colors.softWhite} />
+          <GiftWeb className="gift-web" fill={colors.softWhite} fill2={colors.green} />
         </motion.a>
-          <a href="https://www.aveda.com/locator/get_the_facts.tmpl?vanity=1&SalonID=38631" rel="noreferrer" target="_blank"><ShopWeb className="gift-movil-store" fill={colors.green} fill2={colors.softWhite} /></a>
+          <a href="https://www.aveda.com/locator/get_the_facts.tmpl?vanity=1&SalonID=38631" rel="noreferrer" target="_blank"><ShopWeb className="gift-movil-store" fill={colors.softWhite} fill2={colors.green} /></a>
           <a href="https://squareup.com/gift/FHH5R6M6H54FS/order" rel="noreferrer" target="_blank" ><GiftMovil className="gift-movil" fill={colors.green} fill2={colors.softWhite} /> </a>
       </Gift>
        <Navbar siteTitle="about"/>

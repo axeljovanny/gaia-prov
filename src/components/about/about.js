@@ -54,7 +54,7 @@ const HeroAbout = ({ children }) => (
             </PhoneLogo>
             <Scroll>  
             <ScrollArrow fill={colors.white} className="scroll" />
-                <ScrollArrow fill={colors.white} className="scroll-movil" />
+                {/* <ScrollArrow fill={colors.white} className="scroll-movil" /> */}
             </Scroll>
         </StyledAbout >
     </>
