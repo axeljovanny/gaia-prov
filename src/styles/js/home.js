@@ -139,7 +139,7 @@ export const PhoneLogo = styled(motion.div)`
   align-items: flex-end;
 
   a svg{
-    margin-bottom: 8vh;
+    margin-bottom: 4vh;
     width: 50px;
     height: auto;
   }
@@ -269,7 +269,7 @@ height: auto;
 export const StyledSvg = styled(motion.div)`
   position:  absolute;
   width: 80%; 
-  top:15%;
+  top:10%;
 ${above.medium`
   top:10%;
   `}
@@ -283,7 +283,7 @@ export const TextWedo = styled.div`
   flex-flow: column nowrap;
   justify-content: center ;
   align-items: flex-start;
-  width: 80%;
+  width: 90%;
   height: 90%;
   padding: 0;
   background: ${colors.none};
@@ -291,21 +291,24 @@ export const TextWedo = styled.div`
   color: ${colors.black};
 
   h1{ 
-    width: 50%;
+    width: 70%;
     font-family: ${font.Rlight};
-    font-size: ${size.Mheader};
+    font-size: 30px;
     color: ${colors.green};
-
   }
   h2{
+    width: 85%;
     font-family: ${font.Rthin};
-    font-size: ${size.Mtittle};
-
+    font-size: 20px;
   }
   h3{
     text-align:justify;
+    padding-top: 10px;
+    line-height: 150%; 
     font-family: ${font.Llight};
-    font-size: ${size.Mtext};
+    font-size: 14px;
+    
+
   }
   a{
     display:flex;
@@ -315,7 +318,7 @@ export const TextWedo = styled.div`
     width: 100%;
     color: ${colors.green};
     font-family: ${font.Lregular};
-    font-size: ${size.Mtext};
+    font-size: 15px;
   }
 
   ${above.medium`
@@ -323,24 +326,26 @@ export const TextWedo = styled.div`
   width: 70%;
   height: 80%;
   a{
-    justify-content: flex-start ;
-    font-size: ${size.XList};
-    padding: 3em 0 0;
+    justify-content: flex-center ;
+    font-size: 22px;
+    padding: 2em 0 0;
   }
   h1{ 
     width: 100%;
     font-family: ${font.Rregular};
-    font-size: ${size.Xheader};
+    font-size: 40px;
   }
   h2{
+    width: 90%;
+    line-height: 150%; 
     font-family: ${font.Rthin};
-    font-size: ${size.Wtittle};
+    font-size: 30px;
   }
   h3{
     text-align:justify;
+    line-height: 160%; 
     font-family: ${font.Llight};
-    font-size: ${size.Xtext};
-    line-height: 150%;
+    font-size: 22px;
   }
   `}
 
@@ -349,22 +354,24 @@ export const TextWedo = styled.div`
   width: 55%;
   height: 90%;
   a{
-    justify-content: flex-start ;
-    font-size: ${size.Wtext};
+    justify-content: flex-center ;
+    font-size: 16px;
   }
   h1{ 
     width: 100%;
     font-family: ${font.Rlight};
-    font-size: ${size.Wheader};
+    font-size: 40px;
   }
   h2{
+    width: 100%;
     font-family: ${font.Rthin};
-    font-size: ${size.Wtittle};
+    font-size: 30px;
   }
   h3{
     text-align:justify;
+    line-height: 160%; 
     font-family: ${font.Llight};
-    font-size: ${size.Wtext};
+    font-size: 16px;
   }
   
   `}
@@ -374,26 +381,23 @@ export const TextWedo = styled.div`
   width: 40%;
   height: 80%;
   
-  a{
-    justify-content: flex-start ;
-  }
   h1{ 
     font-family: ${font.Rsemi};
-    font-size: ${size.Xheader};
+    font-size: 40px;
   }
   h2{
-    font-family: ${font.Rsemi};
-    font-size: ${size.XList};
+    font-family: ${font.Rregular};
+    font-size: 26px;
   }
   h3{
     text-align:justify;
+    line-height: 160%;
     font-family: ${font.Llight};
-    font-size: ${size.WList};
+    font-size: 20px;
   }
   a{
-    width: 19%;
-    font-family: ${font.Rbold};
-    font-size: ${size.Mtittle};
+    justify-content: flex-center ;
+    font-size: 20px;
   }
   
   `}
@@ -656,8 +660,10 @@ export const TextSkin = styled.div`
 
   h3{
     text-align:justify;
+    padding-top: 4%; 
+    line-height: 150%; 
     font-family: ${font.Llight};
-    font-size: ${size.Mtext};
+    font-size: 14px;
   }
   a{
     display:flex;
@@ -667,7 +673,7 @@ export const TextSkin = styled.div`
     width: 100%;
     color: ${colors.green};
     font-family: ${font.Lregular};
-    font-size: ${size.Mtext};
+    font-size: 14px;
   }
 
   ${above.medium`
@@ -676,13 +682,13 @@ export const TextSkin = styled.div`
   padding: 2em 0 0;
   a{
     justify-content: center ;
-    font-size: ${size.XList};
+    font-size: 22px;
     padding: 2em 0 0;
   }
   h3{
     text-align:justify;
     font-family: ${font.Llight};
-    font-size: ${size.XList};
+    font-size: 22px;
     line-height: 150%;
   }
   `}
@@ -692,13 +698,15 @@ export const TextSkin = styled.div`
   justify-content: flex-end;
   width: 45%;
   a{
-    justify-content: flex-start ;
-    font-size: ${size.Wtext};
+    justify-content: flex-center ;
+    font-size: 16px;
+
   }
   h3{
     text-align:justify;
+    line-height: 160%; 
     font-family: ${font.Llight};
-    font-size: ${size.Wtext};
+    font-size: 16px;
   }
   
   `}
@@ -708,14 +716,15 @@ export const TextSkin = styled.div`
   width: 45%;
   padding: 5em 0 0;
   a{
-    font-family: ${font.Rbold};
-    font-size: ${size.Mtittle};
-    justify-content: flex-start ;
+    font-family: ${font.Lbold};
+    font-size: 20px;
+    justify-content: flex-center ;
   }
   h3{
     text-align:justify;
+    line-height: 160%;
     font-family: ${font.Llight};
-    font-size: ${size.WList};
+    font-size: 20px;
   }
   
   `}
@@ -758,8 +767,10 @@ color: ${colors.softWhite};
 
 h3{
   text-align:justify;
+  padding-top: 4%; 
+  line-height: 150%; 
   font-family: ${font.Llight};
-  font-size: ${size.Mtext};
+  font-size: 14px;
 }
 a{
   display:flex;
@@ -769,7 +780,7 @@ a{
   width: 100%;
   color: ${colors.softWhite};
   font-family: ${font.Lregular};
-  font-size: ${size.Mtext};
+  font-size: 14px;
 }
 
 ${above.medium`
@@ -778,13 +789,13 @@ width: 70%;
 padding: 4em 0 0;
 a{
   justify-content: center ;
-  font-size: ${size.XList};
+  font-size: 22px;
   padding: 2em 0 0;
 }
 h3{
   text-align:justify;
   font-family: ${font.Llight};
-  font-size: ${size.XList};
+  font-size: 22px;
   line-height: 150%;
 }
 `}
@@ -794,13 +805,15 @@ height: 50%;
 justify-content: flex-end;
 width: 38%;
 a{
-  justify-content: flex-start ;
-  font-size: ${size.Wtext};
+  justify-content: flex-center ;
+  font-size: 16px;
+
 }
 h3{
   text-align:justify;
+  line-height: 160%; 
   font-family: ${font.Llight};
-  font-size: ${size.Wtext};
+  font-size: 16px;
 }
 
 `}
@@ -810,15 +823,16 @@ justify-content: flex-end;
 width: 45%;
 padding: 5em 0 0;
 a{
-  font-family: ${font.Rbold};
-  font-size: ${size.Mtittle};
-  justify-content: flex-start ;
+  font-family: ${font.Lbold};
+  font-size: 20px;
+  justify-content: flex-center ;
 }
 h3{
   padding: 0 2em 0 0;
+  line-height: 160%; 
   text-align:justify;
   font-family: ${font.Llight};
-  font-size: ${size.WList};
+  font-size: 20px;
 }
 
 `}
@@ -885,6 +899,8 @@ export const TextMaps = styled.div`
     padding: 2em 0 0;
     width: 100%;
     color: ${colors.green};
+    font-family: ${font.Lregular};
+    font-size: 14px;
   }
 
   ${above.medium`
@@ -907,8 +923,8 @@ export const TextMaps = styled.div`
     justify-content: center ;
     gap: 0.5em;
     font-family: ${font.Lregular};
-    font-size: ${size.XList};
-    padding: 2em 0 0;
+    font-size: 22px;
+    padding: 4em 0 0;
     width: 100%;
     color: ${colors.green};
   }
@@ -941,6 +957,7 @@ export const TextMaps = styled.div`
   }
   a{
     display: ${props => (props.movil ? "none" : "flex")};
+    font-size: 16px;
   }
 
   
@@ -950,6 +967,8 @@ export const TextMaps = styled.div`
   a{
     margin-top: 18%;
     display: ${props => (props.movil ? "none" : "flex")};
+    font-size: 20px;
+    font-family: ${font.Lbold};
   }
 
   
