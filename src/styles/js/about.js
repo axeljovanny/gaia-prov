@@ -62,7 +62,7 @@ export const StyledFirst = styled.div`
   align-items: center;
   width: 100vw;
   height: auto;
-  background: ${colors.red};
+  background: ${colors.softWhite};
 
   ${above.medium` 
   padding: 10% 0;
@@ -79,24 +79,25 @@ export const StyledText = styled.div`
   align-items: flex-start;
 
   width: 80%;
-  height: 100%;
+  height: 80%;
   background: ${colors.none};
 
   h1{
-    text-align: justify;
-    word-spacing:-2px;  
-    width: 80%;
+    text-align: center;
+    word-spacing: 0px;  
+    width: 100%;
     padding: 10% 0;
     font-family: ${font.Rsemi};
-    font-size: ${size.Mheader};
+    font-size: ${size.Mtittle};
     color: ${colors.black};
   }
   p{
     text-align: justify;
     word-spacing:-2px;  
     padding: 5% 0;
-    font-family: ${font.Llight};
-    font-size: ${size.WList};
+    line-height: 150%;
+    font-family: ${font.Lregular};
+    font-size:  15px;
     color: ${colors.black};
   }
   p:nth-child(4) {
@@ -106,11 +107,13 @@ export const StyledText = styled.div`
   ${above.medium` 
   h1{
     padding: 5% 0;
-    font-size: ${size.WTitle};
+    font-family: ${font.Rregular};
+    font-size: 40px;
   }
   p{
-    padding: 3% 0;
-    font-size: ${size.WList};
+    padding: 0;
+    font-family: ${font.Llight};
+    font-size: 20px;
   }
   `}
   ${above.large` 
@@ -120,14 +123,39 @@ export const StyledText = styled.div`
     text-align: center;
     width: 80%;
     padding: 3% 0;
-    font-size: ${size.WTitle};
+    font-family: ${font.Rlight};
+    font-size: 40px;
   }
   p{
+    text-align: justify;
+    word-spacing: 5px;
     background: ${colors.none};
-    width: 90%;
+    width: 70%;
     padding: 2% 0 ;
     margin: 0;
-    font-size: ${size.XList};
+    font-family: ${font.Llight};
+    font-size: 17px;
+  }
+  `}
+  ${above.xlarge` 
+  align-items: center;
+
+  h1{
+    text-align: center;
+    width: 85%;
+    padding: 2% 0;
+    font-family: ${font.Rlight};
+    font-size: 40px;
+  }
+  p{
+    text-align: justify;
+    word-spacing: 5px;
+    background: ${colors.none};
+    width: 70%;
+    padding: 2% 0 ;
+    margin: 0;
+    font-family: ${font.Llight};
+    font-size: 20px;
   }
   `}
 `
@@ -147,7 +175,7 @@ export const StyledTwo = styled.div`
   flex-direction: row;
   `}
   ${above.large` 
-  padding: 1% 0;
+  padding: 5% 0;
   align-items: flex-start;
   justify-content: flex-start;
   
@@ -180,46 +208,88 @@ export const TextOne = styled.div`
   width: 80%;
   height: 35%;
   background: ${colors.none};
-  padding: 1em 0 3em 0;
+  padding: .1em 0 3em 0;
 
   h1{
-    word-spacing: -1px;  
+    word-spacing: 0px;  
     padding: 10% 0;
     width: 100%;
-    text-align: right;
-    font-family: ${font.Rthin};
-    font-size: ${size.XList};
+    text-align: center;
+    font-family: ${font.Rsemi};
+    font-size: ${size.Mtittle};
     color: ${colors.white};
   }
+  h2{
+    word-spacing: 0px;  
+    padding: 2% 0;
+    width: 100%;
+    text-align: left;
+    font-family: ${font.Rthin};
+    font-size: 16.5px;
+    color: ${colors.white};
+  }
+
   p{
-    margin: 2% 0;
+    text-align: justify;
+    margin: 5% 0;
     word-spacing: -1px; 
+    line-height: 150%;
     font-family: ${font.Llight};
-    font-size: 17px;
+    font-size: 15px;
     color: ${colors.white};
   }
   ${above.medium` 
   width: 50%;
   padding: 0 0 0 5%;
   h1{
+    text-align: left;
     width: 80%;
     padding: 5% 0;
-    font-size: ${size.WTitle};
+    font-family: ${font.Rregular};
+    font-size: 30px;
   }
   p{
-    margin: 1% 0;
-    font-size: ${size.WList};
+    margin: 6% 0;
+    font-family: ${font.Llight};
+    font-size: 20px;
   }
   `}
   ${above.large`
   width: 80%;
+  background: ${colors.none};
+  height: auto;
+  justify-content: center;
+
   h1{
-    font-family: ${font.Rsemi};
-    font-size: ${size.WTitle};
-    text-align: left;
+    text-align: center;
+    padding: 4% 10%;
+    font-family: ${font.Rlight};
+    font-size: 30px;
   }
-  p{
-    font-size: ${size.XList};
+  p{  
+    margin: 2% 0;
+    background: ${colors.none};
+    text-align: center;
+    margin-left: 28%;
+    font-family: ${font.Rlight};
+    font-size: 18px;
+  }
+ 
+  `}
+  ${above.xlarge`
+  h1{
+    text-align: center;
+    padding: 4% 10%;
+    font-family: ${font.Rlight};
+    font-size: 40px;
+  }
+  p{  
+    margin: 2% 0;
+    background: ${colors.none};
+    text-align: center;
+    margin-left: 28%;
+    font-family: ${font.Llight};
+    font-size: 20px;
   }
  
   `}
@@ -249,21 +319,40 @@ export const StyledThree = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
+ 
 
   width: 70vw;
-  padding: 0 10%;
+  padding: 0 35%;
   height: auto;
 
-  h1{font-family: ${font.Lregular};
-  font-size: ${size.WTitle};
+  h1{
+  justify-content: center;  
+  font-family: ${font.Lregular};
+  font-size: ${size.Mtittle};
   color: ${colors.black};}
   
 
   background: ${colors.none};
+
+  ${above.medium`
+  h1{
+    justify-content: left;  
+    margin-left: -23.5%;
+    font-family: ${font.Rregular};
+    font-size: 40px;}
+  `}
+
   ${above.large`
   padding: 0;
+  justify-content: center;  
+  margin-left: -11.5%;
   align-items: center;
   width: 100%;
+  font-family: ${font.Rlight};
+  font-size: 40px;}
+  `}
+  ${above.xlarge`
+  margin-left: -4.5%;
   `}
 `
 export const TexTwo = styled.div`
@@ -283,8 +372,9 @@ export const TexTwo = styled.div`
 
   p{ 
     margin: 0.5em 10%;
-    font-family: ${font.Llight};
-    font-size: ${size.WList};
+    font-family: ${font.Lregular};
+    font-size: 15px;
+    line-height:150%;
     color: ${colors.black};
   }
   ${above.medium` 
@@ -293,15 +383,26 @@ export const TexTwo = styled.div`
   p{ 
     margin: 2% 5% 0 20%;
     font-family: ${font.Llight};
-    font-size: 17px;
+    font-size: 20px;
     color: ${colors.black};
   }
   `}
   ${above.large` 
-  width: 60vw;
+  margin: 2% 5% 0 10%;
+  width: 70%;
   
   p{
-    font-size: ${size.XList};
+    font-family: ${font.Rlight};
+    font-size: 16px;
+  }
+  `}
+  ${above.xlarge` 
+  margin: 2% 0% 0 10%;
+  width: 70%;
+  
+  p{
+    font-family: ${font.Llight};
+    font-size: 20px;
   }
   `}
 `
@@ -322,8 +423,9 @@ export const TexThree = styled.div`
   h2{ width: 90%; }
   p{ 
     margin: 0 15% 10% 10%;
-    font-family: ${font.Llight};
-    font-size: ${size.WList};
+    font-family: ${font.Lregular};
+    line-height: 150%;
+    font-size: 15px;
     color: ${colors.black};
   }
   ${above.medium` 
@@ -334,14 +436,30 @@ export const TexThree = styled.div`
     margin: 2% 5% 0 20%;
     word-spacing: -1px; 
     font-family: ${font.Llight};
-    font-size: 17px;
+    font-size: 20px;
     color: ${colors.black};
   }
   `}
   ${above.large` 
-  width: 60vw;
+  width: 70%;
+  height: 20%;
+  margin: 6% 5% 0 10%;
+  background:${colors.none};
+  
   p{
-    font-size: ${size.XList};
+    font-family: ${font.Rlight};
+    font-size: 16px;
+  }
+  `}
+
+  ${above.xlarge` 
+  background:${colors.none};
+  margin: 2%  0% 0% 10%;
+  width: 70%;
+  
+  p{
+    font-family: ${font.Llight};
+    font-size: 20px;
   }
   `}
 `
@@ -357,14 +475,15 @@ export const TexFour = styled.div`
 
 
   width: 100%;
-  height: auto;
+  height: auto%;
   background: ${colors.none};
 
   h2{ width: 90%; }
   p{ 
-    margin: 5% 10%;
-    font-family: ${font.Llight};
-    font-size: ${size.WList};
+    margin: 2.5% 10%;
+    line-height: 140%;
+    font-family: ${font.Lregular};
+    font-size: 15px;
     color: ${colors.black};
   }
   ${above.medium` 
@@ -376,13 +495,26 @@ export const TexFour = styled.div`
     margin: 1% 12%;
     word-spacing: -1px; 
     font-family: ${font.Llight};
-    font-size: 17px;
+    font-size: 20px;
     color: ${colors.black};
   }
   `}
   ${above.large` 
+  margin: -7% 4.5% 0% 8.5%;
+  background:${colors.none};
+  width:38%;
   p{
-    font-size: ${size.XList};
+    font-family: ${font.Rlight};
+    font-size: 16px;
+  }  
+  `}
+  ${above.xlarge` 
+  margin: -5.5% 4.5% 0% 10.8%;
+  background:${colors.none};
+  width:46%;
+  p{
+    font-family: ${font.Llight};
+    font-size: 20px;
   }  
   `}
 `
@@ -401,6 +533,12 @@ export const ImgArc = styled(motion.div)`
   `}
   ${above.large` 
   width: 70%;
+  margin: 0% 0 0 2%;
+  `}
+
+  ${above.xlarge` 
+  width: 70%;
+  margin: 0% 0 0 -20%;
   `}
 `
 export const ImgVM = styled(motion.div)`
@@ -416,6 +554,11 @@ export const ImgVM = styled(motion.div)`
   ${above.large` 
   width: 30%;
   `}
+
+  ${above.xlarge` 
+  margin:  ${props => (props.img === 'uno' ? "3% 0 0 10%" : "-3% 0 0 -10%")};
+  width: 25%;
+  `}
 `
 
 export const TexFive = styled.div`
@@ -430,31 +573,153 @@ export const TexFive = styled.div`
   background: ${colors.green};
 
   h2{
-    margin: 0.5em 10%;
+    margin: 0.5em 35%;
+    justify-content: center;
   font-family: ${font.Lregular};
-  font-size: ${size.WTitle};
+  font-size: ${size.Mtittle};
   color: ${colors.white};
 }
   p{ 
     margin: 0.5em 10%;
-    font-family: ${font.Llight};
-    font-size: ${size.WList};
+    line-height: 150%;
+    font-family: ${font.Lregular};
+    font-size: 15px;
     color: ${colors.white};
   }
 
   ${above.medium` 
   width: 50%;
+  h2{
+  margin: 0.5em 46.2%;
+  justify-content: center;
+  font-family: ${font.Rregular};
+  font-size: 40px;
+  color: ${colors.white};
+}
   p{ 
+    text-align: right;
     margin: 0.5em 10%;
     font-family: ${font.Llight};
-    font-size: ${size.WList};
+    font-size: 20px;
+    color: ${colors.white};
+  }
+  `}
+  ${above.large`
+  
+  h2{
+    margin: -1.2em 50%;
+    justify-content: center;
+    font-family: ${font.Rlight};
+    font-size: 40px;
+    color: ${colors.white};
+  } 
+  p{ 
+    text-align: center;
+    width: 80%;
+    margin: 4.5em 0% 0% 20%;
+    word-spacing: 5px;
+    font-family: ${font.Rlight};
+    font-size: 16px;
+  }
+  `}
+
+  ${above.xlarge`
+  
+  h2{
+    margin: 7% 0 0 35%;
+    font-family: ${font.Rsemi};
+    font-size: 40px;
+    color: ${colors.white};
+  } 
+  p{ 
+    width: 70%;
+    margin: 3% 0% 0% 10%;
+    word-spacing: 5px;
+    font-family: ${font.Llight};
+    font-size: 20px;
+  }
+  `}
+`
+export const TexFive2 = styled.div`
+  display: flex; 
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 5% 0;
+
+  width: 100%;
+  height: auto;
+  background: ${colors.green};
+
+  h2{
+    margin: 0.5em 38%;
+    justify-content: center;
+  font-family: ${font.Lregular};
+  font-size: ${size.Mtittle};
+  color: ${colors.white};
+}
+  p{ 
+    margin: 0.5em 10%;
+    line-height: 150%;
+    font-family: ${font.Lregular};
+    font-size: 15px;
+    color: ${colors.white};
+  }
+
+  ${above.medium` 
+  width: 50%;
+  h2{
+  margin: 0.5em 10%;
+  justify-content: center;
+  font-family: ${font.Rregular};
+  font-size: 40px;
+  color: ${colors.white};
+}
+  p{ 
+    text-align: left;
+    margin: 0.5em 10%;
+    font-family: ${font.Llight};
+    font-size: 20px;
     color: ${colors.white};
   }
   `}
   ${above.large` 
-  p{ 
-    font-size: ${size.XList};
+  h2{
+    margin: -0.5em 27%;
+    justify-content: center;
+    font-family: ${font.Rlight};
+    font-size: 40px;
+    color: ${colors.white};
   }
+    p{ 
+      width: 88%;
+      text-align: center;
+      margin: 2.5em -7%;
+      word-spacing: 5px;
+      font-family: ${font.Rlight};
+      font-size: 16px;
+      color: ${colors.white};
+    }
+  `}
+
+  ${above.xlarge` 
+  padding: 2% 0;
+  h2{
+    margin: -0.5em 27%;
+    justify-content: center;
+    font-family: ${font.Rsemi};
+    font-size: 40px;
+    color: ${colors.white};
+  }
+    p{ 
+      width: 70%;
+      text-align: center;
+      margin: 2.5em 0% 0 0%;
+      word-spacing: 5px;
+      font-family: ${font.Llight};
+      font-size: 20px;
+      color: ${colors.white};
+    }
   `}
 `
 
@@ -468,8 +733,14 @@ export const StyledFour = styled.div`
   height: auto;
   background: ${colors.green};
 
-  padding: 10% 0;
+  padding: 1% 0; 
   ${above.large` 
+  width: 100vw;
+  height: 100vh;
+  `}
+
+  ${above.xlarge`
+  padding: 1% 0; 
   width: 100vw;
   height: 100vh;
   `}
@@ -481,21 +752,43 @@ export const StyledPeopleSay = styled.div`
   justify-content: center;
   flex-flow: column nowrap ;
   align-items: center;
-  padding: 10% 0;
+  padding: 0 0;
   
   width: 100vw;
-  height: 60vh;
+  height: 80vh;
   background: ${colors.none};
   h1{
     margin: 0.5em 10%;
   font-family: ${font.Lregular};
-  font-size: ${size.WTitle};
+  font-size: ${size.Title};
   color: ${colors.black};
 }
+
+${above.medium` 
+h1{
+  margin: 1% 0 -8% 1%;
+font-family: ${font.Rregular};
+font-size: 40px;
+color: ${colors.black};
+}
+`}
+
   ${above.large` 
   width: 100vw;
   height: 100vh;
-  `}
+  h1{
+  font-family: ${font.Rlight};
+  font-size: 40px; 
+}`}
+
+${above.xlarge` 
+padding: 0 0 0 5%;
+margin: 1% 0 -10% -5%;
+
+h1{
+font-family: ${font.Rlight};
+font-size: 40px; 
+}`}
 
   `
 
@@ -504,9 +797,9 @@ export const CardPeopleSay = styled.div`
   flex-flow: column nowrap ;
   justify-content: center;
   align-items: flex-start;
-  
+
   width: 80%;
-  height: 90%;
+  height: 70%;
   background: ${colors.none};
   border: 1px solid rgba(130, 140, 122, 0.3);
 
@@ -522,8 +815,9 @@ export const CardPeopleSay = styled.div`
     margin: 0 0 10% 10%;
     overflow-x: scroll;
     width: 80%;
+    line-height: 150%;
     font-family: ${font.Lregular};
-    font-size: ${size.Wtext};
+    font-size: 15px;
     color: ${colors.black};
   }
 .rating {
@@ -543,9 +837,89 @@ export const CardPeopleSay = styled.div`
 			transition: color .4s;
 		}
 
+  ${above.medium` 
+
+  width: 80%;
+  height: 55%;
+
+  h3{
+    margin: 10% 0 0 10%;
+    width: 80%;
+    height: auto;
+    font-family: ${font.Rregular};
+    font-size: 20px;
+    color: ${colors.black};
+  }
+  p{
+    margin: 0 0 10% 10%;
+    overflow-x: scroll;
+    width: 80%;
+    line-height: 150%;
+    font-family: ${font.Lregular};
+    font-size: 15px;
+    color: ${colors.black};
+  }
+.rating {
+			width: 80%;
+      height: auto;
+      margin: 0 0 10% 10%;
+			font-size: 20px;
+		}
+
+		.rating a,
+    .rating label {
+			color: #828C7A;
+			text-decoration: none;
+			-webkit-transition: color .4s;
+			-moz-transition: color .4s;
+			-o-transition: color .4s;
+			transition: color .4s;
+		}
+    `}
+
   ${above.large` 
-  width: 100vw;
-  height: 100vh;
+  width: 82%;
+  height: 50%;
+
+  h3{
+    margin: 10% 0 0 10%;
+    width: 80%;
+    height: auto;
+    font-family: ${font.Rregular};
+    font-size: 20px;
+    color: ${colors.black};
+  }
+  p{
+    margin: 0 0 10% 10%;
+    overflow-x: scroll;
+    width: 80%;
+    line-height: 150%;
+    font-family: ${font.Lregular};
+    font-size: 15px;
+    color: ${colors.black};
+  }
+  `}
+  ${above.xlarge` 
+  width: 80%;
+  height: 40%;
+
+  h3{
+    margin: 10% 0 0 10%;
+    width: 80%;
+    height: auto;
+    font-family: ${font.Rregular};
+    font-size: 20px;
+    color: ${colors.black};
+  }
+  p{
+    margin: 0 0 10% 10%;
+    overflow-x: scroll;
+    width: 80%;
+    line-height: 150%;
+    font-family: ${font.Lregular};
+    font-size: 15px;
+    color: ${colors.black};
+  }
   `}
 
   `

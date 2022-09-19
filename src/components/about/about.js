@@ -10,7 +10,7 @@ import { FacebookIcon, InstagramIcon, TiktokIcon } from "../../images/icons"
 import { Phone ,GEWeb, GEMovil, ScrollArrow} from "../../assets/Home"
 // CSS
 import "../../styles/css/home.css"
-import { ImgArc, ImgOne, ImgVM, OurServicesText, StyledAbout, StyledFirst, StyledFour, StyledPeopleSay, StyledText, StyledThree, StyledTwo, TexFive, TexFour, TexThree, TextOne, TexTwo } from "../../styles/js/about.js"
+import { ImgArc, ImgOne, ImgVM, OurServicesText, StyledAbout, StyledFirst, StyledFour, StyledPeopleSay, StyledText, StyledThree, StyledTwo, TexFive, TexFive2, TexFour, TexThree, TextOne, TexTwo } from "../../styles/js/about.js"
 import { StaticImage } from "gatsby-plugin-image"
 import PeopleSay from "./people.js"
 
@@ -98,9 +98,12 @@ const About = ({ children }) => (
     </ImgOne>
     <TextOne>
     <motion.h1 initial={{ opacity: 0, }} whileInView={{ opacity: 1 }} transition={{ duration: 1.5 }} viewport={{ once: true }}>Gaia Evolution Group is a highly qualify professionals trained in several fields such as:</motion.h1>
-    <motion.p initial={{ opacity: 0, }} whileInView={{ opacity: 1 }} transition={{ duration: 1.5 }} viewport={{ once: true }}>* Cosmetologists ( Hair Care Professionals )</motion.p>
-    <motion.p initial={{ opacity: 0, }} whileInView={{ opacity: 1 }} transition={{ duration: 1.5 }} viewport={{ once: true }}>* Estheticians ( Skin Care Professionals )</motion.p>
-    <motion.p initial={{ opacity: 0, }} whileInView={{ opacity: 1 }} transition={{ duration: 1.5 }} viewport={{ once: true }}>° Reiki ( Healing Energy Therapists )</motion.p>
+    <motion.h2 initial={{ opacity: 0, }} whileInView={{ opacity: 1 }} transition={{ duration: 1.5 }} viewport={{ once: true }}>Cosmetologists ( Hair Care Professionals )</motion.h2>
+    <motion.p initial={{ opacity: 0, }} whileInView={{ opacity: 1 }} transition={{ duration: 1.5 }} viewport={{ once: true }}>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce vel purus lorem. Donec a cursus arcu. Vivamus sed lectus quis metus posuere molestie. Morbi iaculis libero a lacus bibendum, eu pretium metus lacinia. In sit amet magna ac nulla egestas luctus. Praesent et egestas ipsum, sed viverra dolor. Phasellus tristique ipsum est, in posuere orci eleifend ut. Vestibulum. )</motion.p>
+    <motion.h2 initial={{ opacity: 0, }} whileInView={{ opacity: 1 }} transition={{ duration: 1.5 }} viewport={{ once: true }}>Estheticians ( Skin Care Professionals )</motion.h2>
+    <motion.p initial={{ opacity: 0, }} whileInView={{ opacity: 1 }} transition={{ duration: 1.5 }} viewport={{ once: true }}>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus interdum velit nibh, ac convallis odio mattis et. Cras eleifend scelerisque erat, id lacinia nibh dignissim id. )</motion.p>
+    <motion.h2 initial={{ opacity: 0, }} whileInView={{ opacity: 1 }} transition={{ duration: 1.5 }} viewport={{ once: true }}>Reiki ( Healing Energy Therapists )</motion.h2>
+    <motion.p initial={{ opacity: 0, }} whileInView={{ opacity: 1 }} transition={{ duration: 1.5 }} viewport={{ once: true }}>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus interdum velit nibh, ac convallis odio mattis et. Cras eleifend scelerisque erat, id lacinia asfrssf nibh dignissim id. )</motion.p>
     </TextOne>
  </StyledTwo>
  <StyledThree>
@@ -163,7 +166,7 @@ const About = ({ children }) => (
 
 </StyledThree>
 <StyledFour>
-<ImgVM>
+<ImgVM img="uno">
     <StaticImage
             className="imgMV"
             imgClassName=""
@@ -181,12 +184,12 @@ const About = ({ children }) => (
     <motion.p initial={{ opacity: 0, }} whileInView={{ opacity: 1 }} transition={{ duration: 1.5 }} viewport={{ once: true }}>Our mission is to be the leader group highly qualified in the fields of Cosmetology, Skin Care, Healing Energy Therapies. Satisfying our client needs and exceeding their expectations providing an excellent customer
     service.</motion.p>
     </TexFive>
-    <TexFive>
+    <TexFive2>
     <motion.h2 initial={{ opacity: 0, }} whileInView={{ opacity: 1 }} transition={{ duration: 1.5 }} viewport={{ once: true }}>VISION</motion.h2>
     <motion.p initial={{ opacity: 0, }} whileInView={{ opacity: 1 }} transition={{ duration: 1.5 }} viewport={{ once: true }}>Our vision is to be the company chosen for its innovation, development
     and services through the expansion of human consciousness through
     the use of natural resources.</motion.p>
-    </TexFive>
+    </TexFive2>
     <ImgVM>
     <StaticImage
             className="imgMV"
