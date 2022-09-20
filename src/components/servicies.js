@@ -14,16 +14,24 @@ import { colors } from "../utils/const";
 const SkinServiceDesc = ({ services, type }) => {
     return (
         <>
+         {
+            type.type !== "ADD ON SERVICES" && (
             <DescTittle><p>{type.type}</p>
                 <a href="https://squareup.com/appointments/book/18a837f7-27d0-4fb3-9184-eed5ec31a526/9XWS7XZK8MK0T/services" target="_blank" rel="noreferrer">
                     <DescBook>BOOK NOW</DescBook>
                 </a>
             </DescTittle>
+             )}
+         {
+            type.type === "ADD ON SERVICES" && (
+            <DescTittle add><p>{type.type}</p>
+            </DescTittle>
+             )}
             {services.map(({ node }) => {
                 return (
                     <div key={node.id}>
                         {
-                             node.type === type.type && (
+                             node.type === type.type && node.type !== "ADD ON SERVICES" &&(
                                 <DescDetailsHair> 
                                 {node.title !== node.type &&(
                                     <DescTitleHair>
@@ -31,6 +39,7 @@ const SkinServiceDesc = ({ services, type }) => {
                                     </DescTitleHair>
                                 )} 
                                     <DescText><p>{node.description}</p></DescText>
+
                                     <DescDetails>
                                         <DescTime>
                                             {node.time}
@@ -39,7 +48,22 @@ const SkinServiceDesc = ({ services, type }) => {
                                             {node.price}
                                         </DescPrice>
                                     </DescDetails>
+
+                                    <DescHairText note >{node.note}</DescHairText>
+
                                 </DescDetailsHair>
+                            )
+                        }
+                        {
+                             node.type === type.type && node.type === "ADD ON SERVICES" &&(
+                                    <DescDetails add>
+                                        <DescTime>
+                                            {node.title}
+                                        </DescTime>
+                                        <DescPrice add>
+                                            {node.time}
+                                        </DescPrice>
+                                    </DescDetails>
                             )
                         }
                     </div>
@@ -72,7 +96,7 @@ const SkinServiceMobileDesc = ({ services }) => {
                                 return (
                                     <div key={node.id}>
                                         {
-                                             node.type === data &&
+                                             node.type === data && node.type !== "ADD ON SERVICES" &&
                                              (
                                                 <DescDetailsHair>
                                                 {node.title !== node.type &&(
@@ -81,6 +105,7 @@ const SkinServiceMobileDesc = ({ services }) => {
                                                         </DescTitleHair>
                                                     )} 
                                                 <DescHairText>{node.description}</DescHairText>
+
                                                 <DescDetails>
                                                     <DescTime>
                                                         {node.time}
@@ -89,15 +114,33 @@ const SkinServiceMobileDesc = ({ services }) => {
                                                         {node.price}
                                                     </DescPrice>
                                                 </DescDetails>
+
+                                                <DescHairText note >{node.note}</DescHairText>
+
                                             </DescDetailsHair>
                                                
                                             )
                                         }
+                                        {
+                                        node.type === data && node.type === "ADD ON SERVICES" &&(
+                                            <DescDetails add>
+                                                <DescTime add>
+                                                    {node.title}
+                                                </DescTime>
+                                                <DescPrice add>
+                                                    {node.time}
+                                                </DescPrice>
+                                            </DescDetails>
+                            )
+                        }
                                     </div>
                                 )
+                                
                             })}
-                            <a href="https://squareup.com/appointments/book/18a837f7-27d0-4fb3-9184-eed5ec31a526/9XWS7XZK8MK0T/services" target="_blank" rel="noreferrer">BOOK NOW </a>
-
+                             {data !== "ADD ON SERVICES" && (
+                                <a href="https://squareup.com/appointments/book/18a837f7-27d0-4fb3-9184-eed5ec31a526/9XWS7XZK8MK0T/services" target="_blank" rel="noreferrer">BOOK NOW </a>
+                            )}
+                           
                         </Show>
                     </div>
                 )

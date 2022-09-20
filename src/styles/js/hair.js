@@ -135,7 +135,7 @@ export const DescHairText = styled.div`
       width: 90%;
       text-align:justify;
         font-family: ${font.Lregular};
-        font-size: ${size.Wmini};
+        font-size: ${props => (props.note ? size.Mmini : size.Wmini)};
         color: ${colors.white};
 
       ${above.large`
@@ -144,13 +144,12 @@ export const DescHairText = styled.div`
       text-align: justify;
       line-height : 23px;
         font-family: ${font.Lregular};
-        font-size: ${size.Wtext};
+        font-size: ${props => (props.note ? size.Mmini : size.Wtext)};
         color: ${colors.black};
       `}
 
       ${above.xlarge`
       font-family: ${font.Llight};
-      font-size: ${size.Wtext};
-        color: ${colors.black};
+      color: ${colors.black};
       `}
       `

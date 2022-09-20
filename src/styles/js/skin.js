@@ -130,7 +130,7 @@ export const DescTittle = styled.div`
       justify-content: flex-start;
       flex-flow: row wrap;
       height: 10%; 
-      padding: 0;
+      padding: ${props => (props.add ? "0 0 2em 0" : "0")};
       border-bottom: none;
 
       p{
@@ -159,12 +159,12 @@ export const DescDetails = styled.div`
       align-items: center;
       background: ${colors.none};
       width: 85vw;
-      padding: 0;
+      padding: ${props => (props.add ? "0" : "2em 0")};
 
       ${above.large`
       background: ${colors.none};
       justify-content: flex-start;
-      width: 30%;
+      width: ${props => (props.add ? "80%" : "30%")};
       padding: 1em 0;
 
     `}
@@ -178,6 +178,7 @@ export const DescTime = styled.div`
       font-family: ${font.Lblack};
       font-size: ${size.Mtext};
       color: ${colors.white};
+      padding: ${props => (props.add ? "1em 0" : "0")};
 
       ${above.large`
       font-family: ${font.Lblack};
@@ -193,11 +194,11 @@ export const DescTime = styled.div`
       `
 export const DescPrice = styled.div`
       display: flex;
-      justify-content: flex-end;
+      justify-content: ${props => (props.add ? "flex-start" : "flex-end")};
       align-items: center;
       background: ${colors.none};
       width: 50%;
-      font-family: ${font.Lblack};
+      font-family:  ${props => (props.add ? font.Lregular : font.Lblack )}; 
       font-size: ${size.Mtext};
       color: ${colors.white};
 

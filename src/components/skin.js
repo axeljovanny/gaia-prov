@@ -16,6 +16,7 @@ export const useSkinService = () => {
               time
               price
               description
+              note
             }
           }
         }
