@@ -9,10 +9,8 @@ import { BannerProducts, BannerSvg, CircleNature, Gift, ImageTratamients, ImageW
 // Constantes
 import { colors } from "../utils/const"
 // SVG
-import Loadable from "@loadable/component"
-const Phone = Loadable(() => import("../assets/Phone.svg"))
-import { MapsIcon, FacebookIcon, InstagramIcon } from "../images/icons"
-import { Circle, GEWeb, GEMovil, Skin, Hair, Flecha, Body, Favorite, FavoriteMovil, CTVTS, CircleMovil, ScrollArrow } from "../assets/Home"
+import { MapsIcon, FacebookIcon, InstagramIcon, TiktokIcon } from "../images/icons"
+import { Circle, Phone ,GEWeb, GEMovil, Skin, Hair, Flecha, Body, Favorite, FavoriteMovil, CTVTS, CircleMovil, ScrollArrow } from "../assets/Home"
 // CSS
 import "../styles/css/home.css"
 
@@ -53,15 +51,15 @@ const Hero = ({ children }) => (
 
                     <InstagramIcon fill={colors.green} className="svgAbout" />
                 </a>
-                <a href="https://www.google.com/maps/place/Gaia+Evolution+Spa+and+Salon/@41.9245235,-87.7068398,19z/data=!3m2!4b1!5s0x880fcd657178d7e3:0x4804758ad15f5cf!4m5!3m4!1s0x880fcd65725634f9:0xf6193b2710f612ea!8m2!3d41.9245235!4d-87.7062926" rel="noreferrer" target="_blank">
-                    <MapsIcon fill={colors.green} className="svgAbout" />
+                <a href="https://www.tiktok.com/@gaiaevolution?_t=8WfinkDhK7B&_r=1" rel="noreferrer" target="_blank">
+                    <TiktokIcon fill={colors.green} className="svgAbout" />
                 </a>
             </Social>
             <PhoneLogo>
                 <motion.a
                     whileHover={{ scale: 1.1, priginX: 0, color: colors.accentBlue }}
                     whileTap={{ scale: 0.9 }} href="tel:773-799-8843">
-                    <Phone className="phone" />
+                    <Phone fill={colors.white} className="phone" />
                 </motion.a>
                 <motion.a
                     whileHover={{ scale: 1.1, priginX: 0, color: colors.accentBlue }}
@@ -347,8 +345,8 @@ const Products = ({ children }) => {
                     alt="Spa Image"
                     loading="lazy"
                     formats={['auto', 'webp', 'avif']}
+                    breakpoints={[750, 1080, 1366, 1920]}
                     quality='100'
-                    width={300}
                 />
                   <BannerSvg 
                   initial={{ opacity: 0 }} 

@@ -208,6 +208,12 @@ export const Over = styled(motion.div)`
 export const OverButton = styled(motion.button)`
   position: fixed;
   z-index: 13;
+  background: rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(10px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
 `;
 
 
