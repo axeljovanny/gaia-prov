@@ -1,8 +1,7 @@
-import React from "react"
+import React, {useState} from "react"
 import { graphql, useStaticQuery } from 'gatsby'
 
-
-import { getImage } from "gatsby-plugin-image"
+import { getImage, StaticImage } from "gatsby-plugin-image"
 import { BgImage } from "gbimage-bridge"
 import { motion } from "framer-motion"
 import { Gift } from "../styles/js/home"
@@ -40,7 +39,15 @@ const AboutPage = () => {
     `
   )
   const image = getImage(backgroundImage123)
-
+  const [isOpen, setIsOpen] = useState(false);
+  const itemVariants = {
+    open: {
+      opacity: 1,
+      x: 150,
+      transition: { type: "spring", stiffness: 300, damping: 24 }
+    },
+    closed: { opacity: 1, x: 450, transition: { duration: 0.2 } }
+  };
 
 
   return (
@@ -50,17 +57,25 @@ const AboutPage = () => {
       </BgImage>
       <About/>
       <AboutGallery/>
-      <Gift initial={{opacity:0}} animate={{opacity:1}} transition={{duration:1, delay:1.9}} >
-        <motion.a href="https://www.aveda.com/locator/get_the_facts.tmpl?vanity=1&SalonID=38631"
-          whileHover={{ scale: 1.1 }} rel="noreferrer" target="_blank">
-          <ShopWeb className="gift-web" fill={colors.softWhite} fill2={colors.green} />
+      <Gift 
+      initial={false}
+      animate={isOpen ? "open" : "closed"} >
+        <motion.a 
+        href="https://squareup.com/gift/FHH5R6M6H54FS/order" rel="noreferrer" target="_blank"
+        style={{backgroundColor: "none"}}
+      
+        onHoverStart={() => setIsOpen(isOpen = true)}
+        onHoverEnd={() => setIsOpen(isOpen = false)}
+        variants={itemVariants}>
+          <StaticImage 
+          src="../images/Home/PNG/Tarjeta.png" 
+          alt="GiftMovil" 
+          placeholder="blurred" 
+          layout="constrained"
+          className="gift"
+          />
         </motion.a>
-        <motion.a href="https://squareup.com/gift/FHH5R6M6H54FS/order"
-          whileHover={{ scale: 1.05 }} rel="noreferrer" target="_blank">
-          <GiftWeb className="gift-web" fill={colors.softWhite} fill2={colors.green} />
-        </motion.a>
-          <a href="https://www.aveda.com/locator/get_the_facts.tmpl?vanity=1&SalonID=38631" rel="noreferrer" target="_blank"><ShopWeb className="gift-movil-store" fill={colors.softWhite} fill2={colors.green} /></a>
-          <a href="https://squareup.com/gift/FHH5R6M6H54FS/order" rel="noreferrer" target="_blank" ><GiftMovil className="gift-movil" fill={colors.green} fill2={colors.softWhite} /> </a>
+
       </Gift>
        <Navbar siteTitle="about"/>
       <Footer></Footer>

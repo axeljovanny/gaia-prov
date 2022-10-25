@@ -31,14 +31,18 @@ export const CircleNature = styled.div`
   display:flex;
   align-items: center;
   position: relative;
+  left: -65vw;
 
   ${above.medium`
   width: 100vw;
   height: 35vh;
   grid-area: 1 / 1 / 2 / 4;
+  left: -65vw;
+
   `}
 
   ${above.large`
+  left: 0;
   width: 19vw;
   height: 60vh;
   position: relative;
@@ -76,22 +80,20 @@ export const LogoPrincipal = styled.div`
 
 export const Gift = styled(motion.div)`
   position: fixed;
-  top: 60%;
+  top: 10%;
   right: 0%;
-  width: 10%;
-  height: 30%;
   background: ${colors.none};
+  width: 15%;
+  height: auto;
 
   display: flex;
   justify-content: center;
   align-items: flex-end;
   flex-direction: column;
   gap 5%;
-
   ${above.medium`
-  top: 50%;
-  width: 7%;
-  height: 35%;
+  top: 5%;
+  width: 10%;
   `}
 
   ${above.large`
@@ -99,12 +101,21 @@ export const Gift = styled(motion.div)`
   justify-content: flex-start;
   align-items: flex-end;
   top: 20%;
-  width: 3%;
+  right: 0%;
+  width: 30%;
   height: 40%;
+
   `}
 
   ${above.xlarge`
-  width: 2%;
+  `}
+`
+
+export const AdvImage = styled(motion.a)`
+  display: ${props => (props.movil ? "flex" : "none")};
+
+${above.large`
+  display: ${props => (props.movil ? "none" : "flex")};
   `}
 `
 

@@ -16,6 +16,9 @@ import { colors } from "../utils/const"
 import { MenuToggle } from "./nav/MenuToggle";
 import { Navigation } from "./nav/Navigation";
 import "./nav/styles.css";
+import { AvedaA, AvedaCompleto } from "../images/icons";
+import '../styles/css/home.css'
+
 
 
 
@@ -29,88 +32,114 @@ const Navbar = ({ siteTitle }) => {
             <StyledNavbar>
                 <StyledItems>
                     <ItemNav
-                    whileHover={{ scale: 1.1, priginX: 0, color: colors.accentBlue }} 
-                    whileTap={{ scale: 0.9 }}>
+                        whileHover={{ scale: 1.1, priginX: 0, color: colors.accentBlue }}
+                        whileTap={{ scale: 0.9 }}>
                         <Link to="/hair"> HAIR CARE </Link>
                     </ItemNav>
                     <ItemNav
-                    whileHover={{ scale: 1.1, priginX: 0, color: colors.accentBlue }} 
-                    whileTap={{ scale: 0.9 }}>
+                        whileHover={{ scale: 1.1, priginX: 0, color: colors.accentBlue }}
+                        whileTap={{ scale: 0.9 }}>
                         <Link to="/skin"> SKIN CARE </Link>
+                    </ItemNav>
+                    <ItemNav
+                        whileHover={{ scale: 1.1, priginX: 0, color: colors.accentBlue }}
+                        whileTap={{ scale: 0.9 }}>
+                        <Link to="/body"> BODY CARE </Link>
                     </ItemNav>
                 </StyledItems>
 
                 <StyledLogoContainer>
                     <Link to="/">
                         <StaticImage
-                        className="logo"
-                        src="../images/logo.png"
-                        alt="imagen de prueba"
-                        loading="eager"
-                        layout="constrained"
-                        breakpoints={[750, 1080, 1366, 1920]}
-                        formats={['auto', 'webp', 'avif']}
-                        quality='70'
+                            className="logo"
+                            src="../images/logo.png"
+                            alt="imagen de prueba"
+                            loading="eager"
+                            layout="constrained"
+                            breakpoints={[750, 1080, 1366, 1920]}
+                            formats={['auto', 'webp', 'avif']}
+                            quality='70'
                         />
                     </Link>
                 </StyledLogoContainer>
 
                 <StyledItems>
                     <ItemNav
-                        whileHover={{ scale: 1.1, priginX: 0, color: colors.accentBlue }} 
-                        whileTap={{ scale: 0.9 }}>                            
-                        <Link to="/body"> BODY CARE </Link>
+                        whileHover={{ scale: 1.1, priginX: 0, color: colors.accentBlue }}
+                        whileTap={{ scale: 0.9 }}>
+                        <Link to="/policies"> POLICIES </Link>
                     </ItemNav>
                     <ItemNav
-                        whileHover={{ scale: 1.1, priginX: 0, color: colors.accentBlue }} 
-                        whileTap={{ scale: 0.9 }}>                            
-                        <Link to="/about"> ABOUT US </Link>
+                        whileHover={{ scale: 1.1, priginX: 0, color: colors.accentBlue }}
+                        whileTap={{ scale: 0.9 }}>
+                        <Link to="/"> ABOUT US </Link>
+                    </ItemNav>
+                    <ItemNav
+                        whileHover={{ scale: 1.1, priginX: 0, fill: colors.accentBlue }}
+                        whileTap={{ scale: 0.9 }}>
+                        <a href="https://www.aveda.com/locator/get_the_facts.tmpl?vanity=1&SalonID=38631"
+                            rel="noreferrer"
+                            target="_blank">
+                            <AvedaCompleto fill={colors.white} /></a>
                     </ItemNav>
                 </StyledItems>
             </StyledNavbar>
-            <IconNav siteTitle="about"/>            
+            <IconNav siteTitle="about" />
         </>)
     }
 
     if (siteTitle === 'index') {
-    return (
-        <>  <Mask/>
-            <StyledNavbar>
-                <StyledItems>
-                    <ItemNav home
-                    whileHover={{ scale: 1.1, priginX: 0, color: colors.accentBlue }} 
-                    whileTap={{ scale: 0.9 }}>
-                        <Link to="/hair"> HAIR CARE </Link>
-                    </ItemNav>
-                    <ItemNav home
-                    whileHover={{ scale: 1.1, priginX: 0, color: colors.accentBlue }} 
-                    whileTap={{ scale: 0.9 }}>
-                        <Link to="/skin"> SKIN CARE </Link>
-                    </ItemNav>
-                </StyledItems>
+        return (
+            <>  <Mask />
+                <StyledNavbar>
+                    <StyledItems>
+                        <ItemNav home
+                            whileHover={{ scale: 1.1, priginX: 0, color: colors.accentBlue }}
+                            whileTap={{ scale: 0.9 }}>
+                            <Link to="/hair"> HAIR CARE </Link>
+                        </ItemNav>
+                        <ItemNav home
+                            whileHover={{ scale: 1.1, priginX: 0, color: colors.accentBlue }}
+                            whileTap={{ scale: 0.9 }}>
+                            <Link to="/skin"> SKIN CARE </Link>
+                        </ItemNav>
+                        <ItemNav home
+                            whileHover={{ scale: 1.1, priginX: 0, color: colors.accentBlue }}
+                            whileTap={{ scale: 0.9 }}>
+                            <Link to="/body"> BODY CARE </Link>
+                        </ItemNav>
+                    </StyledItems>
 
-                <StyledLogoContainer>
-                    <Link to="/">
-                        <Logow className="logo" />
-                    </Link>
-                </StyledLogoContainer>
+                    <StyledLogoContainer>
+                        <Link to="/">
+                            <Logow className="logo" />
+                        </Link>
+                    </StyledLogoContainer>
 
-                <StyledItems>
-                    <ItemNav home
-                        whileHover={{ scale: 1.1, priginX: 0, color: colors.accentBlue }} 
-                        whileTap={{ scale: 0.9 }}>                            
-                        <Link to="/body"> BODY CARE </Link>
-                    </ItemNav>
-                    <ItemNav home
-                        whileHover={{ scale: 1.1, priginX: 0, color: colors.accentBlue }} 
-                        whileTap={{ scale: 0.9 }}>                            
-                        <Link to="/about"> ABOUT US </Link>
-                    </ItemNav>
-                </StyledItems>
-            </StyledNavbar>
-            <IconNav/>            
-        </>
-    )
+                    <StyledItems>
+                        <ItemNav home
+                            whileHover={{ scale: 1.1, priginX: 0, color: colors.accentBlue }}
+                            whileTap={{ scale: 0.9 }}>
+                            <Link to="/policies"> POLICIES </Link>
+                        </ItemNav>
+                        <ItemNav home
+                            whileHover={{ scale: 1.1, priginX: 0, color: colors.accentBlue }}
+                            whileTap={{ scale: 0.9 }}>
+                            <Link to="/"> ABOUT US </Link>
+                        </ItemNav>
+                        <ItemNav home
+                            whileHover={{ scale: 1.1, priginX: 0, fill: colors.accentBlue }}
+                            whileTap={{ scale: 0.9 }}>
+                            <a href="https://www.aveda.com/locator/get_the_facts.tmpl?vanity=1&SalonID=38631"
+                                rel="noreferrer"
+                                target="_blank">
+                                <AvedaCompleto fill={colors.green} /></a>
+                        </ItemNav>
+                    </StyledItems>
+                </StyledNavbar>
+                <IconNav />
+            </>
+        )
     }
 
 }
@@ -119,17 +148,17 @@ const Navbar = ({ siteTitle }) => {
 const IconNav = ({ siteTitle }) => {
     const [isOpen, toggleOpen] = useCycle(false, true);
     const containerRef = useRef(null);
-  
+
     return (
-      <Overlay
-        initial={false}
-        animate={isOpen ? "open" : "closed"}
-        ref={containerRef}>
-        <MenuToggle toggle={() => toggleOpen()} siteTitle={siteTitle} />
-        <Navigation open={isOpen}/>
-      </Overlay>
+        <Overlay
+            initial={false}
+            animate={isOpen ? "open" : "closed"}
+            ref={containerRef}>
+            <MenuToggle toggle={() => toggleOpen()} siteTitle={siteTitle} />
+            <Navigation open={isOpen} />
+        </Overlay>
     );
-  };
+};
 
 
 export { Navbar, IconNav }

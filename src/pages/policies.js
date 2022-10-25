@@ -1,21 +1,16 @@
 import React from "react"
-import { Policies } from "../components";
+
 
 import { graphql, useStaticQuery } from 'gatsby'
 import { getImage } from "gatsby-plugin-image"
 
 import { BgImage } from "gbimage-bridge"
-import { colors } from "../utils/const";
+import { Policies } from "../components/policies";
 import { Navbar } from "../components/navbar";
 
 
-const pageStyles = {
-  flexDirection: 'column',
-  width: '100vw',
-  display: "flex",
-  justifyContent: "center",
-  alignItems: "center",
-}
+
+
 
 const PoliciesPage = () => {
   const { backgroundImage123 } = useStaticQuery(
@@ -40,11 +35,10 @@ const PoliciesPage = () => {
   return (
     <>
       <BgImage image={image} className="masthead" />
+      <Navbar siteTitle="about" />
       <div className="content">
-        <Navbar />
-        <div style={pageStyles} >
-          <Policies />
-        </div></div>
+        <Policies></Policies>
+        </div>
     </>
   )
 };

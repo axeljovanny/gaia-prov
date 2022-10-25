@@ -55,6 +55,7 @@ export const StyledLogoContainer = styled.div`
   justify-content: center;
   align-items: center;
   background: ${colors.none};
+  margin: 1% 0;
   width: 10%;
   a{
     display: flex;
@@ -72,28 +73,40 @@ export const StyledItems = styled.div`
   `}
   ${above.large`
   display: flex;
-  justify-content: center ;
+  justify-content: space-between; ;
   align-items: center;
+  width: 20vw;
+  height: auto;
   background: ${colors.none};  
   `}
+  ${above.xlarge`
+  `}
+
 `
 
 export const ItemNav = styled(motion.div)`
 display: flex;
 justify-content: center;
 align-items: center;
-list-style: none; 
-padding: 0;
-background-color: none;
-margin: 54px 3vw;
+list-style: none;
 font-family: 'Montserrat', sans-serif;
-background: ${colors.none};  
+background: ${colors.none}; 
+width: 100%; 
+padding: 0 0.5em ;
 
+a svg{
+  width: 70%;
+  padding: 0;
+  margin: 0;
+}
 
 a{
+  width: 100%;
+  margin: 0;
   font-family:  ${font.Rlight};
   color: ${props => (props.home ? colors.black : colors.white)};
   font-size: ${size.Wtext};
+
 }
 a:hover{
   color: ${colors.accentBlue} ;

@@ -1,7 +1,6 @@
 import { StaticImage } from "gatsby-plugin-image"
 import React from "react"
 import { StyledContent, StyledText, StyledLogoMobileContainer } from "../styles/js/content"
-
 import Footer from "./footer"
 
 
@@ -95,4 +94,4 @@ const Policies = ({ children }) => (
 )
 
 
-export default Policies
+export { Policies }

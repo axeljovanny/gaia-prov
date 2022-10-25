@@ -9,7 +9,7 @@ import { BannerProducts, BannerSvg, CircleNature, Gift, ImageTratamients, ImageW
 // Constantes
 import { colors } from "../utils/const"
 // SVG
-import { MapsIcon, FacebookIcon, InstagramIcon } from "../images/icons"
+import { MapsIcon, FacebookIcon, InstagramIcon, TiktokIcon } from "../images/icons"
 import { Circle, Phone ,GEWeb, GEMovil, Skin, Hair, Flecha, Body, Favorite, FavoriteMovil, CTVTS, CircleMovil, ScrollArrow } from "../assets/Home"
 // CSS
 import "../styles/css/home.css"
@@ -51,8 +51,8 @@ const Hero = ({ children }) => (
 
                     <InstagramIcon fill={colors.green} className="svgAbout" />
                 </a>
-                <a href="https://www.google.com/maps/place/Gaia+Evolution+Spa+and+Salon/@41.9245235,-87.7068398,19z/data=!3m2!4b1!5s0x880fcd657178d7e3:0x4804758ad15f5cf!4m5!3m4!1s0x880fcd65725634f9:0xf6193b2710f612ea!8m2!3d41.9245235!4d-87.7062926" rel="noreferrer" target="_blank">
-                    <MapsIcon fill={colors.green} className="svgAbout" />
+                <a href="https://www.tiktok.com/@gaiaevolution?_t=8WfinkDhK7B&_r=1" rel="noreferrer" target="_blank">
+                    <TiktokIcon fill={colors.green} className="svgAbout" />
                 </a>
             </Social>
             <PhoneLogo>
@@ -105,7 +105,7 @@ const Wedo = ({ children }) => {
                     <motion.h1 initial={{ opacity: 0, }} whileInView={{ opacity: 1 }} transition={{ duration: 1.5 }} viewport={{ once: true }}>What we do?</motion.h1>
                     <motion.h2 initial={{ opacity: 0, }} whileInView={{ opacity: 1 }} transition={{ duration: 1.5 }} viewport={{ once: true }}>We are a group of professional Cosmetologists & Estheticians</motion.h2>
                     <motion.h3 initial={{ opacity: 0, }} whileInView={{ opacity: 1 }} transition={{ duration: 1.5 }} viewport={{ once: true }}>That are hard working and staying up to date with the latest trends and technology in the beauty industry to bring our clients the best experience possible. Gaia Evolution Spa & Salon was created with the concept of rescue the use of natural & organic sources from our professional lines...</motion.h3>
-                    <Link to="/about">See More <Flecha className="flecha" stroke={colors.green} /></Link>
+                    <Link to="/">See More <Flecha className="flecha" stroke={colors.green} /></Link>
                 </TextWedo>
                 <ImgsWedo>
                     <ImageWedo initial={{ opacity: 0, y: 10 }} animate={{ y: 0 }} whileInView={{ opacity: 1 }} transition={{ duration: 1 }} viewport={{ once: true }} style={{ y: y1 }}>
@@ -345,8 +345,8 @@ const Products = ({ children }) => {
                     alt="Spa Image"
                     loading="lazy"
                     formats={['auto', 'webp', 'avif']}
+                    breakpoints={[750, 1080, 1366, 1920]}
                     quality='100'
-                    width={300}
                 />
                   <BannerSvg 
                   initial={{ opacity: 0 }} 
