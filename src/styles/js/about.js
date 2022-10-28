@@ -63,12 +63,17 @@ export const StyledFirst = styled.div`
   width: 100vw;
   height: auto;
   background: ${colors.softWhite};
+  padding: 10% 0 20% 0;
+
 
   ${above.medium` 
   padding: 10% 0;
   `}
   ${above.large` 
-  padding: 5% 0;
+  padding: 2% 0;
+  `}
+  ${above.xlarge` 
+  padding: 0;
   `}
 `
 
@@ -90,6 +95,8 @@ export const StyledText = styled.div`
     font-family: ${font.Rsemi};
     font-size: ${size.Mtittle};
     color: ${colors.black};
+    background: ${colors.none};
+
   }
   p{
     text-align: justify;
@@ -129,9 +136,8 @@ export const StyledText = styled.div`
   p{
     text-align: justify;
     word-spacing: 5px;
-    background: ${colors.none};
     width: 70%;
-    padding: 2% 0 ;
+    padding: 2% 0;
     margin: 0;
     font-family: ${font.Llight};
     font-size: 17px;
@@ -140,159 +146,160 @@ export const StyledText = styled.div`
   ${above.xlarge` 
   align-items: center;
 
-  h1{
-    text-align: center;
-    width: 85%;
-    padding: 2% 0;
-    font-family: ${font.Rlight};
-    font-size: 40px;
+  h1{    
+    width: 70%;
+    padding: 2% 0%;
   }
   p{
-    text-align: justify;
-    word-spacing: 5px;
-    background: ${colors.none};
-    width: 70%;
-    padding: 2% 0 ;
-    margin: 0;
-    font-family: ${font.Llight};
     font-size: 20px;
   }
   `}
 `
 
 export const StyledTwo = styled.div`
-  display: flex; 
-  flex-direction: column-reverse;
-  justify-content: center;
-  align-items: center;
-  
+  display: flex;
+  flex-direction: column;
   width: 100vw;
-  height: auto;
-  padding: 10% 0;
-
   background: ${colors.green};
+  position: relative;
+  padding: 0 0 20%  0;
+
   ${above.medium` 
-  flex-direction: row;
   `}
-  ${above.large` 
-  padding: 5% 0;
-  align-items: flex-start;
-  justify-content: flex-start;
+  ${above.large`
+  display: grid;
+  grid-template-columns: repeat(3, auto);
+  grid-template-rows: repeat(3, auto);
+  padding: 0 0 5%  0;
   
   `}
+  ${above.xlarge`
+  grid-template-columns: 30% 30% 30%;
+  
+  `}
+
 `
 export const ImgOne = styled.div`
-  display: flex; 
+  display: flex;
+  position: absolute;
   flex-direction: column;
   align-items: center;
-
-  width: 110%;
+  width: 100%;
   background: ${colors.none};
-  padding: 0 0;
+  top: -12%;
 
   ${above.medium` 
   align-items: flex-start;
-  width: 50%;
 
   `}
-  ${above.large` 
-  width: 50%;
+  ${above.large`
+  position: relative;
+  grid-area: 2 / 1 / 4 / 2; 
+  `}
+  ${above.xlarge`
+  width: 90%;
   `}
 `
 export const TextOne = styled.div`
   display: flex; 
   flex-direction: column;
-  justify-content: flex-start;
-  align-items: flex-start;
+  justify-content: center;
+  align-items: center;
 
-  width: 80%;
-  height: 35%;
+  width: 100%;
+  height: auto;
   background: ${colors.none};
-  padding: .1em 0 3em 0;
-
+  padding: 50% 0 5% 0;
   h1{
-    word-spacing: 0px;  
-    padding: 10% 0;
-    width: 100%;
+    width: 90%;
     text-align: center;
-    font-family: ${font.Rsemi};
+    font-family: ${font.Rmedium};
     font-size: ${size.Mtittle};
     color: ${colors.white};
   }
-  h2{
-    word-spacing: 0px;  
-    padding: 2% 0;
-    width: 100%;
-    text-align: left;
-    font-family: ${font.Rthin};
-    font-size: 16.5px;
-    color: ${colors.white};
-  }
-
-  p{
-    text-align: justify;
-    margin: 5% 0;
-    word-spacing: -1px; 
-    line-height: 150%;
-    font-family: ${font.Llight};
-    font-size: 15px;
-    color: ${colors.white};
-  }
+  
   ${above.medium` 
-  width: 50%;
-  padding: 0 0 0 5%;
-  h1{
-    text-align: left;
-    width: 80%;
-    padding: 5% 0;
-    font-family: ${font.Rregular};
-    font-size: 30px;
-  }
-  p{
-    margin: 6% 0;
-    font-family: ${font.Llight};
-    font-size: 20px;
-  }
+  
   `}
   ${above.large`
-  width: 80%;
-  background: ${colors.none};
-  height: auto;
-  justify-content: center;
+  grid-area: 1 / 1 / 2 / 4;
+  padding: 5% 0;
 
   h1{
-    text-align: center;
-    padding: 4% 10%;
-    font-family: ${font.Rlight};
-    font-size: 30px;
+    width: 50%;
+    font-family: ${font.Rmedium};
+    font-size: ${size.Wtittle};
   }
-  p{  
-    margin: 2% 0;
-    background: ${colors.none};
-    text-align: center;
-    margin-left: 28%;
-    font-family: ${font.Rlight};
-    font-size: 18px;
-  }
- 
   `}
   ${above.xlarge`
-  h1{
-    text-align: center;
-    padding: 4% 10%;
-    font-family: ${font.Rlight};
-    font-size: 40px;
-  }
-  p{  
-    margin: 2% 0;
-    background: ${colors.none};
-    text-align: center;
-    margin-left: 28%;
-    font-family: ${font.Llight};
-    font-size: 20px;
-  }
- 
   `}
+
+  `
+export const ServicesText = styled.div`
+    font-family: ${font.Rlight};
+    font-size: ${size.Mmini};
+    color: ${colors.white};
+    text-align: center;
+    display: flex;
+    align-items: flex-start;  
+    flex-direction: column;
+    width: 80%;
+    h2{    
+      margin: 2% 0;
+    }
+    p{
+      display: none;
+    }
+    ${above.large`
+    align-items: ${props => (props.skin ? 'flex-start' : 'center')};
+    font-family: ${font.Rmedium};
+    font-size: ${size.Mtext};
+    color: ${colors.white};
+    width: 100%;
+    h2, p{
+      width: ${props => (props.reiki ? "80%" : "60%")};
+      text-align: center;
+    }
+    p{
+      display: flex;
+      text-align: justify;
+      font-family: ${font.Rlight};
+    }
+  `}
+    ${above.xlarge`
+    font-size: ${size.Xtext};
+  `}
+  `
+export const HairText = styled.div`
+display: flex;
+justify-content: center;
+margin: 0;
+
+${above.large`
+grid-area: 2 / 2 / 3 / 3;
+  `}
+
+
+`
+export const SkinText = styled.div`
+display: flex;
+justify-content: center;
+margin: 0;
+
+${above.large`
+grid-area: 2 / 3 / 3 / 4;
+`}
+`
+export const ReikiText = styled.div`
+display: flex;
+justify-content: center;
+background: ${colors.none};
+margin: 0;
+
+${above.large`
+width: 90%;
+grid-area: 3 / 2 / 4 / 4;
+`}
 `
 
 export const StyledThree = styled.div`
@@ -313,7 +320,7 @@ export const StyledThree = styled.div`
   `}
 
   `
-  export const OurServicesText = styled(motion.div)`
+export const OurServicesText = styled(motion.div)`
   grid-area: 1 / 1 / 2 / 3;
   display: flex; 
   flex-direction: column;
@@ -388,8 +395,8 @@ export const TexTwo = styled.div`
   }
   `}
   ${above.large` 
-  margin: 2% 5% 0 10%;
-  width: 70%;
+  margin: -10% 5% 0 10%;
+  width: 90%;
   
   p{
     font-family: ${font.Rlight};
@@ -441,9 +448,9 @@ export const TexThree = styled.div`
   }
   `}
   ${above.large` 
-  width: 70%;
+  width: 90%;
   height: 20%;
-  margin: 6% 5% 0 10%;
+  margin: -5% 5% 0 10%;
   background:${colors.none};
   
   p{
@@ -500,9 +507,9 @@ export const TexFour = styled.div`
   }
   `}
   ${above.large` 
-  margin: -7% 4.5% 0% 8.5%;
+  margin: -17% 5% 0% 9.5%;
   background:${colors.none};
-  width:38%;
+  width: 49%;
   p{
     font-family: ${font.Rlight};
     font-size: 16px;

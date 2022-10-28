@@ -79,7 +79,7 @@ export const LogoPrincipal = styled.div`
 `
 
 export const Gift = styled(motion.div)`
-  position: fixed;
+  position: absolute;
   top: 10%;
   right: 0%;
   background: ${colors.none};

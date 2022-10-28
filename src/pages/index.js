@@ -2,16 +2,13 @@ import React, {useState} from "react"
 import { graphql, useStaticQuery } from 'gatsby'
 import { getImage, StaticImage } from "gatsby-plugin-image"
 import { BgImage } from "gbimage-bridge"
-import { motion } from "framer-motion";
 // Componentes
 import { Navbar } from "../components/navbar";
 import { Bodycare, Haircare, Hero, Maps, Products, Skincare, Wedo } from "../components/home";
 import { Footer } from "../components"
 // Estilos
 import { AdvImage, Gift, StyledHair, StyledSkin } from "../styles/js/home";
-import { GiftWeb, GiftMovil, ShopWeb } from "../assets/Home";
 // Constantes
-import { colors } from "../utils/const"
 // CSS
 import '../styles/css/home.css'
 
