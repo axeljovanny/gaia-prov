@@ -25,7 +25,7 @@ export const useBodyService = () => {
   )
   return data.allGoogleBodySheet.edges
 }
-// comentario DS :v
+// No me importan sus comentarios :)
 const BodyService = (type) => {
   const kawai = useBodyService()
   return (
