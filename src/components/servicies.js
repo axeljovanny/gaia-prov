@@ -277,6 +277,7 @@ const BodyServiceDesc = ({ services, type }) => {
         </>
     )
 }
+// Servicio para Body en Movil 
 const BodyServiceMobileDesc = ({ services }) => {
 
     const result = services.map(({ node }) => node.type)
